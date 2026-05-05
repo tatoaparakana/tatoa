@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mulheres Parakanã – Koxoas | MPI · Tato'a</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --preto: #1A1612;
+  --ouro: #C8940A;
+  --ouro-claro: #E8B020;
+  --verde: #2D5A1B;
+  --verde-claro: #3a7223;
+  --terra: #6B3A1A;
+  --creme: #F5EFE0;
+  --creme2: #EDE4CE;
+  --bg: #141210;
+  --card-bg: #1e1a15;
+  --card-border: #2a2318;
+  --texto: #e8dfc8;
+  --texto-muted: #9a8f7a;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  background: var(--bg);
+  color: var(--texto);
+  min-height: 100vh;
+}
+
+/* ── HEADER ── */
+.header {
+  background: var(--preto);
+  border-bottom: 2px solid var(--ouro);
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 14px 32px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.logo-svg {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+.logo-text { line-height: 1.2; }
+.logo-text strong {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  color: var(--ouro);
+  letter-spacing: .03em;
+}
+.logo-text span {
+  font-size: .75rem;
+  color: var(--texto-muted);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.header-sep { flex: 1; }
+.project-badge {
+  background: linear-gradient(135deg, var(--verde), var(--verde-claro));
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--ouro);
+  text-decoration: none;
+  font-size: .85rem;
+  font-weight: 600;
+  border: 1px solid var(--ouro);
+  padding: 6px 14px;
+  border-radius: 6px;
+  transition: all .2s;
+  letter-spacing: .04em;
+}
+.back-btn:hover { background: var(--ouro); color: var(--preto); }
+
+/* ── HERO ── */
+.hero {
+  background: linear-gradient(160deg, #1e1a0e 0%, #0f1a0a 50%, #1a120a 100%);
+  border-bottom: 1px solid var(--card-border);
+  padding: 52px 32px 44px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -40px; right: -40px;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(200,148,10,.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: start;
+}
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(45,90,27,.25);
+  border: 1px solid rgba(45,90,27,.6);
+  color: #7fcf5a;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+.hero-tag::before { content: '●'; font-size: .55rem; }
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  line-height: 1.2;
+  color: var(--creme);
+  margin-bottom: 8px;
+}
+.hero h1 em {
+  color: var(--ouro);
+  font-style: italic;
+}
+.hero-sub {
+  color: var(--texto-muted);
+  font-size: 1rem;
+  margin-bottom: 22px;
+  max-width: 560px;
+  line-height: 1.6;
+}
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.meta-chip {
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: .8rem;
+}
+.meta-chip strong { color: var(--ouro); display: block; font-size: .7rem; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 2px; }
+
+/* financeiro hero */
+.hero-financeiro {
+  background: rgba(200,148,10,.06);
+  border: 1px solid rgba(200,148,10,.25);
+  border-radius: 12px;
+  padding: 24px 28px;
+  min-width: 280px;
+  text-align: center;
+}
+.hf-label { font-size: .72rem; text-transform: uppercase; letter-spacing: .1em; color: var(--texto-muted); margin-bottom: 6px; }
+.hf-total { font-family: 'Playfair Display', serif; font-size: 2.1rem; color: var(--ouro); font-weight: 700; }
+.hf-sub { font-size: .78rem; color: var(--texto-muted); margin-top: 4px; margin-bottom: 16px; }
+.progress-wrap { margin: 8px 0; }
+.progress-label { display: flex; justify-content: space-between; font-size: .75rem; margin-bottom: 6px; }
+.progress-label span:last-child { color: var(--ouro-claro); font-weight: 600; }
+.progress-bar {
+  height: 8px;
+  background: rgba(255,255,255,.08);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--ouro), var(--ouro-claro));
+  border-radius: 4px;
+  transition: width 1s ease;
+}
+.hf-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; }
+.hf-item { background: rgba(255,255,255,.04); border-radius: 6px; padding: 8px 10px; }
+.hf-item .v { font-size: .95rem; font-weight: 600; color: var(--texto); }
+.hf-item .l { font-size: .65rem; text-transform: uppercase; letter-spacing: .06em; color: var(--texto-muted); margin-top: 2px; }
+.hf-item.verde .v { color: #7fcf5a; }
+.hf-item.ouro .v { color: var(--ouro-claro); }
+
+/* ── TABS ── */
+.tabs-wrap {
+  background: var(--preto);
+  border-bottom: 1px solid var(--card-border);
+  position: sticky;
+  top: 76px;
+  z-index: 90;
+}
+.tabs {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  gap: 0;
+  padding: 0 32px;
+}
+.tab {
+  padding: 14px 22px;
+  font-size: .85rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: var(--texto-muted);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all .2s;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+.tab:hover { color: var(--texto); }
+.tab.active { color: var(--ouro); border-bottom-color: var(--ouro); }
+
+/* ── CONTENT ── */
+.content { max-width: 1300px; margin: 0 auto; padding: 36px 32px 60px; }
+.panel { display: none; }
+.panel.active { display: block; }
+
+/* ── CARDS ── */
+.cards-row { display: grid; gap: 20px; }
+.cards-3 { grid-template-columns: repeat(3, 1fr); }
+.cards-2 { grid-template-columns: repeat(2, 1fr); }
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 24px;
+}
+.card-title {
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--texto-muted);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.card-title::before {
+  content: '';
+  display: inline-block;
+  width: 3px;
+  height: 14px;
+  background: var(--ouro);
+  border-radius: 2px;
+}
+
+/* ── FINANCEIRO PANEL ── */
+.rubricas-list { display: flex; flex-direction: column; gap: 12px; }
+.rubrica-item {
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 8px;
+  padding: 14px 18px;
+}
+.rubrica-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+.rubrica-nome { font-size: .88rem; color: var(--texto); font-weight: 400; }
+.rubrica-valor { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--ouro); font-weight: 600; }
+.rubrica-bar { height: 5px; background: rgba(255,255,255,.07); border-radius: 3px; overflow: hidden; }
+.rubrica-fill { height: 100%; border-radius: 3px; background: linear-gradient(90deg, var(--ouro), var(--ouro-claro)); }
+
+.meses-chart { display: flex; align-items: flex-end; gap: 8px; height: 120px; margin-top: 8px; }
+.mes-col { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.mes-bar-wrap { flex: 1; display: flex; align-items: flex-end; width: 100%; }
+.mes-bar {
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+  background: linear-gradient(180deg, var(--ouro-claro), var(--ouro));
+  min-height: 4px;
+  transition: opacity .2s;
+}
+.mes-bar:hover { opacity: .8; }
+.mes-label { font-size: .62rem; color: var(--texto-muted); text-align: center; }
+.mes-valor { font-size: .62rem; color: var(--ouro); font-weight: 600; display: none; }
+.mes-col:hover .mes-valor { display: block; }
+
+.top-beneficiarias { display: flex; flex-direction: column; gap: 8px; }
+.benef-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: rgba(255,255,255,.03);
+  border-radius: 6px;
+}
+.benef-rank {
+  width: 22px;
+  height: 22px;
+  background: rgba(200,148,10,.15);
+  border-radius: 50%;
+  font-size: .7rem;
+  font-weight: 700;
+  color: var(--ouro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.benef-nome { flex: 1; font-size: .85rem; }
+.benef-valor { font-size: .85rem; color: var(--ouro-claro); font-weight: 600; }
+
+/* ── ATIVIDADES PANEL ── */
+.atividades-grid { display: flex; flex-direction: column; gap: 14px; }
+.ativ-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-left: 4px solid var(--ouro);
+  border-radius: 0 10px 10px 0;
+  padding: 18px 20px;
+}
+.ativ-card.verde { border-left-color: var(--verde-claro); }
+.ativ-header { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 8px; }
+.ativ-num {
+  background: rgba(200,148,10,.12);
+  color: var(--ouro);
+  font-size: .72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.ativ-card.verde .ativ-num { background: rgba(45,90,27,.2); color: #7fcf5a; }
+.ativ-title { font-size: .95rem; color: var(--creme); font-weight: 600; line-height: 1.3; }
+.ativ-desc { font-size: .83rem; color: var(--texto-muted); line-height: 1.55; }
+.ativ-meta { display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap; }
+.ativ-tag {
+  font-size: .7rem;
+  padding: 3px 10px;
+  border-radius: 12px;
+  background: rgba(255,255,255,.05);
+  color: var(--texto-muted);
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+/* ── SOBRE PANEL ── */
+.sobre-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; }
+.sobre-text { font-size: .9rem; line-height: 1.75; color: var(--texto); }
+.sobre-text p { margin-bottom: 14px; }
+.sobre-text strong { color: var(--ouro); }
+.sobre-text h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--creme);
+  font-size: 1.1rem;
+  margin: 20px 0 10px;
+}
+
+.equipe-list { display: flex; flex-direction: column; gap: 10px; }
+.equipe-item {
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+.equipe-nome { font-size: .88rem; color: var(--creme); font-weight: 600; }
+.equipe-cargo { font-size: .75rem; color: var(--texto-muted); margin-top: 2px; }
+
+.eixos-list { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+.eixo-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: .83rem;
+  color: var(--texto);
+}
+.eixo-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ouro);
+  flex-shrink: 0;
+}
+.eixo-item:nth-child(2) .eixo-dot { background: var(--verde-claro); }
+.eixo-item:nth-child(3) .eixo-dot { background: var(--terra); }
+
+.beneficiarias-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.bs-item {
+  background: rgba(200,148,10,.06);
+  border: 1px solid rgba(200,148,10,.15);
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+}
+.bs-num { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--ouro); }
+.bs-label { font-size: .68rem; text-transform: uppercase; letter-spacing: .06em; color: var(--texto-muted); margin-top: 3px; }
+
+/* ── STATUS BADGE ── */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  padding: 3px 10px;
+  border-radius: 12px;
+}
+.status-andamento { background: rgba(45,90,27,.25); color: #7fcf5a; border: 1px solid rgba(45,90,27,.5); }
+.status-prevista { background: rgba(200,148,10,.15); color: var(--ouro-claro); border: 1px solid rgba(200,148,10,.3); }
+
+/* ── FOOTER ── */
+.footer {
+  background: var(--preto);
+  border-top: 2px solid var(--ouro);
+  padding: 20px 32px;
+  text-align: center;
+  font-size: .75rem;
+  color: var(--texto-muted);
+  letter-spacing: .04em;
+}
+.footer strong { color: var(--ouro); }
+
+/* ── SECTION TITLE ── */
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: var(--creme);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--card-border);
+}
+.section-title em { color: var(--ouro); font-style: italic; }
+
+.mt20 { margin-top: 20px; }
+.mt32 { margin-top: 32px; }
+
+@media (max-width: 900px) {
+  .cards-3 { grid-template-columns: 1fr; }
+  .cards-2 { grid-template-columns: 1fr; }
+  .hero-inner { grid-template-columns: 1fr; }
+  .sobre-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 1.7rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <div class="logo-area">
+      <!-- Logo SVG simplificado Tato'a -->
+      <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="46" fill="#1A1612" stroke="#C8940A" stroke-width="3"/>
+        <text x="50" y="40" text-anchor="middle" font-family="serif" font-size="16" fill="#C8940A" font-weight="bold">TATO'A</text>
+        <path d="M20 55 Q35 42 50 50 Q65 58 80 45" stroke="#2D5A1B" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path d="M22 63 Q37 50 52 58 Q67 66 78 55" stroke="#2D5A1B" stroke-width="1.5" fill="none" stroke-linecap="round" opacity=".6"/>
+        <circle cx="50" cy="50" r="4" fill="#C8940A" opacity=".6"/>
+      </svg>
+      <div class="logo-text">
+        <strong>Associação Indígena Tato'a</strong>
+        <span>Povo Parakanã · TI Apyterewa</span>
+      </div>
+    </div>
+    <div class="header-sep"></div>
+    <span class="project-badge">Mulheres · Koxoas</span>
+    <a href="tatoa_final.html" class="back-btn">← Painel Geral</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag">MPI · Mulheres Indígenas: Tecendo o Bem Viver / 2024</div>
+      <h1>Fortalecimento e Protagonismo<br>das <em>Mulheres Parakanã</em></h1>
+      <p class="hero-sub">Apoio à Kania Arte Parakanã — espaço de autonomia, cultura e renda para as artesãs da TI Apyterewa. Beneficia diretamente 250 artesãs de 22 comunidades.</p>
+      <div class="hero-meta">
+        <div class="meta-chip"><strong>Financiador</strong>MPI – Mulheres Poxira</div>
+        <div class="meta-chip"><strong>Período</strong>Nov/2024 – Nov/2025 (12 meses)</div>
+        <div class="meta-chip"><strong>Valor Total</strong>R$ 100.000</div>
+        <div class="meta-chip"><strong>Proponente</strong>Associação Indígena Tato'a – AIT</div>
+      </div>
+    </div>
+    <div class="hero-financeiro">
+      <div class="hf-label">Total recebido</div>
+      <div class="hf-total">R$ 100.000</div>
+      <div class="hf-sub">Dotação orçamentária (Jul/2025)</div>
+      <div class="progress-wrap">
+        <div class="progress-label">
+          <span>Execução financeira</span>
+          <span>25,4%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width:25.4%"></div>
+        </div>
+      </div>
+      <div class="hf-grid">
+        <div class="hf-item ouro">
+          <div class="v">R$ 25.443</div>
+          <div class="l">Executado</div>
+        </div>
+        <div class="hf-item verde">
+          <div class="v">R$ 74.557</div>
+          <div class="l">Saldo disponível</div>
+        </div>
+        <div class="hf-item">
+          <div class="v">40</div>
+          <div class="l">Lançamentos</div>
+        </div>
+        <div class="hf-item">
+          <div class="v">Jul/25–Abr/26</div>
+          <div class="l">Período exec.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TABS -->
+<div class="tabs-wrap">
+  <div class="tabs">
+    <div class="tab active" onclick="showTab('financeiro',this)">Financeiro</div>
+    <div class="tab" onclick="showTab('atividades',this)">Atividades</div>
+    <div class="tab" onclick="showTab('sobre',this)">Sobre o Projeto</div>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<main class="content">
+
+  <!-- ── FINANCEIRO ── -->
+  <div class="panel active" id="financeiro">
+    <h2 class="section-title">Execução <em>Financeira</em></h2>
+
+    <div class="cards-row cards-3">
+
+      <!-- Rubricas -->
+      <div class="card" style="grid-column: span 2;">
+        <div class="card-title">Execução por Rubrica</div>
+        <div class="rubricas-list">
+
+          <div class="rubrica-item">
+            <div class="rubrica-header">
+              <span class="rubrica-nome">Salários e benefícios</span>
+              <span class="rubrica-valor">R$ 21.320</span>
+            </div>
+            <div class="rubrica-bar"><div class="rubrica-fill" style="width:83.8%"></div></div>
+            <div style="font-size:.72rem;color:var(--texto-muted);margin-top:5px;">
+              Bolsas artesãs (R$ 15.920) · Assessora artesanato (R$ 3.000) · Diárias feiras (R$ 2.400)
+            </div>
+          </div>
+
+          <div class="rubrica-item">
+            <div class="rubrica-header">
+              <span class="rubrica-nome">Sem rubrica definida</span>
+              <span class="rubrica-valor">R$ 3.228</span>
+            </div>
+            <div class="rubrica-bar"><div class="rubrica-fill" style="width:12.7%;background:linear-gradient(90deg,#8B6914,#a07d1a)"></div></div>
+            <div style="font-size:.72rem;color:var(--texto-muted);margin-top:5px;">
+              Computadores Mulheres – Magalu Pay
+            </div>
+          </div>
+
+          <div class="rubrica-item">
+            <div class="rubrica-header">
+              <span class="rubrica-nome">Viagens e atividades</span>
+              <span class="rubrica-valor">R$ 895</span>
+            </div>
+            <div class="rubrica-bar"><div class="rubrica-fill" style="width:3.5%;background:linear-gradient(90deg,var(--verde),var(--verde-claro))"></div></div>
+            <div style="font-size:.72rem;color:var(--texto-muted);margin-top:5px;">
+              Passagens · Transportes das artesãs
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Categorias -->
+      <div class="card">
+        <div class="card-title">Categorias de Gasto</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div>
+            <div style="display:flex;justify-content:space-between;font-size:.8rem;margin-bottom:4px;">
+              <span>Bolsas artesãs (estágio Kania)</span>
+              <span style="color:var(--ouro)">R$ 15.920</span>
+            </div>
+            <div class="rubrica-bar"><div class="rubrica-fill" style="width:62.6%"></div></div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;font-size:.8rem;margin-bottom:4px;">
+              <span>Equipamentos (computadores)</span>
+              <span style="color:var(--ouro)">R$ 3.228</span>
+            </div>
+            <div class="rubrica-bar"><div class="rubrica-fill" style="width:12.7%"></div></div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;font-size:.8rem;margin-bottom:4px;">
+              <span>Assessoria artesanato (30%)</span>
+              <span style="color:var(--ouro)">R$ 3.000</span>
+            </div>
+            <div class="rubrica-bar"><div class="rubrica-fill" style="width:11.8%"></div></div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;font-size:.8rem;margin-bottom:4px;">
+              <span>Diárias feiras / marcha</span>
+              <span style="color:var(--ouro)">R$ 2.600</span>
+            </div>
+            <div class="rubrica-bar"><div class="rubrica-fill" style="width:10.2%"></div></div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;font-size:.8rem;margin-bottom:4px;">
+              <span>Passagens e transporte</span>
+              <span style="color:var(--ouro)">R$ 695</span>
+            </div>
+            <div class="rubrica-bar"><div class="rubrica-fill" style="width:2.7%"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Desembolso por mês -->
+    <div class="card mt20">
+      <div class="card-title">Desembolso por Mês</div>
+      <div class="meses-chart">
+        <!-- max: 6920 (nov/25) -->
+        <div class="mes-col">
+          <div class="mes-bar-wrap"><div class="mes-bar" style="height:40.8%"></div></div>
+          <div class="mes-label">Jul/25</div>
+          <div class="mes-valor">R$ 2.825</div>
+        </div>
+        <div class="mes-col">
+          <div class="mes-bar-wrap"><div class="mes-bar" style="height:6.8%"></div></div>
+          <div class="mes-label">Ago/25</div>
+          <div class="mes-valor">R$ 470</div>
+        </div>
+        <div class="mes-col">
+          <div class="mes-bar-wrap"><div class="mes-bar" style="height:2%;min-height:4px"></div></div>
+          <div class="mes-label">Set/25</div>
+          <div class="mes-valor">–</div>
+        </div>
+        <div class="mes-col">
+          <div class="mes-bar-wrap"><div class="mes-bar" style="height:21.7%"></div></div>
+          <div class="mes-label">Out/25</div>
+          <div class="mes-valor">R$ 1.500</div>
+        </div>
+        <div class="mes-col">
+          <div class="mes-bar-wrap"><div class="mes-bar" style="height:100%"></div></div>
+          <div class="mes-label">Nov/25</div>
+          <div class="mes-valor">R$ 6.920</div>
+        </div>
+        <div class="mes-col">
+          <div class="mes-bar-wrap"><div class="mes-bar" style="height:28.9%"></div></div>
+          <div class="mes-label">Dez/25</div>
+          <div class="mes-valor">R$ 2.000</div>
+        </div>
+        <div class="mes-col">
+          <div class="mes-bar-wrap"><div class="mes-bar" style="height:28.9%"></div></div>
+          <div class="mes-label">Jan/26</div>
+          <div class="mes-valor">R$ 2.000</div>
+        </div>
+        <div class="mes-col">
+          <div class="mes-bar-wrap"><div class="mes-bar" style="height:57.8%"></div></div>
+          <div class="mes-label">Fev/26</div>
+          <div class="mes-valor">R$ 4.000</div>
+        </div>
+        <div class="mes-col">
+          <div class="mes-bar-wrap"><div class="mes-bar" style="height:68.3%"></div></div>
+          <div class="mes-label">Mar/26</div>
+          <div class="mes-valor">R$ 4.728</div>
+        </div>
+        <div class="mes-col">
+          <div class="mes-bar-wrap"><div class="mes-bar" style="height:14.4%"></div></div>
+          <div class="mes-label">Abr/26</div>
+          <div class="mes-valor">R$ 1.000</div>
+        </div>
+      </div>
+      <div style="font-size:.72rem;color:var(--texto-muted);margin-top:8px;">Passe o mouse sobre as barras para ver os valores</div>
+    </div>
+
+    <!-- Top beneficiárias -->
+    <div class="cards-row cards-2 mt20">
+      <div class="card">
+        <div class="card-title">Top Beneficiárias Indígenas</div>
+        <div class="top-beneficiarias">
+          <div class="benef-item">
+            <div class="benef-rank">1</div>
+            <div class="benef-nome">Kaxapoga Parakanã</div>
+            <div class="benef-valor">R$ 4.460</div>
+          </div>
+          <div class="benef-item">
+            <div class="benef-rank">2</div>
+            <div class="benef-nome">Naoi Parakanã</div>
+            <div class="benef-valor">R$ 4.000</div>
+          </div>
+          <div class="benef-item">
+            <div class="benef-rank">3</div>
+            <div class="benef-nome">Ywoagia Parakanã</div>
+            <div class="benef-valor">R$ 3.500</div>
+          </div>
+          <div class="benef-item">
+            <div class="benef-rank">4</div>
+            <div class="benef-nome">Xogoa Parakanã</div>
+            <div class="benef-valor">R$ 2.500</div>
+          </div>
+          <div class="benef-item">
+            <div class="benef-rank">5</div>
+            <div class="benef-nome">Inara Parakanã</div>
+            <div class="benef-valor">R$ 960</div>
+          </div>
+          <div class="benef-item">
+            <div class="benef-rank">6</div>
+            <div class="benef-nome">Poxira Parakanã</div>
+            <div class="benef-valor">R$ 500</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Outros Pagamentos</div>
+        <div class="top-beneficiarias">
+          <div class="benef-item">
+            <div class="benef-rank" style="background:rgba(45,90,27,.2);color:#7fcf5a">A</div>
+            <div class="benef-nome">Valério Caetano Filho<br><span style="font-size:.72rem;color:var(--texto-muted)">Consultoria artesanato (30% salário)</span></div>
+            <div class="benef-valor">R$ 3.000</div>
+          </div>
+          <div class="benef-item">
+            <div class="benef-rank" style="background:rgba(45,90,27,.2);color:#7fcf5a">B</div>
+            <div class="benef-nome">Rafaelle Maria de Lima<br><span style="font-size:.72rem;color:var(--texto-muted)">Diárias e passagens</span></div>
+            <div class="benef-valor">R$ 2.825</div>
+          </div>
+          <div class="benef-item">
+            <div class="benef-rank" style="background:rgba(45,90,27,.2);color:#7fcf5a">C</div>
+            <div class="benef-nome">Magalu Pay<br><span style="font-size:.72rem;color:var(--texto-muted)">Computadores mulheres</span></div>
+            <div class="benef-valor">R$ 3.228</div>
+          </div>
+        </div>
+        <div style="margin-top:14px;padding:12px 14px;background:rgba(200,148,10,.06);border-radius:8px;border:1px solid rgba(200,148,10,.15);">
+          <div style="font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--texto-muted);margin-bottom:6px;">Contas utilizadas</div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <span style="font-size:.78rem;background:rgba(255,255,255,.05);padding:3px 10px;border-radius:10px;">BANPARÁ (entrada)</span>
+            <span style="font-size:.78rem;background:rgba(255,255,255,.05);padding:3px 10px;border-radius:10px;">ASAAS (saídas)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── ATIVIDADES ── -->
+  <div class="panel" id="atividades">
+    <h2 class="section-title">Atividades do <em>Plano de Trabalho</em></h2>
+
+    <div class="atividades-grid">
+
+      <div class="ativ-card">
+        <div class="ativ-header">
+          <div class="ativ-num">Ativ. 01</div>
+          <div>
+            <div class="ativ-title">Fortalecimento do Espaço Kania Arte Parakanã</div>
+            <div class="ativ-meta">
+              <span class="ativ-tag">Nov/2024 – Nov/2025</span>
+              <span class="status-badge status-andamento">● Em andamento</span>
+            </div>
+          </div>
+        </div>
+        <div class="ativ-desc">
+          Contratação de recursos humanos e aquisição de materiais para estruturação da sede. Inclui bolsa de estágio remunerado para artesã Parakanã, 30% do salário da assessora do artesanato, bolsa de coordenação e diárias para participação em feiras nacionais.
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px;">
+          <div style="background:rgba(255,255,255,.04);border-radius:6px;padding:8px;text-align:center;">
+            <div style="font-size:.75rem;color:var(--ouro);font-weight:600;">R$ 6.000</div>
+            <div style="font-size:.65rem;color:var(--texto-muted);">Coordenação</div>
+          </div>
+          <div style="background:rgba(255,255,255,.04);border-radius:6px;padding:8px;text-align:center;">
+            <div style="font-size:.75rem;color:var(--ouro);font-weight:600;">R$ 12.000</div>
+            <div style="font-size:.65rem;color:var(--texto-muted);">Assessora 30%</div>
+          </div>
+          <div style="background:rgba(255,255,255,.04);border-radius:6px;padding:8px;text-align:center;">
+            <div style="font-size:.75rem;color:var(--ouro);font-weight:600;">R$ 6.000</div>
+            <div style="font-size:.65rem;color:var(--texto-muted);">Bolsa artesã</div>
+          </div>
+          <div style="background:rgba(255,255,255,.04);border-radius:6px;padding:8px;text-align:center;">
+            <div style="font-size:.75rem;color:var(--ouro);font-weight:600;">R$ 3.700</div>
+            <div style="font-size:.65rem;color:var(--texto-muted);">Equip. + mat.</div>
+          </div>
+        </div>
+        <div style="font-size:.75rem;color:var(--texto-muted);margin-top:8px;">Total previsto: <strong style="color:var(--ouro)">R$ 27.700</strong></div>
+      </div>
+
+      <div class="ativ-card verde">
+        <div class="ativ-header">
+          <div class="ativ-num" style="background:rgba(45,90,27,.2);color:#7fcf5a;">Ativ. 02</div>
+          <div>
+            <div class="ativ-title">Assembleia das Mulheres e Oficina de Transmissão de Saberes</div>
+            <div class="ativ-meta">
+              <span class="ativ-tag">Março/2025</span>
+              <span class="status-badge status-andamento">● Em andamento</span>
+            </div>
+          </div>
+        </div>
+        <div class="ativ-desc">
+          Realização de assembleia na Aldeia Apyterewa com artesãs anciãs e jovens. Oficinas de técnicas de cerâmica e cestaria, temas de saúde da mulher, educação e direitos. Distribuição de kits individuais de materiais para fabricação de artesanatos.
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px;">
+          <div style="background:rgba(255,255,255,.04);border-radius:6px;padding:8px;text-align:center;">
+            <div style="font-size:.75rem;color:#7fcf5a;font-weight:600;">R$ 16.200</div>
+            <div style="font-size:.65rem;color:var(--texto-muted);">Materiais artesanato</div>
+          </div>
+          <div style="background:rgba(255,255,255,.04);border-radius:6px;padding:8px;text-align:center;">
+            <div style="font-size:.75rem;color:#7fcf5a;font-weight:600;">R$ 10.000</div>
+            <div style="font-size:.65rem;color:var(--texto-muted);">Gêneros aliment.</div>
+          </div>
+          <div style="background:rgba(255,255,255,.04);border-radius:6px;padding:8px;text-align:center;">
+            <div style="font-size:.75rem;color:#7fcf5a;font-weight:600;">R$ 18.500</div>
+            <div style="font-size:.65rem;color:var(--texto-muted);">Logística + outros</div>
+          </div>
+        </div>
+        <div style="font-size:.75rem;color:var(--texto-muted);margin-top:8px;">Total previsto: <strong style="color:#7fcf5a">R$ 44.700</strong></div>
+      </div>
+
+      <div class="ativ-card">
+        <div class="ativ-header">
+          <div class="ativ-num">Ativ. 03</div>
+          <div>
+            <div class="ativ-title">Participação de Mulheres em Encontros com Organizações Indígenas e Órgãos Governamentais</div>
+            <div class="ativ-meta">
+              <span class="ativ-tag">Jan – Set/2025</span>
+              <span class="status-badge status-andamento">● Em andamento</span>
+            </div>
+          </div>
+        </div>
+        <div class="ativ-desc">
+          Viabilização da presença de mulheres Parakanã em encontros da FEPIPA, reuniões com MPI, FUNAI, APIB, COIAB e MPF. Inclui logística de deslocamento da aldeia até Altamira e demais destinos, além de diárias e hospedagem.
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px;">
+          <div style="background:rgba(255,255,255,.04);border-radius:6px;padding:8px;text-align:center;">
+            <div style="font-size:.75rem;color:var(--ouro);font-weight:600;">R$ 12.600</div>
+            <div style="font-size:.65rem;color:var(--texto-muted);">Voadeira + combustível</div>
+          </div>
+          <div style="background:rgba(255,255,255,.04);border-radius:6px;padding:8px;text-align:center;">
+            <div style="font-size:.75rem;color:var(--ouro);font-weight:600;">R$ 8.000</div>
+            <div style="font-size:.65rem;color:var(--texto-muted);">Passagens aéreas</div>
+          </div>
+          <div style="background:rgba(255,255,255,.04);border-radius:6px;padding:8px;text-align:center;">
+            <div style="font-size:.75rem;color:var(--ouro);font-weight:600;">R$ 7.000</div>
+            <div style="font-size:.65rem;color:var(--texto-muted);">Diárias (alim. + hosp.)</div>
+          </div>
+        </div>
+        <div style="font-size:.75rem;color:var(--texto-muted);margin-top:8px;">Total previsto: <strong style="color:var(--ouro)">R$ 27.600</strong></div>
+      </div>
+
+    </div>
+
+    <!-- Resumo orçamento -->
+    <div class="card mt32">
+      <div class="card-title">Resumo Orçamentário por Atividade</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:4px;">
+        <div style="text-align:center;padding:16px;background:rgba(255,255,255,.03);border-radius:8px;">
+          <div style="font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--ouro);">R$ 27.700</div>
+          <div style="font-size:.75rem;color:var(--texto-muted);margin-top:4px;">Atividade 01<br>Kania Arte Parakanã</div>
+          <div style="margin-top:8px;">
+            <div class="rubrica-bar"><div class="rubrica-fill" style="width:27.7%"></div></div>
+          </div>
+          <div style="font-size:.72rem;color:var(--ouro);margin-top:4px;">27,7% do total</div>
+        </div>
+        <div style="text-align:center;padding:16px;background:rgba(255,255,255,.03);border-radius:8px;">
+          <div style="font-family:'Playfair Display',serif;font-size:1.5rem;color:#7fcf5a;">R$ 44.700</div>
+          <div style="font-size:.75rem;color:var(--texto-muted);margin-top:4px;">Atividade 02<br>Assembleia e Oficina</div>
+          <div style="margin-top:8px;">
+            <div class="rubrica-bar"><div class="rubrica-fill" style="width:44.7%;background:linear-gradient(90deg,var(--verde),var(--verde-claro))"></div></div>
+          </div>
+          <div style="font-size:.72rem;color:#7fcf5a;margin-top:4px;">44,7% do total</div>
+        </div>
+        <div style="text-align:center;padding:16px;background:rgba(255,255,255,.03);border-radius:8px;">
+          <div style="font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--ouro);">R$ 27.600</div>
+          <div style="font-size:.75rem;color:var(--texto-muted);margin-top:4px;">Atividade 03<br>Encontros e Articulação</div>
+          <div style="margin-top:8px;">
+            <div class="rubrica-bar"><div class="rubrica-fill" style="width:27.6%"></div></div>
+          </div>
+          <div style="font-size:.72rem;color:var(--ouro);margin-top:4px;">27,6% do total</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SOBRE ── -->
+  <div class="panel" id="sobre">
+    <h2 class="section-title">Sobre o <em>Projeto</em></h2>
+
+    <div class="sobre-grid">
+      <div>
+        <div class="sobre-text">
+          <p>As <strong>mulheres Parakanã</strong> — chamadas <em>Koxoas</em> em sua língua — residem na Terra Indígena Apyterewa, localizada na região do Médio Xingu, no município de São Félix do Xingu – PA. A TI foi homologada em 2007 com 773 mil hectares e foi considerada por quatro anos consecutivos (2019–2022) como a terra indígena mais desmatada do Brasil.</p>
+          <p>A <strong>Kania Arte Parakanã</strong>, criada em 2021 e nomeada em homenagem a uma artesã anciã especialista em cerâmica, é o espaço de venda e gestão do artesanato Parakanã. Nela, todas as decisões são tomadas exclusivamente pelas artesãs, fortalecendo o empoderamento e proporcionando geração de renda para mais de 90% das artesãs cujo único sustento contínuo é o artesanato.</p>
+          <h3>Objetivo Geral</h3>
+          <p>Fortalecer o protagonismo, empoderamento e <strong>independência financeira</strong> das mulheres Parakanã através da cultura, buscando maior visibilidade ao trabalho singular desenvolvido pelas Parakanã na região do Médio Xingu.</p>
+          <h3>Eixos Temáticos</h3>
+          <div class="eixos-list">
+            <div class="eixo-item"><div class="eixo-dot"></div>Fortalecimento da articulação de mulheres indígenas</div>
+            <div class="eixo-item"><div class="eixo-dot"></div>Fortalecimento da gestão indígena de base comunitária e institucional</div>
+            <div class="eixo-item"><div class="eixo-dot"></div>Sociobioeconomia</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <!-- Públicbo -->
+        <div class="card" style="margin-bottom:16px;">
+          <div class="card-title">Público Beneficiado</div>
+          <div class="beneficiarias-stats">
+            <div class="bs-item">
+              <div class="bs-num">250</div>
+              <div class="bs-label">Artesãs diretas</div>
+            </div>
+            <div class="bs-item">
+              <div class="bs-num">127</div>
+              <div class="bs-label">Famílias TI</div>
+            </div>
+            <div class="bs-item">
+              <div class="bs-num">14</div>
+              <div class="bs-label">Adolescentes</div>
+            </div>
+            <div class="bs-item">
+              <div class="bs-num">30</div>
+              <div class="bs-label">Artesãs anciãs</div>
+            </div>
+            <div class="bs-item" style="grid-column:span 2;">
+              <div class="bs-num">~650</div>
+              <div class="bs-label">Pessoas beneficiadas indiretamente</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Equipe -->
+        <div class="card" style="margin-bottom:16px;">
+          <div class="card-title">Equipe do Projeto</div>
+          <div class="equipe-list">
+            <div class="equipe-item">
+              <div class="equipe-nome">Wenatoa Parakanã</div>
+              <div class="equipe-cargo">Coordenadora Indígena · Presidente AIT</div>
+            </div>
+            <div class="equipe-item">
+              <div class="equipe-nome">Brunna Stefanny Baroni Fehlauer</div>
+              <div class="equipe-cargo">Coordenadora do Projeto</div>
+            </div>
+            <div class="equipe-item">
+              <div class="equipe-nome">Rafaelle Maria</div>
+              <div class="equipe-cargo">Assessora do Artesanato (30% dedicação)</div>
+            </div>
+            <div class="equipe-item">
+              <div class="equipe-nome">Kaxapoga, Naoi, Ywoagia, Xogoa, Inara, Poxira Parakanã</div>
+              <div class="equipe-cargo">Artesãs bolsistas – Gestão Kania</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contratos / Relatórios -->
+        <div class="card">
+          <div class="card-title">Cronograma e Obrigações</div>
+          <div style="display:flex;flex-direction:column;gap:8px;font-size:.82rem;">
+            <div style="display:flex;justify-content:space-between;padding:8px 10px;background:rgba(255,255,255,.03);border-radius:6px;">
+              <span>Início do projeto</span>
+              <span style="color:var(--ouro)">Novembro/2024</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:8px 10px;background:rgba(255,255,255,.03);border-radius:6px;">
+              <span>Término previsto</span>
+              <span style="color:var(--ouro)">Novembro/2025</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:8px 10px;background:rgba(255,255,255,.03);border-radius:6px;">
+              <span>Dotação recebida (Jul/25)</span>
+              <span style="color:#7fcf5a">R$ 100.000</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:8px 10px;background:rgba(255,255,255,.03);border-radius:6px;">
+              <span>Financiador</span>
+              <span style="color:var(--texto-muted)">MPI · Sec. Artic. Prom. Direitos</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:8px 10px;background:rgba(255,255,255,.03);border-radius:6px;">
+              <span>Conta de entrada</span>
+              <span style="color:var(--texto-muted)">BANPARÁ</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:8px 10px;background:rgba(255,255,255,.03);border-radius:6px;">
+              <span>Conta de pagamentos</span>
+              <span style="color:var(--texto-muted)">ASAAS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <strong>Associação Indígena Tato'a – AIT</strong> · Povo Parakanã · TI Apyterewa · São Félix do Xingu – PA &nbsp;|&nbsp;
+  Projeto <strong>Mulheres Parakanã / Koxoas</strong> · MPI · Dados extraídos da planilha de monitoramento financeiro · Atualizado em Abr/2026
+</footer>
+
+<script>
+function showTab(id, el) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  el.classList.add('active');
+}
+</script>
+</body>
+</html>

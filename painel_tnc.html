@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TNC – BR FY25 091 | Gestão Territorial Parakanã · Tato'a</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --preto: #1A1612;
+  --ouro: #C8940A;
+  --ouro-claro: #E8B020;
+  --verde: #2D5A1B;
+  --verde-claro: #3a7223;
+  --terra: #6B3A1A;
+  --azul: #1a3a5a;
+  --azul-claro: #2a5a8a;
+  --creme: #F5EFE0;
+  --creme2: #EDE4CE;
+  --bg: #141210;
+  --card-bg: #1e1a15;
+  --card-border: #2a2318;
+  --texto: #e8dfc8;
+  --texto-muted: #9a8f7a;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Source Sans 3', sans-serif; background: var(--bg); color: var(--texto); min-height: 100vh; }
+
+.header {
+  background: var(--preto);
+  border-bottom: 2px solid var(--ouro);
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 14px 32px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.logo-svg { width: 48px; height: 48px; flex-shrink: 0; }
+.logo-text { line-height: 1.2; }
+.logo-text strong { display: block; font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--ouro); letter-spacing: .03em; }
+.logo-text span { font-size: .75rem; color: var(--texto-muted); letter-spacing: .08em; text-transform: uppercase; }
+.header-sep { flex: 1; }
+.project-badge { background: linear-gradient(135deg, #1a3a5a, #2a5a8a); color: #a0d0f0; padding: 6px 16px; border-radius: 20px; font-size: .78rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.back-btn { display: flex; align-items: center; gap: 6px; color: var(--ouro); text-decoration: none; font-size: .85rem; font-weight: 600; border: 1px solid var(--ouro); padding: 6px 14px; border-radius: 6px; transition: all .2s; letter-spacing: .04em; }
+.back-btn:hover { background: var(--ouro); color: var(--preto); }
+
+/* HERO */
+.hero {
+  background: linear-gradient(160deg, #0e1520 0%, #0f1a0a 60%, #1a120a 100%);
+  border-bottom: 1px solid var(--card-border);
+  padding: 52px 32px 44px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -40px; right: -40px;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(200,148,10,.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -60px; left: 100px;
+  width: 200px; height: 200px;
+  background: radial-gradient(circle, rgba(26,58,90,.3) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: start;
+}
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(26,58,90,.35);
+  border: 1px solid rgba(42,90,138,.5);
+  color: #70b8e0;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+.hero-tag::before { content: '◆'; font-size: .5rem; }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: 2.2rem; line-height: 1.25; color: var(--creme); margin-bottom: 8px; }
+.hero h1 em { color: var(--ouro); font-style: italic; }
+.hero-sub { color: var(--texto-muted); font-size: .95rem; margin-bottom: 22px; max-width: 580px; line-height: 1.65; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: 10px; }
+.meta-chip { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); border-radius: 6px; padding: 6px 14px; font-size: .8rem; }
+.meta-chip strong { color: var(--ouro); display: block; font-size: .7rem; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 2px; }
+
+.hero-financeiro {
+  background: rgba(200,148,10,.06);
+  border: 1px solid rgba(200,148,10,.25);
+  border-radius: 12px;
+  padding: 24px 28px;
+  min-width: 280px;
+  text-align: center;
+}
+.hf-label { font-size: .72rem; text-transform: uppercase; letter-spacing: .1em; color: var(--texto-muted); margin-bottom: 6px; }
+.hf-total { font-family: 'Playfair Display', serif; font-size: 1.9rem; color: var(--ouro); font-weight: 700; line-height: 1.1; }
+.hf-sub { font-size: .75rem; color: var(--texto-muted); margin: 4px 0 10px; }
+.hf-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; }
+.hf-item { background: rgba(255,255,255,.04); border-radius: 6px; padding: 8px 10px; }
+.hf-item .v { font-size: .9rem; font-weight: 600; color: var(--texto); }
+.hf-item .l { font-size: .65rem; text-transform: uppercase; letter-spacing: .06em; color: var(--texto-muted); margin-top: 2px; }
+.hf-item.ouro .v { color: var(--ouro-claro); }
+.hf-item.azul .v { color: #70b8e0; }
+.hf-desembolsos { margin-top: 12px; border-top: 1px solid rgba(255,255,255,.08); padding-top: 12px; }
+.desembolso-row { display: flex; justify-content: space-between; align-items: center; font-size: .78rem; padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,.05); }
+.desembolso-row:last-child { border-bottom: none; }
+.desembolso-row .num { color: var(--texto-muted); }
+.desembolso-row .val { color: var(--ouro); font-weight: 600; }
+.desembolso-row .cond { color: var(--texto-muted); font-size: .68rem; text-align: right; max-width: 120px; }
+
+/* TABS */
+.tabs-wrap { background: var(--preto); border-bottom: 1px solid var(--card-border); position: sticky; top: 76px; z-index: 90; }
+.tabs { max-width: 1300px; margin: 0 auto; display: flex; padding: 0 32px; }
+.tab { padding: 14px 22px; font-size: .85rem; font-weight: 600; letter-spacing: .04em; color: var(--texto-muted); cursor: pointer; border-bottom: 3px solid transparent; transition: all .2s; white-space: nowrap; text-transform: uppercase; }
+.tab:hover { color: var(--texto); }
+.tab.active { color: var(--ouro); border-bottom-color: var(--ouro); }
+
+/* CONTENT */
+.content { max-width: 1300px; margin: 0 auto; padding: 36px 32px 60px; }
+.panel { display: none; }
+.panel.active { display: block; }
+
+/* CARDS */
+.cards-row { display: grid; gap: 20px; }
+.cards-3 { grid-template-columns: repeat(3, 1fr); }
+.cards-2 { grid-template-columns: repeat(2, 1fr); }
+.cards-4 { grid-template-columns: repeat(4, 1fr); }
+
+.card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 24px; }
+.card-title { font-size: .72rem; text-transform: uppercase; letter-spacing: .1em; color: var(--texto-muted); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.card-title::before { content: ''; display: inline-block; width: 3px; height: 14px; background: var(--ouro); border-radius: 2px; }
+
+.section-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--creme); margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid var(--card-border); }
+.section-title em { color: var(--ouro); font-style: italic; }
+.mt20 { margin-top: 20px; }
+.mt32 { margin-top: 32px; }
+
+/* RUBRICAS */
+.rubrica-item { background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.07); border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; }
+.rubrica-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+.rubrica-nome { font-size: .88rem; }
+.rubrica-valor { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--ouro); font-weight: 600; }
+.rubrica-bar { height: 5px; background: rgba(255,255,255,.07); border-radius: 3px; overflow: hidden; }
+.rubrica-fill { height: 100%; border-radius: 3px; background: linear-gradient(90deg, var(--ouro), var(--ouro-claro)); }
+
+/* CRONOGRAMA */
+.crono-eixo {
+  margin-bottom: 24px;
+}
+.eixo-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+.eixo-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(200,148,10,.15);
+  border: 1px solid rgba(200,148,10,.35);
+  color: var(--ouro);
+  font-size: .75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.eixo-title { font-size: .95rem; color: var(--creme); font-weight: 600; }
+.eixo-badge { font-size: .7rem; padding: 2px 8px; border-radius: 10px; background: rgba(200,148,10,.1); color: var(--ouro-claro); border: 1px solid rgba(200,148,10,.25); }
+
+.ativs-list { display: flex; flex-direction: column; gap: 8px; padding-left: 38px; }
+.ativ-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 14px;
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 6px;
+  position: relative;
+}
+.ativ-row::before {
+  content: '';
+  position: absolute;
+  left: -22px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 1px;
+  background: rgba(200,148,10,.3);
+}
+.ativ-info { flex: 1; }
+.ativ-nome { font-size: .83rem; color: var(--texto); line-height: 1.35; }
+.ativ-resp { font-size: .7rem; color: var(--texto-muted); margin-top: 3px; }
+.ativ-periodo { font-size: .7rem; color: var(--texto-muted); }
+.ativ-val { font-size: .83rem; color: var(--ouro); font-weight: 600; white-space: nowrap; }
+
+/* EQUIPE */
+.equipe-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.equipe-card {
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.equipe-eixo { font-size: .65rem; text-transform: uppercase; letter-spacing: .08em; color: var(--ouro); margin-bottom: 6px; }
+.equipe-nome { font-size: .88rem; color: var(--creme); font-weight: 600; }
+.equipe-func { font-size: .75rem; color: var(--texto-muted); margin-top: 3px; line-height: 1.4; }
+
+/* SOBRE */
+.sobre-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; }
+.sobre-text { font-size: .9rem; line-height: 1.75; color: var(--texto); }
+.sobre-text p { margin-bottom: 14px; }
+.sobre-text strong { color: var(--ouro); }
+.sobre-text h3 { font-family: 'Playfair Display', serif; color: var(--creme); font-size: 1.1rem; margin: 20px 0 10px; }
+
+.relatorio-list { display: flex; flex-direction: column; gap: 8px; }
+.rel-item {
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 6px;
+  padding: 10px 14px;
+}
+.rel-nome { font-size: .8rem; color: var(--creme); font-weight: 600; }
+.rel-periodo { font-size: .72rem; color: var(--texto-muted); margin-top: 2px; }
+.rel-prazo { font-size: .72rem; color: var(--ouro); margin-top: 2px; }
+
+.footer { background: var(--preto); border-top: 2px solid var(--ouro); padding: 20px 32px; text-align: center; font-size: .75rem; color: var(--texto-muted); letter-spacing: .04em; }
+.footer strong { color: var(--ouro); }
+
+@media (max-width: 900px) {
+  .cards-3, .cards-4 { grid-template-columns: 1fr 1fr; }
+  .cards-2 { grid-template-columns: 1fr; }
+  .hero-inner { grid-template-columns: 1fr; }
+  .sobre-grid { grid-template-columns: 1fr; }
+  .equipe-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 1.7rem; }
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="46" fill="#1A1612" stroke="#C8940A" stroke-width="3"/>
+      <text x="50" y="40" text-anchor="middle" font-family="serif" font-size="16" fill="#C8940A" font-weight="bold">TATO'A</text>
+      <path d="M20 55 Q35 42 50 50 Q65 58 80 45" stroke="#2D5A1B" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <path d="M22 63 Q37 50 52 58 Q67 66 78 55" stroke="#2D5A1B" stroke-width="1.5" fill="none" stroke-linecap="round" opacity=".6"/>
+      <circle cx="50" cy="50" r="4" fill="#C8940A" opacity=".6"/>
+    </svg>
+    <div class="logo-text">
+      <strong>Associação Indígena Tato'a</strong>
+      <span>Povo Parakanã · TI Apyterewa</span>
+    </div>
+    <div class="header-sep"></div>
+    <span class="project-badge">TNC · BR FY25 091</span>
+    <a href="tatoa_final.html" class="back-btn">← Painel Geral</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag">◆ The Nature Conservancy · Termo Aditivo · Assinado 01/04/2026</div>
+      <h1>Gestão Territorial e Autonomia<br>da <em>TI Apyterewa</em></h1>
+      <p class="hero-sub">Parceria estratégica entre a TNC e a Associação Tato'a para consolidar a proteção territorial, as cadeias produtivas da sociobiodiversidade e o fortalecimento institucional do Povo Parakanã no contexto pós-desintrusão.</p>
+      <div class="hero-meta">
+        <div class="meta-chip"><strong>Acordo</strong>BR FY25 091-0001</div>
+        <div class="meta-chip"><strong>Período</strong>Jul/2024 – Jun/2026 (24 meses)</div>
+        <div class="meta-chip"><strong>Valor Total</strong>R$ 1.017.458,79</div>
+        <div class="meta-chip"><strong>Aditivado</strong>+ R$ 389.616,79 (1º Aditivo)</div>
+        <div class="meta-chip"><strong>Financiador</strong>The Nature Conservancy – Brasil</div>
+      </div>
+    </div>
+    <div class="hero-financeiro">
+      <div class="hf-label">Valor total do acordo</div>
+      <div class="hf-total">R$ 1.017.458</div>
+      <div class="hf-sub">Incluindo 1º Termo Aditivo (R$ 389.616)</div>
+      <div class="hf-grid">
+        <div class="hf-item azul">
+          <div class="v">BR FY25 091</div>
+          <div class="l">Nº do acordo</div>
+        </div>
+        <div class="hf-item">
+          <div class="v">24 meses</div>
+          <div class="l">Duração</div>
+        </div>
+        <div class="hf-item">
+          <div class="v">Jul/2024</div>
+          <div class="l">Início atividades</div>
+        </div>
+        <div class="hf-item">
+          <div class="v">Jun/2026</div>
+          <div class="l">Término atividades</div>
+        </div>
+      </div>
+      <div class="hf-desembolsos">
+        <div style="font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--texto-muted);text-align:left;margin-bottom:8px;">Cronograma de Desembolsos</div>
+        <div class="desembolso-row">
+          <span class="num">1ª Parcela</span>
+          <span class="val">R$ 313.921</span>
+          <span class="cond">Assinatura da carta</span>
+        </div>
+        <div class="desembolso-row">
+          <span class="num">2ª Parcela</span>
+          <span class="val">R$ 313.921</span>
+          <span class="cond">Aprovação 2º Rel. + 1º Fin.</span>
+        </div>
+        <div class="desembolso-row">
+          <span class="num">3ª Parcela</span>
+          <span class="val">R$ 389.617</span>
+          <span class="cond">Assinatura 1º Aditivo</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TABS -->
+<div class="tabs-wrap">
+  <div class="tabs">
+    <div class="tab active" onclick="showTab('financeiro',this)">Financeiro</div>
+    <div class="tab" onclick="showTab('cronograma',this)">Plano de Trabalho</div>
+    <div class="tab" onclick="showTab('equipe',this)">Equipe</div>
+    <div class="tab" onclick="showTab('sobre',this)">Sobre o Projeto</div>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<main class="content">
+
+  <!-- ── FINANCEIRO ── -->
+  <div class="panel active" id="financeiro">
+    <h2 class="section-title">Estrutura <em>Orçamentária</em></h2>
+
+    <!-- Rubricas originais -->
+    <div class="cards-row cards-2">
+      <div class="card">
+        <div class="card-title">Orçamento por Rubrica – Acordo Original</div>
+        <div class="rubrica-item">
+          <div class="rubrica-header"><span class="rubrica-nome">Contratos</span><span class="rubrica-valor">R$ 295.900</span></div>
+          <div class="rubrica-bar"><div class="rubrica-fill" style="width:100%"></div></div>
+          <div style="font-size:.7rem;color:var(--texto-muted);margin-top:4px;">Assessorias técnicas, consultorias, paioleiros, agentes</div>
+        </div>
+        <div class="rubrica-item">
+          <div class="rubrica-header"><span class="rubrica-nome">Viagens</span><span class="rubrica-valor">R$ 151.800</span></div>
+          <div class="rubrica-bar"><div class="rubrica-fill" style="width:51.3%"></div></div>
+          <div style="font-size:.7rem;color:var(--texto-muted);margin-top:4px;">Logística, combustível, alimentação, hospedagem</div>
+        </div>
+        <div class="rubrica-item">
+          <div class="rubrica-header"><span class="rubrica-nome">Outros</span><span class="rubrica-valor">R$ 72.000</span></div>
+          <div class="rubrica-bar"><div class="rubrica-fill" style="width:24.3%;background:linear-gradient(90deg,var(--verde),var(--verde-claro))"></div></div>
+        </div>
+        <div class="rubrica-item">
+          <div class="rubrica-header"><span class="rubrica-nome">Equipamentos</span><span class="rubrica-valor">R$ 45.142</span></div>
+          <div class="rubrica-bar"><div class="rubrica-fill" style="width:15.3%;background:linear-gradient(90deg,#8B6914,#a07d1a)"></div></div>
+        </div>
+        <div class="rubrica-item">
+          <div class="rubrica-header"><span class="rubrica-nome">Suprimentos</span><span class="rubrica-valor">R$ 38.000</span></div>
+          <div class="rubrica-bar"><div class="rubrica-fill" style="width:12.8%;background:linear-gradient(90deg,var(--terra),#8b4a2a)"></div></div>
+        </div>
+        <div class="rubrica-item">
+          <div class="rubrica-header"><span class="rubrica-nome">Obras</span><span class="rubrica-valor">R$ 10.000</span></div>
+          <div class="rubrica-bar"><div class="rubrica-fill" style="width:3.4%;background:linear-gradient(90deg,#6B3A1A,#8B4A2A)"></div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Orçamento 1º Aditivo (Fev–Jun/2026)</div>
+        <div class="rubrica-item">
+          <div class="rubrica-header"><span class="rubrica-nome">Contratos</span><span class="rubrica-valor">R$ 216.067</span></div>
+          <div class="rubrica-bar"><div class="rubrica-fill" style="width:100%"></div></div>
+          <div style="font-size:.7rem;color:var(--texto-muted);margin-top:4px;">Assessorias jurídica, coordenação exec., artesanato, cacau</div>
+        </div>
+        <div class="rubrica-item">
+          <div class="rubrica-header"><span class="rubrica-nome">Obras</span><span class="rubrica-valor">R$ 112.000</span></div>
+          <div class="rubrica-bar"><div class="rubrica-fill" style="width:51.8%;background:linear-gradient(90deg,var(--terra),#8b4a2a)"></div></div>
+          <div style="font-size:.7rem;color:var(--texto-muted);margin-top:4px;">Reforma galpão cacau + cantinas + construções</div>
+        </div>
+        <div class="rubrica-item">
+          <div class="rubrica-header"><span class="rubrica-nome">Viagens</span><span class="rubrica-valor">R$ 72.000</span></div>
+          <div class="rubrica-bar"><div class="rubrica-fill" style="width:33.3%"></div></div>
+          <div style="font-size:.7rem;color:var(--texto-muted);margin-top:4px;">Brasília, campo TI, feiras, articulações</div>
+        </div>
+        <div class="rubrica-item">
+          <div class="rubrica-header"><span class="rubrica-nome">Outros</span><span class="rubrica-valor">R$ 14.000</span></div>
+          <div class="rubrica-bar"><div class="rubrica-fill" style="width:6.5%;background:linear-gradient(90deg,var(--verde),var(--verde-claro))"></div></div>
+        </div>
+        <div class="rubrica-item">
+          <div class="rubrica-header"><span class="rubrica-nome">Suprimentos</span><span class="rubrica-valor">R$ 5.000</span></div>
+          <div class="rubrica-bar"><div class="rubrica-fill" style="width:2.3%;background:linear-gradient(90deg,#8B6914,#a07d1a)"></div></div>
+        </div>
+        <div style="padding:12px 14px;background:rgba(200,148,10,.06);border-radius:8px;border:1px solid rgba(200,148,10,.15);margin-top:10px;">
+          <div style="display:flex;justify-content:space-between;">
+            <span style="font-size:.83rem;">Custo Administrativo (10%)</span>
+            <span style="color:var(--ouro);font-weight:600;">R$ 41.550</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;margin-top:6px;padding-top:6px;border-top:1px solid rgba(200,148,10,.15);">
+            <span style="font-size:.88rem;font-weight:600;">Total Aditivo</span>
+            <span style="color:var(--ouro-claro);font-weight:700;font-family:'Playfair Display',serif;">R$ 389.617</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Total consolidado -->
+    <div class="card mt20">
+      <div class="card-title">Orçamento Consolidado – Acordo Completo</div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;">
+        <div style="text-align:center;padding:16px;background:rgba(255,255,255,.03);border-radius:8px;">
+          <div style="font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;color:var(--texto-muted);margin-bottom:6px;">Contratos</div>
+          <div style="font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--ouro);">R$ 511.967</div>
+          <div style="font-size:.7rem;color:var(--texto-muted);margin-top:3px;">50,3% do total</div>
+        </div>
+        <div style="text-align:center;padding:16px;background:rgba(255,255,255,.03);border-radius:8px;">
+          <div style="font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;color:var(--texto-muted);margin-bottom:6px;">Viagens</div>
+          <div style="font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--ouro);">R$ 162.800</div>
+          <div style="font-size:.7rem;color:var(--texto-muted);margin-top:3px;">16,0% do total</div>
+        </div>
+        <div style="text-align:center;padding:16px;background:rgba(255,255,255,.03);border-radius:8px;">
+          <div style="font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;color:var(--texto-muted);margin-bottom:6px;">Obras</div>
+          <div style="font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--ouro);">R$ 112.000</div>
+          <div style="font-size:.7rem;color:var(--texto-muted);margin-top:3px;">11,0% do total</div>
+        </div>
+        <div style="text-align:center;padding:16px;background:rgba(255,255,255,.03);border-radius:8px;">
+          <div style="font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;color:var(--texto-muted);margin-bottom:6px;">Custo Adm. 10%</div>
+          <div style="font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--ouro);">R$ 56.550</div>
+          <div style="font-size:.7rem;color:var(--texto-muted);margin-top:3px;">5,6% do total</div>
+        </div>
+      </div>
+      <div style="margin-top:16px;padding:14px 18px;background:rgba(200,148,10,.08);border-radius:8px;border:1px solid rgba(200,148,10,.2);display:flex;justify-content:space-between;align-items:center;">
+        <div>
+          <div style="font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--texto-muted);">Nota</div>
+          <div style="font-size:.82rem;color:var(--texto);margin-top:3px;">Dados financeiros de execução serão disponibilizados quando os relatórios financeiros forem prestados à TNC (prazo: Jun–Jul/2026)</div>
+        </div>
+        <div style="text-align:right;min-width:160px;">
+          <div style="font-size:.72rem;color:var(--texto-muted);">Total acordo</div>
+          <div style="font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--ouro-claro);font-weight:700;">R$ 1.017.459</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Relatórios financeiros -->
+    <div class="card mt20">
+      <div class="card-title">Calendário de Relatórios Financeiros</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+        <div style="padding:14px;background:rgba(255,255,255,.03);border-radius:8px;border:1px solid rgba(255,255,255,.07);">
+          <div style="font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ouro);margin-bottom:6px;">Relatório Financeiro 1</div>
+          <div style="font-size:.8rem;color:var(--texto);">Jul/2024 – Mai/2025</div>
+          <div style="font-size:.75rem;color:var(--texto-muted);margin-top:4px;">Prazo: 30/06/2025</div>
+          <div style="margin-top:8px;display:inline-flex;align-items:center;gap:5px;font-size:.7rem;background:rgba(200,148,10,.1);color:var(--ouro);padding:3px 8px;border-radius:10px;">Formato: Excel</div>
+        </div>
+        <div style="padding:14px;background:rgba(255,255,255,.03);border-radius:8px;border:1px solid rgba(255,255,255,.07);">
+          <div style="font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ouro);margin-bottom:6px;">Relatório Financeiro 2</div>
+          <div style="font-size:.8rem;color:var(--texto);">Jun/2025 – Dez/2025</div>
+          <div style="font-size:.75rem;color:var(--texto-muted);margin-top:4px;">Prazo: 20/01/2026</div>
+          <div style="margin-top:8px;display:inline-flex;align-items:center;gap:5px;font-size:.7rem;background:rgba(200,148,10,.1);color:var(--ouro);padding:3px 8px;border-radius:10px;">Formato: Excel</div>
+        </div>
+        <div style="padding:14px;background:rgba(255,255,255,.03);border-radius:8px;border:1px solid rgba(255,255,255,.07);">
+          <div style="font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ouro);margin-bottom:6px;">Relatório Financeiro 3</div>
+          <div style="font-size:.8rem;color:var(--texto);">Dez/2025 – Jun/2026</div>
+          <div style="font-size:.75rem;color:var(--texto-muted);margin-top:4px;">Prazo: 30/07/2026</div>
+          <div style="margin-top:8px;display:inline-flex;align-items:center;gap:5px;font-size:.7rem;background:rgba(200,148,10,.1);color:var(--ouro);padding:3px 8px;border-radius:10px;">Formato: Excel</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── PLANO DE TRABALHO ── -->
+  <div class="panel" id="cronograma">
+    <h2 class="section-title">Plano de <em>Trabalho</em> – 1º Aditivo (Fev–Jun/2026)</h2>
+
+    <!-- Eixo 1 -->
+    <div class="crono-eixo">
+      <div class="eixo-header">
+        <div class="eixo-num">1</div>
+        <span class="eixo-title">Fortalecimento Institucional</span>
+        <span class="eixo-badge">R$ 149.317</span>
+      </div>
+      <div class="ativs-list">
+        <div class="ativ-row">
+          <div class="ativ-info">
+            <div class="ativ-nome">1.1.1 Assistência jurídica contínua</div>
+            <div class="ativ-resp">Aluísio Azanha · Tato'a · 6 meses</div>
+          </div>
+          <div class="ativ-val">R$ 60.000</div>
+        </div>
+        <div class="ativ-row">
+          <div class="ativ-info">
+            <div class="ativ-nome">1.1.2 Coordenação executiva de projetos (30%)</div>
+            <div class="ativ-resp">Paulo Bull · Tato'a · 6 meses</div>
+          </div>
+          <div class="ativ-val">R$ 42.000</div>
+        </div>
+        <div class="ativ-row">
+          <div class="ativ-info">
+            <div class="ativ-nome">1.1.3 Assistência técnica de projetos (50%)</div>
+            <div class="ativ-resp">Brunna Baroni · Tato'a · 6 meses</div>
+          </div>
+          <div class="ativ-val">R$ 28.000</div>
+        </div>
+        <div class="ativ-row">
+          <div class="ativ-info">
+            <div class="ativ-nome">1.1.4 Assistência técnica artesanato</div>
+            <div class="ativ-resp">A definir · Tato'a · 6 meses</div>
+          </div>
+          <div class="ativ-val">R$ 18.000</div>
+        </div>
+        <div class="ativ-row">
+          <div class="ativ-info">
+            <div class="ativ-nome">1.2.1 Taxa administrativa – aluguel da sede</div>
+            <div class="ativ-resp">Tato'a · 6 meses</div>
+          </div>
+          <div class="ativ-val">R$ 15.000</div>
+        </div>
+        <div class="ativ-row">
+          <div class="ativ-info">
+            <div class="ativ-nome">1.3.2 Prestação de contas à diretoria e conselho</div>
+            <div class="ativ-resp">Tato'a · Mar/2026</div>
+          </div>
+          <div class="ativ-val">R$ 2.500</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Eixo 2 – Castanha -->
+    <div class="crono-eixo">
+      <div class="eixo-header">
+        <div class="eixo-num" style="background:rgba(45,90,27,.2);border-color:rgba(45,90,27,.5);color:#7fcf5a">2</div>
+        <span class="eixo-title">Cadeias da Sociobioeconomia</span>
+        <span class="eixo-badge" style="background:rgba(45,90,27,.1);color:#7fcf5a;border-color:rgba(45,90,27,.25)">Castanha · Artesanato · Cacau</span>
+      </div>
+      <div class="ativs-list">
+        <div class="ativ-row">
+          <div class="ativ-info">
+            <div class="ativ-nome">2.2.1 Sistema de gestão do artesanato</div>
+            <div class="ativ-resp">Tato'a · 6 meses</div>
+          </div>
+          <div class="ativ-val">R$ 1.000</div>
+        </div>
+        <div class="ativ-row">
+          <div class="ativ-info">
+            <div class="ativ-nome">2.2.2 Diárias para eventos / feiras artesanato</div>
+            <div class="ativ-resp">Tato'a · conforme eventos</div>
+          </div>
+          <div class="ativ-val">R$ 2.500</div>
+        </div>
+        <div class="ativ-row">
+          <div class="ativ-info">
+            <div class="ativ-nome">2.3.1 Assessoria especializada cacau (50%)</div>
+            <div class="ativ-resp">Consultoria pontual · 2 meses</div>
+          </div>
+          <div class="ativ-val">R$ 21.000</div>
+        </div>
+        <div class="ativ-row">
+          <div class="ativ-info">
+            <div class="ativ-nome">2.3.2 Cacaueiros – pós-colheita safra 2026</div>
+            <div class="ativ-resp">Rodrigo e Nahoa Parakanã · 6 meses</div>
+          </div>
+          <div class="ativ-val">R$ 11.000</div>
+        </div>
+        <div class="ativ-row">
+          <div class="ativ-info">
+            <div class="ativ-nome">2.3.3–5 Logística cacau (diárias, frete, combustível, alimentação)</div>
+            <div class="ativ-resp">Tato'a · safra 2026</div>
+          </div>
+          <div class="ativ-val">R$ 28.000</div>
+        </div>
+        <div class="ativ-row">
+          <div class="ativ-info">
+            <div class="ativ-nome">2.4.1–2 Obras: galpão cacau + cantinas</div>
+            <div class="ativ-resp">Construtora + projetista · Tato'a</div>
+          </div>
+          <div class="ativ-val">R$ 41.000</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Eixo 3 -->
+    <div class="crono-eixo">
+      <div class="eixo-header">
+        <div class="eixo-num" style="background:rgba(107,58,26,.25);border-color:rgba(107,58,26,.5);color:#c87a4a">3</div>
+        <span class="eixo-title">Proteção e Segurança Territorial</span>
+        <span class="eixo-badge" style="background:rgba(107,58,26,.1);color:#c87a4a;border-color:rgba(107,58,26,.25)">Plano Segurança · Starlink</span>
+      </div>
+      <div class="ativs-list">
+        <div class="ativ-row">
+          <div class="ativ-info">
+            <div class="ativ-nome">3.2.1 Consultor – Plano de Segurança do Paredão–Apyterewa</div>
+            <div class="ativ-resp">Tato'a · Fev–Abr/2026</div>
+          </div>
+          <div class="ativ-val">R$ 15.000</div>
+        </div>
+        <div class="ativ-row">
+          <div class="ativ-info">
+            <div class="ativ-nome">3.2.3 Seguro viagem para assessores e consultores na TI</div>
+            <div class="ativ-resp">Tato'a · 6 meses</div>
+          </div>
+          <div class="ativ-val">R$ 5.000</div>
+        </div>
+        <div class="ativ-row">
+          <div class="ativ-info">
+            <div class="ativ-nome">3.3.1 Mensalidades Starlink – comunicação aldeias</div>
+            <div class="ativ-resp">Tato'a · aldeias reocupação</div>
+          </div>
+          <div class="ativ-val">R$ 22.800</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Eixo 4 -->
+    <div class="crono-eixo">
+      <div class="eixo-header">
+        <div class="eixo-num" style="background:rgba(26,58,90,.25);border-color:rgba(26,58,90,.5);color:#70b8e0">4</div>
+        <span class="eixo-title">Bem-Estar e Articulação Política</span>
+        <span class="eixo-badge" style="background:rgba(26,58,90,.1);color:#70b8e0;border-color:rgba(26,58,90,.25)">Brasília · Parceiros · Koxoas</span>
+      </div>
+      <div class="ativs-list">
+        <div class="ativ-row">
+          <div class="ativ-info">
+            <div class="ativ-nome">4.1.1–3 Viagem a Brasília – logística comitiva indígena</div>
+            <div class="ativ-resp">Tato'a · Fev/2026</div>
+          </div>
+          <div class="ativ-val">R$ 54.000</div>
+        </div>
+        <div class="ativ-row">
+          <div class="ativ-info">
+            <div class="ativ-nome">4.3.1 Articulação com Rede Terra do Meio</div>
+            <div class="ativ-resp">Tato'a · 6 meses</div>
+          </div>
+          <div class="ativ-val">R$ 2.000</div>
+        </div>
+        <div class="ativ-row">
+          <div class="ativ-info">
+            <div class="ativ-nome">4.3.3 Articulação com parceiros comerciais</div>
+            <div class="ativ-resp">Tato'a e TNC · 6 meses</div>
+          </div>
+          <div class="ativ-val">R$ 2.000</div>
+        </div>
+        <div class="ativ-row">
+          <div class="ativ-info">
+            <div class="ativ-nome">Reuniões de acompanhamento TNC–Tato'a</div>
+            <div class="ativ-resp">30/04 · 29/05 · 19/06 de 2026</div>
+          </div>
+          <div class="ativ-val">–</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── EQUIPE ── -->
+  <div class="panel" id="equipe">
+    <h2 class="section-title">Equipe do <em>Acordo</em></h2>
+
+    <div class="cards-row cards-2 mb20">
+      <div class="card">
+        <div class="card-title">Equipe Tato'a – Apoio Técnico (Eixo 1)</div>
+        <div class="equipe-grid">
+          <div class="equipe-card">
+            <div class="equipe-eixo">1.1.1 · Jurídico</div>
+            <div class="equipe-nome">Aluísio Azanha</div>
+            <div class="equipe-func">Assistência jurídica contínua · 6 meses · R$ 60.000</div>
+          </div>
+          <div class="equipe-card">
+            <div class="equipe-eixo">1.1.2 · Coordenação Exec.</div>
+            <div class="equipe-nome">Paulo Bull</div>
+            <div class="equipe-func">Coordenação executiva de projetos e PBA-CI · 30% · 6 meses · R$ 42.000</div>
+          </div>
+          <div class="equipe-card">
+            <div class="equipe-eixo">1.1.3 · Projetos</div>
+            <div class="equipe-nome">Brunna Baroni</div>
+            <div class="equipe-func">Assistência técnica em projetos · 50% · 6 meses · R$ 28.000</div>
+          </div>
+          <div class="equipe-card">
+            <div class="equipe-eixo">1.1.4 · Artesanato</div>
+            <div class="equipe-nome">A definir</div>
+            <div class="equipe-func">Assistência técnica artesanato · 6 meses · R$ 18.000</div>
+          </div>
+          <div class="equipe-card">
+            <div class="equipe-eixo">1.1.5 · Adm. Financeiro</div>
+            <div class="equipe-nome">Simone</div>
+            <div class="equipe-func">Assistente administrativo e financeiro · 35% · 6 meses · R$ 1.067</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Equipe de Campo – Cadeias Produtivas</div>
+        <div class="equipe-grid">
+          <div class="equipe-card" style="border-left:3px solid var(--verde-claro)">
+            <div class="equipe-eixo" style="color:#7fcf5a">2.1.2 · Castanha 2025/26</div>
+            <div class="equipe-nome">Iori Parakanã</div>
+            <div class="equipe-func">Paioleiro · Safra castanha · Aldeia Apyterewa</div>
+          </div>
+          <div class="equipe-card" style="border-left:3px solid var(--verde-claro)">
+            <div class="equipe-eixo" style="color:#7fcf5a">2.1.2 · Castanha 2025/26</div>
+            <div class="equipe-nome">Nahoa Parakanã</div>
+            <div class="equipe-func">Paioleiro · Safra castanha · Aldeia Raio de Sol</div>
+          </div>
+          <div class="equipe-card" style="border-left:3px solid #c87a4a">
+            <div class="equipe-eixo" style="color:#c87a4a">2.3.2 · Cacau 2026</div>
+            <div class="equipe-nome">Rodrigo Parakanã</div>
+            <div class="equipe-func">Cacaueiro / pós-colheita · Safra 2026</div>
+          </div>
+          <div class="equipe-card" style="border-left:3px solid #c87a4a">
+            <div class="equipe-eixo" style="color:#c87a4a">2.3.2 · Cacau 2026</div>
+            <div class="equipe-nome">Nahoa Parakanã</div>
+            <div class="equipe-func">Cacaueiro / pós-colheita · Safra 2026</div>
+          </div>
+        </div>
+
+        <!-- Contrapartes TNC -->
+        <div style="margin-top:16px;">
+          <div class="card-title" style="margin-bottom:8px;">Contrapartes TNC</div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="display:flex;gap:10px;align-items:center;padding:8px 12px;background:rgba(255,255,255,.03);border-radius:6px;">
+              <div style="width:34px;height:34px;background:rgba(26,58,90,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.65rem;color:#70b8e0;font-weight:700;flex-shrink:0;">TNC</div>
+              <div>
+                <div style="font-size:.85rem;color:var(--creme);">Luciana Lima</div>
+                <div style="font-size:.72rem;color:var(--texto-muted);">Community-Based Conservation Supervisor · Brazil</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:10px;align-items:center;padding:8px 12px;background:rgba(255,255,255,.03);border-radius:6px;">
+              <div style="width:34px;height:34px;background:rgba(26,58,90,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.65rem;color:#70b8e0;font-weight:700;flex-shrink:0;">TNC</div>
+              <div>
+                <div style="font-size:.85rem;color:var(--creme);">Fernanda Karczewski</div>
+                <div style="font-size:.72rem;color:var(--texto-muted);">Director of Finance and Operations · Brazil</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:10px;align-items:center;padding:8px 12px;background:rgba(255,255,255,.03);border-radius:6px;">
+              <div style="width:34px;height:34px;background:rgba(26,58,90,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.65rem;color:#70b8e0;font-weight:700;flex-shrink:0;">TNC</div>
+              <div>
+                <div style="font-size:.85rem;color:var(--creme);">Márcio Sztutman</div>
+                <div style="font-size:.72rem;color:var(--texto-muted);">Diretor de Conservação do Programa Brasil</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SOBRE ── -->
+  <div class="panel" id="sobre">
+    <h2 class="section-title">Sobre o <em>Acordo</em></h2>
+
+    <div class="sobre-grid">
+      <div>
+        <div class="sobre-text">
+          <p>A parceria entre a <strong>The Nature Conservancy (TNC) Brasil</strong> e a <strong>Associação Indígena Tato'a (AIT)</strong> tem origem no Convênio BR FY21 030 e se consolida no Acordo BR FY25 091, assinado em 2025. O 1º Termo Aditivo foi assinado em <strong>01 de abril de 2026</strong>, ampliando o escopo e o valor para R$ 1.017.458,79.</p>
+          <p>A TI Apyterewa liderou todos os índices de desmatamento das terras indígenas da Amazônia desde 2019. Com o avanço da <strong>Operação de Desintrusão TIATB</strong> (desde 2023), a Tato'a e o Povo Parakanã têm intensificado esforços para garantir a reocupação ordenada e sustentável do território — o número de aldeias saltou de 8 para 22 em dois anos.</p>
+          <h3>Objetivo Geral</h3>
+          <p>Consolidar e ampliar as ações de proteção e reocupação territorial, com ênfase na implementação do <strong>PGTA Matantapa Xapo</strong>, no fortalecimento das cadeias produtivas (castanha, cacau, artesanato) e na autonomia institucional da Tato'a.</p>
+          <h3>4 Eixos Estratégicos</h3>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px;">
+            <div style="padding:12px;background:rgba(200,148,10,.06);border:1px solid rgba(200,148,10,.15);border-radius:8px;">
+              <div style="font-size:.72rem;color:var(--ouro);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px;">Eixo 1</div>
+              <div style="font-size:.83rem;">Fortalecimento Institucional</div>
+            </div>
+            <div style="padding:12px;background:rgba(45,90,27,.08);border:1px solid rgba(45,90,27,.2);border-radius:8px;">
+              <div style="font-size:.72rem;color:#7fcf5a;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px;">Eixo 2</div>
+              <div style="font-size:.83rem;">Cadeias Produtivas Sociobiodiversidade</div>
+            </div>
+            <div style="padding:12px;background:rgba(107,58,26,.08);border:1px solid rgba(107,58,26,.2);border-radius:8px;">
+              <div style="font-size:.72rem;color:#c87a4a;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px;">Eixo 3</div>
+              <div style="font-size:.83rem;">Gestão e Proteção Territorial</div>
+            </div>
+            <div style="padding:12px;background:rgba(26,58,90,.1);border:1px solid rgba(26,58,90,.25);border-radius:8px;">
+              <div style="font-size:.72rem;color:#70b8e0;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px;">Eixo 4</div>
+              <div style="font-size:.83rem;">Bem-Estar e Articulação Política</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <!-- Relatórios técnicos -->
+        <div class="card" style="margin-bottom:16px;">
+          <div class="card-title">Relatórios Técnicos</div>
+          <div class="relatorio-list">
+            <div class="rel-item">
+              <div class="rel-nome">Rel. Técnico 1</div>
+              <div class="rel-periodo">Jul/2024 – Jan/2025</div>
+              <div class="rel-prazo">Entregue: 28/02/2025</div>
+            </div>
+            <div class="rel-item">
+              <div class="rel-nome">Rel. Técnico 2</div>
+              <div class="rel-periodo">Fev/2025 – Mai/2025</div>
+              <div class="rel-prazo">Prazo: 30/06/2025</div>
+            </div>
+            <div class="rel-item">
+              <div class="rel-nome">Rel. Técnico 3</div>
+              <div class="rel-periodo">Jun/2025 – Dez/2025</div>
+              <div class="rel-prazo">Prazo: 20/01/2026</div>
+            </div>
+            <div class="rel-item">
+              <div class="rel-nome">Rel. Técnico 4</div>
+              <div class="rel-periodo">Dez/2025 – Jun/2026</div>
+              <div class="rel-prazo">Prazo: 30/07/2026</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dados do acordo -->
+        <div class="card">
+          <div class="card-title">Dados do Acordo</div>
+          <div style="display:flex;flex-direction:column;gap:7px;font-size:.82rem;">
+            <div style="display:flex;justify-content:space-between;padding:7px 10px;background:rgba(255,255,255,.03);border-radius:5px;"><span>Número do acordo</span><span style="color:var(--ouro);">BR FY25 091-0001</span></div>
+            <div style="display:flex;justify-content:space-between;padding:7px 10px;background:rgba(255,255,255,.03);border-radius:5px;"><span>Projeto WD</span><span style="color:var(--texto-muted);">PRJ000955 BRA Amazon</span></div>
+            <div style="display:flex;justify-content:space-between;padding:7px 10px;background:rgba(255,255,255,.03);border-radius:5px;"><span>Project Task</span><span style="color:var(--texto-muted);">CM Parakanã Brazil</span></div>
+            <div style="display:flex;justify-content:space-between;padding:7px 10px;background:rgba(255,255,255,.03);border-radius:5px;"><span>Iconic Place</span><span style="color:var(--texto-muted);">BRA Amazon</span></div>
+            <div style="display:flex;justify-content:space-between;padding:7px 10px;background:rgba(255,255,255,.03);border-radius:5px;"><span>Fonte dos recursos</span><span style="color:var(--texto-muted);">Privados c/ restrições doador</span></div>
+            <div style="display:flex;justify-content:space-between;padding:7px 10px;background:rgba(255,255,255,.03);border-radius:5px;"><span>Identificação TNC</span><span style="color:var(--texto-muted);">CO029 (TNC Brasil)</span></div>
+            <div style="display:flex;justify-content:space-between;padding:7px 10px;background:rgba(255,255,255,.03);border-radius:5px;"><span>Início atividades</span><span style="color:var(--ouro);">01/07/2024</span></div>
+            <div style="display:flex;justify-content:space-between;padding:7px 10px;background:rgba(255,255,255,.03);border-radius:5px;"><span>Fim atividades</span><span style="color:var(--ouro);">30/06/2026</span></div>
+            <div style="display:flex;justify-content:space-between;padding:7px 10px;background:rgba(255,255,255,.03);border-radius:5px;"><span>Vigência da carta</span><span style="color:var(--ouro);">até 30/09/2026</span></div>
+            <div style="display:flex;justify-content:space-between;padding:7px 10px;background:rgba(255,255,255,.03);border-radius:5px;"><span>Assinatura Tato'a</span><span style="color:var(--texto-muted);">Wenatoa Parakanã (Presidente)</span></div>
+            <div style="display:flex;justify-content:space-between;padding:7px 10px;background:rgba(255,255,255,.03);border-radius:5px;"><span>Assinatura TNC</span><span style="color:var(--texto-muted);">Márcio Sztutman</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <strong>Associação Indígena Tato'a – AIT</strong> · Povo Parakanã · TI Apyterewa · São Félix do Xingu – PA &nbsp;|&nbsp;
+  Acordo <strong>TNC · BR FY25 091-0001</strong> · Dados extraídos do Plano de Trabalho (1º Aditivo) · Assinado 01/04/2026
+</footer>
+
+<script>
+function showTab(id, el) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  el.classList.add('active');
+}
+</script>
+</body>
+</html>

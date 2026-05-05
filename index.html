@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tato'a · Painel de Projetos</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--preto:#1A1612;--ouro:#C8940A;--verde:#2D5A1B;--bg:#141210;--texto:#e8dfc8;--muted:#9a8f7a;--border:#2a2318;}
+body{background:var(--bg);font-family:'Source Sans 3',sans-serif;min-height:100vh;display:flex;flex-direction:column;}
+header{background:var(--preto);border-bottom:2px solid var(--ouro);padding:14px 32px;}
+.h-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:14px;}
+.h-inner svg{width:44px;height:44px;flex-shrink:0;}
+.h-text strong{display:block;font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--ouro);}
+.h-text span{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;}
+.h-sep{flex:1;}
+.h-title{font-family:'Playfair Display',serif;font-size:1rem;color:var(--texto);}
+main{flex:1;max-width:1100px;margin:0 auto;padding:52px 32px;}
+.intro{margin-bottom:40px;}
+.intro h2{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--texto);margin-bottom:10px;}
+.intro h2 em{color:var(--ouro);font-style:italic;}
+.intro p{color:var(--muted);font-size:.95rem;line-height:1.6;}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+.proj-card{
+  background:#1e1a15;border:1px solid var(--border);border-radius:14px;
+  padding:28px 28px 24px;text-decoration:none;color:inherit;
+  transition:all .2s;display:flex;flex-direction:column;gap:8px;
+  border-top:4px solid var(--ouro);
+}
+.proj-card:hover{background:#252018;transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,.4);}
+.proj-card.azul{border-top-color:#1A3A6B;}
+.proj-card.verde{border-top-color:#2D5A1B;}
+.proj-card.ciano{border-top-color:#2a7a8a;}
+.proj-card.cinza{border-top-color:#555;opacity:.55;cursor:default;pointer-events:none;}
+.pc-tag{font-size:.65rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);font-weight:600;}
+.pc-nome{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--texto);}
+.pc-desc{font-size:.82rem;color:var(--muted);line-height:1.55;margin-top:4px;}
+.pc-meta{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;}
+.pc-chip{font-size:.7rem;padding:3px 10px;border-radius:10px;background:rgba(255,255,255,.06);color:var(--muted);}
+.pc-valor{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--ouro);margin-top:auto;padding-top:14px;border-top:1px solid rgba(255,255,255,.07);}
+.pc-valor.verde{color:#7fcf5a;}
+.pc-valor.ciano{color:#70b8e0;}
+footer{background:var(--preto);border-top:2px solid var(--ouro);padding:14px 32px;text-align:center;font-size:.7rem;color:var(--muted);}
+footer strong{color:var(--ouro);}
+@media(max-width:700px){.grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="h-inner">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="46" fill="#1A1612" stroke="#C8940A" stroke-width="3"/>
+      <text x="50" y="40" text-anchor="middle" font-family="serif" font-size="16" fill="#C8940A" font-weight="bold">TATO'A</text>
+      <path d="M20 55 Q35 42 50 50 Q65 58 80 45" stroke="#2D5A1B" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <path d="M22 63 Q37 50 52 58 Q67 66 78 55" stroke="#2D5A1B" stroke-width="1.5" fill="none" stroke-linecap="round" opacity=".6"/>
+      <circle cx="50" cy="50" r="4" fill="#C8940A" opacity=".6"/>
+    </svg>
+    <div class="h-text">
+      <strong>Associação Indígena Tato'a</strong>
+      <span>Povo Parakanã · TI Apyterewa · São Félix do Xingu – PA</span>
+    </div>
+    <div class="h-sep"></div>
+    <span class="h-title">Painel de Projetos</span>
+  </div>
+</header>
+
+<main>
+  <div class="intro">
+    <h2>Monitoramento de <em>Projetos</em></h2>
+    <p>Selecione um projeto para abrir o painel detalhado com dados financeiros, cronograma e atividades.</p>
+  </div>
+
+  <div class="grid">
+
+    <a class="proj-card" href="painel_pba_ci.html">
+      <span class="pc-tag">Belo Monte · CP4338 · Eletrobras</span>
+      <span class="pc-nome">PBA &amp; CI / Restaura Amazônia</span>
+      <p class="pc-desc">Plano Básico Ambiental e CI-Brasil Restaura Amazônia. Gestão territorial, restauração florestal (300 ha), cadeias produtivas e fortalecimento institucional.</p>
+      <div class="pc-meta">
+        <span class="pc-chip">Jul/2025 – Set/2027</span>
+        <span class="pc-chip">24 meses</span>
+        <span class="pc-chip">2 projetos</span>
+      </div>
+      <span class="pc-valor">R$ 1,59M (PBA) + R$ 8,95M (CI)</span>
+    </a>
+
+    <a class="proj-card verde" href="painel_mpi.html">
+      <span class="pc-tag">MPI · Mulheres Indígenas: Tecendo o Bem Viver / 2024</span>
+      <span class="pc-nome">Mulheres Parakanã – Koxoas</span>
+      <p class="pc-desc">Fortalecimento do protagonismo e independência financeira das mulheres Parakanã por meio da Kania Arte Parakanã e participação em redes nacionais.</p>
+      <div class="pc-meta">
+        <span class="pc-chip">Nov/2024 – Nov/2025</span>
+        <span class="pc-chip">12 meses</span>
+        <span class="pc-chip">250 artesãs</span>
+      </div>
+      <span class="pc-valor verde">R$ 100.000</span>
+    </a>
+
+    <a class="proj-card ciano" href="painel_tnc.html">
+      <span class="pc-tag">TNC · BR FY25 091-0001 · The Nature Conservancy</span>
+      <span class="pc-nome">Gestão Territorial Parakanã</span>
+      <p class="pc-desc">Proteção territorial pós-desintrusão, fortalecimento das cadeias produtivas (castanha, cacau, artesanato) e autonomia institucional da Tato'a. 1º Aditivo assinado Abr/2026.</p>
+      <div class="pc-meta">
+        <span class="pc-chip">Jul/2024 – Jun/2026</span>
+        <span class="pc-chip">24 meses</span>
+        <span class="pc-chip">4 eixos</span>
+      </div>
+      <span class="pc-valor ciano">R$ 1.017.459</span>
+    </a>
+
+    <a class="proj-card" href="painel_dabucury.html" style="border-top-color:#6B3A1A;">
+      <span class="pc-tag">CESE · Fundo Amazônia · Proj. 27907 · Dabucury / Urucum</span>
+      <span class="pc-nome">Ipoxika'o Ka'a — Retomada Parakanã</span>
+      <p class="pc-desc">Reocupação territorial pós-desintrusão, fortalecimento das cadeias produtivas (cacau, castanha), mapeamento produtivo, construção de estufa e gestão institucional.</p>
+      <div class="pc-meta">
+        <span class="pc-chip">Abr/2025 – Abr/2027</span>
+        <span class="pc-chip">24 meses</span>
+        <span class="pc-chip">40,1% executado</span>
+      </div>
+      <span class="pc-valor" style="color:#C8720A;">R$ 400.000</span>
+    </a>
+
+  </div>
+</main>
+
+<footer>
+  <strong>Associação Indígena Tato'a – AIT</strong> · Povo Parakanã ·
+  Terra Indígena Apyterewa · São Félix do Xingu – PA &nbsp;·&nbsp;
+  Painel integrado de monitoramento · Atualizado Mai/2026
+</footer>
+
+</body>
+</html>
