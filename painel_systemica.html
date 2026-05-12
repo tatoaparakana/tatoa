@@ -199,6 +199,58 @@ footer strong{color:var(--ouro-claro);}
 <!-- ══════ FINANCEIRO ══════ -->
 <div class="inner-section active" id="sys-financeiro">
 
+  <!-- ════════ DADOS AO VIVO (alimentado por Google Sheets) ════════ -->
+  <div class="card" id="sys-live-card" style="border-left:4px solid var(--sys-verde);">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+      <div class="card-title" style="margin-bottom:0;">Monitoramento Financeiro · Dados ao Vivo</div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span id="sys-live-status" style="font-size:10px;color:var(--texto-l);">carregando…</span>
+        <span id="sys-live-pulse" style="width:8px;height:8px;border-radius:50%;background:#bbb;display:inline-block;"></span>
+      </div>
+    </div>
+
+    <div class="grid4" id="sys-live-kpis">
+      <div class="stat"><div class="stat-val sys" id="sys-kpi-saldo">—</div><div class="stat-lbl">Saldo atual<br><span style="font-size:10px;color:#bbb">entradas − saídas</span></div></div>
+      <div class="stat"><div class="stat-val verde" id="sys-kpi-entradas">—</div><div class="stat-lbl">Total entradas<br><span style="font-size:10px;color:#bbb">recursos recebidos</span></div></div>
+      <div class="stat"><div class="stat-val terra" id="sys-kpi-saidas">—</div><div class="stat-lbl">Total saídas<br><span style="font-size:10px;color:#bbb">recursos executados</span></div></div>
+      <div class="stat"><div class="stat-val ouro" id="sys-kpi-lancamentos">—</div><div class="stat-lbl">Lançamentos<br><span style="font-size:10px;color:#bbb">total do projeto</span></div></div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:10px;">
+      <div>
+        <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--texto-l);margin-bottom:10px;">Saldo por Caixa</div>
+        <div id="sys-por-caixa" style="font-size:12px;">—</div>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--texto-l);margin-bottom:10px;">Saldo por Categoria</div>
+        <div id="sys-por-categoria" style="font-size:12px;">—</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tabela das últimas movimentações -->
+  <div class="card">
+    <div class="card-title">Últimas Movimentações</div>
+    <div style="overflow-x:auto;">
+      <table class="data-table" id="sys-tabela-mov">
+        <thead>
+          <tr>
+            <th style="width:80px;">Data</th>
+            <th>Descrição</th>
+            <th>Fornecedor</th>
+            <th>Caixa</th>
+            <th style="text-align:right;width:110px;">Valor</th>
+          </tr>
+        </thead>
+        <tbody id="sys-mov-body">
+          <tr><td colspan="5" style="text-align:center;color:var(--texto-l);padding:18px;">Carregando…</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ════════ HISTÓRICO (dados das prestações de contas) ════════ -->
+
   <!-- Barra geral -->
   <div class="card">
     <div class="card-title">Antecipação de Recursos — Fase de Implantação (Jan–Jun/2026)</div>
@@ -697,6 +749,105 @@ function showInner(proj, id) {
   document.getElementById(proj + '-' + id).classList.add('active');
   event.target.classList.add('active');
 }
+
+// ══════ Dados ao vivo · Systemica ══════
+(function carregarDadosSystemica(){
+  function fmtBR(n){
+    if (typeof n !== 'number') return '—';
+    return n.toLocaleString('pt-BR', {minimumFractionDigits:2, maximumFractionDigits:2});
+  }
+  function fmtCompact(n){
+    if (typeof n !== 'number') return '—';
+    var abs = Math.abs(n);
+    if (abs >= 1000000) return (n/1000000).toFixed(2).replace('.', ',') + 'M';
+    if (abs >= 1000) return (n/1000).toFixed(1).replace('.', ',') + 'k';
+    return fmtBR(n);
+  }
+  function fmtData(iso){
+    if (!iso) return '';
+    var d = new Date(iso);
+    var dd = String(d.getDate()).padStart(2,'0');
+    var mm = String(d.getMonth()+1).padStart(2,'0');
+    var yy = d.getFullYear();
+    var hh = String(d.getHours()).padStart(2,'0');
+    var mi = String(d.getMinutes()).padStart(2,'0');
+    return dd + '/' + mm + '/' + yy + ' às ' + hh + ':' + mi;
+  }
+  function escapeHtml(s){
+    return String(s).replace(/[&<>"']/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  }
+
+  function renderizar(d){
+    document.getElementById('sys-kpi-saldo').textContent = 'R$ ' + fmtCompact(d.saldo);
+    document.getElementById('sys-kpi-entradas').textContent = 'R$ ' + fmtCompact(d.totalEntradas);
+    document.getElementById('sys-kpi-saidas').textContent = 'R$ ' + fmtCompact(d.totalSaidas);
+    document.getElementById('sys-kpi-lancamentos').textContent = d.totalLancamentos;
+
+    // Por caixa
+    var caixaHtml = '';
+    var caixas = Object.keys(d.porCaixa).sort(function(a,b){
+      return Math.abs(d.porCaixa[b]) - Math.abs(d.porCaixa[a]);
+    });
+    caixas.forEach(function(k){
+      var v = d.porCaixa[k];
+      var cor = v < 0 ? 'var(--terra)' : 'var(--sys-verde)';
+      caixaHtml += '<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:.5px solid var(--cinza-q);">' +
+        '<span>' + escapeHtml(k) + '</span>' +
+        '<span style="font-weight:600;color:' + cor + ';">R$ ' + fmtBR(v) + '</span></div>';
+    });
+    document.getElementById('sys-por-caixa').innerHTML = caixaHtml || '<span style="color:var(--texto-l);">Sem dados</span>';
+
+    // Por categoria
+    var catHtml = '';
+    var cats = Object.keys(d.porCategoria).sort(function(a,b){
+      return Math.abs(d.porCategoria[b]) - Math.abs(d.porCategoria[a]);
+    });
+    cats.forEach(function(k){
+      var v = d.porCategoria[k];
+      var cor = v < 0 ? 'var(--terra)' : 'var(--sys-verde)';
+      catHtml += '<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:.5px solid var(--cinza-q);">' +
+        '<span>' + escapeHtml(k) + '</span>' +
+        '<span style="font-weight:600;color:' + cor + ';">R$ ' + fmtBR(v) + '</span></div>';
+    });
+    document.getElementById('sys-por-categoria').innerHTML = catHtml || '<span style="color:var(--texto-l);">Sem dados</span>';
+
+    // Tabela
+    var trs = '';
+    (d.movimentacoes || []).forEach(function(m){
+      var cor = m.valor < 0 ? 'var(--terra)' : 'var(--sys-verde)';
+      var sinal = m.valor < 0 ? '−' : '+';
+      trs += '<tr>' +
+        '<td>' + escapeHtml(m.dtPgto || '') + '</td>' +
+        '<td>' + escapeHtml(m.descricao || '') + '</td>' +
+        '<td style="color:var(--texto-l);font-size:11px;">' + escapeHtml(m.fornecedor || '') + '</td>' +
+        '<td><span class="badge b-sys">' + escapeHtml(m.caixa || '') + '</span></td>' +
+        '<td style="text-align:right;font-weight:600;color:' + cor + ';">' + sinal + ' R$ ' + fmtBR(Math.abs(m.valor)) + '</td>' +
+        '</tr>';
+    });
+    document.getElementById('sys-mov-body').innerHTML = trs ||
+      '<tr><td colspan="5" style="text-align:center;color:var(--texto-l);padding:18px;">Sem movimentações</td></tr>';
+
+    // Status
+    document.getElementById('sys-live-status').textContent = 'atualizado em ' + fmtData(d.geradoEm);
+    document.getElementById('sys-live-pulse').style.background = 'var(--sys-verde)';
+  }
+
+  function falhar(msg){
+    document.getElementById('sys-live-status').textContent = msg || 'erro ao carregar';
+    document.getElementById('sys-live-pulse').style.background = '#CC2200';
+    document.getElementById('sys-mov-body').innerHTML =
+      '<tr><td colspan="5" style="text-align:center;color:var(--texto-l);padding:18px;">Dados indisponíveis no momento.</td></tr>';
+  }
+
+  // Adiciona cache-bust para evitar JSON cacheado no GitHub Pages
+  var url = 'dados_systemica.json?t=' + Date.now();
+  fetch(url)
+    .then(function(r){ if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(renderizar)
+    .catch(function(e){ console.error(e); falhar('dados indisponíveis'); });
+})();
 </script>
 </body>
 </html>
