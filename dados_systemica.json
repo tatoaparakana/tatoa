@@ -1,0 +1,218 @@
+{
+  "geradoEm": "2026-05-12T18:28:45.721Z",
+  "projeto": "Systemica - Antecipação",
+  "saldo": 48288.02,
+  "totalEntradas": 239061.48,
+  "totalSaidas": 190773.46,
+  "totalLancamentos": 149,
+  "porCaixa": {
+    "Asaas": -8016,
+    "Sicredi Systemica": 57304.02,
+    "Sicredi Cacau": -1000
+  },
+  "porCategoria": {
+    "(sem categoria)": 48288.02
+  },
+  "movimentacoes": [
+    {
+      "dtPgto": "30/03/2026",
+      "descricao": "40154884000153",
+      "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
+      "valor": -235.52,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Systemica",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "30/03/2026",
+      "descricao": "40154884000153",
+      "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
+      "valor": -235.52,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Systemica",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "27/03/2026",
+      "descricao": "Fortalecimento da Reocupação",
+      "fornecedor": "PAGAMENTO PIX SICREDI 39663958000106 PREMIUM SUP",
+      "valor": -2727.2,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Systemica",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "25/03/2026",
+      "descricao": "Fortalecimento da Reocupação",
+      "fornecedor": "PAGAMENTO PIX SICREDI 39663958000106 PREMIUM SUP",
+      "valor": -2195.44,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Systemica",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "24/03/2026",
+      "descricao": "Bolsa da comissão Parakanã mês de abril",
+      "fornecedor": "PAGAMENTO PIX 52618145291 MAMA PARAKANA",
+      "valor": -1000,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Systemica",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "24/03/2026",
+      "descricao": "Bolsa comissão Parakanã mês de abril",
+      "fornecedor": "PAGAMENTO PIX 04006819196 xokarowara parakana",
+      "valor": -1000,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Systemica",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "23/03/2026",
+      "descricao": "Mensalidade - Aldeia Paredão",
+      "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
+      "valor": -430.77,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Systemica",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "23/03/2026",
+      "descricao": "Mensalidade - Centro Parakanã",
+      "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
+      "valor": -235.52,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Systemica",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "23/03/2026",
+      "descricao": "Mensalidade - Aldeia xahytata",
+      "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
+      "valor": -235.52,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Systemica",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "23/03/2026",
+      "descricao": "Mensalidade - Aldeia Cacaueiro",
+      "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
+      "valor": -235.52,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Systemica",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "23/03/2026",
+      "descricao": "Mensalidade - Aldeia Paranoete",
+      "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
+      "valor": -235.52,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Systemica",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "23/03/2026",
+      "descricao": "Mensalidade - Aldeia Maraca",
+      "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
+      "valor": -235.52,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Systemica",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "23/03/2026",
+      "descricao": "Mensalidade starlink",
+      "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
+      "valor": -471.04,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Systemica",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "23/03/2026",
+      "descricao": "Mensalidade - aldeia Xahytata",
+      "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
+      "valor": -61.36,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Systemica",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "23/03/2026",
+      "descricao": "Mensalidade - aldeia Itaete",
+      "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
+      "valor": -244.38,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Systemica",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "23/03/2026",
+      "descricao": "Mensalidade - aldeia Cacaueiro",
+      "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
+      "valor": -68.89,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Systemica",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "20/03/2026",
+      "descricao": "",
+      "fornecedor": "RECEBIMENTO PIX 22524415000105 SYSTEMICA",
+      "valor": 63699.34,
+      "movimento": "Entrada",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Systemica",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "18/03/2026",
+      "descricao": "prestação de serviços meses de janeiro fevereiro",
+      "fornecedor": "PAGAMENTO PIX 62010588000111 62 010 588 SIMONE P",
+      "valor": -1500,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Systemica",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "18/03/2026",
+      "descricao": "prestação de serviços meses janeiro fevereiro",
+      "fornecedor": "PAGAMENTO PIX 62218112000170 J E BANDEIRA DE MAT",
+      "valor": -4000,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Systemica",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "18/03/2026",
+      "descricao": "Prestação de serviços meses janeiro fevereiro",
+      "fornecedor": "PAGAMENTO PIX 59276258000168 59.276.258 JORDAN C",
+      "valor": -6000,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Systemica",
+      "categoria": "(sem categoria)"
+    }
+  ]
+}
