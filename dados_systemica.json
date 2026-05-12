@@ -1,17 +1,16 @@
 {
-  "geradoEm": "2026-05-12T19:49:31.268Z",
+  "geradoEm": "2026-05-12T20:43:21.946Z",
   "projeto": "Systemica - Antecipação",
-  "saldo": -65818.92,
+  "saldo": -45345.18,
   "totalEntradas": 315038.51,
-  "totalSaidas": 380857.43,
-  "totalLancamentos": 186,
+  "totalSaidas": 360383.69,
+  "totalLancamentos": 174,
   "porCaixa": {
-    "Asaas": -8016,
-    "Sicredi Systemica": -56802.92,
-    "Sicredi Cacau": -1000
+    "Asaas": -11402.99,
+    "Sicredi Systemica": -33942.19
   },
   "porCategoria": {
-    "(sem categoria)": -65818.92
+    "(sem categoria)": -45345.18
   },
   "movimentacoes": [
     {
