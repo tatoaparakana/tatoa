@@ -1,17 +1,17 @@
 {
-  "geradoEm": "2026-05-12T18:54:19.434Z",
+  "geradoEm": "2026-05-12T19:43:22.078Z",
   "projeto": "Systemica - Antecipação",
-  "saldo": 55414.98,
-  "totalEntradas": 375655.46,
-  "totalSaidas": 320240.48,
+  "saldo": -65818.92,
+  "totalEntradas": 315038.51,
+  "totalSaidas": 380857.43,
   "totalLancamentos": 186,
   "porCaixa": {
     "Asaas": -8016,
-    "Sicredi Systemica": 64430.98,
+    "Sicredi Systemica": -56802.92,
     "Sicredi Cacau": -1000
   },
   "porCategoria": {
-    "(sem categoria)": 55414.98
+    "(sem categoria)": -65818.92
   },
   "movimentacoes": [
     {
@@ -78,8 +78,8 @@
       "dtPgto": "17/04/2026",
       "descricao": "transferência entre contas da AIT rest Systemica",
       "fornecedor": "RECEBIMENTO PIX 20481744000182 ASSOCIACAO INDIGE",
-      "valor": 7703.72,
-      "movimento": "Entrada",
+      "valor": -7703.72,
+      "movimento": "Saída",
       "status": "Em Aberto",
       "caixa": "Sicredi Systemica",
       "categoria": "(sem categoria)"
