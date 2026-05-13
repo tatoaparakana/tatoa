@@ -1,0 +1,216 @@
+{
+  "geradoEm": "2026-05-13T13:37:15.423Z",
+  "projeto": "Dabucury",
+  "saldo": -4159.51,
+  "totalEntradas": 70635.51,
+  "totalSaidas": 74795.02,
+  "totalLancamentos": 38,
+  "porCaixa": {
+    "Sicredi Dabucury": -4159.51
+  },
+  "porCategoria": {
+    "(sem categoria)": -4159.51
+  },
+  "movimentacoes": [
+    {
+      "dtPgto": "24/04/2026",
+      "descricao": "",
+      "fornecedor": "TRANSFERENCIA DA POUPANCA",
+      "valor": 10000,
+      "movimento": "Entrada",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Dabucury",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "24/04/2026",
+      "descricao": "",
+      "fornecedor": "LIQUIDACAO BOLETO SICREDI 01951330000125 FERREIR",
+      "valor": -2450,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Dabucury",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "24/04/2026",
+      "descricao": "Pix Para Nenexiga Parakana",
+      "fornecedor": "PAGAMENTO PIX 55501605287 NENEXIGA PARAKANA",
+      "valor": -6000,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Dabucury",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "06/04/2026",
+      "descricao": "Taxa Sicredi",
+      "fornecedor": "CESTA DE RELACIONAMENTO",
+      "valor": -35.7,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Dabucury",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "26/03/2026",
+      "descricao": "TRANSFERENCIA DA POUPANCA",
+      "fornecedor": "TRANSFERENCIA DA POUPANCA",
+      "valor": 3000,
+      "movimento": "Entrada",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Dabucury",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "26/03/2026",
+      "descricao": "Pgtobde lona preta e saco de fibra atic. Cacau",
+      "fornecedor": "PAGAMENTO PIX SICREDI 01951330000125 FERREIRA E",
+      "valor": -2450,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Dabucury",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "05/03/2026",
+      "descricao": "Taxa Sicredi",
+      "fornecedor": "CESTA DE RELACIONAMENTO",
+      "valor": -35.7,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Dabucury",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "02/03/2026",
+      "descricao": "",
+      "fornecedor": "PAGAMENTO PIX 09609403000298 A RURALISTA",
+      "valor": -675,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Dabucury",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "02/03/2026",
+      "descricao": "pgto mensalidade Maraca",
+      "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
+      "valor": -235.52,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Dabucury",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "26/02/2026",
+      "descricao": "mensalidade aldeia Ma'eapotawa",
+      "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
+      "valor": -466.06,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Dabucury",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "20/02/2026",
+      "descricao": "Mensalidade aldeia Capanema",
+      "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
+      "valor": -235.52,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Dabucury",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "19/02/2026",
+      "descricao": "Mensalidade Centro",
+      "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
+      "valor": -800.26,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Dabucury",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "19/02/2026",
+      "descricao": "NFs 267, 310, 302, 309",
+      "fornecedor": "PAGAMENTO PIX SICREDI 39663958000106 PREMIUM SUP",
+      "valor": -2836.99,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Dabucury",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "18/02/2026",
+      "descricao": "Mensalidade - Aldeia Cacaueiro",
+      "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
+      "valor": -185.48,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Dabucury",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "18/02/2026",
+      "descricao": "TRANSFERENCIA DA POUPANCA",
+      "fornecedor": "TRANSFERENCIA DA POUPANCA",
+      "valor": 10000,
+      "movimento": "Entrada",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Dabucury",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "18/02/2026",
+      "descricao": "pgto Escoamento de castanha Apyterewa raio de sol",
+      "fornecedor": "PAGAMENTO PIX 87244756291 JOAO INACIO DE ASSUNCA",
+      "valor": -10000,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Dabucury",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "13/02/2026",
+      "descricao": "Mensalidade aldeia Paredão",
+      "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
+      "valor": -235.52,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Dabucury",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "12/02/2026",
+      "descricao": "Pgto trimestral - Coordenador do Projeto Dabucur",
+      "fornecedor": "PAGAMENTO PIX 55504922291 KAWOWE PARAKANA",
+      "valor": -13500,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Dabucury",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "12/02/2026",
+      "descricao": "TRANSFERENCIA DA POUPANCA",
+      "fornecedor": "TRANSFERENCIA DA POUPANCA",
+      "valor": 12000,
+      "movimento": "Entrada",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Dabucury",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "11/02/2026",
+      "descricao": "Mensalidade Pipi 1",
+      "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
+      "valor": -235.52,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Dabucury",
+      "categoria": "(sem categoria)"
+    }
+  ]
+}
