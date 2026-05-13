@@ -206,6 +206,48 @@ footer{background:var(--preto);border-top:2px solid var(--ouro);padding:18px 28p
   <!-- FINANCEIRO PBA -->
   <div id="pba-financeiro" class="inner-section active">
 
+  <!-- ════ DADOS AO VIVO ════ -->
+  <div class="card" style="border-left:4px solid var(--verde);">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+      <div class="card-title" style="margin-bottom:0;">Monitoramento Financeiro · Dados ao Vivo</div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span id="pba-live-status" style="font-size:10px;color:var(--texto-l);">carregando…</span>
+        <span id="pba-live-pulse" style="width:8px;height:8px;border-radius:50%;background:#bbb;display:inline-block;"></span>
+      </div>
+    </div>
+    <div class="grid4">
+      <div class="stat"><div class="stat-val verde" id="pba-kpi-saldo">—</div><div class="stat-lbl">Saldo atual<br><span style="font-size:10px;color:#bbb">entradas − saídas</span></div></div>
+      <div class="stat"><div class="stat-val verde" id="pba-kpi-entradas">—</div><div class="stat-lbl">Total entradas<br><span style="font-size:10px;color:#bbb">recursos recebidos</span></div></div>
+      <div class="stat"><div class="stat-val terra" id="pba-kpi-saidas">—</div><div class="stat-lbl">Total saídas<br><span style="font-size:10px;color:#bbb">recursos executados</span></div></div>
+      <div class="stat"><div class="stat-val ouro" id="pba-kpi-lancamentos">—</div><div class="stat-lbl">Lançamentos<br><span style="font-size:10px;color:#bbb">total do projeto</span></div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:10px;">
+      <div>
+        <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--texto-l);margin-bottom:10px;">Saldo por Caixa</div>
+        <div id="pba-por-caixa" style="font-size:12px;">—</div>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--texto-l);margin-bottom:10px;">Saldo por Categoria</div>
+        <div id="pba-por-categoria" style="font-size:12px;">—</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tabela últimas movimentações -->
+  <div class="card">
+    <div class="card-title">Últimas Movimentações</div>
+    <div style="overflow-x:auto;">
+      <table class="data-table">
+        <thead>
+          <tr><th style="width:80px;">Data</th><th>Descrição</th><th>Fornecedor</th><th>Caixa</th><th style="text-align:right;width:110px;">Valor</th></tr>
+        </thead>
+        <tbody id="pba-mov-body">
+          <tr><td colspan="5" style="text-align:center;color:var(--texto-l);padding:18px;">Carregando…</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
     <!-- DUAL VIEW: desembolsado vs orçado -->
     <div class="card">
       <div class="card-title">Visão financeira — desembolsado vs. orçado total</div>
@@ -873,6 +915,82 @@ new Chart(document.getElementById('chartCiTecnicas'),{
   },
   options:{responsive:true,maintainAspectRatio:false,cutout:'55%',plugins:{legend:{display:true,position:'bottom',labels:{font:{size:11},boxWidth:10,padding:8}}}}
 });
+
+// ─── DADOS AO VIVO · PBA ────────────────────────────────────
+(function carregarDadosPBA(){
+  function fmtBR(n){
+    if(typeof n!=='number')return '—';
+    return n.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
+  }
+  function fmtCompact(n){
+    if(typeof n!=='number')return '—';
+    var abs=Math.abs(n);
+    if(abs>=1000000)return (n/1000000).toFixed(2).replace('.',',')+' M';
+    if(abs>=1000)return (n/1000).toFixed(1).replace('.',',')+' k';
+    return fmtBR(n);
+  }
+  function fmtData(iso){
+    if(!iso)return '';
+    var d=new Date(iso);
+    return ('0'+d.getDate()).slice(-2)+'/'+('0'+(d.getMonth()+1)).slice(-2)+'/'+d.getFullYear()+' às '+('0'+d.getHours()).slice(-2)+':'+('0'+d.getMinutes()).slice(-2);
+  }
+  function esc(s){return String(s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+
+  function renderizar(d){
+    document.getElementById('pba-kpi-saldo').textContent='R$ '+fmtCompact(d.saldo);
+    document.getElementById('pba-kpi-entradas').textContent='R$ '+fmtCompact(d.totalEntradas);
+    document.getElementById('pba-kpi-saidas').textContent='R$ '+fmtCompact(d.totalSaidas);
+    document.getElementById('pba-kpi-lancamentos').textContent=d.totalLancamentos;
+
+    var caixaHtml='';
+    Object.keys(d.porCaixa).sort(function(a,b){return Math.abs(d.porCaixa[b])-Math.abs(d.porCaixa[a]);}).forEach(function(k){
+      var v=d.porCaixa[k];
+      var cor=v<0?'var(--terra)':'var(--verde)';
+      caixaHtml+='<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:.5px solid var(--cinza-q);">'+
+        '<span>'+esc(k)+'</span><span style="font-weight:600;color:'+cor+';">R$ '+fmtBR(v)+'</span></div>';
+    });
+    document.getElementById('pba-por-caixa').innerHTML=caixaHtml||'<span style="color:var(--texto-l);">Sem dados</span>';
+
+    var catHtml='';
+    Object.keys(d.porCategoria).sort(function(a,b){return Math.abs(d.porCategoria[b])-Math.abs(d.porCategoria[a]);}).forEach(function(k){
+      var v=d.porCategoria[k];
+      var cor=v<0?'var(--terra)':'var(--verde)';
+      catHtml+='<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:.5px solid var(--cinza-q);">'+
+        '<span>'+esc(k)+'</span><span style="font-weight:600;color:'+cor+';">R$ '+fmtBR(v)+'</span></div>';
+    });
+    document.getElementById('pba-por-categoria').innerHTML=catHtml||'<span style="color:var(--texto-l);">Sem dados</span>';
+
+    var trs='';
+    (d.movimentacoes||[]).forEach(function(m){
+      var cor=m.valor<0?'var(--terra)':'var(--verde)';
+      var sinal=m.valor<0?'−':'+';
+      trs+='<tr>'+
+        '<td>'+esc(m.dtPgto||'')+'</td>'+
+        '<td>'+esc(m.descricao||'')+'</td>'+
+        '<td style="color:var(--texto-l);font-size:11px;">'+esc(m.fornecedor||'')+'</td>'+
+        '<td><span class="badge b-verde">'+esc(m.caixa||'')+'</span></td>'+
+        '<td style="text-align:right;font-weight:600;color:'+cor+';">'+sinal+' R$ '+fmtBR(Math.abs(m.valor))+'</td>'+
+        '</tr>';
+    });
+    document.getElementById('pba-mov-body').innerHTML=trs||
+      '<tr><td colspan="5" style="text-align:center;color:var(--texto-l);padding:18px;">Sem movimentações</td></tr>';
+
+    document.getElementById('pba-live-status').textContent='atualizado em '+fmtData(d.geradoEm);
+    document.getElementById('pba-live-pulse').style.background='var(--verde)';
+  }
+
+  function falhar(){
+    document.getElementById('pba-live-status').textContent='dados indisponíveis';
+    document.getElementById('pba-live-pulse').style.background='#CC2200';
+    document.getElementById('pba-mov-body').innerHTML=
+      '<tr><td colspan="5" style="text-align:center;color:var(--texto-l);padding:18px;">Dados indisponíveis no momento.</td></tr>';
+  }
+
+  fetch('dados_pba.json?t='+Date.now())
+    .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();})
+    .then(renderizar)
+    .catch(function(e){console.error(e);falhar();});
+})();
 </script>
 </body>
 </html>
