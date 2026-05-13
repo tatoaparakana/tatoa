@@ -361,6 +361,68 @@ body { font-family: 'Source Sans 3', sans-serif; background: var(--bg); color: v
   <div class="panel active" id="financeiro">
     <h2 class="section-title">Estrutura <em>Orçamentária</em></h2>
 
+  <!-- ════ DADOS AO VIVO ════ -->
+  <div class="card" style="border-left:4px solid #1a3a5a;margin-bottom:20px;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+      <div class="card-title" style="margin-bottom:0;">Monitoramento Financeiro · Dados ao Vivo</div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span id="tnc-live-status" style="font-size:10px;color:#999;">carregando…</span>
+        <span id="tnc-live-pulse" style="width:8px;height:8px;border-radius:50%;background:#bbb;display:inline-block;"></span>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px;">
+      <div style="background:#fff;border:1px solid #e0dbd0;border-radius:12px;padding:16px 18px;">
+        <div id="tnc-kpi-saldo" style="font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#1a3a5a;">—</div>
+        <div style="font-size:12px;color:#999;margin-top:3px;">Saldo atual<br><span style="font-size:10px;">entradas − saídas</span></div>
+      </div>
+      <div style="background:#fff;border:1px solid #e0dbd0;border-radius:12px;padding:16px 18px;">
+        <div id="tnc-kpi-entradas" style="font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#2D5A1B;">—</div>
+        <div style="font-size:12px;color:#999;margin-top:3px;">Total entradas<br><span style="font-size:10px;">recursos recebidos</span></div>
+      </div>
+      <div style="background:#fff;border:1px solid #e0dbd0;border-radius:12px;padding:16px 18px;">
+        <div id="tnc-kpi-saidas" style="font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#8B3A1A;">—</div>
+        <div style="font-size:12px;color:#999;margin-top:3px;">Total saídas<br><span style="font-size:10px;">recursos executados</span></div>
+      </div>
+      <div style="background:#fff;border:1px solid #e0dbd0;border-radius:12px;padding:16px 18px;">
+        <div id="tnc-kpi-lancamentos" style="font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#C8940A;">—</div>
+        <div style="font-size:12px;color:#999;margin-top:3px;">Lançamentos<br><span style="font-size:10px;">total do projeto</span></div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:4px;">
+      <div>
+        <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#999;margin-bottom:10px;">Saldo por Caixa</div>
+        <div id="tnc-por-caixa" style="font-size:12px;">—</div>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#999;margin-bottom:10px;">Saldo por Categoria</div>
+        <div id="tnc-por-categoria" style="font-size:12px;">—</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tabela últimas movimentações -->
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-title">Últimas Movimentações</div>
+    <div style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;font-size:13px;">
+        <thead>
+          <tr style="border-bottom:2px solid #e0dbd0;">
+            <th style="text-align:left;padding:8px 6px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#999;width:80px;">Data</th>
+            <th style="text-align:left;padding:8px 6px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#999;">Descrição</th>
+            <th style="text-align:left;padding:8px 6px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#999;">Fornecedor</th>
+            <th style="text-align:left;padding:8px 6px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#999;">Caixa</th>
+            <th style="text-align:right;padding:8px 6px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#999;width:110px;">Valor</th>
+          </tr>
+        </thead>
+        <tbody id="tnc-mov-body">
+          <tr><td colspan="5" style="text-align:center;color:#999;padding:18px;">Carregando…</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+
     <!-- Rubricas originais -->
     <div class="cards-row cards-2">
       <div class="card">
@@ -859,6 +921,67 @@ body { font-family: 'Source Sans 3', sans-serif; background: var(--bg); color: v
 </footer>
 
 <script>
+
+// ─── DADOS AO VIVO · TNC ────────────────────────────────────
+(function carregarDados_tnc(){
+  function fmtBR(n){if(typeof n!=='number')return '—';return n.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});}
+  function fmtCompact(n){if(typeof n!=='number')return '—';var abs=Math.abs(n);if(abs>=1000000)return (n/1000000).toFixed(2).replace('.',',')+' M';if(abs>=1000)return (n/1000).toFixed(1).replace('.',',')+' k';return fmtBR(n);}
+  function fmtData(iso){if(!iso)return '';var d=new Date(iso);return ('0'+d.getDate()).slice(-2)+'/'+('0'+(d.getMonth()+1)).slice(-2)+'/'+d.getFullYear()+' às '+('0'+d.getHours()).slice(-2)+':'+('0'+d.getMinutes()).slice(-2);}
+  function esc(s){return String(s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+
+  function renderizar(d){
+    document.getElementById('tnc-kpi-saldo').textContent='R$ '+fmtCompact(d.saldo);
+    document.getElementById('tnc-kpi-entradas').textContent='R$ '+fmtCompact(d.totalEntradas);
+    document.getElementById('tnc-kpi-saidas').textContent='R$ '+fmtCompact(d.totalSaidas);
+    document.getElementById('tnc-kpi-lancamentos').textContent=d.totalLancamentos;
+
+    var caixaHtml='';
+    Object.keys(d.porCaixa).sort(function(a,b){return Math.abs(d.porCaixa[b])-Math.abs(d.porCaixa[a]);}).forEach(function(k){
+      var v=d.porCaixa[k];var cor=v<0?'#8B3A1A':'#2a5a8a';
+      caixaHtml+='<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:.5px solid #e8e4dc;">'+
+        '<span>'+esc(k)+'</span><span style="font-weight:600;color:'+cor+';">R$ '+fmtBR(v)+'</span></div>';
+    });
+    document.getElementById('tnc-por-caixa').innerHTML=caixaHtml||'<span style="color:#999;">Sem dados</span>';
+
+    var catHtml='';
+    Object.keys(d.porCategoria).sort(function(a,b){return Math.abs(d.porCategoria[b])-Math.abs(d.porCategoria[a]);}).forEach(function(k){
+      var v=d.porCategoria[k];var cor=v<0?'#8B3A1A':'#2a5a8a';
+      catHtml+='<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:.5px solid #e8e4dc;">'+
+        '<span>'+esc(k)+'</span><span style="font-weight:600;color:'+cor+';">R$ '+fmtBR(v)+'</span></div>';
+    });
+    document.getElementById('tnc-por-categoria').innerHTML=catHtml||'<span style="color:#999;">Sem dados</span>';
+
+    var trs='';
+    (d.movimentacoes||[]).forEach(function(m){
+      var cor=m.valor<0?'#8B3A1A':'#2a5a8a';var sinal=m.valor<0?'−':'+';
+      trs+='<tr style="border-bottom:.5px solid #e8e4dc;">'+
+        '<td style="padding:7px 6px;white-space:nowrap;">'+esc(m.dtPgto||'')+'</td>'+
+        '<td style="padding:7px 6px;">'+esc(m.descricao||'')+'</td>'+
+        '<td style="padding:7px 6px;color:#999;font-size:11px;">'+esc(m.fornecedor||'')+'</td>'+
+        '<td style="padding:7px 6px;"><span style="font-size:11px;padding:2px 8px;border-radius:10px;background:rgba(200,148,10,.1);color:#C8940A;border:1px solid rgba(200,148,10,.25);">'+esc(m.caixa||'')+'</span></td>'+
+        '<td style="padding:7px 6px;text-align:right;font-weight:600;color:'+cor+';">'+sinal+' R$ '+fmtBR(Math.abs(m.valor))+'</td>'+
+        '</tr>';
+    });
+    document.getElementById('tnc-mov-body').innerHTML=trs||
+      '<tr><td colspan="5" style="text-align:center;color:#999;padding:18px;">Sem movimentações</td></tr>';
+
+    document.getElementById('tnc-live-status').textContent='atualizado em '+fmtData(d.geradoEm);
+    document.getElementById('tnc-live-pulse').style.background='#2a5a8a';
+  }
+
+  function falhar(){
+    document.getElementById('tnc-live-status').textContent='dados indisponíveis';
+    document.getElementById('tnc-live-pulse').style.background='#CC2200';
+    document.getElementById('tnc-mov-body').innerHTML=
+      '<tr><td colspan="5" style="text-align:center;color:#999;padding:18px;">Dados indisponíveis no momento.</td></tr>';
+  }
+
+  fetch('dados_tnc.json?t='+Date.now())
+    .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();})
+    .then(renderizar)
+    .catch(function(e){console.error(e);falhar();});
+})();
+
 function showTab(id, el) {
   document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
