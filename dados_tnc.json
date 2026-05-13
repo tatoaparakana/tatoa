@@ -1,0 +1,218 @@
+{
+  "geradoEm": "2026-05-13T13:37:17.390Z",
+  "projeto": "TNC Aditivo",
+  "saldo": -95913.22,
+  "totalEntradas": 0,
+  "totalSaidas": 95913.22,
+  "totalLancamentos": 106,
+  "porCaixa": {
+    "Asaas": -45460.01,
+    "Sicredi Cacau": -41759.94,
+    "Sicredi TNC": -8693.27
+  },
+  "porCategoria": {
+    "(sem categoria)": -95913.22
+  },
+  "movimentacoes": [
+    {
+      "dtPgto": "27/04/2026",
+      "descricao": "Pgto de combustível",
+      "fornecedor": "PAGAMENTO PIX 19276857000167 L R DA PAZ & CIA LT",
+      "valor": -390,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi TNC",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "27/04/2026",
+      "descricao": "Pgto de combustível",
+      "fornecedor": "PAGAMENTO PIX 54573197000187 AUTO POSTO LIMA LTD",
+      "valor": -400,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi TNC",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "27/04/2026",
+      "descricao": "Pgto de combustível Apoio logístico",
+      "fornecedor": "PAGAMENTO PIX 54573197000187 AUTO POSTO LIMA LTD",
+      "valor": -1600,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi TNC",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "27/04/2026",
+      "descricao": "Uber - casai x AIT - WENATOA reunião",
+      "fornecedor": "PAGAMENTO PIX 01728516293 ELIZANDRA BRANDAO ARAU",
+      "valor": -18.7,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi TNC",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "27/04/2026",
+      "descricao": "Alimentação",
+      "fornecedor": "PAGAMENTO PIX 39663958000106 PREMIUM SUPERMERCAD",
+      "valor": -1884.51,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi TNC",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "27/04/2026",
+      "descricao": "Pagamento weslley-cleb",
+      "fornecedor": "PAGAMENTO PIX 63701949000139 63.701.949 WESLLEY",
+      "valor": -19.7,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi TNC",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "27/04/2026",
+      "descricao": "cacaueiro",
+      "fornecedor": "PAGAMENTO PIX 55479456253 Xakaria Parakanã",
+      "valor": -200,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi TNC",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "24/04/2026",
+      "descricao": "Conserto de moto, prestação de serviços p AIT",
+      "fornecedor": "PAGAMENTO PIX 70328476250 WELVES DUARTE DE SOUZA",
+      "valor": -140,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi TNC",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "24/04/2026",
+      "descricao": "Apoio Logístico",
+      "fornecedor": "PAGAMENTO PIX 19276857000167 L R DA PAZ & CIA LT",
+      "valor": -217,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi TNC",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "24/04/2026",
+      "descricao": "Apoio a safra do cacau 2026",
+      "fornecedor": "PAGAMENTO PIX 39663958000106 PREMIUM SUPERMERCAD",
+      "valor": -250,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi TNC",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "23/04/2026",
+      "descricao": "Desenv.da cadeia produtiva do cacau 2026",
+      "fornecedor": "PAGAMENTO PIX 39663958000106 PREMIUM SUPERMERCAD",
+      "valor": -181.96,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi TNC",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "20/04/2026",
+      "descricao": "",
+      "fornecedor": "PAGAMENTO PIX 47710834000154 MARIA DAS GRACAS SI",
+      "valor": -330,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi TNC",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "20/04/2026",
+      "descricao": "Pgto - apoio ao idia dos povos indígenas",
+      "fornecedor": "PAGAMENTO PIX 71432493272 FRANCISCO DAS CHAGAS D",
+      "valor": -230,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi TNC",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "20/04/2026",
+      "descricao": "Desenvolvimento da cadeia produtiva do cacau",
+      "fornecedor": "PAGAMENTO PIX 39663958000106 PREMIUM SUPERMERCAD",
+      "valor": -2640,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi TNC",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "17/04/2026",
+      "descricao": "Taxa Sicredi",
+      "fornecedor": "CESTA DE RELACIONAMENTO",
+      "valor": -63.8,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi TNC",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "17/04/2026",
+      "descricao": "Taxa Sicredi",
+      "fornecedor": "CESTA DE RELACIONAMENTO",
+      "valor": -63.8,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi TNC",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "17/04/2026",
+      "descricao": "Taxa Sicredi",
+      "fornecedor": "CESTA DE RELACIONAMENTO",
+      "valor": -63.8,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi TNC",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "27/03/2026",
+      "descricao": "pgto restante de janeiro e parcial de fevereiro 2",
+      "fornecedor": "35.948.995 BRUNNA STEFANNY BARONI",
+      "valor": -8400,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Sicredi Cacau",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "26/03/2026",
+      "descricao": "Casa do índio x Associação Tato'a",
+      "fornecedor": "Edivaldo Almeida da Silva",
+      "valor": -25,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Asaas",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "26/03/2026",
+      "descricao": "Pgto - ajudante de paioleiro",
+      "fornecedor": "Awy Ywa Parakana",
+      "valor": -600,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Sicredi Cacau",
+      "categoria": "(sem categoria)"
+    }
+  ]
+}
