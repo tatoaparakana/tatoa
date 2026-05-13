@@ -1,39 +1,19 @@
 {
-  "geradoEm": "2026-05-13T18:13:29.832Z",
+  "geradoEm": "2026-05-13T18:29:02.020Z",
   "projeto": "TNC Aditivo",
-  "saldo": 658443.13,
-  "totalEntradas": 764381.28,
-  "totalSaidas": 105938.15,
-  "totalLancamentos": 139,
+  "saldo": 279261.18,
+  "totalEntradas": 389616.8,
+  "totalSaidas": 110355.62,
+  "totalLancamentos": 125,
   "porCaixa": {
-    "Asaas": 336046.19,
+    "Asaas": 331628.72,
     "Sicredi Cacau": -43674.27,
-    "Sicredi TNC": 366071.21
+    "Sicredi TNC": -8693.27
   },
   "porCategoria": {
-    "(sem categoria)": 658443.13
+    "(sem categoria)": 279261.18
   },
   "movimentacoes": [
-    {
-      "dtPgto": "29/04/2026",
-      "descricao": "transferência entre contas da mesma titularidade",
-      "fornecedor": "RECEBIMENTO PIX 20481744000182 ASSOCIACAO INDIGE",
-      "valor": 25000,
-      "movimento": "Entrada",
-      "status": "Em Aberto",
-      "caixa": "Sicredi TNC",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "29/04/2026",
-      "descricao": "transferência entre contas da mesma titularidade",
-      "fornecedor": "RECEBIMENTO PIX 20481744000182 ASSOCIACAO INDIGE",
-      "valor": 25000,
-      "movimento": "Entrada",
-      "status": "Em Aberto",
-      "caixa": "Sicredi TNC",
-      "categoria": "(sem categoria)"
-    },
     {
       "dtPgto": "27/04/2026",
       "descricao": "Pgto de combustível",
@@ -60,26 +40,6 @@
       "fornecedor": "PAGAMENTO PIX 54573197000187 AUTO POSTO LIMA LTD",
       "valor": -1600,
       "movimento": "Saída",
-      "status": "Em Aberto",
-      "caixa": "Sicredi TNC",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "27/04/2026",
-      "descricao": "transferência entre contas da mesma titularidade",
-      "fornecedor": "RECEBIMENTO PIX 20481744000182 ASSOCIACAO INDIGE",
-      "valor": 25000,
-      "movimento": "Entrada",
-      "status": "Em Aberto",
-      "caixa": "Sicredi TNC",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "27/04/2026",
-      "descricao": "transferência entre contas da mesma titularidade",
-      "fornecedor": "RECEBIMENTO PIX 20481744000182 ASSOCIACAO INDIGE",
-      "valor": 25000,
-      "movimento": "Entrada",
       "status": "Em Aberto",
       "caixa": "Sicredi TNC",
       "categoria": "(sem categoria)"
@@ -120,26 +80,6 @@
       "fornecedor": "PAGAMENTO PIX 55479456253 Xakaria Parakanã",
       "valor": -200,
       "movimento": "Saída",
-      "status": "Em Aberto",
-      "caixa": "Sicredi TNC",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "24/04/2026",
-      "descricao": "transferência entre contas da mesma titularidade",
-      "fornecedor": "RECEBIMENTO PIX 20481744000182 ASSOCIACAO INDIGE",
-      "valor": 25000,
-      "movimento": "Entrada",
-      "status": "Em Aberto",
-      "caixa": "Sicredi TNC",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "24/04/2026",
-      "descricao": "transferência entre contas da mesma titularidade",
-      "fornecedor": "RECEBIMENTO PIX 20481744000182 ASSOCIACAO INDIGE",
-      "valor": 25000,
-      "movimento": "Entrada",
       "status": "Em Aberto",
       "caixa": "Sicredi TNC",
       "categoria": "(sem categoria)"
@@ -196,20 +136,80 @@
     },
     {
       "dtPgto": "22/04/2026",
-      "descricao": "transferência entre contas da mesma titularidade",
-      "fornecedor": "RECEBIMENTO PIX 20481744000182 ASSOCIACAO INDIGE",
-      "valor": 25000,
-      "movimento": "Entrada",
+      "descricao": "Starlink mensalidade",
+      "fornecedor": "Transação via Pix Automático para STARLINK BRAZIL SERVICOS",
+      "valor": -235.52,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Asaas",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "20/04/2026",
+      "descricao": "",
+      "fornecedor": "PAGAMENTO PIX 47710834000154 MARIA DAS GRACAS SI",
+      "valor": -330,
+      "movimento": "Saída",
       "status": "Em Aberto",
       "caixa": "Sicredi TNC",
       "categoria": "(sem categoria)"
     },
     {
-      "dtPgto": "22/04/2026",
-      "descricao": "transferência entre contas da mesma titularidade",
-      "fornecedor": "RECEBIMENTO PIX 20481744000182 ASSOCIACAO INDIGE",
-      "valor": 24764.48,
-      "movimento": "Entrada",
+      "dtPgto": "20/04/2026",
+      "descricao": "Pgto - apoio ao idia dos povos indígenas",
+      "fornecedor": "PAGAMENTO PIX 71432493272 FRANCISCO DAS CHAGAS D",
+      "valor": -230,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi TNC",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "20/04/2026",
+      "descricao": "Desenvolvimento da cadeia produtiva do cacau",
+      "fornecedor": "PAGAMENTO PIX 39663958000106 PREMIUM SUPERMERCAD",
+      "valor": -2640,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi TNC",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "19/04/2026",
+      "descricao": "Starlink mensalidade",
+      "fornecedor": "Transação via Pix Automático para STARLINK BRAZIL SERVICOS",
+      "valor": -235.52,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Asaas",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "17/04/2026",
+      "descricao": "Taxa Sicredi",
+      "fornecedor": "CESTA DE RELACIONAMENTO",
+      "valor": -63.8,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi TNC",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "17/04/2026",
+      "descricao": "Taxa Sicredi",
+      "fornecedor": "CESTA DE RELACIONAMENTO",
+      "valor": -63.8,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi TNC",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "17/04/2026",
+      "descricao": "Taxa Sicredi",
+      "fornecedor": "CESTA DE RELACIONAMENTO",
+      "valor": -63.8,
+      "movimento": "Saída",
       "status": "Em Aberto",
       "caixa": "Sicredi TNC",
       "categoria": "(sem categoria)"
