@@ -1,0 +1,216 @@
+{
+  "geradoEm": "2026-05-13T13:27:00.762Z",
+  "projeto": "PBA",
+  "saldo": 6033.83,
+  "totalEntradas": 210934.82,
+  "totalSaidas": 204900.99,
+  "totalLancamentos": 84,
+  "porCaixa": {
+    "Sicredi NESA": 6033.83
+  },
+  "porCategoria": {
+    "(sem categoria)": 6033.83
+  },
+  "movimentacoes": [
+    {
+      "dtPgto": "30/04/2026",
+      "descricao": "prestação de serviços mês de abril 2026",
+      "fornecedor": "PAGAMENTO PIX 62010588000111 62 010 588 SIMONE P",
+      "valor": -3960,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi NESA",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "30/04/2026",
+      "descricao": "prestação de serviços mês de abril 2026",
+      "fornecedor": "PAGAMENTO PIX 59276258000168 59.276.258 JORDAN C",
+      "valor": -7700,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi NESA",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "30/04/2026",
+      "descricao": "prestação de serviços mês de abril 2026",
+      "fornecedor": "PAGAMENTO PIX 55479847287 Marcio Parakana",
+      "valor": -6160,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi NESA",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "30/04/2026",
+      "descricao": "prestação de serviços mês de abril 2026",
+      "fornecedor": "PAGAMENTO PIX 62218112000170 J E BANDEIRA DE MAT",
+      "valor": -13000,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi NESA",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "24/04/2026",
+      "descricao": "Venc: 29.04.2026 - R$ 570,82",
+      "fornecedor": "PAGAMENTO PIX 04895728000180 EQUATORIAL PARA DIS",
+      "valor": -570.82,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi NESA",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "22/04/2026",
+      "descricao": "Conserto notebook",
+      "fornecedor": "PAGAMENTO PIX 04624939000188 PERFORM INFORMATICA",
+      "valor": -370,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi NESA",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "13/04/2026",
+      "descricao": "Apoio Logístico - retorno ATL 2026",
+      "fornecedor": "PAGAMENTO PIX 75110326215 Sebastiao Gonçalves Po",
+      "valor": -70,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi NESA",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "13/04/2026",
+      "descricao": "limpeza interna da sede AIT",
+      "fornecedor": "PAGAMENTO PIX 82182396268 ELZA DO LIVRAMENTO ARA",
+      "valor": -150,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi NESA",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "10/04/2026",
+      "descricao": "",
+      "fornecedor": "PAGAMENTO PIX 02558157000162 TELEFONICA BRAS",
+      "valor": -99.99,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi NESA",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "09/04/2026",
+      "descricao": "Serviços Contábeis- mês de março 2026",
+      "fornecedor": "PAGAMENTO PIX 38636232000103 SILVAS GESTAO EMPRE",
+      "valor": -1621,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi NESA",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "08/04/2026",
+      "descricao": "Reembolso- viagem a TI APYTEREWA",
+      "fornecedor": "PAGAMENTO PIX 01385741201 JORDAN CARVALHO PANTOJ",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi NESA",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "07/04/2026",
+      "descricao": "Pgto - Material permanente",
+      "fornecedor": "PAGAMENTO PIX 10302089000366 ALANNA COMERCIO LTD",
+      "valor": -341,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi NESA",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "07/04/2026",
+      "descricao": "Despesas com transporte de materiais - ATL",
+      "fornecedor": "PAGAMENTO PIX 55479847287 Marcio Parakana",
+      "valor": -570,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi NESA",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "06/04/2026",
+      "descricao": "limpeza da sede - AIT",
+      "fornecedor": "PAGAMENTO PIX 82182396268 ELZA DO LIVRAMENTO ARA",
+      "valor": -150,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi NESA",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "06/04/2026",
+      "descricao": "Apoio Logístico",
+      "fornecedor": "PAGAMENTO PIX 06038254000185 C R W COMERCIO DE C",
+      "valor": -427.07,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi NESA",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "06/04/2026",
+      "descricao": "Apoio Logístico- ATL",
+      "fornecedor": "PAGAMENTO PIX 75110326215 Sebastiao Gonçalves Po",
+      "valor": -80,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi NESA",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "06/04/2026",
+      "descricao": "",
+      "fornecedor": "PAGAMENTO PIX 04624939000188 PERFORM INFORMATICA",
+      "valor": -220,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi NESA",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "06/04/2026",
+      "descricao": "Taxa Sicredi",
+      "fornecedor": "CESTA DE RELACIONAMENTO",
+      "valor": -63.8,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi NESA",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "02/04/2026",
+      "descricao": "Apoio Logístico TI Apyterewa",
+      "fornecedor": "PAGAMENTO PIX 19276857000167 L R DA PAZ CIA LTDA",
+      "valor": -491.39,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi NESA",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "02/04/2026",
+      "descricao": "",
+      "fornecedor": "PAGAMENTO PIX 05081671000148 FISCHER",
+      "valor": -80.55,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi NESA",
+      "categoria": "(sem categoria)"
+    }
+  ]
+}
