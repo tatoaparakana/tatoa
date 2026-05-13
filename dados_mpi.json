@@ -1,0 +1,217 @@
+{
+  "geradoEm": "2026-05-13T13:37:13.560Z",
+  "projeto": "MPI Mulheres",
+  "saldo": -10730.1,
+  "totalEntradas": 1000,
+  "totalSaidas": 11730.1,
+  "totalLancamentos": 21,
+  "porCaixa": {
+    "Asaas": -7502,
+    "Sicredi Cacau": -3228.1
+  },
+  "porCategoria": {
+    "(sem categoria)": -10730.1
+  },
+  "movimentacoes": [
+    {
+      "dtPgto": "18/03/2026",
+      "descricao": "Pgto - referente Bolsa de estágio na Kania - projeto das mulheres",
+      "fornecedor": "YWOAGIA PARAKANA",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Asaas",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "18/03/2026",
+      "descricao": "Pgto - referente Bolsa de estágio na Kania - projeto das mulheres",
+      "fornecedor": "Estorno de",
+      "valor": 500,
+      "movimento": "Entrada",
+      "status": "Em Aberto",
+      "caixa": "Asaas",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "18/03/2026",
+      "descricao": "Pgto - referente Bolsa de estágio na Kania - projeto das mulheres - mês de abril",
+      "fornecedor": "YWOAGIA PARAKANA",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Asaas",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "18/03/2026",
+      "descricao": "Pgto - referente Bolsa de estágio na Kania - Projeto das mulheres",
+      "fornecedor": "Naoi Parakana",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Asaas",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "16/03/2026",
+      "descricao": "Pgto referente Bolsa estágio na Kania projetos das Mulheres - Abril",
+      "fornecedor": "Kaxapoga Parakana",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Asaas",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "03/03/2026",
+      "descricao": "compra 2 notebooks para Koxoetoa",
+      "fornecedor": "MAGALUPAY",
+      "valor": -3228.1,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Sicredi Cacau",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "27/02/2026",
+      "descricao": "Pgto referente Bolsa estágio na Kania projeto das Mulheres",
+      "fornecedor": "YWOAGIA PARAKANA",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Asaas",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "27/02/2026",
+      "descricao": "Pgto referente Bolsa estágio na Kania projeto das Mulheres",
+      "fornecedor": "Naoi Parakana",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Asaas",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "27/02/2026",
+      "descricao": "Pgto referente Bolsa estágio na Kania projeto das Mulheres",
+      "fornecedor": "Kaxapoga Parakana",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Asaas",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "27/02/2026",
+      "descricao": "Pgto referente Bolsa estágio na Kania projeto das Mulheres",
+      "fornecedor": "Xogoa Parakana",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Asaas",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "27/02/2026",
+      "descricao": "Pgto referente Bolsa estágio na Kania projeto das Mulheres",
+      "fornecedor": "Pix",
+      "valor": -2,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Asaas",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "14/02/2026",
+      "descricao": "Pgto - referente Bolsa de estágio na Kania - Projeto das mulheres",
+      "fornecedor": "YWOAGIA PARAKANA",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Asaas",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "14/02/2026",
+      "descricao": "Pgto - referente Bolsa de estágio na Kania - Projeto das mulheres",
+      "fornecedor": "Naoi Parakana",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Asaas",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "14/02/2026",
+      "descricao": "Pgto - referente Bolsa de estágio na Kania - Projeto das mulheres",
+      "fornecedor": "Kaxapoga Parakana",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Asaas",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "14/02/2026",
+      "descricao": "Pgto - referente Bolsa de estágio na Kania - Projeto das mulheres",
+      "fornecedor": "Xogoa Parakana",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Asaas",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "14/02/2026",
+      "descricao": "Pgto - referente Bolsa de estágio na Kania - Projeto das mulheres",
+      "fornecedor": "Estorno de",
+      "valor": 500,
+      "movimento": "Entrada",
+      "status": "Em Aberto",
+      "caixa": "Asaas",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "14/02/2026",
+      "descricao": "Pgto - referente Bolsa de estágio na Kania - Projeto das mulheres (Poxira pago no pix do Xogoa)",
+      "fornecedor": "Xogoa Parakana",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Asaas",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "15/01/2026",
+      "descricao": "Pgto - referente Bolsa de estágio na Kania projeto das Mulheres",
+      "fornecedor": "Kaxapoga Parakana",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Asaas",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "15/01/2026",
+      "descricao": "Pgto - referente Bolsa de estágio na Kania, projeto das Mulheres - Poxira",
+      "fornecedor": "Xogoa Parakana",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Asaas",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "15/01/2026",
+      "descricao": "Pgto - referente Bolsa de estágio na Kania, projeto das Mulheres",
+      "fornecedor": "Naoi Parakana",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Asaas",
+      "categoria": "(sem categoria)"
+    }
+  ]
+}
