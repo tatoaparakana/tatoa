@@ -1,17 +1,17 @@
 {
-  "geradoEm": "2026-05-13T13:43:14.345Z",
+  "geradoEm": "2026-05-13T18:13:29.832Z",
   "projeto": "TNC Aditivo",
-  "saldo": 278851.26,
-  "totalEntradas": 374764.48,
-  "totalSaidas": 95913.22,
-  "totalLancamentos": 121,
+  "saldo": 658443.13,
+  "totalEntradas": 764381.28,
+  "totalSaidas": 105938.15,
+  "totalLancamentos": 139,
   "porCaixa": {
-    "Asaas": -45460.01,
-    "Sicredi Cacau": -41759.94,
+    "Asaas": 336046.19,
+    "Sicredi Cacau": -43674.27,
     "Sicredi TNC": 366071.21
   },
   "porCategoria": {
-    "(sem categoria)": 278851.26
+    "(sem categoria)": 658443.13
   },
   "movimentacoes": [
     {
@@ -185,6 +185,16 @@
       "categoria": "(sem categoria)"
     },
     {
+      "dtPgto": "23/04/2026",
+      "descricao": "Starlink mensalidade",
+      "fornecedor": "Transação via Pix Automático para STARLINK BRAZIL SERVICOS",
+      "valor": -235.52,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Asaas",
+      "categoria": "(sem categoria)"
+    },
+    {
       "dtPgto": "22/04/2026",
       "descricao": "transferência entre contas da mesma titularidade",
       "fornecedor": "RECEBIMENTO PIX 20481744000182 ASSOCIACAO INDIGE",
@@ -199,16 +209,6 @@
       "descricao": "transferência entre contas da mesma titularidade",
       "fornecedor": "RECEBIMENTO PIX 20481744000182 ASSOCIACAO INDIGE",
       "valor": 24764.48,
-      "movimento": "Entrada",
-      "status": "Em Aberto",
-      "caixa": "Sicredi TNC",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "20/04/2026",
-      "descricao": "transferência entre contas da mesma titularidade",
-      "fornecedor": "RECEBIMENTO PIX 20481744000182 ASSOCIACAO INDIGE",
-      "valor": 25000,
       "movimento": "Entrada",
       "status": "Em Aberto",
       "caixa": "Sicredi TNC",
