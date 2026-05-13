@@ -1,16 +1,16 @@
 {
-  "geradoEm": "2026-05-13T12:43:21.985Z",
+  "geradoEm": "2026-05-13T13:37:09.817Z",
   "projeto": "Systemica - Antecipação",
-  "saldo": 69057.4,
-  "totalEntradas": 367951.74,
-  "totalSaidas": 298894.34,
-  "totalLancamentos": 174,
+  "saldo": 42121.2,
+  "totalEntradas": 340951.74,
+  "totalSaidas": 298830.54,
+  "totalLancamentos": 171,
   "porCaixa": {
     "Asaas": -11402.99,
-    "Sicredi Systemica": 80460.39
+    "Sicredi Systemica": 53524.19
   },
   "porCategoria": {
-    "(sem categoria)": 69057.4
+    "(sem categoria)": 42121.2
   },
   "movimentacoes": [
     {
@@ -185,16 +185,6 @@
     },
     {
       "dtPgto": "07/04/2026",
-      "descricao": "transferência entre contas da mesma titularidade",
-      "fornecedor": "RECEBIMENTO PIX 20481744000182 ASSOCIACAO INDIGE",
-      "valor": 17000,
-      "movimento": "Entrada",
-      "status": "Em Aberto",
-      "caixa": "Sicredi Systemica",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "07/04/2026",
       "descricao": "Pgto conserto quadriciclo da presidente da AIT",
       "fornecedor": "PAGAMENTO PIX 48884870000105 GAMBA MOTOS LTDA",
       "valor": -1360,
@@ -208,6 +198,16 @@
       "descricao": "40154884000153",
       "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
       "valor": -235.52,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Systemica",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "06/04/2026",
+      "descricao": "Fortalecimento da Reocupação",
+      "fornecedor": "PAGAMENTO PIX 39663958000106 PREMIUM SUPERMERCAD",
+      "valor": -2550,
       "movimento": "Saída",
       "status": "Em Aberto",
       "caixa": "Sicredi Systemica",
