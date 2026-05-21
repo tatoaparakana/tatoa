@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-05-13T18:28:57.365Z",
+  "geradoEm": "2026-05-21T15:29:23.696Z",
   "projeto": "MPI Mulheres",
   "saldo": -19675.1,
   "totalEntradas": 1000,
@@ -159,7 +159,7 @@
       "fornecedor": "MAGALUPAY",
       "valor": -3228.1,
       "movimento": "Saída",
-      "status": "",
+      "status": "Em Aberto",
       "caixa": "Sicredi Cacau",
       "categoria": "(sem categoria)"
     },
