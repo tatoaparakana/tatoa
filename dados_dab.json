@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-05-21T15:29:27.293Z",
+  "geradoEm": "2026-05-21T21:07:52.878Z",
   "projeto": "Dabucury",
   "saldo": -4803.17,
   "totalEntradas": 83527.55,
@@ -9,7 +9,11 @@
     "Sicredi Dabucury": -4803.17
   },
   "porCategoria": {
-    "(sem categoria)": -4803.17
+    "(sem categoria)": 26305.19,
+    "Consultoria Técnica": -7000,
+    "Mensalidade internet": -4608.36,
+    "Coordenador financeiro": -6000,
+    "Coordenador do Projeto": -13500
   },
   "movimentacoes": [
     {
@@ -20,7 +24,7 @@
       "movimento": "Saída",
       "status": "Em Aberto",
       "caixa": "Sicredi Dabucury",
-      "categoria": "(sem categoria)"
+      "categoria": "Coordenador do Projeto"
     },
     {
       "dtPgto": "12/05/2026",
@@ -80,7 +84,7 @@
       "movimento": "Saída",
       "status": "Em Aberto",
       "caixa": "Sicredi Dabucury",
-      "categoria": "(sem categoria)"
+      "categoria": "Coordenador financeiro"
     },
     {
       "dtPgto": "06/04/2026",
@@ -110,7 +114,7 @@
       "movimento": "Saída",
       "status": "Em Aberto",
       "caixa": "Sicredi Dabucury",
-      "categoria": "(sem categoria)"
+      "categoria": "Mensalidade internet"
     },
     {
       "dtPgto": "05/03/2026",
@@ -140,7 +144,7 @@
       "movimento": "Saída",
       "status": "Em Aberto",
       "caixa": "Sicredi Dabucury",
-      "categoria": "(sem categoria)"
+      "categoria": "Mensalidade internet"
     },
     {
       "dtPgto": "26/02/2026",
@@ -150,7 +154,7 @@
       "movimento": "Saída",
       "status": "Em Aberto",
       "caixa": "Sicredi Dabucury",
-      "categoria": "(sem categoria)"
+      "categoria": "Mensalidade internet"
     },
     {
       "dtPgto": "20/02/2026",
@@ -160,7 +164,7 @@
       "movimento": "Saída",
       "status": "Em Aberto",
       "caixa": "Sicredi Dabucury",
-      "categoria": "(sem categoria)"
+      "categoria": "Mensalidade internet"
     },
     {
       "dtPgto": "19/02/2026",
@@ -170,7 +174,7 @@
       "movimento": "Saída",
       "status": "Em Aberto",
       "caixa": "Sicredi Dabucury",
-      "categoria": "(sem categoria)"
+      "categoria": "Mensalidade internet"
     },
     {
       "dtPgto": "19/02/2026",
@@ -190,7 +194,7 @@
       "movimento": "Saída",
       "status": "Em Aberto",
       "caixa": "Sicredi Dabucury",
-      "categoria": "(sem categoria)"
+      "categoria": "Mensalidade internet"
     },
     {
       "dtPgto": "18/02/2026",
