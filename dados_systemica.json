@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-05-21T15:15:44.038Z",
+  "geradoEm": "2026-05-21T15:28:03.936Z",
   "projeto": "Systemica - Antecipação",
   "saldo": 13107.52,
   "totalEntradas": 375655.46,
@@ -35,7 +35,7 @@
     },
     {
       "dtPgto": "11/05/2026",
-      "descricao": "",
+      "descricao": "pagamento conserto carro tato'a (josias)",
       "fornecedor": "LIQUIDACAO BOLETO 01338388000106 RAJA RENT A CAR",
       "valor": -5313.23,
       "movimento": "Saída",
@@ -135,7 +135,7 @@
     },
     {
       "dtPgto": "05/05/2026",
-      "descricao": "",
+      "descricao": "taxa bancária",
       "fornecedor": "CESTA DE RELACIONAMENTO",
       "valor": -63.8,
       "movimento": "Saída",
