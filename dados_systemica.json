@@ -1,20 +1,30 @@
 {
-  "geradoEm": "2026-05-21T12:43:22.617Z",
+  "geradoEm": "2026-05-21T13:43:22.479Z",
   "projeto": "Systemica - Antecipação",
-  "saldo": 41527.81,
+  "saldo": 1969.94,
   "totalEntradas": 340951.74,
-  "totalSaidas": 299423.93,
-  "totalLancamentos": 172,
+  "totalSaidas": 338981.8,
+  "totalLancamentos": 209,
   "porCaixa": {
     "Asaas": -11402.99,
-    "Sicredi Systemica": 52930.8
+    "Sicredi Systemica": 13372.93
   },
   "porCategoria": {
-    "(sem categoria)": 41527.81
+    "(sem categoria)": 1969.94
   },
   "movimentacoes": [
     {
-      "dtPgto": "30/04/2026",
+      "dtPgto": "15/05/2026",
+      "descricao": "Hospedagem- comissão Parakanã",
+      "fornecedor": "PAGAMENTO PIX 06236230000130 PALACE HOTEL",
+      "valor": -3699,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Systemica",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "11/05/2026",
       "descricao": "40154884000153",
       "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
       "valor": -235.52,
@@ -24,59 +34,49 @@
       "categoria": "(sem categoria)"
     },
     {
-      "dtPgto": "30/04/2026",
-      "descricao": "pgto de vasilhame",
-      "fornecedor": "PAGAMENTO PIX 30445734000145 CASA RURAL",
-      "valor": -400,
-      "movimento": "Saída",
-      "status": "Em Aberto",
-      "caixa": "Sicredi Systemica",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "29/04/2026",
-      "descricao": "40154884000153",
-      "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
-      "valor": -235.52,
-      "movimento": "Saída",
-      "status": "Em Aberto",
-      "caixa": "Sicredi Systemica",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "29/04/2026",
-      "descricao": "Fortalecimento da Reocupação",
-      "fornecedor": "PAGAMENTO PIX 07506820000107 MAX AUTO PECAS",
-      "valor": -2273.73,
-      "movimento": "Saída",
-      "status": "Em Aberto",
-      "caixa": "Sicredi Systemica",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "28/04/2026",
+      "dtPgto": "11/05/2026",
       "descricao": "",
-      "fornecedor": "RECEBIMENTO PIX 22524415000105 SYSTEMICA",
-      "valor": 16500,
-      "movimento": "Entrada",
+      "fornecedor": "LIQUIDACAO BOLETO 01338388000106 RAJA RENT A CAR",
+      "valor": -5313.23,
+      "movimento": "Saída",
       "status": "Em Aberto",
       "caixa": "Sicredi Systemica",
       "categoria": "(sem categoria)"
     },
     {
-      "dtPgto": "28/04/2026",
+      "dtPgto": "08/05/2026",
       "descricao": "",
-      "fornecedor": "RECEBIMENTO PIX 22524415000105 SYSTEMICA",
-      "valor": 42477.03,
-      "movimento": "Entrada",
+      "fornecedor": "PAGAMENTO PIX 42020136000103 CASA DO LAVADOR",
+      "valor": -90,
+      "movimento": "Saída",
       "status": "Em Aberto",
       "caixa": "Sicredi Systemica",
       "categoria": "(sem categoria)"
     },
     {
-      "dtPgto": "17/04/2026",
-      "descricao": "Fortalecimento da Reocupação",
-      "fornecedor": "PAGAMENTO PIX 39663958000106 PREMIUM SUPERMERCAD",
+      "dtPgto": "08/05/2026",
+      "descricao": "apoio Logístico retorno de agendas em ATM",
+      "fornecedor": "PAGAMENTO PIX 28782251000194 AZEVEDO COMERCIO VA",
+      "valor": -2376.5,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Systemica",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "08/05/2026",
+      "descricao": "Apoio Logístico - agendas em ATM",
+      "fornecedor": "PAGAMENTO PIX 59446451000108 JULIANA SANTOS EMBA",
+      "valor": -600,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Systemica",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "07/05/2026",
+      "descricao": "ogto Bolsa comissão Parakanã mês de junho",
+      "fornecedor": "PAGAMENTO PIX 52618145291 MAMA PARAKANA",
       "valor": -1000,
       "movimento": "Saída",
       "status": "Em Aberto",
@@ -84,88 +84,68 @@
       "categoria": "(sem categoria)"
     },
     {
-      "dtPgto": "16/04/2026",
-      "descricao": "Mensalidade aldeia- Centro Parakanã",
-      "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
-      "valor": -235.52,
+      "dtPgto": "07/05/2026",
+      "descricao": "Pgto Bolsa da comissão Parakanã mês maio",
+      "fornecedor": "PAGAMENTO PIX 53829905220 Wenatoa Parakana",
+      "valor": -1000,
       "movimento": "Saída",
       "status": "Em Aberto",
       "caixa": "Sicredi Systemica",
       "categoria": "(sem categoria)"
     },
     {
-      "dtPgto": "14/04/2026",
-      "descricao": "Pgto mensalidade - Aldeia Ywyete",
-      "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
-      "valor": -190,
-      "movimento": "Saída",
-      "status": "Em Aberto",
-      "caixa": "Sicredi Systemica",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "14/04/2026",
-      "descricao": "",
-      "fornecedor": "LIQUIDACAO BOLETO 01338388000106 RAJA RENT A CAR",
-      "valor": -5424.81,
-      "movimento": "Saída",
-      "status": "Em Aberto",
-      "caixa": "Sicredi Systemica",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "14/04/2026",
-      "descricao": "Fortalecimento da Reocupação",
-      "fornecedor": "PAGAMENTO PIX 15496840000164 F. R. A. DA SILVA C",
-      "valor": -225.5,
-      "movimento": "Saída",
-      "status": "Em Aberto",
-      "caixa": "Sicredi Systemica",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "13/04/2026",
+      "dtPgto": "06/05/2026",
       "descricao": "40154884000153",
       "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
-      "valor": -235.52,
+      "valor": -471.04,
       "movimento": "Saída",
       "status": "Em Aberto",
       "caixa": "Sicredi Systemica",
       "categoria": "(sem categoria)"
     },
     {
-      "dtPgto": "09/04/2026",
+      "dtPgto": "06/05/2026",
+      "descricao": "Ajuda de custo agendas em ATM de 5 a 07 de maio",
+      "fornecedor": "PAGAMENTO PIX 53829905220 Wenatoa Parakana",
+      "valor": -450,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Systemica",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "06/05/2026",
+      "descricao": "Ajuda de custo agendas em ATM de 5 a 07 de maio",
+      "fornecedor": "PAGAMENTO PIX 55628796204 Koxawewoxa Parakana",
+      "valor": -450,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Systemica",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "05/05/2026",
       "descricao": "Fortalecimento da Reocupação",
       "fornecedor": "PAGAMENTO PIX 09404556000118 SUPERMERCADO TOCANT",
-      "valor": -407.32,
+      "valor": -2514.18,
       "movimento": "Saída",
       "status": "Em Aberto",
       "caixa": "Sicredi Systemica",
       "categoria": "(sem categoria)"
     },
     {
-      "dtPgto": "09/04/2026",
-      "descricao": "Prestação de serviços - mês de março 2026",
-      "fornecedor": "PAGAMENTO PIX 59276258000168 59.276.258 JORDAN C",
-      "valor": -3000,
+      "dtPgto": "05/05/2026",
+      "descricao": "",
+      "fornecedor": "CESTA DE RELACIONAMENTO",
+      "valor": -63.8,
       "movimento": "Saída",
       "status": "Em Aberto",
       "caixa": "Sicredi Systemica",
       "categoria": "(sem categoria)"
     },
     {
-      "dtPgto": "09/04/2026",
-      "descricao": "Prestação de serviços - mês de março 2026",
-      "fornecedor": "PAGAMENTO PIX 62010588000111 62 010 588 SIMONE P",
-      "valor": -1100,
-      "movimento": "Saída",
-      "status": "Em Aberto",
-      "caixa": "Sicredi Systemica",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "09/04/2026",
-      "descricao": "Prestação de serviços - mês de março 2026",
+      "dtPgto": "05/05/2026",
+      "descricao": "Prestação de serviços mês de abril 2026",
       "fornecedor": "PAGAMENTO PIX 62218112000170 J E BANDEIRA DE MAT",
       "valor": -2000,
       "movimento": "Saída",
@@ -174,27 +154,37 @@
       "categoria": "(sem categoria)"
     },
     {
-      "dtPgto": "08/04/2026",
+      "dtPgto": "05/05/2026",
+      "descricao": "Prestação de serviços mês de abril 2026",
+      "fornecedor": "PAGAMENTO PIX 62010588000111 62 010 588 SIMONE P",
+      "valor": -1100,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Systemica",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "05/05/2026",
+      "descricao": "Prestação de serviços mês de abril de 2026",
+      "fornecedor": "PAGAMENTO PIX 59276258000168 59.276.258 JORDAN C",
+      "valor": -3000,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Systemica",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "04/05/2026",
       "descricao": "Fortalecimento da Reocupação",
-      "fornecedor": "PAGAMENTO PIX 09404556000118 SUPERMERCADO TOCANT",
-      "valor": -1247.82,
+      "fornecedor": "PAGAMENTO PIX 39663958000106 PREMIUM SUPERMERCAD",
+      "valor": -303,
       "movimento": "Saída",
       "status": "Em Aberto",
       "caixa": "Sicredi Systemica",
       "categoria": "(sem categoria)"
     },
     {
-      "dtPgto": "07/04/2026",
-      "descricao": "Pgto conserto quadriciclo da presidente da AIT",
-      "fornecedor": "PAGAMENTO PIX 48884870000105 GAMBA MOTOS LTDA",
-      "valor": -1360,
-      "movimento": "Saída",
-      "status": "Em Aberto",
-      "caixa": "Sicredi Systemica",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "06/04/2026",
+      "dtPgto": "04/05/2026",
       "descricao": "40154884000153",
       "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
       "valor": -235.52,
@@ -204,10 +194,20 @@
       "categoria": "(sem categoria)"
     },
     {
-      "dtPgto": "06/04/2026",
-      "descricao": "Fortalecimento da Reocupação",
-      "fornecedor": "PAGAMENTO PIX 39663958000106 PREMIUM SUPERMERCAD",
-      "valor": -2550,
+      "dtPgto": "04/05/2026",
+      "descricao": "Mensalidade- Aldeia Pipi",
+      "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
+      "valor": -235.52,
+      "movimento": "Saída",
+      "status": "Em Aberto",
+      "caixa": "Sicredi Systemica",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "04/05/2026",
+      "descricao": "40154884000153",
+      "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
+      "valor": -235.52,
       "movimento": "Saída",
       "status": "Em Aberto",
       "caixa": "Sicredi Systemica",
