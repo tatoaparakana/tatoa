@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-05-26T22:50:03.005Z",
+  "geradoEm": "2026-05-26T23:43:24.755Z",
   "projeto": "Systemica - Antecipação",
   "saldo": 12683,
   "totalEntradas": 375656.46,
@@ -16,7 +16,7 @@
   "movimentacoes": [
     {
       "dtPgto": "23/05/2026",
-      "descricao": "dsds",
+      "descricao": "",
       "fornecedor": "",
       "valor": 1,
       "movimento": "Entrada",
