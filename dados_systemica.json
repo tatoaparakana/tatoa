@@ -1,18 +1,29 @@
 {
-  "geradoEm": "2026-05-26T22:48:38.506Z",
+  "geradoEm": "2026-05-26T22:50:03.005Z",
   "projeto": "Systemica - Antecipação",
-  "saldo": 12682,
-  "totalEntradas": 375655.46,
+  "saldo": 12683,
+  "totalEntradas": 375656.46,
   "totalSaidas": 362973.46,
-  "totalLancamentos": 219,
+  "totalLancamentos": 220,
   "porCaixa": {
     "Asaas": -11402.99,
-    "Sicredi Systemica": 24084.99
+    "Sicredi Systemica": 24084.99,
+    "(sem caixa)": 1
   },
   "porCategoria": {
-    "(sem categoria)": 12682
+    "(sem categoria)": 12683
   },
   "movimentacoes": [
+    {
+      "dtPgto": "23/05/2026",
+      "descricao": "dsds",
+      "fornecedor": "",
+      "valor": 1,
+      "movimento": "Entrada",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
     {
       "dtPgto": "22/05/2026",
       "descricao": "Mensalidade - Centro Parakanã",
@@ -198,16 +209,6 @@
       "descricao": "Fortalecimento da Reocupação",
       "fornecedor": "PAGAMENTO PIX 39663958000106 PREMIUM SUPERMERCAD",
       "valor": -303,
-      "movimento": "Saída",
-      "status": "Sicredi Systemica",
-      "caixa": "Sicredi Systemica",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "04/05/2026",
-      "descricao": "40154884000153",
-      "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
-      "valor": -235.52,
       "movimento": "Saída",
       "status": "Sicredi Systemica",
       "caixa": "Sicredi Systemica",
