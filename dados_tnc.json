@@ -1,11 +1,218 @@
 {
-  "geradoEm": "2026-05-26T14:03:06.099Z",
+  "geradoEm": "2026-05-26T14:07:51.140Z",
   "projeto": "TNC Aditivo",
-  "saldo": 0,
-  "totalEntradas": 0,
-  "totalSaidas": 0,
-  "totalLancamentos": 0,
-  "porCaixa": {},
-  "porCategoria": {},
-  "movimentacoes": []
+  "saldo": 212664.81,
+  "totalEntradas": 389616.8,
+  "totalSaidas": 176951.99,
+  "totalLancamentos": 182,
+  "porCaixa": {
+    "Sicredi Cacau": -43674.27,
+    "Asaas": 331402.28,
+    "Sicredi TNC": -75063.2
+  },
+  "porCategoria": {
+    "(sem categoria)": 212664.81
+  },
+  "movimentacoes": [
+    {
+      "dtPgto": "23/05/2026",
+      "descricao": "Apoio a safra do cacau",
+      "fornecedor": "PAGAMENTO PIX 08116338000620 PRIMAVERA AGROPECUA",
+      "valor": -237.03,
+      "movimento": "Saída",
+      "status": "Sicredi TNC",
+      "caixa": "Sicredi TNC",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "23/05/2026",
+      "descricao": "Starlink mensalidade",
+      "fornecedor": "Transação via Pix Automático para STARLINK BRAZIL SERVICOS",
+      "valor": -235.52,
+      "movimento": "Saída",
+      "status": "Asaas",
+      "caixa": "Asaas",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "22/05/2026",
+      "descricao": "Apoio Logístico",
+      "fornecedor": "PAGAMENTO PIX 28782251000194 AZEVEDO COMERCIO VA",
+      "valor": -9,
+      "movimento": "Saída",
+      "status": "Sicredi TNC",
+      "caixa": "Sicredi TNC",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "22/05/2026",
+      "descricao": "Apoio Logístico",
+      "fornecedor": "",
+      "valor": -670,
+      "movimento": "Saída",
+      "status": "Sicredi TNC",
+      "caixa": "Sicredi TNC",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "22/05/2026",
+      "descricao": "Apoio a safra do cacau",
+      "fornecedor": "PAGAMENTO PIX 09609403000298 A RURALISTA",
+      "valor": -3100,
+      "movimento": "Saída",
+      "status": "Sicredi TNC",
+      "caixa": "Sicredi TNC",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "22/05/2026",
+      "descricao": "Pgto de Bolsa referente ao mês de julho",
+      "fornecedor": "PAGAMENTO PIX 53829905220 Wenatoa Parakana",
+      "valor": -2277,
+      "movimento": "Saída",
+      "status": "Sicredi TNC",
+      "caixa": "Sicredi TNC",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "22/05/2026",
+      "descricao": "Alimentação",
+      "fornecedor": "PAGAMENTO PIX 15496840000164 F. R. A. DA SILVA C",
+      "valor": -191,
+      "movimento": "Saída",
+      "status": "Sicredi TNC",
+      "caixa": "Sicredi TNC",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "22/05/2026",
+      "descricao": "Starlink mensalidade",
+      "fornecedor": "Transação via Pix Automático para STARLINK BRAZIL SERVICOS",
+      "valor": -235.52,
+      "movimento": "Saída",
+      "status": "Asaas",
+      "caixa": "Asaas",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "20/05/2026",
+      "descricao": "Recibo cada do índio x AIT coleta de artesanato",
+      "fornecedor": "Transação via Pix com QR Code para 99 TECNOLOGIA LTDA",
+      "valor": -12.6,
+      "movimento": "Saída",
+      "status": "Asaas",
+      "caixa": "Asaas",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "20/05/2026",
+      "descricao": "Recibo uber - AIT x CASAI pegar artesanato e trazer para Kania",
+      "fornecedor": "Transação via Pix com chave para Luis Assuncao Ribeiro de Souza",
+      "valor": -15.4,
+      "movimento": "Saída",
+      "status": "Asaas",
+      "caixa": "Asaas",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "20/05/2026",
+      "descricao": "Casai x AIT retorno coletar artesanato",
+      "fornecedor": "Transação via Pix com QR Code para 99 TECNOLOGIA LTDA",
+      "valor": -15.9,
+      "movimento": "Saída",
+      "status": "Asaas",
+      "caixa": "Asaas",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "19/05/2026",
+      "descricao": "Starlink mensalidade",
+      "fornecedor": "Transação via Pix Automático para STARLINK BRAZIL SERVICOS",
+      "valor": -235.52,
+      "movimento": "Saída",
+      "status": "Asaas",
+      "caixa": "Asaas",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "18/05/2026",
+      "descricao": "Apoio Logístico",
+      "fornecedor": "PAGAMENTO PIX 19276857000167 L R DA PAZ & CIA LT",
+      "valor": -1368,
+      "movimento": "Saída",
+      "status": "Sicredi TNC",
+      "caixa": "Sicredi TNC",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "18/05/2026",
+      "descricao": "Apoio ao escoamento do cacau",
+      "fornecedor": "PAGAMENTO PIX 19276857000167 L R DA PAZ & CIA LT",
+      "valor": -598.63,
+      "movimento": "Saída",
+      "status": "Sicredi TNC",
+      "caixa": "Sicredi TNC",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "18/05/2026",
+      "descricao": "Apoio ao escoamento da castanha",
+      "fornecedor": "PAGAMENTO PIX 47458725000191 Chão Goiano Ltda",
+      "valor": -1667,
+      "movimento": "Saída",
+      "status": "Sicredi TNC",
+      "caixa": "Sicredi TNC",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "16/05/2026",
+      "descricao": "apoio a cadeia produtiva do cacau",
+      "fornecedor": "PAGAMENTO PIX 15496840000164 F. R. A. DA SILVA C",
+      "valor": -1337,
+      "movimento": "Saída",
+      "status": "Sicredi TNC",
+      "caixa": "Sicredi TNC",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "14/05/2026",
+      "descricao": "apoio no escoamento do cacau",
+      "fornecedor": "PAGAMENTO PIX 52618145291 MAMA PARAKANA",
+      "valor": -200,
+      "movimento": "Saída",
+      "status": "Sicredi TNC",
+      "caixa": "Sicredi TNC",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "14/05/2026",
+      "descricao": "pgto alimentação",
+      "fornecedor": "PAGAMENTO PIX 15496840000164 F. R. A. DA SILVA C",
+      "valor": -955,
+      "movimento": "Saída",
+      "status": "Sicredi TNC",
+      "caixa": "Sicredi TNC",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "14/05/2026",
+      "descricao": "pgto restante 601kg de cacau - Wenera",
+      "fornecedor": "PAGAMENTO PIX 55504922291 KAWOWE PARAKANA",
+      "valor": -867,
+      "movimento": "Saída",
+      "status": "Sicredi TNC",
+      "caixa": "Sicredi TNC",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "14/05/2026",
+      "descricao": "pgto restante de 412kg de Cacau - Xopiona",
+      "fornecedor": "PAGAMENTO PIX 55504922291 KAWOWE PARAKANA",
+      "valor": -944,
+      "movimento": "Saída",
+      "status": "Sicredi TNC",
+      "caixa": "Sicredi TNC",
+      "categoria": "(sem categoria)"
+    }
+  ]
 }
