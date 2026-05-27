@@ -1,29 +1,19 @@
 {
-  "geradoEm": "2026-05-27T11:44:01.180Z",
+  "geradoEm": "2026-05-27T13:43:22.556Z",
   "projeto": "Systemica - Antecipação",
-  "saldo": 12683,
-  "totalEntradas": 375656.46,
+  "saldo": 12682,
+  "totalEntradas": 375655.46,
   "totalSaidas": 362973.46,
-  "totalLancamentos": 220,
+  "totalLancamentos": 219,
   "porCaixa": {
     "Asaas": -11402.99,
-    "Sicredi Systemica": 24084.99,
-    "(sem caixa)": 1
+    "Sicredi Systemica": 24084.99
   },
   "porCategoria": {
-    "(sem categoria)": 12683
+    "(sem categoria)": 26159.77,
+    "3.3 Sistema de comunicação": -13477.77
   },
   "movimentacoes": [
-    {
-      "dtPgto": "23/05/2026",
-      "descricao": "",
-      "fornecedor": "",
-      "valor": 1,
-      "movimento": "Entrada",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
-    },
     {
       "dtPgto": "22/05/2026",
       "descricao": "Mensalidade - Centro Parakanã",
@@ -32,7 +22,7 @@
       "movimento": "Saída",
       "status": "Sicredi Systemica",
       "caixa": "Sicredi Systemica",
-      "categoria": "(sem categoria)"
+      "categoria": "3.3 Sistema de comunicação"
     },
     {
       "dtPgto": "22/05/2026",
@@ -42,7 +32,7 @@
       "movimento": "Saída",
       "status": "Sicredi Systemica",
       "caixa": "Sicredi Systemica",
-      "categoria": "(sem categoria)"
+      "categoria": "3.3 Sistema de comunicação"
     },
     {
       "dtPgto": "15/05/2026",
@@ -52,7 +42,7 @@
       "movimento": "Saída",
       "status": "Sicredi Systemica",
       "caixa": "Sicredi Systemica",
-      "categoria": "(sem categoria)"
+      "categoria": "3.3 Sistema de comunicação"
     },
     {
       "dtPgto": "11/05/2026",
@@ -62,7 +52,7 @@
       "movimento": "Saída",
       "status": "Sicredi Systemica",
       "caixa": "Sicredi Systemica",
-      "categoria": "(sem categoria)"
+      "categoria": "3.3 Sistema de comunicação"
     },
     {
       "dtPgto": "11/05/2026",
@@ -72,7 +62,7 @@
       "movimento": "Saída",
       "status": "Sicredi Systemica",
       "caixa": "Sicredi Systemica",
-      "categoria": "(sem categoria)"
+      "categoria": "3.3 Sistema de comunicação"
     },
     {
       "dtPgto": "08/05/2026",
@@ -82,7 +72,7 @@
       "movimento": "Saída",
       "status": "Sicredi Systemica",
       "caixa": "Sicredi Systemica",
-      "categoria": "(sem categoria)"
+      "categoria": "3.3 Sistema de comunicação"
     },
     {
       "dtPgto": "08/05/2026",
@@ -92,7 +82,7 @@
       "movimento": "Saída",
       "status": "Sicredi Systemica",
       "caixa": "Sicredi Systemica",
-      "categoria": "(sem categoria)"
+      "categoria": "3.3 Sistema de comunicação"
     },
     {
       "dtPgto": "08/05/2026",
@@ -102,7 +92,7 @@
       "movimento": "Saída",
       "status": "Sicredi Systemica",
       "caixa": "Sicredi Systemica",
-      "categoria": "(sem categoria)"
+      "categoria": "3.3 Sistema de comunicação"
     },
     {
       "dtPgto": "07/05/2026",
@@ -112,7 +102,7 @@
       "movimento": "Saída",
       "status": "Sicredi Systemica",
       "caixa": "Sicredi Systemica",
-      "categoria": "(sem categoria)"
+      "categoria": "3.3 Sistema de comunicação"
     },
     {
       "dtPgto": "07/05/2026",
@@ -122,7 +112,7 @@
       "movimento": "Saída",
       "status": "Sicredi Systemica",
       "caixa": "Sicredi Systemica",
-      "categoria": "(sem categoria)"
+      "categoria": "3.3 Sistema de comunicação"
     },
     {
       "dtPgto": "06/05/2026",
@@ -132,7 +122,7 @@
       "movimento": "Saída",
       "status": "Sicredi Systemica",
       "caixa": "Sicredi Systemica",
-      "categoria": "(sem categoria)"
+      "categoria": "3.3 Sistema de comunicação"
     },
     {
       "dtPgto": "06/05/2026",
@@ -142,7 +132,7 @@
       "movimento": "Saída",
       "status": "Sicredi Systemica",
       "caixa": "Sicredi Systemica",
-      "categoria": "(sem categoria)"
+      "categoria": "3.3 Sistema de comunicação"
     },
     {
       "dtPgto": "06/05/2026",
@@ -152,7 +142,7 @@
       "movimento": "Saída",
       "status": "Sicredi Systemica",
       "caixa": "Sicredi Systemica",
-      "categoria": "(sem categoria)"
+      "categoria": "3.3 Sistema de comunicação"
     },
     {
       "dtPgto": "05/05/2026",
@@ -162,7 +152,7 @@
       "movimento": "Saída",
       "status": "Sicredi Systemica",
       "caixa": "Sicredi Systemica",
-      "categoria": "(sem categoria)"
+      "categoria": "3.3 Sistema de comunicação"
     },
     {
       "dtPgto": "05/05/2026",
@@ -172,7 +162,7 @@
       "movimento": "Saída",
       "status": "Sicredi Systemica",
       "caixa": "Sicredi Systemica",
-      "categoria": "(sem categoria)"
+      "categoria": "3.3 Sistema de comunicação"
     },
     {
       "dtPgto": "05/05/2026",
@@ -182,7 +172,7 @@
       "movimento": "Saída",
       "status": "Sicredi Systemica",
       "caixa": "Sicredi Systemica",
-      "categoria": "(sem categoria)"
+      "categoria": "3.3 Sistema de comunicação"
     },
     {
       "dtPgto": "05/05/2026",
@@ -192,7 +182,7 @@
       "movimento": "Saída",
       "status": "Sicredi Systemica",
       "caixa": "Sicredi Systemica",
-      "categoria": "(sem categoria)"
+      "categoria": "3.3 Sistema de comunicação"
     },
     {
       "dtPgto": "05/05/2026",
@@ -202,7 +192,7 @@
       "movimento": "Saída",
       "status": "Sicredi Systemica",
       "caixa": "Sicredi Systemica",
-      "categoria": "(sem categoria)"
+      "categoria": "3.3 Sistema de comunicação"
     },
     {
       "dtPgto": "04/05/2026",
@@ -212,7 +202,17 @@
       "movimento": "Saída",
       "status": "Sicredi Systemica",
       "caixa": "Sicredi Systemica",
-      "categoria": "(sem categoria)"
+      "categoria": "3.3 Sistema de comunicação"
+    },
+    {
+      "dtPgto": "04/05/2026",
+      "descricao": "40154884000153",
+      "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
+      "valor": -235.52,
+      "movimento": "Saída",
+      "status": "Sicredi Systemica",
+      "caixa": "Sicredi Systemica",
+      "categoria": "3.3 Sistema de comunicação"
     }
   ]
 }
