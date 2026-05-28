@@ -1,17 +1,15 @@
 {
-  "geradoEm": "2026-05-28T13:43:22.825Z",
+  "geradoEm": "2026-05-28T14:43:21.329Z",
   "projeto": "Systemica - Antecipação",
   "saldo": 12682,
   "totalEntradas": 375655.46,
   "totalSaidas": 362973.46,
   "totalLancamentos": 219,
   "porCaixa": {
-    "Asaas": -11402.99,
-    "Sicredi Systemica": 24084.99
+    "(sem caixa)": 12682
   },
   "porCategoria": {
-    "(sem categoria)": 26159.77,
-    "3.3 Sistema de comunicação": -13477.77
+    "(sem categoria)": 12682
   },
   "movimentacoes": [
     {
@@ -20,9 +18,9 @@
       "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
       "valor": -235.52,
       "movimento": "Saída",
-      "status": "Sicredi Systemica",
-      "caixa": "Sicredi Systemica",
-      "categoria": "3.3 Sistema de comunicação"
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
     },
     {
       "dtPgto": "22/05/2026",
@@ -30,9 +28,9 @@
       "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
       "valor": -190,
       "movimento": "Saída",
-      "status": "Sicredi Systemica",
-      "caixa": "Sicredi Systemica",
-      "categoria": "3.3 Sistema de comunicação"
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
     },
     {
       "dtPgto": "15/05/2026",
@@ -40,9 +38,9 @@
       "fornecedor": "PAGAMENTO PIX 06236230000130 PALACE HOTEL",
       "valor": -3699,
       "movimento": "Saída",
-      "status": "Sicredi Systemica",
-      "caixa": "Sicredi Systemica",
-      "categoria": "3.3 Sistema de comunicação"
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
     },
     {
       "dtPgto": "11/05/2026",
@@ -50,9 +48,9 @@
       "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
       "valor": -235.52,
       "movimento": "Saída",
-      "status": "Sicredi Systemica",
-      "caixa": "Sicredi Systemica",
-      "categoria": "3.3 Sistema de comunicação"
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
     },
     {
       "dtPgto": "11/05/2026",
@@ -60,9 +58,9 @@
       "fornecedor": "LIQUIDACAO BOLETO 01338388000106 RAJA RENT A CAR",
       "valor": -5313.23,
       "movimento": "Saída",
-      "status": "Sicredi Systemica",
-      "caixa": "Sicredi Systemica",
-      "categoria": "3.3 Sistema de comunicação"
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
     },
     {
       "dtPgto": "08/05/2026",
@@ -70,9 +68,9 @@
       "fornecedor": "PAGAMENTO PIX 42020136000103 CASA DO LAVADOR",
       "valor": -90,
       "movimento": "Saída",
-      "status": "Sicredi Systemica",
-      "caixa": "Sicredi Systemica",
-      "categoria": "3.3 Sistema de comunicação"
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
     },
     {
       "dtPgto": "08/05/2026",
@@ -80,9 +78,9 @@
       "fornecedor": "PAGAMENTO PIX 28782251000194 AZEVEDO COMERCIO VA",
       "valor": -2376.5,
       "movimento": "Saída",
-      "status": "Sicredi Systemica",
-      "caixa": "Sicredi Systemica",
-      "categoria": "3.3 Sistema de comunicação"
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
     },
     {
       "dtPgto": "08/05/2026",
@@ -90,9 +88,9 @@
       "fornecedor": "PAGAMENTO PIX 59446451000108 JULIANA SANTOS EMBA",
       "valor": -600,
       "movimento": "Saída",
-      "status": "Sicredi Systemica",
-      "caixa": "Sicredi Systemica",
-      "categoria": "3.3 Sistema de comunicação"
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
     },
     {
       "dtPgto": "07/05/2026",
@@ -100,9 +98,9 @@
       "fornecedor": "PAGAMENTO PIX 52618145291 MAMA PARAKANA",
       "valor": -1000,
       "movimento": "Saída",
-      "status": "Sicredi Systemica",
-      "caixa": "Sicredi Systemica",
-      "categoria": "3.3 Sistema de comunicação"
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
     },
     {
       "dtPgto": "07/05/2026",
@@ -110,9 +108,9 @@
       "fornecedor": "PAGAMENTO PIX 53829905220 Wenatoa Parakana",
       "valor": -1000,
       "movimento": "Saída",
-      "status": "Sicredi Systemica",
-      "caixa": "Sicredi Systemica",
-      "categoria": "3.3 Sistema de comunicação"
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
     },
     {
       "dtPgto": "06/05/2026",
@@ -120,9 +118,9 @@
       "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
       "valor": -471.04,
       "movimento": "Saída",
-      "status": "Sicredi Systemica",
-      "caixa": "Sicredi Systemica",
-      "categoria": "3.3 Sistema de comunicação"
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
     },
     {
       "dtPgto": "06/05/2026",
@@ -130,9 +128,9 @@
       "fornecedor": "PAGAMENTO PIX 53829905220 Wenatoa Parakana",
       "valor": -450,
       "movimento": "Saída",
-      "status": "Sicredi Systemica",
-      "caixa": "Sicredi Systemica",
-      "categoria": "3.3 Sistema de comunicação"
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
     },
     {
       "dtPgto": "06/05/2026",
@@ -140,9 +138,9 @@
       "fornecedor": "PAGAMENTO PIX 55628796204 Koxawewoxa Parakana",
       "valor": -450,
       "movimento": "Saída",
-      "status": "Sicredi Systemica",
-      "caixa": "Sicredi Systemica",
-      "categoria": "3.3 Sistema de comunicação"
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
     },
     {
       "dtPgto": "05/05/2026",
@@ -150,9 +148,9 @@
       "fornecedor": "PAGAMENTO PIX 09404556000118 SUPERMERCADO TOCANT",
       "valor": -2514.18,
       "movimento": "Saída",
-      "status": "Sicredi Systemica",
-      "caixa": "Sicredi Systemica",
-      "categoria": "3.3 Sistema de comunicação"
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
     },
     {
       "dtPgto": "05/05/2026",
@@ -160,9 +158,9 @@
       "fornecedor": "CESTA DE RELACIONAMENTO",
       "valor": -63.8,
       "movimento": "Saída",
-      "status": "Sicredi Systemica",
-      "caixa": "Sicredi Systemica",
-      "categoria": "3.3 Sistema de comunicação"
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
     },
     {
       "dtPgto": "05/05/2026",
@@ -170,9 +168,9 @@
       "fornecedor": "PAGAMENTO PIX 62218112000170 J E BANDEIRA DE MAT",
       "valor": -2000,
       "movimento": "Saída",
-      "status": "Sicredi Systemica",
-      "caixa": "Sicredi Systemica",
-      "categoria": "3.3 Sistema de comunicação"
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
     },
     {
       "dtPgto": "05/05/2026",
@@ -180,9 +178,9 @@
       "fornecedor": "PAGAMENTO PIX 62010588000111 62 010 588 SIMONE P",
       "valor": -1100,
       "movimento": "Saída",
-      "status": "Sicredi Systemica",
-      "caixa": "Sicredi Systemica",
-      "categoria": "3.3 Sistema de comunicação"
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
     },
     {
       "dtPgto": "05/05/2026",
@@ -190,9 +188,9 @@
       "fornecedor": "PAGAMENTO PIX 59276258000168 59.276.258 JORDAN C",
       "valor": -3000,
       "movimento": "Saída",
-      "status": "Sicredi Systemica",
-      "caixa": "Sicredi Systemica",
-      "categoria": "3.3 Sistema de comunicação"
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
     },
     {
       "dtPgto": "04/05/2026",
@@ -200,9 +198,9 @@
       "fornecedor": "PAGAMENTO PIX 39663958000106 PREMIUM SUPERMERCAD",
       "valor": -303,
       "movimento": "Saída",
-      "status": "Sicredi Systemica",
-      "caixa": "Sicredi Systemica",
-      "categoria": "3.3 Sistema de comunicação"
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
     },
     {
       "dtPgto": "04/05/2026",
@@ -210,9 +208,9 @@
       "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
       "valor": -235.52,
       "movimento": "Saída",
-      "status": "Sicredi Systemica",
-      "caixa": "Sicredi Systemica",
-      "categoria": "3.3 Sistema de comunicação"
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
     }
   ]
 }
