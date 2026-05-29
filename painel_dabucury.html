@@ -803,12 +803,15 @@ footer strong{color:var(--ouro-claro);}
   
   // ── ORÇAMENTO APROVADO ──
   var ORCAMENTO_RUBRICA = {
-    "Coordenador do Projeto": 56700,
-    "Coordenador financeiro": 25200,
-    "Mensalidade internet": 12000,
-    "Materiais e insumos": 15000,
-    "Viagens": 8000,
-    "Outros": 10000
+    "1. Equipe do projeto": 156000,
+    "2. Atividades/Eventos/Reuniões": 145450,
+    "5. Despesas Administrativas": 58700,
+    "4. Máquinas, equipamentos e outros bens": 25450,
+    "3. Obras civis e instalações": 14400,
+    "Coordenador do Projeto": 108000,
+    "Coordenador financeiro": 48000,
+    "Mensalidade internet": 9600,
+    "Consultoria Técnica": 28000
 };
   var ORCAMENTO_ACAO    = {};
 
@@ -820,7 +823,7 @@ footer strong{color:var(--ouro-claro);}
     (movimentacoes || []).forEach(function(m) {
       if (m.valor >= 0) return;
       var val  = Math.abs(m.valor);
-      var rub  = (m.rubrica  && m.rubrica  !== '(sem categoria)') ? m.rubrica  : 'Sem classificação';
+      var rub  = (m.rubrica  && m.rubrica  !== '(sem categoria)') ? m.rubrica  : (m.categoria && m.categoria !== '(sem categoria)') ? m.categoria : 'Sem classificação';
       var acao = (m.acao     && m.acao     !== '(sem categoria)') ? m.acao     : 'Sem classificação';
       var ativ = (m.atividade&& m.atividade!== '(sem categoria)') ? m.atividade: 'Sem classificação';
       porRubrica[rub] = (porRubrica[rub] || 0) + val;
