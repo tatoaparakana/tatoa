@@ -978,7 +978,90 @@ body {
       <div class="card-title">Execução por Atividade</div>
       <div id="mpi-exec-atividade"><div style="padding:14px;text-align:center;color:#777;">Carregando…</div></div>
     </div>
-    <div class="card">
+        <div class="card" style="margin-bottom:18px;">
+      <div class="card-title">Orçamento Aprovado &middot; Detalhamento por Atividade</div>
+      <div style="font-size:.78rem;color:var(--texto-muted,#888);margin-bottom:16px;">Orçamento aprovado do plano de trabalho MPI Mulheres Indígenas: Tecendo o Bem Viver / 2024. Clique em cada atividade para expandir os itens.</div>
+      <style>
+        .mpi-accordion{border:1px solid rgba(255,255,255,.1);border-radius:8px;overflow:hidden;margin-bottom:10px}
+        .mpi-accordion-header{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:rgba(255,255,255,.04);cursor:pointer;user-select:none;transition:background .2s}
+        .mpi-accordion-header:hover{background:rgba(255,255,255,.08)}
+        .mpi-accordion-header.open{background:rgba(200,148,10,.08);border-bottom:1px solid rgba(200,148,10,.2)}
+        .mpi-accordion-title{font-size:.88rem;font-weight:600;color:var(--creme,#F5EFE0)}
+        .mpi-accordion-meta{display:flex;gap:14px;align-items:center}
+        .mpi-accordion-total{font-family:'Playfair Display',serif;font-size:.95rem;color:var(--ouro,#C8940A);font-weight:700}
+        .mpi-accordion-arrow{font-size:.75rem;color:var(--texto-muted,#888);transition:transform .2s}
+        .mpi-accordion-header.open .mpi-accordion-arrow{transform:rotate(180deg)}
+        .mpi-accordion-body{display:none;overflow-x:auto}
+        .mpi-accordion-body.open{display:block}
+        .mpi-orc-table{width:100%;border-collapse:collapse;font-size:12px}
+        .mpi-orc-table thead tr{border-bottom:1px solid rgba(255,255,255,.1)}
+        .mpi-orc-table th{padding:8px 10px;text-align:left;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--texto-muted,#888);white-space:nowrap}
+        .mpi-orc-table th:last-child,.mpi-orc-table td:last-child,.mpi-orc-table th:nth-last-child(2),.mpi-orc-table td:nth-last-child(2){text-align:right}
+        .mpi-orc-table td{padding:7px 10px;border-top:.5px solid rgba(255,255,255,.05);vertical-align:top;line-height:1.4}
+        .mpi-orc-table tbody tr:hover td{background:rgba(255,255,255,.03)}
+        .mpi-rubrica-badge{display:inline-block;font-size:10px;padding:2px 8px;border-radius:10px;background:rgba(200,148,10,.1);color:var(--ouro,#C8940A);border:1px solid rgba(200,148,10,.25);white-space:nowrap}
+        .mpi-rubrica-badge.viagens{background:rgba(45,90,27,.15);color:#7fcf5a;border-color:rgba(45,90,27,.4)}
+        .mpi-rubrica-badge.infra{background:rgba(107,58,26,.2);color:#d4895a;border-color:rgba(107,58,26,.4)}
+        .mpi-orc-subtotal td{font-weight:700;border-top:1px solid rgba(200,148,10,.3);background:rgba(200,148,10,.04)}
+        .mpi-total-geral{display:flex;justify-content:flex-end;align-items:center;gap:12px;padding:12px 16px;border-top:2px solid rgba(200,148,10,.3);background:rgba(200,148,10,.06);border-radius:0 0 8px 8px}
+        .mpi-total-geral span{font-size:.8rem;color:var(--texto-muted,#888);text-transform:uppercase;letter-spacing:.06em}
+        .mpi-total-geral strong{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--ouro,#C8940A)}
+      </style>
+      <div class="mpi-accordion">
+        <div class="mpi-accordion-header" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+          <div><div style="font-size:.65rem;color:var(--ouro,#C8940A);letter-spacing:.08em;text-transform:uppercase;margin-bottom:3px;">Atividade 01</div><div class="mpi-accordion-title">Fortalecimento do espaço Kania Arte Parakanã</div></div>
+          <div class="mpi-accordion-meta"><div class="mpi-accordion-total">R$&#160;27.700,00</div><div class="mpi-accordion-arrow">&#9660;</div></div>
+        </div>
+        <div class="mpi-accordion-body">
+          <table class="mpi-orc-table"><thead><tr><th>Rubrica</th><th>Item</th><th>Valor Unit.</th><th>Valor Total</th></tr></thead><tbody>
+            <tr><td><span class="mpi-rubrica-badge">Contratos</span></td><td>Pagamento de coordenadora do projeto</td><td>R$&#160;6.000,00</td><td>R$&#160;6.000,00</td></tr>
+            <tr><td><span class="mpi-rubrica-badge">Contratos</span></td><td>Pagamento de 30% salário assessora do artesanato (12 meses)</td><td>R$&#160;1.000,00</td><td>R$&#160;12.000,00</td></tr>
+            <tr><td><span class="mpi-rubrica-badge">Contratos</span></td><td>Bolsa para 01 artesã realizar gestão de artesanato (12 meses)</td><td>R$&#160;500,00</td><td>R$&#160;6.000,00</td></tr>
+            <tr><td><span class="mpi-rubrica-badge">Contratos</span></td><td>Diárias para artesã apoiar em feiras (15 diárias)</td><td>R$&#160;150,00</td><td>R$&#160;2.250,00</td></tr>
+            <tr><td><span class="mpi-rubrica-badge">Contratos</span></td><td>Aquisição de expositores para a Kania Artes Parakanã</td><td>R$&#160;500,00</td><td>R$&#160;500,00</td></tr>
+            <tr><td><span class="mpi-rubrica-badge infra">Infraestrutura</span></td><td>Aquisição de materiais de escritório (12 meses)</td><td>R$&#160;950,00</td><td>R$&#160;950,00</td></tr>
+            <tr class="mpi-orc-subtotal"><td colspan="3">Subtotal Ativ. 01</td><td>R$&#160;27.700,00</td></tr>
+          </tbody></table>
+        </div>
+      </div>
+      <div class="mpi-accordion">
+        <div class="mpi-accordion-header" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+          <div><div style="font-size:.65rem;color:#7fcf5a;letter-spacing:.08em;text-transform:uppercase;margin-bottom:3px;">Atividade 02</div><div class="mpi-accordion-title">Assembleia das mulheres e oficina de transmissão de saberes</div></div>
+          <div class="mpi-accordion-meta"><div class="mpi-accordion-total" style="color:#7fcf5a">R$&#160;44.700,00</div><div class="mpi-accordion-arrow">&#9660;</div></div>
+        </div>
+        <div class="mpi-accordion-body">
+          <table class="mpi-orc-table"><thead><tr><th>Rubrica</th><th>Item</th><th>Valor Unit.</th><th>Valor Total</th></tr></thead><tbody>
+            <tr><td><span class="mpi-rubrica-badge infra">Infraestrutura</span></td><td>Materiais para fabricação de artesanato (miçangas, base brinco, linha nylon, brocas, barbante, furadeira, tela pintura, tinta óleo)</td><td>R$&#160;16.200,00</td><td>R$&#160;16.200,00</td></tr>
+            <tr><td><span class="mpi-rubrica-badge viagens">Viagens</span></td><td>Aluguel de voadeira Altamira &#8596; TI Apyterewa + deslocamento interno (6 diárias)</td><td>R$&#160;700,00</td><td>R$&#160;4.200,00</td></tr>
+            <tr><td><span class="mpi-rubrica-badge viagens">Viagens</span></td><td>Combustível gasolina (1.200 litros)</td><td>R$&#160;7,00</td><td>R$&#160;8.400,00</td></tr>
+            <tr><td><span class="mpi-rubrica-badge viagens">Viagens</span></td><td>Diesel para motor gerador (100 litros)</td><td>R$&#160;7,00</td><td>R$&#160;700,00</td></tr>
+            <tr><td><span class="mpi-rubrica-badge viagens">Viagens</span></td><td>Aluguel de caminhonete + insumos para realização da atividade</td><td>R$&#160;2.000,00</td><td>R$&#160;2.000,00</td></tr>
+            <tr><td><span class="mpi-rubrica-badge viagens">Viagens</span></td><td>Gêneros alimentícios</td><td>R$&#160;10.000,00</td><td>R$&#160;10.000,00</td></tr>
+            <tr><td><span class="mpi-rubrica-badge">Contratos</span></td><td>Pagamento de cozinheira (06 dias)</td><td>R$&#160;200,00</td><td>R$&#160;1.200,00</td></tr>
+            <tr><td><span class="mpi-rubrica-badge">Contratos</span></td><td>Diárias para 05 artesãs ministrarem oficina de transmissão de saberes (10 diárias)</td><td>R$&#160;200,00</td><td>R$&#160;2.000,00</td></tr>
+            <tr class="mpi-orc-subtotal"><td colspan="3">Subtotal Ativ. 02</td><td>R$&#160;44.700,00</td></tr>
+          </tbody></table>
+        </div>
+      </div>
+      <div class="mpi-accordion">
+        <div class="mpi-accordion-header" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+          <div><div style="font-size:.65rem;color:var(--ouro,#C8940A);letter-spacing:.08em;text-transform:uppercase;margin-bottom:3px;">Atividade 03</div><div class="mpi-accordion-title">Participação de mulheres em encontros com organizações indígenas e instituições governamentais</div></div>
+          <div class="mpi-accordion-meta"><div class="mpi-accordion-total">R$&#160;27.600,00</div><div class="mpi-accordion-arrow">&#9660;</div></div>
+        </div>
+        <div class="mpi-accordion-body">
+          <table class="mpi-orc-table"><thead><tr><th>Rubrica</th><th>Item</th><th>Valor Unit.</th><th>Valor Total</th></tr></thead><tbody>
+            <tr><td><span class="mpi-rubrica-badge viagens">Viagens</span></td><td>Aluguel de voadeira Altamira &#8596; TI Apyterewa (6 diárias)</td><td>R$&#160;700,00</td><td>R$&#160;4.200,00</td></tr>
+            <tr><td><span class="mpi-rubrica-badge viagens">Viagens</span></td><td>Combustível para deslocamentos (1.200 litros)</td><td>R$&#160;7,00</td><td>R$&#160;8.400,00</td></tr>
+            <tr><td><span class="mpi-rubrica-badge viagens">Viagens</span></td><td>Passagens aéreas e/ou terrestres para viagens</td><td>R$&#160;8.000,00</td><td>R$&#160;8.000,00</td></tr>
+            <tr><td><span class="mpi-rubrica-badge viagens">Viagens</span></td><td>Diárias alimentação durante viagens (20 diárias)</td><td>R$&#160;150,00</td><td>R$&#160;3.000,00</td></tr>
+            <tr><td><span class="mpi-rubrica-badge viagens">Viagens</span></td><td>Diárias hospedagem durante viagens (20 diárias)</td><td>R$&#160;200,00</td><td>R$&#160;4.000,00</td></tr>
+            <tr class="mpi-orc-subtotal"><td colspan="3">Subtotal Ativ. 03</td><td>R$&#160;27.600,00</td></tr>
+          </tbody></table>
+        </div>
+      </div>
+      <div class="mpi-total-geral"><span>Total Orçamento Aprovado</span><strong>R$ 100.000,00</strong></div>
+    </div>
+        <div class="card">
       <div style="font-size:.75rem;color:var(--texto-muted,#888);line-height:1.6;">
         <strong>Nota metodológica:</strong> Para que as barras sejam preenchidas, cada lançamento na planilha de monitoramento financeiro deve ter as colunas <strong>Rubrica (C)</strong>, <strong>Ação/Categoria (D)</strong> e <strong>Atividade (E)</strong> preenchidas, e o Apps Script deve estar atualizado para exportar esses campos.
       </div>
