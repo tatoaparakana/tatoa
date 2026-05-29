@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-05-29T13:11:53.026Z",
+  "geradoEm": "2026-05-29T14:55:52.458Z",
   "projeto": "PBA",
   "filtroProjeto": "PBA",
   "saldo": 3600.850000000035,
@@ -10,10 +10,7 @@
     "Geral": 3600.8500000000167
   },
   "porCategoria": {
-    "MÃO-DE-OBRA (COM ENCARGOS)": -63.8,
-    "ATIVIDADES DOS PROGRAMAS (PFI e PGTI) - MATERIAIS E SERVIÇOS": -249.99,
-    "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO": -1518,
-    "(sem categoria)": 5432.640000000025
+    "(sem categoria)": 3600.8500000000167
   },
   "movimentacoes": [
     {
@@ -1080,8 +1077,8 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "ATIVIDADES DOS PROGRAMAS (PFI e PGTI) - MATERIAIS E SERVIÇOS",
-      "acao": "Materiais e serviços diversos para atividades do PFI e PGTI",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
       "atividade": "(sem categoria)"
     },
     {
@@ -1092,8 +1089,8 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "ATIVIDADES DOS PROGRAMAS (PFI e PGTI) - MATERIAIS E SERVIÇOS",
-      "acao": "Materiais e serviços diversos para atividades do PFI e PGTI",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
       "atividade": "(sem categoria)"
     },
     {
@@ -1104,8 +1101,8 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
-      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
       "atividade": "(sem categoria)"
     },
     {
@@ -1116,7 +1113,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "rubrica": "(sem categoria)",
       "acao": "(sem categoria)",
       "atividade": "(sem categoria)"
     }
