@@ -1,13 +1,13 @@
 {
-  "geradoEm": "2026-05-26T22:48:50.252Z",
+  "geradoEm": "2026-05-29T13:11:50.669Z",
   "projeto": "MPI Mulheres",
+  "filtroProjeto": "MPI Mulheres",
   "saldo": -19675.1,
   "totalEntradas": 1000,
   "totalSaidas": 20675.1,
   "totalLancamentos": 30,
   "porCaixa": {
-    "Asaas": -16447,
-    "Sicredi Cacau": -3228.1
+    "Geral": -19675.1
   },
   "porCategoria": {
     "(sem categoria)": -19675.1
@@ -19,9 +19,11 @@
       "fornecedor": "Transação via Pix com chave para Kaxapoga Parakana",
       "valor": -1000,
       "movimento": "Saída",
-      "status": "Asaas",
-      "caixa": "Asaas",
-      "categoria": "(sem categoria)"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "09/04/2026",
@@ -29,9 +31,11 @@
       "fornecedor": "Transação via Pix com chave para Wenatoa Parakana",
       "valor": -2277,
       "movimento": "Saída",
-      "status": "Asaas",
-      "caixa": "Asaas",
-      "categoria": "(sem categoria)"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "07/04/2026",
@@ -39,9 +43,11 @@
       "fornecedor": "Transação via Pix com chave para Naoi Parakana",
       "valor": -1000,
       "movimento": "Saída",
-      "status": "Asaas",
-      "caixa": "Asaas",
-      "categoria": "(sem categoria)"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "07/04/2026",
@@ -49,9 +55,11 @@
       "fornecedor": "Transação via Pix com chave para POXIRA PARAKANA",
       "valor": -1000,
       "movimento": "Saída",
-      "status": "Asaas",
-      "caixa": "Asaas",
-      "categoria": "(sem categoria)"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "07/04/2026",
@@ -59,9 +67,11 @@
       "fornecedor": "Transação via Pix com chave para Koxawewoxa Parakana",
       "valor": -1518,
       "movimento": "Saída",
-      "status": "Asaas",
-      "caixa": "Asaas",
-      "categoria": "(sem categoria)"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "06/04/2026",
@@ -69,9 +79,11 @@
       "fornecedor": "Transação via Pix com chave para YWOAGIA PARAKANA",
       "valor": -1000,
       "movimento": "Saída",
-      "status": "Asaas",
-      "caixa": "Asaas",
-      "categoria": "(sem categoria)"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "04/04/2026",
@@ -79,9 +91,11 @@
       "fornecedor": "Transação via Pix com chave para Naoi Parakana",
       "valor": -500,
       "movimento": "Saída",
-      "status": "Asaas",
-      "caixa": "Asaas",
-      "categoria": "(sem categoria)"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "02/04/2026",
@@ -89,9 +103,11 @@
       "fornecedor": "Transação via Pix com chave para POXIRA PARAKANA",
       "valor": -500,
       "movimento": "Saída",
-      "status": "Asaas",
-      "caixa": "Asaas",
-      "categoria": "(sem categoria)"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "01/04/2026",
@@ -99,9 +115,11 @@
       "fornecedor": "Transação via Pix com chave para POXIRA PARAKANA",
       "valor": -150,
       "movimento": "Saída",
-      "status": "Asaas",
-      "caixa": "Asaas",
-      "categoria": "(sem categoria)"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "18/03/2026",
@@ -109,9 +127,11 @@
       "fornecedor": "YWOAGIA PARAKANA",
       "valor": -500,
       "movimento": "Saída",
-      "status": "Asaas",
-      "caixa": "Asaas",
-      "categoria": "(sem categoria)"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "18/03/2026",
@@ -119,9 +139,11 @@
       "fornecedor": "Estorno de",
       "valor": 500,
       "movimento": "Entrada",
-      "status": "Asaas",
-      "caixa": "Asaas",
-      "categoria": "(sem categoria)"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "18/03/2026",
@@ -129,9 +151,11 @@
       "fornecedor": "YWOAGIA PARAKANA",
       "valor": -500,
       "movimento": "Saída",
-      "status": "Asaas",
-      "caixa": "Asaas",
-      "categoria": "(sem categoria)"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "18/03/2026",
@@ -139,9 +163,11 @@
       "fornecedor": "Naoi Parakana",
       "valor": -500,
       "movimento": "Saída",
-      "status": "Asaas",
-      "caixa": "Asaas",
-      "categoria": "(sem categoria)"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "16/03/2026",
@@ -149,9 +175,11 @@
       "fornecedor": "Kaxapoga Parakana",
       "valor": -500,
       "movimento": "Saída",
-      "status": "Asaas",
-      "caixa": "Asaas",
-      "categoria": "(sem categoria)"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "03/03/2026",
@@ -159,9 +187,11 @@
       "fornecedor": "MAGALUPAY",
       "valor": -3228.1,
       "movimento": "Saída",
-      "status": "Sicredi Cacau",
-      "caixa": "Sicredi Cacau",
-      "categoria": "(sem categoria)"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "27/02/2026",
@@ -169,9 +199,11 @@
       "fornecedor": "YWOAGIA PARAKANA",
       "valor": -500,
       "movimento": "Saída",
-      "status": "Asaas",
-      "caixa": "Asaas",
-      "categoria": "(sem categoria)"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "27/02/2026",
@@ -179,9 +211,11 @@
       "fornecedor": "Naoi Parakana",
       "valor": -500,
       "movimento": "Saída",
-      "status": "Asaas",
-      "caixa": "Asaas",
-      "categoria": "(sem categoria)"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "27/02/2026",
@@ -189,9 +223,11 @@
       "fornecedor": "Kaxapoga Parakana",
       "valor": -500,
       "movimento": "Saída",
-      "status": "Asaas",
-      "caixa": "Asaas",
-      "categoria": "(sem categoria)"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "27/02/2026",
@@ -199,9 +235,11 @@
       "fornecedor": "Xogoa Parakana",
       "valor": -500,
       "movimento": "Saída",
-      "status": "Asaas",
-      "caixa": "Asaas",
-      "categoria": "(sem categoria)"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "27/02/2026",
@@ -209,9 +247,131 @@
       "fornecedor": "Pix",
       "valor": -2,
       "movimento": "Saída",
-      "status": "Asaas",
-      "caixa": "Asaas",
-      "categoria": "(sem categoria)"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "14/02/2026",
+      "descricao": "Pgto - referente Bolsa de estágio na Kania - Projeto das mulheres",
+      "fornecedor": "YWOAGIA PARAKANA",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "14/02/2026",
+      "descricao": "Pgto - referente Bolsa de estágio na Kania - Projeto das mulheres",
+      "fornecedor": "Naoi Parakana",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "14/02/2026",
+      "descricao": "Pgto - referente Bolsa de estágio na Kania - Projeto das mulheres",
+      "fornecedor": "Kaxapoga Parakana",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "14/02/2026",
+      "descricao": "Pgto - referente Bolsa de estágio na Kania - Projeto das mulheres",
+      "fornecedor": "Xogoa Parakana",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "14/02/2026",
+      "descricao": "Pgto - referente Bolsa de estágio na Kania - Projeto das mulheres",
+      "fornecedor": "Estorno de",
+      "valor": 500,
+      "movimento": "Entrada",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "14/02/2026",
+      "descricao": "Pgto - referente Bolsa de estágio na Kania - Projeto das mulheres (Poxira pago no pix do Xogoa)",
+      "fornecedor": "Xogoa Parakana",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "15/01/2026",
+      "descricao": "Pgto - referente Bolsa de estágio na Kania projeto das Mulheres",
+      "fornecedor": "Kaxapoga Parakana",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "15/01/2026",
+      "descricao": "Pgto - referente Bolsa de estágio na Kania, projeto das Mulheres - Poxira",
+      "fornecedor": "Xogoa Parakana",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "15/01/2026",
+      "descricao": "Pgto - referente Bolsa de estágio na Kania, projeto das Mulheres",
+      "fornecedor": "Naoi Parakana",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "15/01/2026",
+      "descricao": "Pgto - referente Bolsa de estágio na Kania, projeto das Mulheres",
+      "fornecedor": "YWOAGIA PARAKANA",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     }
   ]
 }
