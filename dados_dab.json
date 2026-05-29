@@ -1,19 +1,18 @@
 {
-  "geradoEm": "2026-05-26T22:48:56.271Z",
+  "geradoEm": "2026-05-29T13:11:48.128Z",
   "projeto": "Dabucury",
-  "saldo": -4803.17,
+  "filtroProjeto": "Dabucury",
+  "saldo": -4803.169999999984,
   "totalEntradas": 83527.55,
-  "totalSaidas": 88330.72,
+  "totalSaidas": 88330.71999999999,
   "totalLancamentos": 42,
   "porCaixa": {
-    "Sicredi Dabucury": -4803.17
+    "Geral": -4803.170000000002
   },
   "porCategoria": {
-    "(sem categoria)": 26305.19,
-    "Consultoria Técnica": -7000,
-    "Mensalidade internet": -4608.36,
-    "Coordenador financeiro": -6000,
-    "Coordenador do Projeto": -13500
+    "5. Despesas Administrativas": -35.7,
+    "(sem categoria)": -4531.950000000001,
+    "4. Máquinas, equipamentos e outros bens": -235.52
   },
   "movimentacoes": [
     {
@@ -22,9 +21,11 @@
       "fornecedor": "PAGAMENTO PIX 55504922291 KAWOWE PARAKANA",
       "valor": -13500,
       "movimento": "Saída",
-      "status": "Sicredi Dabucury",
-      "caixa": "Sicredi Dabucury",
-      "categoria": "Coordenador do Projeto"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "12/05/2026",
@@ -32,9 +33,11 @@
       "fornecedor": "TRANSFERENCIA DA POUPANCA",
       "valor": 12000,
       "movimento": "Entrada",
-      "status": "Sicredi Dabucury",
-      "caixa": "Sicredi Dabucury",
-      "categoria": "(sem categoria)"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "12/05/2026",
@@ -42,9 +45,11 @@
       "fornecedor": "RECEBIMENTO PIX 20481744000182 ASSOCIACAO INDIGE",
       "valor": 892.04,
       "movimento": "Entrada",
-      "status": "Sicredi Dabucury",
-      "caixa": "Sicredi Dabucury",
-      "categoria": "(sem categoria)"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "05/05/2026",
@@ -52,9 +57,11 @@
       "fornecedor": "CESTA DE RELACIONAMENTO",
       "valor": -35.7,
       "movimento": "Saída",
-      "status": "Sicredi Dabucury",
-      "caixa": "Sicredi Dabucury",
-      "categoria": "(sem categoria)"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "24/04/2026",
@@ -62,9 +69,11 @@
       "fornecedor": "TRANSFERENCIA DA POUPANCA",
       "valor": 10000,
       "movimento": "Entrada",
-      "status": "Sicredi Dabucury",
-      "caixa": "Sicredi Dabucury",
-      "categoria": "(sem categoria)"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "24/04/2026",
@@ -72,9 +81,11 @@
       "fornecedor": "LIQUIDACAO BOLETO SICREDI 01951330000125 FERREIR",
       "valor": -2450,
       "movimento": "Saída",
-      "status": "Sicredi Dabucury",
-      "caixa": "Sicredi Dabucury",
-      "categoria": "(sem categoria)"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "24/04/2026",
@@ -82,9 +93,11 @@
       "fornecedor": "PAGAMENTO PIX 55501605287 NENEXIGA PARAKANA",
       "valor": -6000,
       "movimento": "Saída",
-      "status": "Sicredi Dabucury",
-      "caixa": "Sicredi Dabucury",
-      "categoria": "Coordenador financeiro"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "06/04/2026",
@@ -92,9 +105,11 @@
       "fornecedor": "CESTA DE RELACIONAMENTO",
       "valor": -35.7,
       "movimento": "Saída",
-      "status": "Sicredi Dabucury",
-      "caixa": "Sicredi Dabucury",
-      "categoria": "(sem categoria)"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "26/03/2026",
@@ -102,9 +117,11 @@
       "fornecedor": "TRANSFERENCIA DA POUPANCA",
       "valor": 3000,
       "movimento": "Entrada",
-      "status": "Sicredi Dabucury",
-      "caixa": "Sicredi Dabucury",
-      "categoria": "(sem categoria)"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "26/03/2026",
@@ -112,9 +129,11 @@
       "fornecedor": "PAGAMENTO PIX SICREDI 01951330000125 FERREIRA E",
       "valor": -2450,
       "movimento": "Saída",
-      "status": "Sicredi Dabucury",
-      "caixa": "Sicredi Dabucury",
-      "categoria": "Mensalidade internet"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "05/03/2026",
@@ -122,9 +141,11 @@
       "fornecedor": "CESTA DE RELACIONAMENTO",
       "valor": -35.7,
       "movimento": "Saída",
-      "status": "Sicredi Dabucury",
-      "caixa": "Sicredi Dabucury",
-      "categoria": "(sem categoria)"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "02/03/2026",
@@ -132,9 +153,11 @@
       "fornecedor": "PAGAMENTO PIX 09609403000298 A RURALISTA",
       "valor": -675,
       "movimento": "Saída",
-      "status": "Sicredi Dabucury",
-      "caixa": "Sicredi Dabucury",
-      "categoria": "(sem categoria)"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "02/03/2026",
@@ -142,9 +165,11 @@
       "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
       "valor": -235.52,
       "movimento": "Saída",
-      "status": "Sicredi Dabucury",
-      "caixa": "Sicredi Dabucury",
-      "categoria": "Mensalidade internet"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "4. Máquinas, equipamentos e outros bens",
+      "acao": "Estruturação Base de Vigilância",
+      "atividade": "Starlink"
     },
     {
       "dtPgto": "26/02/2026",
@@ -152,9 +177,11 @@
       "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
       "valor": -466.06,
       "movimento": "Saída",
-      "status": "Sicredi Dabucury",
-      "caixa": "Sicredi Dabucury",
-      "categoria": "Mensalidade internet"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "20/02/2026",
@@ -162,9 +189,11 @@
       "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
       "valor": -235.52,
       "movimento": "Saída",
-      "status": "Sicredi Dabucury",
-      "caixa": "Sicredi Dabucury",
-      "categoria": "Mensalidade internet"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "19/02/2026",
@@ -172,9 +201,11 @@
       "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
       "valor": -800.26,
       "movimento": "Saída",
-      "status": "Sicredi Dabucury",
-      "caixa": "Sicredi Dabucury",
-      "categoria": "Mensalidade internet"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "19/02/2026",
@@ -182,9 +213,11 @@
       "fornecedor": "PAGAMENTO PIX SICREDI 39663958000106 PREMIUM SUP",
       "valor": -2836.99,
       "movimento": "Saída",
-      "status": "Sicredi Dabucury",
-      "caixa": "Sicredi Dabucury",
-      "categoria": "(sem categoria)"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "18/02/2026",
@@ -192,9 +225,11 @@
       "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
       "valor": -185.48,
       "movimento": "Saída",
-      "status": "Sicredi Dabucury",
-      "caixa": "Sicredi Dabucury",
-      "categoria": "Mensalidade internet"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "18/02/2026",
@@ -202,9 +237,11 @@
       "fornecedor": "TRANSFERENCIA DA POUPANCA",
       "valor": 10000,
       "movimento": "Entrada",
-      "status": "Sicredi Dabucury",
-      "caixa": "Sicredi Dabucury",
-      "categoria": "(sem categoria)"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "18/02/2026",
@@ -212,9 +249,275 @@
       "fornecedor": "PAGAMENTO PIX 87244756291 JOAO INACIO DE ASSUNCA",
       "valor": -10000,
       "movimento": "Saída",
-      "status": "Sicredi Dabucury",
-      "caixa": "Sicredi Dabucury",
-      "categoria": "(sem categoria)"
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "13/02/2026",
+      "descricao": "Mensalidade aldeia Paredão",
+      "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
+      "valor": -235.52,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "12/02/2026",
+      "descricao": "Pgto trimestral - Coordenador do Projeto Dabucur",
+      "fornecedor": "PAGAMENTO PIX 55504922291 KAWOWE PARAKANA",
+      "valor": -13500,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "12/02/2026",
+      "descricao": "TRANSFERENCIA DA POUPANCA",
+      "fornecedor": "TRANSFERENCIA DA POUPANCA",
+      "valor": 12000,
+      "movimento": "Entrada",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "11/02/2026",
+      "descricao": "Mensalidade Pipi 1",
+      "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
+      "valor": -235.52,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "10/02/2026",
+      "descricao": "mensalidade aldeia Paredão",
+      "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
+      "valor": -471.04,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "09/02/2026",
+      "descricao": "TRANSFERENCIA DA POUPANCA",
+      "fornecedor": "TRANSFERENCIA DA POUPANCA",
+      "valor": 10000,
+      "movimento": "Entrada",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "09/02/2026",
+      "descricao": "",
+      "fornecedor": "PAGAMENTO PIX 44609340000190 CENTRO POSTO",
+      "valor": -4240,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "06/02/2026",
+      "descricao": "TRANSFERENCIA DA POUPANCA",
+      "fornecedor": "TRANSFERENCIA DA POUPANCA",
+      "valor": 10000,
+      "movimento": "Entrada",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "06/02/2026",
+      "descricao": "Consultoria técnica de protocolo de gestão",
+      "fornecedor": "PAGAMENTO PIX 35948995000100 35.948.995 BRUNNA S",
+      "valor": -7000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "05/02/2026",
+      "descricao": "Taxa Sicredi",
+      "fornecedor": "CESTA DE RELACIONAMENTO",
+      "valor": -35.7,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "04/02/2026",
+      "descricao": "Combustível apoia a safra Cacau e castanha",
+      "fornecedor": "PAGAMENTO PIX 55501605287 NENEXIGA PARAKANA",
+      "valor": -6000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "04/02/2026",
+      "descricao": "pgto trimestral Coordenador financeiro",
+      "fornecedor": "PAGAMENTO PIX SICREDI 19276857000167 L R DA PAZ",
+      "valor": -2351,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "02/02/2026",
+      "descricao": "TRANSFERENCIA DA POUPANCA",
+      "fornecedor": "TRANSFERENCIA DA POUPANCA",
+      "valor": 10000,
+      "movimento": "Entrada",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "02/02/2026",
+      "descricao": "pgto dre gêneros alimentícios",
+      "fornecedor": "PAGAMENTO PIX SICREDI 39663958000106 PREMIUM SUP",
+      "valor": -3121,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "28/01/2026",
+      "descricao": "PAGAMENTO PIX SICREDI 39663958000106 PREMIUM SUP",
+      "fornecedor": "PAGAMENTO PIX SICREDI 39663958000106 PREMIUM SUP",
+      "valor": -3077.8,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "28/01/2026",
+      "descricao": "TRANSFERENCIA DA POUPANCA",
+      "fornecedor": "TRANSFERENCIA DA POUPANCA",
+      "valor": 5000,
+      "movimento": "Entrada",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "27/01/2026",
+      "descricao": "PAGAMENTO PIX 99117509220 Tatoraroa Parakana",
+      "fornecedor": "PAGAMENTO PIX 99117509220 Tatoraroa Parakana",
+      "valor": -350.34,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "27/01/2026",
+      "descricao": "PAGAMENTO PIX 99117509220 Tatoraroa Parakana",
+      "fornecedor": "PAGAMENTO PIX 99117509220 Tatoraroa Parakana",
+      "valor": -285.17,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "27/01/2026",
+      "descricao": "RECEBIMENTO PIX SICREDI 20481744000182 ASSOCIACA",
+      "fornecedor": "RECEBIMENTO PIX SICREDI 20481744000182 ASSOCIACA",
+      "valor": 635.51,
+      "movimento": "Entrada",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "26/01/2026",
+      "descricao": "LIQUIDACAO BOLETO SICREDI 01951330000125 FERREIR",
+      "fornecedor": "LIQUIDACAO BOLETO SICREDI 01951330000125 FERREIR",
+      "valor": -2450,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "26/01/2026",
+      "descricao": "PAGAMENTO PIX 82518904204 Gilvan da Silva Lima",
+      "fornecedor": "PAGAMENTO PIX 82518904204 Gilvan da Silva Lima",
+      "valor": -5000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "05/01/2026",
+      "descricao": "Taxa Sicredi",
+      "fornecedor": "CESTA DE RELACIONAMENTO",
+      "valor": -35.7,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "5. Despesas Administrativas",
+      "acao": "Gestão do Projeto",
+      "atividade": "Adesivos para o projeto"
     }
   ]
 }
