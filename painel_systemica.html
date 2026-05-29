@@ -147,6 +147,14 @@ footer strong{color:var(--ouro-claro);}
   .grid2{grid-template-columns:1fr;}
   .proj-hero-kpis{display:none;}
 }
+
+  .tabs-wrap { background:var(--preto,#1A1612); border-bottom:1px solid rgba(200,148,10,.2); position:sticky; top:62px; z-index:100; }
+  .tabs { display:flex; gap:0; max-width:900px; margin:0 auto; padding:0 28px; }
+  .tab { padding:12px 20px; font-size:13px; color:var(--texto-l,#7A6F5A); background:none; border:none; border-bottom:2px solid transparent; cursor:pointer; margin-bottom:-1px; transition:all .15s; }
+  .tab:hover { color:var(--ouro-claro,#F0D878); }
+  .tab.active { color:var(--ouro-claro,#F0D878); border-bottom:2px solid var(--ouro,#C8940A); font-weight:600; }
+  .panel { display:none; }
+  .panel.active { display:block; }
 </style>
 </head>
 <body>
@@ -175,6 +183,13 @@ footer strong{color:var(--ouro-claro);}
 <!-- HERO -->
 <div class="proj-hero">
   <div class="proj-hero-content">
+<div class="tabs-wrap">
+  <div class="tabs">
+    <div class="tab active" onclick="showTab('sys-financeiro',this)">Financeiro</div>
+    <div class="tab" onclick="showTab('sys-execucao',this)">Execução por Rubrica</div>
+  </div>
+</div>
+
     <div class="proj-hero-left">
       <div class="proj-hero-title">Projeto Apyterewa<br><em>REDD+ · Conservação e Carbono</em></div>
       <div class="proj-hero-sub">Systemica – Inteligência em Sustentabilidade · Antecipação de recursos · Fase de implantação Jan–Jun/2026</div>
@@ -237,13 +252,14 @@ footer strong{color:var(--ouro-claro);}
           <tr>
             <th style="width:80px;">Data</th>
             <th>Descrição</th>
-            <th>Fornecedor</th>
-            <th>Caixa</th>
+            <th style="text-align:left;padding:8px 6px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#999;">Rubrica</th>
+            <th style="text-align:left;padding:8px 6px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#999;">Ação / Atividade</th>
+            <th style="text-align:left;padding:8px 6px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#999;">Caixa</th>
             <th style="text-align:right;width:110px;">Valor</th>
           </tr>
         </thead>
         <tbody id="sys-mov-body">
-          <tr><td colspan="5" style="text-align:center;color:var(--texto-l);padding:18px;">Carregando…</td></tr>
+          <tr><td colspan="6" style="text-align:center;color:var(--texto-l);padding:18px;">Carregando…</td></tr>
         </tbody>
       </table>
     </div>
@@ -735,6 +751,28 @@ footer strong{color:var(--ouro-claro);}
   </div>
 </div><!-- /sobre -->
 
+
+  <!-- ── EXECUÇÃO POR RUBRICA ── -->
+  <div class="panel" id="sys-execucao">
+    <div class="card" style="margin-bottom:18px;">
+      <div class="card-title">Execução por Rubrica</div>
+      <div style="font-size:.78rem;color:var(--texto-muted,#888);margin-bottom:16px;">Executado real (lançamentos do monitoramento financeiro) vs. orçado aprovado. Alimentado automaticamente via Apps Script.</div>
+      <div id="sys-exec-rubrica"><div style="padding:20px;text-align:center;color:#777;">Carregando…</div></div>
+    </div>
+    <div class="card" style="margin-bottom:18px;">
+      <div class="card-title">Execução por Ação</div>
+      <div id="sys-exec-acao"><div style="padding:14px;text-align:center;color:#777;">Carregando…</div></div>
+    </div>
+    <div class="card" style="margin-bottom:18px;">
+      <div class="card-title">Execução por Atividade</div>
+      <div id="sys-exec-atividade"><div style="padding:14px;text-align:center;color:#777;">Carregando…</div></div>
+    </div>
+    <div class="card">
+      <div style="font-size:.75rem;color:var(--texto-muted,#888);line-height:1.6;">
+        <strong>Nota metodológica:</strong> Para que as barras sejam preenchidas, cada lançamento na planilha de monitoramento financeiro deve ter as colunas <strong>Rubrica (C)</strong>, <strong>Ação/Categoria (D)</strong> e <strong>Atividade (E)</strong> preenchidas, e o Apps Script deve estar atualizado para exportar esses campos.
+      </div>
+    </div>
+  </div>
 </main>
 
 <footer>
@@ -827,9 +865,10 @@ function showInner(proj, id) {
         '</tr>';
     });
     document.getElementById('sys-mov-body').innerHTML = trs ||
-      '<tr><td colspan="5" style="text-align:center;color:var(--texto-l);padding:18px;">Sem movimentações</td></tr>';
+      '<tr><td colspan="6" style="text-align:center;color:var(--texto-l);padding:18px;">Sem movimentações</td></tr>';
 
     // Status
+    renderExecucao(d.movimentacoes);
     document.getElementById('sys-live-status').textContent = 'atualizado em ' + fmtData(d.geradoEm);
     document.getElementById('sys-live-pulse').style.background = 'var(--sys-verde)';
   }
@@ -846,8 +885,131 @@ function showInner(proj, id) {
   fetch(url)
     .then(function(r){ if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
     .then(renderizar)
-    .catch(function(e){ console.error(e); falhar('dados indisponíveis'); });
+    
+  // ── ORÇAMENTO APROVADO ──
+  var ORCAMENTO_RUBRICA = {
+    "Pessoal": 300000,
+    "Contratos": 150000,
+    "Viagens": 50000,
+    "Equipamentos": 40000,
+    "Mensalidade internet": 15000,
+    "Custo Administrativo": 20000,
+    "Outros": 25000
+};
+  var ORCAMENTO_ACAO    = {};
+
+  function renderExecucao(movimentacoes) {
+    var porRubrica = {};
+    var porAcao    = {};
+    var porAtividade = {};
+
+    (movimentacoes || []).forEach(function(m) {
+      if (m.valor >= 0) return;
+      var val  = Math.abs(m.valor);
+      var rub  = (m.rubrica  && m.rubrica  !== '(sem categoria)') ? m.rubrica  : 'Sem classificação';
+      var acao = (m.acao     && m.acao     !== '(sem categoria)') ? m.acao     : 'Sem classificação';
+      var ativ = (m.atividade&& m.atividade!== '(sem categoria)') ? m.atividade: 'Sem classificação';
+      porRubrica[rub] = (porRubrica[rub] || 0) + val;
+      if (!porAcao[acao]) porAcao[acao] = 0;
+      porAcao[acao] += val;
+      var chav = acao + ' › ' + ativ;
+      if (!porAtividade[chav]) porAtividade[chav] = {acao: acao, atividade: ativ, total: 0, lancamentos: []};
+      porAtividade[chav].total += val;
+      porAtividade[chav].lancamentos.push(m);
+    });
+
+    // Render Rubrica
+    var rubricasAll = Object.keys(ORCAMENTO_RUBRICA).concat(
+      Object.keys(porRubrica).filter(function(k){return !ORCAMENTO_RUBRICA[k];}));
+    rubricasAll = rubricasAll.filter(function(v,i,a){return a.indexOf(v)===i;});
+    var rubHtml = '';
+    rubricasAll.forEach(function(rub) {
+      var exec = porRubrica[rub] || 0;
+      var orc  = ORCAMENTO_RUBRICA[rub] || 0;
+      var pct  = orc > 0 ? Math.min((exec/orc)*100, 100) : 0;
+      var pctR = orc > 0 ? ((exec/orc)*100).toFixed(1) : '—';
+      var cor  = pct < 50 ? 'linear-gradient(90deg,#1a5a2a,#2a8a3a)' : pct < 80 ? 'linear-gradient(90deg,var(--ouro),var(--ouro-claro))' : 'linear-gradient(90deg,#8B3A1A,#aa4a2a)';
+      rubHtml += '<div style="margin-bottom:14px;">' +
+        '<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px;">' +
+          '<span style="font-weight:600;font-size:.85rem;">' + esc(rub) + '</span>' +
+          '<span style="display:flex;gap:14px;">' +
+            (orc ? '<span style="font-size:.72rem;color:var(--texto-muted,#888);">Orçado: R$ ' + fmtBR(orc) + '</span>' : '') +
+            '<span style="font-size:.9rem;font-weight:700;color:var(--ouro);">R$ ' + fmtBR(exec) + '</span>' +
+          '</span>' +
+        '</div>' +
+        '<div style="background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden;">' +
+          '<div style="height:8px;border-radius:4px;width:' + pct + '%;background:' + cor + ';transition:width .5s;"></div>' +
+        '</div>' +
+        '<div style="font-size:.7rem;color:var(--texto-muted,#888);margin-top:3px;">' + pctR + '% executado</div>' +
+      '</div>';
+    });
+    document.getElementById('sys-exec-rubrica').innerHTML = rubHtml ||
+      '<div style="color:#777;padding:20px;text-align:center;">Nenhum lançamento classificado ainda.<br><small>Preencha as colunas Rubrica/Ação/Atividade na planilha de monitoramento.</small></div>';
+
+    // Render Ação
+    var acoesAll = Object.keys(ORCAMENTO_ACAO).concat(Object.keys(porAcao).filter(function(k){return !ORCAMENTO_ACAO[k];}));
+    acoesAll = acoesAll.filter(function(v,i,a){return a.indexOf(v)===i;});
+    var acaoHtml = '';
+    acoesAll.forEach(function(acao) {
+      var exec = porAcao[acao] || 0;
+      var orc  = ORCAMENTO_ACAO[acao] || 0;
+      var pct  = orc > 0 ? Math.min((exec/orc)*100,100) : 0;
+      var pctR = orc > 0 ? ((exec/orc)*100).toFixed(1) : '—';
+      var cor  = pct < 50 ? 'linear-gradient(90deg,#1a5a2a,#2a8a3a)' : pct < 80 ? 'linear-gradient(90deg,var(--ouro),var(--ouro-claro))' : 'linear-gradient(90deg,#8B3A1A,#aa4a2a)';
+      acaoHtml += '<div style="margin-bottom:12px;">' +
+        '<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px;">' +
+          '<span style="font-size:.82rem;">' + esc(acao) + '</span>' +
+          '<span style="font-size:.88rem;font-weight:600;color:var(--ouro);">R$ ' + fmtBR(exec) + '</span>' +
+        '</div>' +
+        '<div style="background:rgba(255,255,255,.08);border-radius:4px;height:6px;overflow:hidden;">' +
+          '<div style="height:6px;border-radius:4px;width:' + pct + '%;background:' + cor + ';"></div>' +
+        '</div>' +
+        (orc ? '<div style="font-size:.68rem;color:var(--texto-muted,#888);margin-top:2px;">' + pctR + '% de R$ ' + fmtBR(orc) + ' orçado</div>' : '<div style="font-size:.68rem;color:#664;margin-top:2px;">Sem orçamento mapeado</div>') +
+      '</div>';
+    });
+    document.getElementById('sys-exec-acao').innerHTML = acaoHtml ||
+      '<div style="color:#777;padding:14px;text-align:center;">Nenhum lançamento classificado por Ação ainda.</div>';
+
+    // Render Atividade
+    var ativHtml = '';
+    Object.keys(porAtividade).sort().forEach(function(chav) {
+      var item = porAtividade[chav];
+      ativHtml += '<div style="margin-bottom:16px;padding:12px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:8px;">' +
+        '<div style="font-size:.72rem;color:var(--ouro);margin-bottom:3px;letter-spacing:.04em;">' + esc(item.acao) + '</div>' +
+        '<div style="font-size:.85rem;font-weight:600;margin-bottom:8px;">' + esc(item.atividade) + '</div>' +
+        '<div style="display:flex;justify-content:space-between;margin-bottom:8px;">' +
+          '<span style="font-size:.75rem;color:var(--texto-muted,#888);">' + item.lancamentos.length + ' lançamento(s)</span>' +
+          '<span style="font-size:.95rem;font-weight:700;color:var(--ouro);">R$ ' + fmtBR(item.total) + '</span>' +
+        '</div>' +
+        '<table style="width:100%;border-collapse:collapse;font-size:11px;">' +
+          '<thead><tr style="color:#888;border-bottom:.5px solid rgba(255,255,255,.1);">' +
+            '<th style="text-align:left;padding:4px 6px;">Data</th>' +
+            '<th style="text-align:left;padding:4px 6px;">Descrição</th>' +
+            '<th style="text-align:right;padding:4px 6px;">Valor</th>' +
+          '</tr></thead><tbody>' +
+          item.lancamentos.map(function(l) {
+            return '<tr style="border-top:.5px solid rgba(255,255,255,.05);">' +
+              '<td style="padding:4px 6px;color:#aaa;white-space:nowrap;">' + esc(l.dtPgto||'') + '</td>' +
+              '<td style="padding:4px 6px;color:#ccc;">' + esc(l.descricao||l.fornecedor||'') + '</td>' +
+              '<td style="padding:4px 6px;text-align:right;color:#8B3A1A;font-weight:600;">− R$ ' + fmtBR(Math.abs(l.valor)) + '</td>' +
+            '</tr>';
+          }).join('') +
+          '</tbody></table>' +
+      '</div>';
+    });
+    document.getElementById('sys-exec-atividade').innerHTML = ativHtml ||
+      '<div style="color:#777;padding:14px;text-align:center;">Nenhum lançamento classificado por Atividade ainda.</div>';
+  }
+.catch(function(e){ console.error(e); falhar('dados indisponíveis'); });
 })();
+
+  function showTab(id, el) {
+    document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('active');});
+    document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('active');});
+    var panel = document.getElementById(id);
+    if (panel) panel.classList.add('active');
+    if (el) el.classList.add('active');
+  }
 </script>
 </body>
 </html>

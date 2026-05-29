@@ -536,6 +536,7 @@ body {
 <div class="tabs-wrap">
   <div class="tabs">
     <div class="tab active" onclick="showTab('financeiro',this)">Financeiro</div>
+    <div class="tab" onclick="showTab('mpi-execucao',this)">Execução por Rubrica</div>
     <div class="tab" onclick="showTab('atividades',this)">Atividades</div>
     <div class="tab" onclick="showTab('sobre',this)">Sobre o Projeto</div>
   </div>
@@ -596,13 +597,14 @@ body {
           <tr style="border-bottom:2px solid #e0dbd0;">
             <th style="text-align:left;padding:8px 6px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#999;width:80px;">Data</th>
             <th style="text-align:left;padding:8px 6px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#999;">Descrição</th>
-            <th style="text-align:left;padding:8px 6px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#999;">Fornecedor</th>
+            <th style="text-align:left;padding:8px 6px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#999;">Rubrica</th>
+            <th style="text-align:left;padding:8px 6px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#999;">Ação / Atividade</th>
             <th style="text-align:left;padding:8px 6px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#999;">Caixa</th>
             <th style="text-align:right;padding:8px 6px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#999;width:110px;">Valor</th>
           </tr>
         </thead>
         <tbody id="mpi-mov-body">
-          <tr><td colspan="5" style="text-align:center;color:#999;padding:18px;">Carregando…</td></tr>
+          <tr><td colspan="6" style="text-align:center;color:#999;padding:18px;">Carregando…</td></tr>
         </tbody>
       </table>
     </div>
@@ -960,7 +962,29 @@ body {
     </div>
   </div>
 
-  <!-- ── SOBRE ── -->
+  
+  <!-- ── EXECUÇÃO POR RUBRICA ── -->
+  <div class="panel" id="mpi-execucao">
+    <div class="card" style="margin-bottom:18px;">
+      <div class="card-title">Execução por Rubrica</div>
+      <div style="font-size:.78rem;color:var(--texto-muted,#888);margin-bottom:16px;">Executado real (lançamentos do monitoramento financeiro) vs. orçado aprovado. Alimentado automaticamente via Apps Script.</div>
+      <div id="mpi-exec-rubrica"><div style="padding:20px;text-align:center;color:#777;">Carregando…</div></div>
+    </div>
+    <div class="card" style="margin-bottom:18px;">
+      <div class="card-title">Execução por Ação</div>
+      <div id="mpi-exec-acao"><div style="padding:14px;text-align:center;color:#777;">Carregando…</div></div>
+    </div>
+    <div class="card" style="margin-bottom:18px;">
+      <div class="card-title">Execução por Atividade</div>
+      <div id="mpi-exec-atividade"><div style="padding:14px;text-align:center;color:#777;">Carregando…</div></div>
+    </div>
+    <div class="card">
+      <div style="font-size:.75rem;color:var(--texto-muted,#888);line-height:1.6;">
+        <strong>Nota metodológica:</strong> Para que as barras sejam preenchidas, cada lançamento na planilha de monitoramento financeiro deve ter as colunas <strong>Rubrica (C)</strong>, <strong>Ação/Categoria (D)</strong> e <strong>Atividade (E)</strong> preenchidas, e o Apps Script deve estar atualizado para exportar esses campos.
+      </div>
+    </div>
+  </div>
+<!-- ── SOBRE ── -->
   <div class="panel" id="sobre">
     <h2 class="section-title">Sobre o <em>Projeto</em></h2>
 
@@ -1110,19 +1134,133 @@ body {
       trs+='<tr style="border-bottom:.5px solid #e8e4dc;">'+
         '<td style="padding:7px 6px;white-space:nowrap;">'+esc(m.dtPgto||'')+'</td>'+
         '<td style="padding:7px 6px;">'+esc(m.descricao||'')+'</td>'+
-        '<td style="padding:7px 6px;color:#999;font-size:11px;">'+esc(m.fornecedor||'')+'</td>'+
+        '<td style="padding:7px 6px;">'+(m.rubrica&&m.rubrica!=='(sem categoria)'?'<span style="font-size:11px;padding:2px 8px;border-radius:10px;background:rgba(200,148,10,.1);color:var(--ouro);border:1px solid rgba(200,148,10,.25);">'+esc(m.rubrica)+'</span>':'<span style="color:#666;font-size:11px;">—</span>')+'</td>'+'<td style="padding:7px 6px;">'+((m.acao&&m.acao!=='(sem categoria)'?'<div style="font-size:11px;color:#bbb;">'+esc(m.acao)+'</div>':'')+(m.atividade&&m.atividade!=='(sem categoria)'?'<div style="font-size:10px;color:#888;margin-top:2px;">'+esc(m.atividade)+'</div>':'')||("<span style='color:#666;font-size:11px;'>—</span>"))+'</td>'+
         '<td style="padding:7px 6px;"><span style="font-size:11px;padding:2px 8px;border-radius:10px;background:rgba(200,148,10,.1);color:#C8940A;border:1px solid rgba(200,148,10,.25);">'+esc(m.caixa||'')+'</span></td>'+
         '<td style="padding:7px 6px;text-align:right;font-weight:600;color:'+cor+';">'+sinal+' R$ '+fmtBR(Math.abs(m.valor))+'</td>'+
         '</tr>';
     });
     document.getElementById('mpi-mov-body').innerHTML=trs||
-      '<tr><td colspan="5" style="text-align:center;color:#999;padding:18px;">Sem movimentações</td></tr>';
+      '<tr><td colspan="6" style="text-align:center;color:#999;padding:18px;">Sem movimentações</td></tr>';
 
+    renderExecucao(d.movimentacoes);
     document.getElementById('mpi-live-status').textContent='atualizado em '+fmtData(d.geradoEm);
     document.getElementById('mpi-live-pulse').style.background='#C8940A';
   }
 
-  function falhar(){
+  
+  // ── ORÇAMENTO APROVADO ──
+  var ORCAMENTO_RUBRICA = {
+    "Bolsas": 48000,
+    "Materiais pedagógicos": 12000,
+    "Viagens": 8000,
+    "Eventos e encontros": 15000,
+    "Outros": 5000
+};
+  var ORCAMENTO_ACAO    = {};
+
+  function renderExecucao(movimentacoes) {
+    var porRubrica = {};
+    var porAcao    = {};
+    var porAtividade = {};
+
+    (movimentacoes || []).forEach(function(m) {
+      if (m.valor >= 0) return;
+      var val  = Math.abs(m.valor);
+      var rub  = (m.rubrica  && m.rubrica  !== '(sem categoria)') ? m.rubrica  : 'Sem classificação';
+      var acao = (m.acao     && m.acao     !== '(sem categoria)') ? m.acao     : 'Sem classificação';
+      var ativ = (m.atividade&& m.atividade!== '(sem categoria)') ? m.atividade: 'Sem classificação';
+      porRubrica[rub] = (porRubrica[rub] || 0) + val;
+      if (!porAcao[acao]) porAcao[acao] = 0;
+      porAcao[acao] += val;
+      var chav = acao + ' › ' + ativ;
+      if (!porAtividade[chav]) porAtividade[chav] = {acao: acao, atividade: ativ, total: 0, lancamentos: []};
+      porAtividade[chav].total += val;
+      porAtividade[chav].lancamentos.push(m);
+    });
+
+    // Render Rubrica
+    var rubricasAll = Object.keys(ORCAMENTO_RUBRICA).concat(
+      Object.keys(porRubrica).filter(function(k){return !ORCAMENTO_RUBRICA[k];}));
+    rubricasAll = rubricasAll.filter(function(v,i,a){return a.indexOf(v)===i;});
+    var rubHtml = '';
+    rubricasAll.forEach(function(rub) {
+      var exec = porRubrica[rub] || 0;
+      var orc  = ORCAMENTO_RUBRICA[rub] || 0;
+      var pct  = orc > 0 ? Math.min((exec/orc)*100, 100) : 0;
+      var pctR = orc > 0 ? ((exec/orc)*100).toFixed(1) : '—';
+      var cor  = pct < 50 ? 'linear-gradient(90deg,#1a5a2a,#2a8a3a)' : pct < 80 ? 'linear-gradient(90deg,var(--ouro),var(--ouro-claro))' : 'linear-gradient(90deg,#8B3A1A,#aa4a2a)';
+      rubHtml += '<div style="margin-bottom:14px;">' +
+        '<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px;">' +
+          '<span style="font-weight:600;font-size:.85rem;">' + esc(rub) + '</span>' +
+          '<span style="display:flex;gap:14px;">' +
+            (orc ? '<span style="font-size:.72rem;color:var(--texto-muted,#888);">Orçado: R$ ' + fmtBR(orc) + '</span>' : '') +
+            '<span style="font-size:.9rem;font-weight:700;color:var(--ouro);">R$ ' + fmtBR(exec) + '</span>' +
+          '</span>' +
+        '</div>' +
+        '<div style="background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden;">' +
+          '<div style="height:8px;border-radius:4px;width:' + pct + '%;background:' + cor + ';transition:width .5s;"></div>' +
+        '</div>' +
+        '<div style="font-size:.7rem;color:var(--texto-muted,#888);margin-top:3px;">' + pctR + '% executado</div>' +
+      '</div>';
+    });
+    document.getElementById('mpi-exec-rubrica').innerHTML = rubHtml ||
+      '<div style="color:#777;padding:20px;text-align:center;">Nenhum lançamento classificado ainda.<br><small>Preencha as colunas Rubrica/Ação/Atividade na planilha de monitoramento.</small></div>';
+
+    // Render Ação
+    var acoesAll = Object.keys(ORCAMENTO_ACAO).concat(Object.keys(porAcao).filter(function(k){return !ORCAMENTO_ACAO[k];}));
+    acoesAll = acoesAll.filter(function(v,i,a){return a.indexOf(v)===i;});
+    var acaoHtml = '';
+    acoesAll.forEach(function(acao) {
+      var exec = porAcao[acao] || 0;
+      var orc  = ORCAMENTO_ACAO[acao] || 0;
+      var pct  = orc > 0 ? Math.min((exec/orc)*100,100) : 0;
+      var pctR = orc > 0 ? ((exec/orc)*100).toFixed(1) : '—';
+      var cor  = pct < 50 ? 'linear-gradient(90deg,#1a5a2a,#2a8a3a)' : pct < 80 ? 'linear-gradient(90deg,var(--ouro),var(--ouro-claro))' : 'linear-gradient(90deg,#8B3A1A,#aa4a2a)';
+      acaoHtml += '<div style="margin-bottom:12px;">' +
+        '<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px;">' +
+          '<span style="font-size:.82rem;">' + esc(acao) + '</span>' +
+          '<span style="font-size:.88rem;font-weight:600;color:var(--ouro);">R$ ' + fmtBR(exec) + '</span>' +
+        '</div>' +
+        '<div style="background:rgba(255,255,255,.08);border-radius:4px;height:6px;overflow:hidden;">' +
+          '<div style="height:6px;border-radius:4px;width:' + pct + '%;background:' + cor + ';"></div>' +
+        '</div>' +
+        (orc ? '<div style="font-size:.68rem;color:var(--texto-muted,#888);margin-top:2px;">' + pctR + '% de R$ ' + fmtBR(orc) + ' orçado</div>' : '<div style="font-size:.68rem;color:#664;margin-top:2px;">Sem orçamento mapeado</div>') +
+      '</div>';
+    });
+    document.getElementById('mpi-exec-acao').innerHTML = acaoHtml ||
+      '<div style="color:#777;padding:14px;text-align:center;">Nenhum lançamento classificado por Ação ainda.</div>';
+
+    // Render Atividade
+    var ativHtml = '';
+    Object.keys(porAtividade).sort().forEach(function(chav) {
+      var item = porAtividade[chav];
+      ativHtml += '<div style="margin-bottom:16px;padding:12px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:8px;">' +
+        '<div style="font-size:.72rem;color:var(--ouro);margin-bottom:3px;letter-spacing:.04em;">' + esc(item.acao) + '</div>' +
+        '<div style="font-size:.85rem;font-weight:600;margin-bottom:8px;">' + esc(item.atividade) + '</div>' +
+        '<div style="display:flex;justify-content:space-between;margin-bottom:8px;">' +
+          '<span style="font-size:.75rem;color:var(--texto-muted,#888);">' + item.lancamentos.length + ' lançamento(s)</span>' +
+          '<span style="font-size:.95rem;font-weight:700;color:var(--ouro);">R$ ' + fmtBR(item.total) + '</span>' +
+        '</div>' +
+        '<table style="width:100%;border-collapse:collapse;font-size:11px;">' +
+          '<thead><tr style="color:#888;border-bottom:.5px solid rgba(255,255,255,.1);">' +
+            '<th style="text-align:left;padding:4px 6px;">Data</th>' +
+            '<th style="text-align:left;padding:4px 6px;">Descrição</th>' +
+            '<th style="text-align:right;padding:4px 6px;">Valor</th>' +
+          '</tr></thead><tbody>' +
+          item.lancamentos.map(function(l) {
+            return '<tr style="border-top:.5px solid rgba(255,255,255,.05);">' +
+              '<td style="padding:4px 6px;color:#aaa;white-space:nowrap;">' + esc(l.dtPgto||'') + '</td>' +
+              '<td style="padding:4px 6px;color:#ccc;">' + esc(l.descricao||l.fornecedor||'') + '</td>' +
+              '<td style="padding:4px 6px;text-align:right;color:#8B3A1A;font-weight:600;">− R$ ' + fmtBR(Math.abs(l.valor)) + '</td>' +
+            '</tr>';
+          }).join('') +
+          '</tbody></table>' +
+      '</div>';
+    });
+    document.getElementById('mpi-exec-atividade').innerHTML = ativHtml ||
+      '<div style="color:#777;padding:14px;text-align:center;">Nenhum lançamento classificado por Atividade ainda.</div>';
+  }
+function falhar(){
     document.getElementById('mpi-live-status').textContent='dados indisponíveis';
     document.getElementById('mpi-live-pulse').style.background='#CC2200';
     document.getElementById('mpi-mov-body').innerHTML=
