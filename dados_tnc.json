@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-05-28T22:07:39.351Z",
-  "projeto": "TNC – BR FY25 091 | Gestão Territorial Parakanã",
+  "geradoEm": "2026-05-29T13:11:43.191Z",
+  "projeto": "TNC",
   "filtroProjeto": "TNC Aditivo",
   "saldo": 208873.80999999997,
   "totalEntradas": 389616.8,
@@ -1457,8 +1457,8 @@
       "status": "",
       "caixa": "Geral",
       "rubrica": "Equipamentos",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "acao": "3.3 Sistema de comunicação",
+      "atividade": "3.3.1 Pagamento de mensalidade de Starlink"
     },
     {
       "dtPgto": "03/03/2026",
