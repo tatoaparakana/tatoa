@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-01T15:43:22.566Z",
+  "geradoEm": "2026-06-01T16:43:22.293Z",
   "projeto": "Systemica - Antecipação",
   "saldo": 12682,
   "totalEntradas": 375655.46,
@@ -9,9 +9,10 @@
     "(sem caixa)": 12682
   },
   "porCategoria": {
-    "Governanca": -84838.08,
-    "(sem categoria)": 98582.25,
-    "Meio Ambiente": -1062.17
+    "Governanca": -160259.57,
+    "(sem categoria)": 346184.25,
+    "Meio Ambiente": -83242.68,
+    "Renda": -90000
   },
   "movimentacoes": [
     {
@@ -22,7 +23,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Meio Ambiente"
     },
     {
       "dtPgto": "22/05/2026",
@@ -32,7 +33,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Meio Ambiente"
     },
     {
       "dtPgto": "15/05/2026",
@@ -42,7 +43,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Meio Ambiente"
     },
     {
       "dtPgto": "11/05/2026",
@@ -52,7 +53,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Meio Ambiente"
     },
     {
       "dtPgto": "11/05/2026",
@@ -62,11 +63,11 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Meio Ambiente"
     },
     {
       "dtPgto": "08/05/2026",
-      "descricao": "",
+      "descricao": "Financeiro Tato'a AIT",
       "fornecedor": "PAGAMENTO PIX 42020136000103 CASA DO LAVADOR",
       "valor": -90,
       "movimento": "Saída",
@@ -82,7 +83,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Governanca"
     },
     {
       "dtPgto": "08/05/2026",
@@ -92,7 +93,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Governanca"
     },
     {
       "dtPgto": "07/05/2026",
@@ -102,7 +103,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Governanca"
     },
     {
       "dtPgto": "07/05/2026",
@@ -112,7 +113,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Governanca"
     },
     {
       "dtPgto": "06/05/2026",
@@ -122,7 +123,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Meio Ambiente"
     },
     {
       "dtPgto": "06/05/2026",
@@ -132,7 +133,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Governanca"
     },
     {
       "dtPgto": "06/05/2026",
@@ -142,7 +143,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Governanca"
     },
     {
       "dtPgto": "05/05/2026",
@@ -152,7 +153,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Meio Ambiente"
     },
     {
       "dtPgto": "05/05/2026",
@@ -162,7 +163,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Governanca"
     },
     {
       "dtPgto": "05/05/2026",
@@ -182,7 +183,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Governanca"
     },
     {
       "dtPgto": "05/05/2026",
@@ -192,7 +193,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Governanca"
     },
     {
       "dtPgto": "04/05/2026",
@@ -202,7 +203,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Meio Ambiente"
     },
     {
       "dtPgto": "04/05/2026",
@@ -212,7 +213,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Meio Ambiente"
     }
   ]
 }
