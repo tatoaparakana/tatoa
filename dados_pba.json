@@ -1,20 +1,104 @@
 {
-  "geradoEm": "2026-06-01T18:32:55.627Z",
+  "geradoEm": "2026-06-01T18:56:10.538Z",
   "projeto": "PBA",
   "filtroProjeto": "PBA",
-  "saldo": 3600.850000000035,
+  "saldo": -36506.26999999996,
   "totalEntradas": 210934.82,
-  "totalSaidas": 207333.96999999997,
-  "totalLancamentos": 92,
+  "totalSaidas": 247441.08999999997,
+  "totalLancamentos": 99,
   "porCaixa": {
-    "Geral": 3600.8500000000167
+    "Geral": -36506.26999999998
   },
   "porCategoria": {
-    "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO": -37381.3,
-    "MÃO-DE-OBRA (COM ENCARGOS)": -169536,
+    "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO": -41537.420000000006,
+    "MÃO-DE-OBRA (COM ENCARGOS)": -205487,
     "(sem categoria)": 210518.15000000002
   },
   "movimentacoes": [
+    {
+      "dtPgto": "28/05/2026",
+      "descricao": "Ajuda de custo",
+      "fornecedor": "PAGAMENTO PIX 78177871234 JOSE EMILIO BANDEIRA D",
+      "valor": -2000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Gerente de Projetos"
+    },
+    {
+      "dtPgto": "28/05/2026",
+      "descricao": "Prestação de serviços mês de maio 2026",
+      "fornecedor": "PAGAMENTO PIX 59276258000168 59.276.258 JORDAN C",
+      "valor": -7700,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Analista técnico de campo (PFI e PGTI)"
+    },
+    {
+      "dtPgto": "27/05/2026",
+      "descricao": "prestação de serviços mês de maio 2026",
+      "fornecedor": "PAGAMENTO PIX 62010588000111 62 010 588 SIMONE P",
+      "valor": -3960,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Técnico Financeiro"
+    },
+    {
+      "dtPgto": "27/05/2026",
+      "descricao": "prestação de serviços mês de maio 2026",
+      "fornecedor": "PAGAMENTO PIX 62218112000170 J E BANDEIRA DE MAT",
+      "valor": -13000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Gerente de Projetos"
+    },
+    {
+      "dtPgto": "27/05/2026",
+      "descricao": "prestação de serviços mês de maio 2026",
+      "fornecedor": "PAGAMENTO PIX 55479847287 Marcio Parakana",
+      "valor": -6160,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Técnico de campo indígena"
+    },
+    {
+      "dtPgto": "27/05/2026",
+      "descricao": "prestação de serviços mês de maio 2028",
+      "fornecedor": "PAGAMENTO PIX 55501605287 NENEXIGA PARAKANA",
+      "valor": -6752,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Agente indígena"
+    },
+    {
+      "dtPgto": "26/05/2026",
+      "descricao": "Conta de Energia",
+      "fornecedor": "PAGAMENTO PIX 04895728000180 EQUATORIAL PARA DIS",
+      "valor": -535.12,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Manutenção do escritório: energia e internet"
+    },
     {
       "dtPgto": "15/05/2026",
       "descricao": "Conta telefônica",
@@ -59,7 +143,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
       "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
       "atividade": "Consultor Contábil (contador - sob demanda)"
     },
@@ -469,7 +553,7 @@
       "caixa": "Geral",
       "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
       "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
-      "atividade": "Analista Administrativo, Financeiro e Logística"
+      "atividade": "Analista técnico de campo (PFI e PGTI)"
     },
     {
       "dtPgto": "30/03/2026",
@@ -725,7 +809,7 @@
     },
     {
       "dtPgto": "13/03/2026",
-      "descricao": "",
+      "descricao": "Conta de Internet",
       "fornecedor": "PAGAMENTO PIX 02558157000162 TELEFONICA BRAS",
       "valor": -99.99,
       "movimento": "Saída",
