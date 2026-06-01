@@ -1,20 +1,60 @@
 {
-  "geradoEm": "2026-06-01T19:43:22.929Z",
+  "geradoEm": "2026-06-01T20:43:22.648Z",
   "projeto": "Systemica - Antecipação",
-  "saldo": 12682,
-  "totalEntradas": 375655.46,
-  "totalSaidas": 362973.46,
-  "totalLancamentos": 219,
+  "saldo": 227767.73,
+  "totalEntradas": 591167.71,
+  "totalSaidas": 363399.98,
+  "totalLancamentos": 223,
   "porCaixa": {
-    "(sem caixa)": 12682
+    "(sem caixa)": 227767.73
   },
   "porCategoria": {
     "Governanca": -160259.57,
-    "(sem categoria)": 346184.25,
+    "(sem categoria)": 561269.98,
     "Meio Ambiente": -83242.68,
     "Renda": -90000
   },
   "movimentacoes": [
+    {
+      "dtPgto": "29/05/2026",
+      "descricao": "TED 12300288000107 NORTE ENERGIA S A",
+      "fornecedor": "",
+      "valor": 161135.22,
+      "movimento": "Entrada",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "28/05/2026",
+      "descricao": "Mensalidade Starlink",
+      "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
+      "valor": -235.52,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "26/05/2026",
+      "descricao": "Parcela de antecipação",
+      "fornecedor": "RECEBIMENTO PIX 22524415000105 SYSTEMICA",
+      "valor": 54377.03,
+      "movimento": "Entrada",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "25/05/2026",
+      "descricao": "Fortalecimento da Reocupação",
+      "fornecedor": "PAGAMENTO PIX 15496840000164 F. R. A. DA SILVA C",
+      "valor": -191,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
     {
       "dtPgto": "22/05/2026",
       "descricao": "Mensalidade - Centro Parakanã",
@@ -174,46 +214,6 @@
       "status": "",
       "caixa": "(sem caixa)",
       "categoria": "Governanca"
-    },
-    {
-      "dtPgto": "05/05/2026",
-      "descricao": "Prestação de serviços mês de abril 2026",
-      "fornecedor": "PAGAMENTO PIX 62010588000111 62 010 588 SIMONE P",
-      "valor": -1100,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Governanca"
-    },
-    {
-      "dtPgto": "05/05/2026",
-      "descricao": "Prestação de serviços mês de abril de 2026",
-      "fornecedor": "PAGAMENTO PIX 59276258000168 59.276.258 JORDAN C",
-      "valor": -3000,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Governanca"
-    },
-    {
-      "dtPgto": "04/05/2026",
-      "descricao": "Fortalecimento da Reocupação",
-      "fornecedor": "PAGAMENTO PIX 39663958000106 PREMIUM SUPERMERCAD",
-      "valor": -303,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Meio Ambiente"
-    },
-    {
-      "dtPgto": "04/05/2026",
-      "descricao": "40154884000153",
-      "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
-      "valor": -235.52,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Meio Ambiente"
     }
   ]
 }
