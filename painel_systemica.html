@@ -147,14 +147,6 @@ footer strong{color:var(--ouro-claro);}
   .grid2{grid-template-columns:1fr;}
   .proj-hero-kpis{display:none;}
 }
-
-  .tabs-wrap { background:var(--preto,#1A1612); border-bottom:1px solid rgba(200,148,10,.2); position:sticky; top:62px; z-index:100; }
-  .tabs { display:flex; gap:0; max-width:900px; margin:0 auto; padding:0 28px; }
-  .tab { padding:12px 20px; font-size:13px; color:var(--texto-l,#7A6F5A); background:none; border:none; border-bottom:2px solid transparent; cursor:pointer; margin-bottom:-1px; transition:all .15s; }
-  .tab:hover { color:var(--ouro-claro,#F0D878); }
-  .tab.active { color:var(--ouro-claro,#F0D878); border-bottom:2px solid var(--ouro,#C8940A); font-weight:600; }
-  .panel { display:none; }
-  .panel.active { display:block; }
 </style>
 </head>
 <body>
@@ -183,12 +175,6 @@ footer strong{color:var(--ouro-claro);}
 <!-- HERO -->
 <div class="proj-hero">
   <div class="proj-hero-content">
-<div class="tabs-wrap">
-  <div class="tabs">
-    <div class="tab active" onclick="showTab('sys-financeiro',this)">Financeiro</div>
-    <div class="tab" onclick="showTab('sys-execucao',this)">Execução por Rubrica</div>
-  </div>
-</div>
 
     <div class="proj-hero-left">
       <div class="proj-hero-title">Projeto Apyterewa<br><em>REDD+ · Conservação e Carbono</em></div>
@@ -205,6 +191,7 @@ footer strong{color:var(--ouro-claro);}
 <!-- INNER TABS -->
 <div class="inner-tabs">
   <button class="inner-tab active" onclick="showInner('sys','financeiro')">Financeiro</button>
+  <button class="inner-tab" onclick="showInner('sys','execucao')">Execução por Rubrica</button>
   <button class="inner-tab" onclick="showInner('sys','clpi')">Consulta CLPI</button>
   <button class="inner-tab" onclick="showInner('sys','estrutura')">Estrutura REDD+</button>
   <button class="inner-tab" onclick="showInner('sys','atividades')">Atividades</button>
@@ -436,6 +423,268 @@ footer strong{color:var(--ouro-claro);}
 </div><!-- /financeiro -->
 
 <!-- ══════ CONSULTA CLPI ══════ -->
+
+<div class="inner-section" id="sys-execucao">
+
+    <div class="card" style="margin-bottom:18px;">
+      <div class="card-title">Execução por Rubrica</div>
+      <div style="font-size:.78rem;color:var(--texto-muted,#888);margin-bottom:16px;">Executado real (lançamentos do monitoramento financeiro) vs. orçado aprovado. Alimentado automaticamente via Apps Script.</div>
+      <div id="sys-exec-rubrica"><div style="padding:20px;text-align:center;color:#777;">Carregando…</div></div>
+    </div>
+    <div class="card" style="margin-bottom:18px;">
+      <div class="card-title">Execução por Ação</div>
+      <div id="sys-exec-acao"><div style="padding:14px;text-align:center;color:#777;">Carregando…</div></div>
+    </div>
+    <div class="card" style="margin-bottom:18px;">
+      <div class="card-title">Execução por Atividade</div>
+      <div id="sys-exec-atividade"><div style="padding:14px;text-align:center;color:#777;">Carregando…</div></div>
+    </div>
+    <div class="card">
+      <div style="font-size:.75rem;color:var(--texto-muted,#888);line-height:1.6;">
+        <strong>Nota metodológica:</strong> Para que as barras sejam preenchidas, cada lançamento na planilha de monitoramento financeiro deve ter as colunas <strong>Rubrica (C)</strong>, <strong>Ação/Categoria (D)</strong> e <strong>Atividade (E)</strong> preenchidas, e o Apps Script deve estar atualizado para exportar esses campos.
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <strong>Associação Indígena Tato'a – AIT</strong> · Povo Parakanã · TI Apyterewa · São Félix do Xingu – PA
+  &nbsp;|&nbsp; Projeto Apyterewa REDD+ · Systemica · Dados: Prestações de contas Jan–Abr/2026 + Orçamento v1 Jan/2026
+</footer>
+
+<script>
+function showInner(proj, id) {
+  document.querySelectorAll('.inner-section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.inner-tab').forEach(b => b.classList.remove('active'));
+  document.getElementById(proj + '-' + id).classList.add('active');
+  event.target.classList.add('active');
+}
+
+// ══════ Dados ao vivo · Systemica ══════
+(function carregarDadosSystemica(){
+  function fmtBR(n){
+    if (typeof n !== 'number') return '—';
+    return n.toLocaleString('pt-BR', {minimumFractionDigits:2, maximumFractionDigits:2});
+  }
+  function fmtCompact(n){
+    if (typeof n !== 'number') return '—';
+    var abs = Math.abs(n);
+    if (abs >= 1000000) return (n/1000000).toFixed(2).replace('.', ',') + 'M';
+    if (abs >= 1000) return (n/1000).toFixed(1).replace('.', ',') + 'k';
+    return fmtBR(n);
+  }
+  function fmtData(iso){
+    if (!iso) return '';
+    var d = new Date(iso);
+    var dd = String(d.getDate()).padStart(2,'0');
+    var mm = String(d.getMonth()+1).padStart(2,'0');
+    var yy = d.getFullYear();
+    var hh = String(d.getHours()).padStart(2,'0');
+    var mi = String(d.getMinutes()).padStart(2,'0');
+    return dd + '/' + mm + '/' + yy + ' às ' + hh + ':' + mi;
+  }
+  function escapeHtml(s){
+    return String(s).replace(/[&<>"']/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  }
+
+  function renderizar(d){
+    document.getElementById('sys-kpi-saldo').textContent = 'R$ ' + fmtCompact(d.saldo);
+    document.getElementById('sys-kpi-entradas').textContent = 'R$ ' + fmtCompact(d.totalEntradas);
+    document.getElementById('sys-kpi-saidas').textContent = 'R$ ' + fmtCompact(d.totalSaidas);
+    document.getElementById('sys-kpi-lancamentos').textContent = d.totalLancamentos;
+
+    // Por caixa
+    var caixaHtml = '';
+    var caixas = Object.keys(d.porCaixa).sort(function(a,b){
+      return Math.abs(d.porCaixa[b]) - Math.abs(d.porCaixa[a]);
+    });
+    caixas.forEach(function(k){
+      var v = d.porCaixa[k];
+      var cor = v < 0 ? 'var(--terra)' : 'var(--sys-verde)';
+      caixaHtml += '<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:.5px solid var(--cinza-q);">' +
+        '<span>' + escapeHtml(k) + '</span>' +
+        '<span style="font-weight:600;color:' + cor + ';">R$ ' + fmtBR(v) + '</span></div>';
+    });
+    document.getElementById('sys-por-caixa').innerHTML = caixaHtml || '<span style="color:var(--texto-l);">Sem dados</span>';
+
+    // Por categoria
+    var catHtml = '';
+    var cats = Object.keys(d.porCategoria).sort(function(a,b){
+      return Math.abs(d.porCategoria[b]) - Math.abs(d.porCategoria[a]);
+    });
+    cats.forEach(function(k){
+      var v = d.porCategoria[k];
+      var cor = v < 0 ? 'var(--terra)' : 'var(--sys-verde)';
+      catHtml += '<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:.5px solid var(--cinza-q);">' +
+        '<span>' + escapeHtml(k) + '</span>' +
+        '<span style="font-weight:600;color:' + cor + ';">R$ ' + fmtBR(v) + '</span></div>';
+    });
+    document.getElementById('sys-por-categoria').innerHTML = catHtml || '<span style="color:var(--texto-l);">Sem dados</span>';
+
+    // Tabela
+    var trs = '';
+    (d.movimentacoes || []).forEach(function(m){
+      var cor = m.valor < 0 ? 'var(--terra)' : 'var(--sys-verde)';
+      var sinal = m.valor < 0 ? '−' : '+';
+      trs += '<tr>' +
+        '<td>' + escapeHtml(m.dtPgto || '') + '</td>' +
+        '<td>' + escapeHtml(m.descricao || '') + '</td>' +
+        '<td style="color:var(--texto-l);font-size:11px;">' + escapeHtml(m.fornecedor || '') + '</td>' +
+        '<td><span class="badge b-sys">' + escapeHtml(m.caixa || '') + '</span></td>' +
+        '<td style="text-align:right;font-weight:600;color:' + cor + ';">' + sinal + ' R$ ' + fmtBR(Math.abs(m.valor)) + '</td>' +
+        '</tr>';
+    });
+    document.getElementById('sys-mov-body').innerHTML = trs ||
+      '<tr><td colspan="6" style="text-align:center;color:var(--texto-l);padding:18px;">Sem movimentações</td></tr>';
+
+    // Status
+    renderExecucao(d.movimentacoes);
+    document.getElementById('sys-live-status').textContent = 'atualizado em ' + fmtData(d.geradoEm);
+    document.getElementById('sys-live-pulse').style.background = 'var(--sys-verde)';
+  }
+
+  function falhar(msg){
+    document.getElementById('sys-live-status').textContent = msg || 'erro ao carregar';
+    document.getElementById('sys-live-pulse').style.background = '#CC2200';
+    document.getElementById('sys-mov-body').innerHTML =
+      '<tr><td colspan="6" style="text-align:center;color:var(--texto-l);padding:18px;">Dados indisponíveis no momento.</td></tr>';
+  }
+
+  // Adiciona cache-bust para evitar JSON cacheado no GitHub Pages
+  var url = 'dados_systemica.json?t=' + Date.now();
+  fetch(url, {cache:'no-store'})
+    .then(function(r){ if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(renderizar)
+    
+  // ── ORÇAMENTO APROVADO ──
+  var ORCAMENTO_RUBRICA = {
+    "Contratação": 237358,
+    "Infraestrutura": 138342,
+    "Transporte": 114300,
+    "Administrativo": 10000
+};
+  var ORCAMENTO_ACAO    = {};
+
+  function renderExecucao(movimentacoes) {
+    var porRubrica = {};
+    var porAcao    = {};
+    var porAtividade = {};
+
+    (movimentacoes || []).forEach(function(m) {
+      if (m.valor >= 0) return;
+      var val  = Math.abs(m.valor);
+      var rub  = (m.rubrica  && m.rubrica  !== '(sem categoria)') ? m.rubrica  : 'Sem classificação';
+      var acao = (m.acao     && m.acao     !== '(sem categoria)') ? m.acao     : 'Sem classificação';
+      var ativ = (m.atividade&& m.atividade!== '(sem categoria)') ? m.atividade: 'Sem classificação';
+      porRubrica[rub] = (porRubrica[rub] || 0) + val;
+      if (!porAcao[acao]) porAcao[acao] = 0;
+      porAcao[acao] += val;
+      var chav = acao + ' › ' + ativ;
+      if (!porAtividade[chav]) porAtividade[chav] = {acao: acao, atividade: ativ, total: 0, lancamentos: []};
+      porAtividade[chav].total += val;
+      porAtividade[chav].lancamentos.push(m);
+    });
+
+    // Render Rubrica
+    var rubricasAll = Object.keys(ORCAMENTO_RUBRICA).concat(
+      Object.keys(porRubrica).filter(function(k){return !ORCAMENTO_RUBRICA[k];}));
+    rubricasAll = rubricasAll.filter(function(v,i,a){return a.indexOf(v)===i;});
+    var rubHtml = '';
+    rubricasAll.forEach(function(rub) {
+      var exec = porRubrica[rub] || 0;
+      var orc  = ORCAMENTO_RUBRICA[rub] || 0;
+      var pct  = orc > 0 ? Math.min((exec/orc)*100, 100) : 0;
+      var pctR = orc > 0 ? ((exec/orc)*100).toFixed(1) : '—';
+      var cor  = pct < 50 ? 'linear-gradient(90deg,#1a5a2a,#2a8a3a)' : pct < 80 ? 'linear-gradient(90deg,var(--ouro),var(--ouro-claro))' : 'linear-gradient(90deg,#8B3A1A,#aa4a2a)';
+      rubHtml += '<div style="margin-bottom:14px;">' +
+        '<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px;">' +
+          '<span style="font-weight:600;font-size:.85rem;">' + esc(rub) + '</span>' +
+          '<span style="display:flex;gap:14px;">' +
+            (orc ? '<span style="font-size:.72rem;color:var(--texto-muted,#888);">Orçado: R$ ' + fmtBR(orc) + '</span>' : '') +
+            '<span style="font-size:.9rem;font-weight:700;color:var(--ouro);">R$ ' + fmtBR(exec) + '</span>' +
+          '</span>' +
+        '</div>' +
+        '<div style="background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden;">' +
+          '<div style="height:8px;border-radius:4px;width:' + pct + '%;background:' + cor + ';transition:width .5s;"></div>' +
+        '</div>' +
+        '<div style="font-size:.7rem;color:var(--texto-muted,#888);margin-top:3px;">' + pctR + '% executado</div>' +
+      '</div>';
+    });
+    document.getElementById('sys-exec-rubrica').innerHTML = rubHtml ||
+      '<div style="color:#777;padding:20px;text-align:center;">Nenhum lançamento classificado ainda.<br><small>Preencha as colunas Rubrica/Ação/Atividade na planilha de monitoramento.</small></div>';
+
+    // Render Ação
+    var acoesAll = Object.keys(ORCAMENTO_ACAO).concat(Object.keys(porAcao).filter(function(k){return !ORCAMENTO_ACAO[k];}));
+    acoesAll = acoesAll.filter(function(v,i,a){return a.indexOf(v)===i;});
+    var acaoHtml = '';
+    acoesAll.forEach(function(acao) {
+      var exec = porAcao[acao] || 0;
+      var orc  = ORCAMENTO_ACAO[acao] || 0;
+      var pct  = orc > 0 ? Math.min((exec/orc)*100,100) : 0;
+      var pctR = orc > 0 ? ((exec/orc)*100).toFixed(1) : '—';
+      var cor  = pct < 50 ? 'linear-gradient(90deg,#1a5a2a,#2a8a3a)' : pct < 80 ? 'linear-gradient(90deg,var(--ouro),var(--ouro-claro))' : 'linear-gradient(90deg,#8B3A1A,#aa4a2a)';
+      acaoHtml += '<div style="margin-bottom:12px;">' +
+        '<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px;">' +
+          '<span style="font-size:.82rem;">' + esc(acao) + '</span>' +
+          '<span style="font-size:.88rem;font-weight:600;color:var(--ouro);">R$ ' + fmtBR(exec) + '</span>' +
+        '</div>' +
+        '<div style="background:rgba(255,255,255,.08);border-radius:4px;height:6px;overflow:hidden;">' +
+          '<div style="height:6px;border-radius:4px;width:' + pct + '%;background:' + cor + ';"></div>' +
+        '</div>' +
+        (orc ? '<div style="font-size:.68rem;color:var(--texto-muted,#888);margin-top:2px;">' + pctR + '% de R$ ' + fmtBR(orc) + ' orçado</div>' : '<div style="font-size:.68rem;color:#664;margin-top:2px;">Sem orçamento mapeado</div>') +
+      '</div>';
+    });
+    document.getElementById('sys-exec-acao').innerHTML = acaoHtml ||
+      '<div style="color:#777;padding:14px;text-align:center;">Nenhum lançamento classificado por Ação ainda.</div>';
+
+    // Render Atividade
+    var ativHtml = '';
+    Object.keys(porAtividade).sort().forEach(function(chav) {
+      var item = porAtividade[chav];
+      ativHtml += '<div style="margin-bottom:16px;padding:12px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:8px;">' +
+        '<div style="font-size:.72rem;color:var(--ouro);margin-bottom:3px;letter-spacing:.04em;">' + esc(item.acao) + '</div>' +
+        '<div style="font-size:.85rem;font-weight:600;margin-bottom:8px;">' + esc(item.atividade) + '</div>' +
+        '<div style="display:flex;justify-content:space-between;margin-bottom:8px;">' +
+          '<span style="font-size:.75rem;color:var(--texto-muted,#888);">' + item.lancamentos.length + ' lançamento(s)</span>' +
+          '<span style="font-size:.95rem;font-weight:700;color:var(--ouro);">R$ ' + fmtBR(item.total) + '</span>' +
+        '</div>' +
+        '<table style="width:100%;border-collapse:collapse;font-size:11px;">' +
+          '<thead><tr style="color:#888;border-bottom:.5px solid rgba(255,255,255,.1);">' +
+            '<th style="text-align:left;padding:4px 6px;">Data</th>' +
+            '<th style="text-align:left;padding:4px 6px;">Descrição</th>' +
+            '<th style="text-align:right;padding:4px 6px;">Valor</th>' +
+          '</tr></thead><tbody>' +
+          item.lancamentos.map(function(l) {
+            return '<tr style="border-top:.5px solid rgba(255,255,255,.05);">' +
+              '<td style="padding:4px 6px;color:#aaa;white-space:nowrap;">' + esc(l.dtPgto||'') + '</td>' +
+              '<td style="padding:4px 6px;color:#ccc;">' + esc(l.descricao||l.fornecedor||'') + '</td>' +
+              '<td style="padding:4px 6px;text-align:right;color:#8B3A1A;font-weight:600;">− R$ ' + fmtBR(Math.abs(l.valor)) + '</td>' +
+            '</tr>';
+          }).join('') +
+          '</tbody></table>' +
+      '</div>';
+    });
+    document.getElementById('sys-exec-atividade').innerHTML = ativHtml ||
+      '<div style="color:#777;padding:14px;text-align:center;">Nenhum lançamento classificado por Atividade ainda.</div>';
+  }
+.catch(function(e){ console.error(e); falhar('dados indisponíveis'); });
+})();
+
+  function showTab(id, el) {
+    document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('active');});
+    document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('active');});
+    var panel = document.getElementById(id);
+    if (panel) panel.classList.add('active');
+    if (el) el.classList.add('active');
+  }
+</script>
+</body>
+</html>
+
+</div>
+
 <div class="inner-section" id="sys-clpi">
 
   <div class="grid3" style="margin-bottom:16px;">
@@ -750,268 +999,9 @@ footer strong{color:var(--ouro-claro);}
     </div>
   </div>
 </div>
-<div class="panel active" id="sys-financeiro">
 <!-- /sobre -->
 
 
   <!-- ── EXECUÇÃO POR RUBRICA ── -->
   
-</div><!-- /sys-financeiro -->
 
-<div class="panel" id="sys-execucao">
-    <div class="card" style="margin-bottom:18px;">
-      <div class="card-title">Execução por Rubrica</div>
-      <div style="font-size:.78rem;color:var(--texto-muted,#888);margin-bottom:16px;">Executado real (lançamentos do monitoramento financeiro) vs. orçado aprovado. Alimentado automaticamente via Apps Script.</div>
-      <div id="sys-exec-rubrica"><div style="padding:20px;text-align:center;color:#777;">Carregando…</div></div>
-    </div>
-    <div class="card" style="margin-bottom:18px;">
-      <div class="card-title">Execução por Ação</div>
-      <div id="sys-exec-acao"><div style="padding:14px;text-align:center;color:#777;">Carregando…</div></div>
-    </div>
-    <div class="card" style="margin-bottom:18px;">
-      <div class="card-title">Execução por Atividade</div>
-      <div id="sys-exec-atividade"><div style="padding:14px;text-align:center;color:#777;">Carregando…</div></div>
-    </div>
-    <div class="card">
-      <div style="font-size:.75rem;color:var(--texto-muted,#888);line-height:1.6;">
-        <strong>Nota metodológica:</strong> Para que as barras sejam preenchidas, cada lançamento na planilha de monitoramento financeiro deve ter as colunas <strong>Rubrica (C)</strong>, <strong>Ação/Categoria (D)</strong> e <strong>Atividade (E)</strong> preenchidas, e o Apps Script deve estar atualizado para exportar esses campos.
-      </div>
-    </div>
-  </div>
-</main>
-
-<footer>
-  <strong>Associação Indígena Tato'a – AIT</strong> · Povo Parakanã · TI Apyterewa · São Félix do Xingu – PA
-  &nbsp;|&nbsp; Projeto Apyterewa REDD+ · Systemica · Dados: Prestações de contas Jan–Abr/2026 + Orçamento v1 Jan/2026
-</footer>
-
-<script>
-function showInner(proj, id) {
-  document.querySelectorAll('.inner-section').forEach(s => s.classList.remove('active'));
-  document.querySelectorAll('.inner-tab').forEach(b => b.classList.remove('active'));
-  document.getElementById(proj + '-' + id).classList.add('active');
-  event.target.classList.add('active');
-}
-
-// ══════ Dados ao vivo · Systemica ══════
-(function carregarDadosSystemica(){
-  function fmtBR(n){
-    if (typeof n !== 'number') return '—';
-    return n.toLocaleString('pt-BR', {minimumFractionDigits:2, maximumFractionDigits:2});
-  }
-  function fmtCompact(n){
-    if (typeof n !== 'number') return '—';
-    var abs = Math.abs(n);
-    if (abs >= 1000000) return (n/1000000).toFixed(2).replace('.', ',') + 'M';
-    if (abs >= 1000) return (n/1000).toFixed(1).replace('.', ',') + 'k';
-    return fmtBR(n);
-  }
-  function fmtData(iso){
-    if (!iso) return '';
-    var d = new Date(iso);
-    var dd = String(d.getDate()).padStart(2,'0');
-    var mm = String(d.getMonth()+1).padStart(2,'0');
-    var yy = d.getFullYear();
-    var hh = String(d.getHours()).padStart(2,'0');
-    var mi = String(d.getMinutes()).padStart(2,'0');
-    return dd + '/' + mm + '/' + yy + ' às ' + hh + ':' + mi;
-  }
-  function escapeHtml(s){
-    return String(s).replace(/[&<>"']/g, function(c){
-      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
-    });
-  }
-
-  function renderizar(d){
-    document.getElementById('sys-kpi-saldo').textContent = 'R$ ' + fmtCompact(d.saldo);
-    document.getElementById('sys-kpi-entradas').textContent = 'R$ ' + fmtCompact(d.totalEntradas);
-    document.getElementById('sys-kpi-saidas').textContent = 'R$ ' + fmtCompact(d.totalSaidas);
-    document.getElementById('sys-kpi-lancamentos').textContent = d.totalLancamentos;
-
-    // Por caixa
-    var caixaHtml = '';
-    var caixas = Object.keys(d.porCaixa).sort(function(a,b){
-      return Math.abs(d.porCaixa[b]) - Math.abs(d.porCaixa[a]);
-    });
-    caixas.forEach(function(k){
-      var v = d.porCaixa[k];
-      var cor = v < 0 ? 'var(--terra)' : 'var(--sys-verde)';
-      caixaHtml += '<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:.5px solid var(--cinza-q);">' +
-        '<span>' + escapeHtml(k) + '</span>' +
-        '<span style="font-weight:600;color:' + cor + ';">R$ ' + fmtBR(v) + '</span></div>';
-    });
-    document.getElementById('sys-por-caixa').innerHTML = caixaHtml || '<span style="color:var(--texto-l);">Sem dados</span>';
-
-    // Por categoria
-    var catHtml = '';
-    var cats = Object.keys(d.porCategoria).sort(function(a,b){
-      return Math.abs(d.porCategoria[b]) - Math.abs(d.porCategoria[a]);
-    });
-    cats.forEach(function(k){
-      var v = d.porCategoria[k];
-      var cor = v < 0 ? 'var(--terra)' : 'var(--sys-verde)';
-      catHtml += '<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:.5px solid var(--cinza-q);">' +
-        '<span>' + escapeHtml(k) + '</span>' +
-        '<span style="font-weight:600;color:' + cor + ';">R$ ' + fmtBR(v) + '</span></div>';
-    });
-    document.getElementById('sys-por-categoria').innerHTML = catHtml || '<span style="color:var(--texto-l);">Sem dados</span>';
-
-    // Tabela
-    var trs = '';
-    (d.movimentacoes || []).forEach(function(m){
-      var cor = m.valor < 0 ? 'var(--terra)' : 'var(--sys-verde)';
-      var sinal = m.valor < 0 ? '−' : '+';
-      trs += '<tr>' +
-        '<td>' + escapeHtml(m.dtPgto || '') + '</td>' +
-        '<td>' + escapeHtml(m.descricao || '') + '</td>' +
-        '<td style="color:var(--texto-l);font-size:11px;">' + escapeHtml(m.fornecedor || '') + '</td>' +
-        '<td><span class="badge b-sys">' + escapeHtml(m.caixa || '') + '</span></td>' +
-        '<td style="text-align:right;font-weight:600;color:' + cor + ';">' + sinal + ' R$ ' + fmtBR(Math.abs(m.valor)) + '</td>' +
-        '</tr>';
-    });
-    document.getElementById('sys-mov-body').innerHTML = trs ||
-      '<tr><td colspan="6" style="text-align:center;color:var(--texto-l);padding:18px;">Sem movimentações</td></tr>';
-
-    // Status
-    renderExecucao(d.movimentacoes);
-    document.getElementById('sys-live-status').textContent = 'atualizado em ' + fmtData(d.geradoEm);
-    document.getElementById('sys-live-pulse').style.background = 'var(--sys-verde)';
-  }
-
-  function falhar(msg){
-    document.getElementById('sys-live-status').textContent = msg || 'erro ao carregar';
-    document.getElementById('sys-live-pulse').style.background = '#CC2200';
-    document.getElementById('sys-mov-body').innerHTML =
-      '<tr><td colspan="6" style="text-align:center;color:var(--texto-l);padding:18px;">Dados indisponíveis no momento.</td></tr>';
-  }
-
-  // Adiciona cache-bust para evitar JSON cacheado no GitHub Pages
-  var url = 'dados_systemica.json?t=' + Date.now();
-  fetch(url, {cache:'no-store'})
-    .then(function(r){ if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-    .then(renderizar)
-    
-  // ── ORÇAMENTO APROVADO ──
-  var ORCAMENTO_RUBRICA = {
-    "Contratação": 237358,
-    "Infraestrutura": 138342,
-    "Transporte": 114300,
-    "Administrativo": 10000
-};
-  var ORCAMENTO_ACAO    = {};
-
-  function renderExecucao(movimentacoes) {
-    var porRubrica = {};
-    var porAcao    = {};
-    var porAtividade = {};
-
-    (movimentacoes || []).forEach(function(m) {
-      if (m.valor >= 0) return;
-      var val  = Math.abs(m.valor);
-      var rub  = (m.rubrica  && m.rubrica  !== '(sem categoria)') ? m.rubrica  : 'Sem classificação';
-      var acao = (m.acao     && m.acao     !== '(sem categoria)') ? m.acao     : 'Sem classificação';
-      var ativ = (m.atividade&& m.atividade!== '(sem categoria)') ? m.atividade: 'Sem classificação';
-      porRubrica[rub] = (porRubrica[rub] || 0) + val;
-      if (!porAcao[acao]) porAcao[acao] = 0;
-      porAcao[acao] += val;
-      var chav = acao + ' › ' + ativ;
-      if (!porAtividade[chav]) porAtividade[chav] = {acao: acao, atividade: ativ, total: 0, lancamentos: []};
-      porAtividade[chav].total += val;
-      porAtividade[chav].lancamentos.push(m);
-    });
-
-    // Render Rubrica
-    var rubricasAll = Object.keys(ORCAMENTO_RUBRICA).concat(
-      Object.keys(porRubrica).filter(function(k){return !ORCAMENTO_RUBRICA[k];}));
-    rubricasAll = rubricasAll.filter(function(v,i,a){return a.indexOf(v)===i;});
-    var rubHtml = '';
-    rubricasAll.forEach(function(rub) {
-      var exec = porRubrica[rub] || 0;
-      var orc  = ORCAMENTO_RUBRICA[rub] || 0;
-      var pct  = orc > 0 ? Math.min((exec/orc)*100, 100) : 0;
-      var pctR = orc > 0 ? ((exec/orc)*100).toFixed(1) : '—';
-      var cor  = pct < 50 ? 'linear-gradient(90deg,#1a5a2a,#2a8a3a)' : pct < 80 ? 'linear-gradient(90deg,var(--ouro),var(--ouro-claro))' : 'linear-gradient(90deg,#8B3A1A,#aa4a2a)';
-      rubHtml += '<div style="margin-bottom:14px;">' +
-        '<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px;">' +
-          '<span style="font-weight:600;font-size:.85rem;">' + esc(rub) + '</span>' +
-          '<span style="display:flex;gap:14px;">' +
-            (orc ? '<span style="font-size:.72rem;color:var(--texto-muted,#888);">Orçado: R$ ' + fmtBR(orc) + '</span>' : '') +
-            '<span style="font-size:.9rem;font-weight:700;color:var(--ouro);">R$ ' + fmtBR(exec) + '</span>' +
-          '</span>' +
-        '</div>' +
-        '<div style="background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden;">' +
-          '<div style="height:8px;border-radius:4px;width:' + pct + '%;background:' + cor + ';transition:width .5s;"></div>' +
-        '</div>' +
-        '<div style="font-size:.7rem;color:var(--texto-muted,#888);margin-top:3px;">' + pctR + '% executado</div>' +
-      '</div>';
-    });
-    document.getElementById('sys-exec-rubrica').innerHTML = rubHtml ||
-      '<div style="color:#777;padding:20px;text-align:center;">Nenhum lançamento classificado ainda.<br><small>Preencha as colunas Rubrica/Ação/Atividade na planilha de monitoramento.</small></div>';
-
-    // Render Ação
-    var acoesAll = Object.keys(ORCAMENTO_ACAO).concat(Object.keys(porAcao).filter(function(k){return !ORCAMENTO_ACAO[k];}));
-    acoesAll = acoesAll.filter(function(v,i,a){return a.indexOf(v)===i;});
-    var acaoHtml = '';
-    acoesAll.forEach(function(acao) {
-      var exec = porAcao[acao] || 0;
-      var orc  = ORCAMENTO_ACAO[acao] || 0;
-      var pct  = orc > 0 ? Math.min((exec/orc)*100,100) : 0;
-      var pctR = orc > 0 ? ((exec/orc)*100).toFixed(1) : '—';
-      var cor  = pct < 50 ? 'linear-gradient(90deg,#1a5a2a,#2a8a3a)' : pct < 80 ? 'linear-gradient(90deg,var(--ouro),var(--ouro-claro))' : 'linear-gradient(90deg,#8B3A1A,#aa4a2a)';
-      acaoHtml += '<div style="margin-bottom:12px;">' +
-        '<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px;">' +
-          '<span style="font-size:.82rem;">' + esc(acao) + '</span>' +
-          '<span style="font-size:.88rem;font-weight:600;color:var(--ouro);">R$ ' + fmtBR(exec) + '</span>' +
-        '</div>' +
-        '<div style="background:rgba(255,255,255,.08);border-radius:4px;height:6px;overflow:hidden;">' +
-          '<div style="height:6px;border-radius:4px;width:' + pct + '%;background:' + cor + ';"></div>' +
-        '</div>' +
-        (orc ? '<div style="font-size:.68rem;color:var(--texto-muted,#888);margin-top:2px;">' + pctR + '% de R$ ' + fmtBR(orc) + ' orçado</div>' : '<div style="font-size:.68rem;color:#664;margin-top:2px;">Sem orçamento mapeado</div>') +
-      '</div>';
-    });
-    document.getElementById('sys-exec-acao').innerHTML = acaoHtml ||
-      '<div style="color:#777;padding:14px;text-align:center;">Nenhum lançamento classificado por Ação ainda.</div>';
-
-    // Render Atividade
-    var ativHtml = '';
-    Object.keys(porAtividade).sort().forEach(function(chav) {
-      var item = porAtividade[chav];
-      ativHtml += '<div style="margin-bottom:16px;padding:12px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:8px;">' +
-        '<div style="font-size:.72rem;color:var(--ouro);margin-bottom:3px;letter-spacing:.04em;">' + esc(item.acao) + '</div>' +
-        '<div style="font-size:.85rem;font-weight:600;margin-bottom:8px;">' + esc(item.atividade) + '</div>' +
-        '<div style="display:flex;justify-content:space-between;margin-bottom:8px;">' +
-          '<span style="font-size:.75rem;color:var(--texto-muted,#888);">' + item.lancamentos.length + ' lançamento(s)</span>' +
-          '<span style="font-size:.95rem;font-weight:700;color:var(--ouro);">R$ ' + fmtBR(item.total) + '</span>' +
-        '</div>' +
-        '<table style="width:100%;border-collapse:collapse;font-size:11px;">' +
-          '<thead><tr style="color:#888;border-bottom:.5px solid rgba(255,255,255,.1);">' +
-            '<th style="text-align:left;padding:4px 6px;">Data</th>' +
-            '<th style="text-align:left;padding:4px 6px;">Descrição</th>' +
-            '<th style="text-align:right;padding:4px 6px;">Valor</th>' +
-          '</tr></thead><tbody>' +
-          item.lancamentos.map(function(l) {
-            return '<tr style="border-top:.5px solid rgba(255,255,255,.05);">' +
-              '<td style="padding:4px 6px;color:#aaa;white-space:nowrap;">' + esc(l.dtPgto||'') + '</td>' +
-              '<td style="padding:4px 6px;color:#ccc;">' + esc(l.descricao||l.fornecedor||'') + '</td>' +
-              '<td style="padding:4px 6px;text-align:right;color:#8B3A1A;font-weight:600;">− R$ ' + fmtBR(Math.abs(l.valor)) + '</td>' +
-            '</tr>';
-          }).join('') +
-          '</tbody></table>' +
-      '</div>';
-    });
-    document.getElementById('sys-exec-atividade').innerHTML = ativHtml ||
-      '<div style="color:#777;padding:14px;text-align:center;">Nenhum lançamento classificado por Atividade ainda.</div>';
-  }
-.catch(function(e){ console.error(e); falhar('dados indisponíveis'); });
-})();
-
-  function showTab(id, el) {
-    document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('active');});
-    document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('active');});
-    var panel = document.getElementById(id);
-    if (panel) panel.classList.add('active');
-    if (el) el.classList.add('active');
-  }
-</script>
-</body>
-</html>
