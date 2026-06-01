@@ -1345,7 +1345,7 @@ function falhar(){
     document.getElementById('mpi-live-status').textContent='dados indisponíveis';
     document.getElementById('mpi-live-pulse').style.background='#CC2200';
     document.getElementById('mpi-mov-body').innerHTML=
-      '<tr><td colspan="5" style="text-align:center;color:#999;padding:18px;">Dados indisponíveis no momento.</td></tr>';
+      '<tr><td colspan="6" style="text-align:center;color:#999;padding:18px;">Dados indisponíveis no momento.</td></tr>';
   }
 
   fetch('dados_mpi.json?t='+Date.now(), {cache:'no-store'})

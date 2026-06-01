@@ -926,7 +926,7 @@ function falhar(){
     document.getElementById('dab-live-status').textContent='dados indisponíveis';
     document.getElementById('dab-live-pulse').style.background='#CC2200';
     document.getElementById('dab-mov-body').innerHTML=
-      '<tr><td colspan="5" style="text-align:center;color:#999;padding:18px;">Dados indisponíveis no momento.</td></tr>';
+      '<tr><td colspan="6" style="text-align:center;color:#999;padding:18px;">Dados indisponíveis no momento.</td></tr>';
   }
 
   fetch('dados_dab.json?t='+Date.now(), {cache:'no-store'})

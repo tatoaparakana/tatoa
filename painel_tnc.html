@@ -417,7 +417,7 @@ body { font-family: 'Source Sans 3', sans-serif; background: var(--bg); color: v
           </tr>
         </thead>
         <tbody id="tnc-mov-body">
-          <tr><td colspan="5" style="text-align:center;color:#999;padding:18px;">Carregando…</td></tr>
+          <tr><td colspan="6" style="text-align:center;color:#999;padding:18px;">Carregando…</td></tr>
         </tbody>
       </table>
     </div>
@@ -1152,7 +1152,7 @@ body { font-family: 'Source Sans 3', sans-serif; background: var(--bg); color: v
     document.getElementById('tnc-live-status').textContent='dados indisponíveis';
     document.getElementById('tnc-live-pulse').style.background='#CC2200';
     document.getElementById('tnc-mov-body').innerHTML=
-      '<tr><td colspan="5" style="text-align:center;color:#999;padding:18px;">Dados indisponíveis no momento.</td></tr>';
+      '<tr><td colspan="6" style="text-align:center;color:#999;padding:18px;">Dados indisponíveis no momento.</td></tr>';
   }
 
   fetch('dados_tnc.json?t='+Date.now(), {cache:'no-store'})
