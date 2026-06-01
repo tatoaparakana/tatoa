@@ -445,812 +445,6 @@ footer strong{color:var(--ouro-claro);}
       </div>
     </div>
   </div>
-</main>
-
-<footer>
-  <strong>Associação Indígena Tato'a – AIT</strong> · Povo Parakanã · TI Apyterewa · São Félix do Xingu – PA
-  &nbsp;|&nbsp; Projeto Apyterewa REDD+ · Systemica · Dados: Prestações de contas Jan–Abr/2026 + Orçamento v1 Jan/2026
-</footer>
-
-<script>
-function showInner(proj, id) {
-  document.querySelectorAll('.inner-section').forEach(s => s.classList.remove('active'));
-  document.querySelectorAll('.inner-tab').forEach(b => b.classList.remove('active'));
-  document.getElementById(proj + '-' + id).classList.add('active');
-  event.target.classList.add('active');
-}
-
-// ══════ Dados ao vivo · Systemica ══════
-(function carregarDadosSystemica(){
-  function fmtBR(n){
-    if (typeof n !== 'number') return '—';
-    return n.toLocaleString('pt-BR', {minimumFractionDigits:2, maximumFractionDigits:2});
-  }
-  function fmtCompact(n){
-    if (typeof n !== 'number') return '—';
-    var abs = Math.abs(n);
-    if (abs >= 1000000) return (n/1000000).toFixed(2).replace('.', ',') + 'M';
-    if (abs >= 1000) return (n/1000).toFixed(1).replace('.', ',') + 'k';
-    return fmtBR(n);
-  }
-  function fmtData(iso){
-    if (!iso) return '';
-    var d = new Date(iso);
-    var dd = String(d.getDate()).padStart(2,'0');
-    var mm = String(d.getMonth()+1).padStart(2,'0');
-    var yy = d.getFullYear();
-    var hh = String(d.getHours()).padStart(2,'0');
-    var mi = String(d.getMinutes()).padStart(2,'0');
-    return dd + '/' + mm + '/' + yy + ' às ' + hh + ':' + mi;
-  }
-  function escapeHtml(s){
-    return String(s).replace(/[&<>"']/g, function(c){
-      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
-    });
-  }
-
-  function renderizar(d){
-    document.getElementById('sys-kpi-saldo').textContent = 'R$ ' + fmtCompact(d.saldo);
-    document.getElementById('sys-kpi-entradas').textContent = 'R$ ' + fmtCompact(d.totalEntradas);
-    document.getElementById('sys-kpi-saidas').textContent = 'R$ ' + fmtCompact(d.totalSaidas);
-    document.getElementById('sys-kpi-lancamentos').textContent = d.totalLancamentos;
-
-    // Por caixa
-    var caixaHtml = '';
-    var caixas = Object.keys(d.porCaixa).sort(function(a,b){
-      return Math.abs(d.porCaixa[b]) - Math.abs(d.porCaixa[a]);
-    });
-    caixas.forEach(function(k){
-      var v = d.porCaixa[k];
-      var cor = v < 0 ? 'var(--terra)' : 'var(--sys-verde)';
-      caixaHtml += '<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:.5px solid var(--cinza-q);">' +
-        '<span>' + escapeHtml(k) + '</span>' +
-        '<span style="font-weight:600;color:' + cor + ';">R$ ' + fmtBR(v) + '</span></div>';
-    });
-    document.getElementById('sys-por-caixa').innerHTML = caixaHtml || '<span style="color:var(--texto-l);">Sem dados</span>';
-
-    // Por categoria
-    var catHtml = '';
-    var cats = Object.keys(d.porCategoria).sort(function(a,b){
-      return Math.abs(d.porCategoria[b]) - Math.abs(d.porCategoria[a]);
-    });
-    cats.forEach(function(k){
-      var v = d.porCategoria[k];
-      var cor = v < 0 ? 'var(--terra)' : 'var(--sys-verde)';
-      catHtml += '<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:.5px solid var(--cinza-q);">' +
-        '<span>' + escapeHtml(k) + '</span>' +
-        '<span style="font-weight:600;color:' + cor + ';">R$ ' + fmtBR(v) + '</span></div>';
-    });
-    document.getElementById('sys-por-categoria').innerHTML = catHtml || '<span style="color:var(--texto-l);">Sem dados</span>';
-
-    // Tabela
-    var trs = '';
-    (d.movimentacoes || []).forEach(function(m){
-      var cor = m.valor < 0 ? 'var(--terra)' : 'var(--sys-verde)';
-      var sinal = m.valor < 0 ? '−' : '+';
-      trs += '<tr>' +
-        '<td>' + escapeHtml(m.dtPgto || '') + '</td>' +
-        '<td>' + escapeHtml(m.descricao || '') + '</td>' +
-        '<td style="color:var(--texto-l);font-size:11px;">' + escapeHtml(m.fornecedor || '') + '</td>' +
-        '<td><span class="badge b-sys">' + escapeHtml(m.caixa || '') + '</span></td>' +
-        '<td style="text-align:right;font-weight:600;color:' + cor + ';">' + sinal + ' R$ ' + fmtBR(Math.abs(m.valor)) + '</td>' +
-        '</tr>';
-    });
-    document.getElementById('sys-mov-body').innerHTML = trs ||
-      '<tr><td colspan="6" style="text-align:center;color:var(--texto-l);padding:18px;">Sem movimentações</td></tr>';
-
-    // Status
-    renderExecucao(d.movimentacoes);
-    document.getElementById('sys-live-status').textContent = 'atualizado em ' + fmtData(d.geradoEm);
-    document.getElementById('sys-live-pulse').style.background = 'var(--sys-verde)';
-  }
-
-  function falhar(msg){
-    document.getElementById('sys-live-status').textContent = msg || 'erro ao carregar';
-    document.getElementById('sys-live-pulse').style.background = '#CC2200';
-    document.getElementById('sys-mov-body').innerHTML =
-      '<tr><td colspan="6" style="text-align:center;color:var(--texto-l);padding:18px;">Dados indisponíveis no momento.</td></tr>';
-  }
-
-  // Adiciona cache-bust para evitar JSON cacheado no GitHub Pages
-  var url = 'dados_systemica.json?t=' + Date.now();
-  fetch(url, {cache:'no-store'})
-    .then(function(r){ if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-    .then(renderizar)
-    
-  // ── ORÇAMENTO APROVADO ──
-  var ORCAMENTO_RUBRICA = {
-    "Contratação": 237358,
-    "Infraestrutura": 138342,
-    "Transporte": 114300,
-    "Administrativo": 10000
-};
-  var ORCAMENTO_ACAO    = {};
-
-  CTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tato'a — Systemica · Projeto Apyterewa REDD+</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --preto:#1A1612;--ouro:#C8940A;--ouro-claro:#F0D878;--ouro-bg:#FDF8EC;
-  --verde:#2D5A1B;--verde-medio:#3D7A25;--verde-claro:#A8D48A;
-  --terra:#6B3A1A;--cinza-q:#F5F0E8;--cinza-b:#DDD5C0;
-  --texto:#1A1612;--texto-m:#4A3F2F;--texto-l:#7A6F5A;--branco:#FDFCF8;
-  --azul:#1A3A6B;--azul-bg:#E6F0FB;
-  --sys-verde:#2D6B3A;--sys-amarelo:#8B9B00;
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:"Source Sans 3",sans-serif;background:var(--branco);color:var(--texto);}
-
-header{position:sticky;top:0;z-index:200;background:var(--preto);height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;border-bottom:2px solid var(--ouro);}
-.logo-wrap{display:flex;align-items:center;gap:12px;}
-.logo-text{font-family:"Playfair Display",serif;font-size:19px;color:var(--ouro-claro);}
-.logo-sub{font-size:10px;color:rgba(240,216,120,0.45);letter-spacing:0.08em;text-transform:uppercase;}
-.header-r{display:flex;align-items:center;gap:14px;}
-.header-tag{font-size:11px;background:rgba(45,107,58,0.25);color:#7fcf5a;padding:4px 12px;border-radius:12px;border:1px solid rgba(45,107,58,0.4);}
-.back-btn{font-size:12px;color:rgba(240,216,120,0.5);text-decoration:none;border:1px solid rgba(240,216,120,0.2);padding:4px 12px;border-radius:6px;transition:all .2s;}
-.back-btn:hover{color:var(--ouro-claro);border-color:rgba(240,216,120,0.5);}
-
-main{max-width:1120px;margin:0 auto;padding:28px 28px 60px;}
-
-/* HERO */
-.proj-hero{border-radius:14px;overflow:hidden;margin-bottom:24px;position:relative;height:200px;background:linear-gradient(135deg,#0a1a0e 0%,#0f2a15 50%,#1a2a0a 100%);}
-.proj-hero-content{position:absolute;inset:0;display:flex;align-items:center;padding:0 32px;gap:48px;}
-.proj-hero-left{flex:1;}
-.proj-hero-title{font-family:"Playfair Display",serif;font-size:26px;font-weight:700;color:#FDFCF8;line-height:1.2;}
-.proj-hero-title em{color:#a8d48a;font-style:italic;}
-.proj-hero-sub{font-size:13px;color:rgba(253,252,248,0.55);margin-top:6px;line-height:1.5;}
-.proj-hero-kpis{display:flex;gap:32px;flex-shrink:0;}
-.phk{text-align:center;}
-.phk-val{font-family:"Playfair Display",serif;font-size:24px;font-weight:700;}
-.phk-val.verde{color:#a8d48a;}
-.phk-val.ouro{color:var(--ouro-claro);}
-.phk-val.branco{color:#FDFCF8;}
-.phk-lbl{font-size:10px;color:rgba(253,252,248,0.4);text-transform:uppercase;letter-spacing:0.08em;margin-top:2px;}
-
-/* INNER TABS */
-.inner-tabs{display:flex;gap:0;border-bottom:1px solid var(--cinza-b);margin-bottom:22px;}
-.inner-tab{padding:8px 18px;font-size:13px;color:var(--texto-l);background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;margin-bottom:-1px;transition:all 0.15s;}
-.inner-tab:hover{color:var(--texto);}
-.inner-tab.active{color:var(--preto);font-weight:600;border-bottom:2px solid var(--ouro);}
-.inner-section{display:none;}
-.inner-section.active{display:block;}
-
-/* CARDS */
-.card{background:#fff;border:1px solid var(--cinza-b);border-radius:12px;padding:18px 20px;margin-bottom:14px;}
-.card-title{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;color:var(--texto-l);margin-bottom:14px;}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px;}
-.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px;}
-
-/* STATS */
-.stat{background:#fff;border:1px solid var(--cinza-b);border-radius:12px;padding:16px 18px;}
-.stat-val{font-family:"Playfair Display",serif;font-size:26px;font-weight:700;color:var(--preto);}
-.stat-val.verde{color:var(--verde);}
-.stat-val.ouro{color:var(--ouro);}
-.stat-val.terra{color:var(--terra);}
-.stat-val.azul{color:var(--azul);}
-.stat-val.cinza{color:#888;}
-.stat-val.sys{color:var(--sys-verde);}
-.stat-lbl{font-size:12px;color:var(--texto-l);margin-top:3px;}
-
-/* BARRAS */
-.dual-bar-outer{background:var(--cinza-q);border-radius:6px;height:28px;position:relative;overflow:hidden;margin-bottom:6px;}
-.dual-bar-fill{height:100%;border-radius:6px 0 0 6px;display:flex;align-items:center;padding-left:10px;font-size:11px;font-weight:600;color:#fff;white-space:nowrap;}
-.dual-meta{display:flex;justify-content:space-between;font-size:11px;color:var(--texto-l);margin-bottom:14px;}
-.pbar-bg{background:var(--cinza-q);border-radius:3px;height:5px;}
-.pbar-fill{height:5px;border-radius:3px;}
-.pbar-meta{display:flex;justify-content:space-between;font-size:11px;color:var(--texto-l);margin-top:3px;}
-
-/* MESES */
-.meses-chart{display:flex;align-items:flex-end;gap:6px;height:110px;margin:10px 0 4px;}
-.mes-col{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;}
-.mes-bar-wrap{flex:1;display:flex;align-items:flex-end;width:100%;}
-.mes-bar{width:100%;border-radius:3px 3px 0 0;min-height:3px;}
-.mes-bar.executado{background:linear-gradient(180deg,#C8940A,#8B6300);}
-.mes-bar.antecipado{background:linear-gradient(180deg,#2D6B3A,#1A4020);}
-.mes-label{font-size:9px;color:var(--texto-l);text-align:center;line-height:1.2;}
-.mes-val{font-size:9px;color:var(--ouro);font-weight:600;}
-
-/* FASES */
-.fase-block{border:1px solid var(--cinza-b);border-radius:10px;padding:14px 16px;margin-bottom:10px;}
-.fase-block.concluida{background:#E8F5E2;border-color:#B8D4A8;}
-.fase-block.em-curso{background:#FDF5DC;border-color:#D4B850;}
-.fase-block.futura{background:#F5F0E8;}
-.fase-titulo{font-size:12px;font-weight:700;margin-bottom:6px;}
-.fase-titulo.concluida{color:var(--verde);}
-.fase-titulo.em-curso{color:var(--ouro);}
-.fase-titulo.futura{color:var(--texto-l);}
-.fase-desc{font-size:12px;color:var(--texto-m);line-height:1.5;}
-
-/* BADGE */
-.badge{font-size:11px;padding:2px 8px;border-radius:20px;font-weight:600;white-space:nowrap;}
-.b-verde{background:#E8F5E2;color:#2D5A1B;}
-.b-ouro{background:#FDF5DC;color:#8B6300;}
-.b-azul{background:#E1EAF5;color:#1A3A6B;}
-.b-cinza{background:#EFEFEF;color:#5A5A5A;}
-.b-sys{background:#E0F0E8;color:#2D6B3A;}
-
-/* TABELA */
-.data-table{width:100%;border-collapse:collapse;font-size:12px;}
-.data-table th{background:var(--cinza-q);color:var(--texto-l);font-weight:600;font-size:10px;text-transform:uppercase;letter-spacing:.06em;padding:7px 10px;text-align:left;border-bottom:1px solid var(--cinza-b);}
-.data-table td{padding:7px 10px;border-bottom:.5px solid var(--cinza-q);}
-.data-table tr:last-child td{border:none;}
-.data-table tr.total td{font-weight:700;background:var(--ouro-bg);}
-
-/* SOBRE */
-.sobre-text{font-size:13px;color:var(--texto-m);line-height:1.75;}
-.sobre-text p{margin-bottom:12px;}
-.sobre-text strong{color:var(--preto);}
-.sobre-text h4{font-family:"Playfair Display",serif;font-size:15px;color:var(--preto);margin:18px 0 8px;}
-
-/* REPARTIÇÃO */
-.reparticao-bar{display:flex;height:32px;border-radius:8px;overflow:hidden;margin:12px 0 6px;}
-.rep-tatoa{background:linear-gradient(90deg,#2D6B3A,#3D7A25);display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:700;}
-.rep-salv{background:#8B9B00;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:700;}
-.rep-sys{background:#4A4A4A;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:700;}
-
-/* CLPI TIMELINE */
-.clpi-steps{display:flex;flex-direction:column;gap:0;}
-.clpi-step{display:flex;gap:16px;padding:10px 0;}
-.clpi-line{display:flex;flex-direction:column;align-items:center;gap:0;}
-.clpi-dot{width:12px;height:12px;border-radius:50%;flex-shrink:0;margin-top:3px;}
-.clpi-dot.feito{background:var(--verde);}
-.clpi-dot.aqui{background:var(--ouro);box-shadow:0 0 0 3px rgba(200,148,10,.25);}
-.clpi-dot.futuro{background:var(--cinza-b);}
-.clpi-vline{width:2px;flex:1;background:var(--cinza-b);margin:2px 5px;}
-.clpi-step:last-child .clpi-vline{display:none;}
-.clpi-content{flex:1;padding-bottom:8px;}
-.clpi-titulo{font-size:13px;font-weight:600;color:var(--preto);}
-.clpi-detalhe{font-size:11px;color:var(--texto-l);margin-top:2px;}
-
-footer{background:var(--preto);border-top:2px solid var(--ouro);padding:16px 28px;text-align:center;font-size:11px;color:rgba(240,216,120,0.3);}
-footer strong{color:var(--ouro-claro);}
-
-@media(max-width:700px){
-  .grid3,.grid4{grid-template-columns:1fr 1fr;}
-  .grid2{grid-template-columns:1fr;}
-  .proj-hero-kpis{display:none;}
-}
-</style>
-</head>
-<body>
-
-<header>
-  <div class="logo-wrap">
-    <svg width="36" height="36" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="50" cy="50" r="46" fill="#1A1612" stroke="#C8940A" stroke-width="3"/>
-      <text x="50" y="40" text-anchor="middle" font-family="serif" font-size="14" fill="#C8940A" font-weight="bold">TATO'A</text>
-      <path d="M20 55 Q35 42 50 50 Q65 58 80 45" stroke="#2D5A1B" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-      <circle cx="50" cy="50" r="3.5" fill="#C8940A" opacity=".6"/>
-    </svg>
-    <div>
-      <div class="logo-text">Associação Indígena Tato'a</div>
-      <div class="logo-sub">Povo Parakanã · TI Apyterewa</div>
-    </div>
-  </div>
-  <div class="header-r">
-    <span class="header-tag">Systemica · REDD+ · Projeto Apyterewa</span>
-    <a href="index.html" class="back-btn">← Painel Geral</a>
-  </div>
-</header>
-
-<main>
-
-<!-- HERO -->
-<div class="proj-hero">
-  <div class="proj-hero-content">
-
-    <div class="proj-hero-left">
-      <div class="proj-hero-title">Projeto Apyterewa<br><em>REDD+ · Conservação e Carbono</em></div>
-      <div class="proj-hero-sub">Systemica – Inteligência em Sustentabilidade · Antecipação de recursos · Fase de implantação Jan–Jun/2026</div>
-    </div>
-    <div class="proj-hero-kpis">
-      <div class="phk"><div class="phk-val ouro">R$ 2,96M</div><div class="phk-lbl">Orçamento implantação</div></div>
-      <div class="phk"><div class="phk-val verde">75%</div><div class="phk-lbl">Créditos para Tato'a</div></div>
-      <div class="phk"><div class="phk-val branco">60 anos</div><div class="phk-lbl">Compromisso VERRA</div></div>
-    </div>
-  </div>
-</div>
-
-<!-- INNER TABS -->
-<div class="inner-tabs">
-  <button class="inner-tab active" onclick="showInner('sys','financeiro')">Financeiro</button>
-  <button class="inner-tab" onclick="showInner('sys','execucao')">Execução por Rubrica</button>
-  <button class="inner-tab" onclick="showInner('sys','clpi')">Consulta CLPI</button>
-  <button class="inner-tab" onclick="showInner('sys','estrutura')">Estrutura REDD+</button>
-  <button class="inner-tab" onclick="showInner('sys','atividades')">Atividades</button>
-  <button class="inner-tab" onclick="showInner('sys','sobre')">Sobre o Projeto</button>
-</div>
-
-<!-- ══════ FINANCEIRO ══════ -->
-<div class="inner-section active" id="sys-financeiro">
-
-  <!-- ════════ DADOS AO VIVO (alimentado por Google Sheets) ════════ -->
-  <div class="card" id="sys-live-card" style="border-left:4px solid var(--sys-verde);">
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
-      <div class="card-title" style="margin-bottom:0;">Monitoramento Financeiro · Dados ao Vivo</div>
-      <div style="display:flex;align-items:center;gap:8px;">
-        <span id="sys-live-status" style="font-size:10px;color:var(--texto-l);">carregando…</span>
-        <span id="sys-live-pulse" style="width:8px;height:8px;border-radius:50%;background:#bbb;display:inline-block;"></span>
-      </div>
-    </div>
-
-    <div class="grid4" id="sys-live-kpis">
-      <div class="stat"><div class="stat-val sys" id="sys-kpi-saldo">—</div><div class="stat-lbl">Saldo atual<br><span style="font-size:10px;color:#bbb">entradas − saídas</span></div></div>
-      <div class="stat"><div class="stat-val verde" id="sys-kpi-entradas">—</div><div class="stat-lbl">Total entradas<br><span style="font-size:10px;color:#bbb">recursos recebidos</span></div></div>
-      <div class="stat"><div class="stat-val terra" id="sys-kpi-saidas">—</div><div class="stat-lbl">Total saídas<br><span style="font-size:10px;color:#bbb">recursos executados</span></div></div>
-      <div class="stat"><div class="stat-val ouro" id="sys-kpi-lancamentos">—</div><div class="stat-lbl">Lançamentos<br><span style="font-size:10px;color:#bbb">total do projeto</span></div></div>
-    </div>
-
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:10px;">
-      <div>
-        <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--texto-l);margin-bottom:10px;">Saldo por Caixa</div>
-        <div id="sys-por-caixa" style="font-size:12px;">—</div>
-      </div>
-      <div>
-        <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--texto-l);margin-bottom:10px;">Saldo por Categoria</div>
-        <div id="sys-por-categoria" style="font-size:12px;">—</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Tabela das últimas movimentações -->
-  <div class="card">
-    <div class="card-title">Últimas Movimentações</div>
-    <div style="overflow-x:auto;">
-      <table class="data-table" id="sys-tabela-mov">
-        <thead>
-          <tr>
-            <th style="width:80px;">Data</th>
-            <th>Descrição</th>
-            <th style="text-align:left;padding:8px 6px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#999;">Rubrica</th>
-            <th style="text-align:left;padding:8px 6px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#999;">Ação / Atividade</th>
-            <th style="text-align:left;padding:8px 6px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#999;">Caixa</th>
-            <th style="text-align:right;width:110px;">Valor</th>
-          </tr>
-        </thead>
-        <tbody id="sys-mov-body">
-          <tr><td colspan="6" style="text-align:center;color:var(--texto-l);padding:18px;">Carregando…</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <!-- ════════ HISTÓRICO (dados das prestações de contas) ════════ -->
-
-  <!-- Barra geral -->
-  <div class="card">
-    <div class="card-title">Antecipação de Recursos — Fase de Implantação (Jan–Jun/2026)</div>
-    <div class="dual-bar-outer">
-      <div class="dual-bar-fill" style="width:100%;background:linear-gradient(90deg,#2D6B3A,#3D7A25);">R$ 620.000 antecipados pela Systemica (Jan–Jun/2026)</div>
-    </div>
-    <div class="dual-meta"><span>Total previsto para os primeiros 6 meses</span><span>Fonte: Orçamento Apyterewa v1 · Jan/2026</span></div>
-    <div class="dual-bar-outer">
-      <div class="dual-bar-fill" style="width:48%;background:linear-gradient(90deg,#C8940A,#E8B020);">R$ 298.590 executados (Jan–Abr/2026) — dados reais das planilhas</div>
-    </div>
-    <div class="dual-meta"><span>R$ 123.375 (Jan/Fev) + R$ 45.747 (Mar) + R$ 129.467 (Abr)</span><span>Dados: 3 prestações de contas</span></div>
-  </div>
-
-  <!-- KPIs -->
-  <div class="grid4">
-    <div class="stat"><div class="stat-val sys">R$ 363k</div><div class="stat-lbl">Total adiantado Jan–Abr/2026<br><span style="font-size:10px;color:#bbb">3 adiantamentos Systemica</span></div></div>
-    <div class="stat"><div class="stat-val ouro">R$ 123k</div><div class="stat-lbl">Executado Jan–Fev/2026<br><span style="font-size:10px;color:#bbb">93 lançamentos · saldo R$ 39k</span></div></div>
-    <div class="stat"><div class="stat-val ouro">R$ 46k</div><div class="stat-lbl">Executado Março/2026<br><span style="font-size:10px;color:#bbb">37 lançamentos · saldo R$ 57k</span></div></div>
-    <div class="stat"><div class="stat-val ouro">R$ 129k</div><div class="stat-lbl">Executado Abril/2026<br><span style="font-size:10px;color:#bbb">31 lançamentos · R$ 90k segurança</span></div></div>
-  </div>
-
-  <!-- Execução por categoria -->
-  <div class="card">
-    <div class="card-title">Execução por Categoria — Jan a Abr/2026 (dados reais)</div>
-
-    <div style="margin-bottom:10px;">
-      <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px;">
-        <span>Caravana Brasília — hospedagem, transporte, alimentação</span>
-        <span style="font-weight:600;">R$ 75.700</span>
-      </div>
-      <div class="pbar-bg"><div class="pbar-fill" style="width:46%;background:var(--ouro);"></div></div>
-      <div class="pbar-meta"><span>Fev/2026 · 2 ônibus Leão + Centro Formação Maria e Ugenia + alimentação BSB</span></div>
-    </div>
-
-    <div style="margin-bottom:10px;">
-      <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px;">
-        <span>Segurança — Plano de Segurança Territorial</span>
-        <span style="font-weight:600;">R$ 90.000</span>
-      </div>
-      <div class="pbar-bg"><div class="pbar-fill" style="width:55%;background:#CC2200;"></div></div>
-      <div class="pbar-meta"><span>Abr/2026 · GA Global Advising Assessoria em Gestão de Risco</span></div>
-    </div>
-
-    <div style="margin-bottom:10px;">
-      <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px;">
-        <span>Bolsas de contratação (indígenas Parakanã)</span>
-        <span style="font-weight:600;">R$ 62.000</span>
-      </div>
-      <div class="pbar-bg"><div class="pbar-fill" style="width:37.7%;background:var(--verde);"></div></div>
-      <div class="pbar-meta"><span>Nenexiga, Mama, Ty'e, Awapewa, Moxeia, Kawore, Inara, Xokarowara, etc. · R$ 1.000/mês cada</span></div>
-    </div>
-
-    <div style="margin-bottom:10px;">
-      <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px;">
-        <span>Folha — motorista e equipe de campo</span>
-        <span style="font-weight:600;">R$ 29.800</span>
-      </div>
-      <div class="pbar-bg"><div class="pbar-fill" style="width:18.1%;background:var(--terra);"></div></div>
-      <div class="pbar-meta"><span>Josias Nascimento Santos (motorista) · R$ 3.600–6.200/mês</span></div>
-    </div>
-
-    <div style="margin-bottom:10px;">
-      <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px;">
-        <span>Alimentação — fortalecimento da reocupação</span>
-        <span style="font-weight:600;">R$ 27.800</span>
-      </div>
-      <div class="pbar-bg"><div class="pbar-fill" style="width:16.9%;background:#8B9B00;"></div></div>
-      <div class="pbar-meta"><span>Letícia Ribeiro Cirqueira (fornecedora principal) · cestas + refeições na TI</span></div>
-    </div>
-
-    <div style="margin-bottom:10px;">
-      <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px;">
-        <span>Conserto de veículos</span>
-        <span style="font-weight:600;">R$ 19.800</span>
-      </div>
-      <div class="pbar-bg"><div class="pbar-fill" style="width:12%;background:#888;"></div></div>
-      <div class="pbar-meta"><span>RAJA RENT A CAR (carro locado) · Max Comércio de Peças · Jan–Abr/2026</span></div>
-    </div>
-
-    <div style="margin-bottom:10px;">
-      <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px;">
-        <span>Combustível — reocupação e campo</span>
-        <span style="font-weight:600;">R$ 6.990</span>
-      </div>
-      <div class="pbar-bg"><div class="pbar-fill" style="width:4.3%;background:#6B3A1A;"></div></div>
-      <div class="pbar-meta"><span>L R da Paz & Cia Ltda · Posto Azevedo · Maria Neuza</span></div>
-    </div>
-
-    <div style="margin-bottom:4px;">
-      <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px;">
-        <span>Starlink + tarifas bancárias + logística + outros</span>
-        <span style="font-weight:600;">R$ 12.700</span>
-      </div>
-      <div class="pbar-bg"><div class="pbar-fill" style="width:7.7%;background:var(--azul);"></div></div>
-      <div class="pbar-meta"><span>Telecomunicações, taxas Sicredi, reembolsos (Paulo Bull, Jordan Pantoja, José Emilio)</span></div>
-    </div>
-
-    <div style="margin-top:14px;padding-top:10px;border-top:1px solid var(--cinza-q);display:flex;justify-content:space-between;align-items:center;">
-      <span style="font-size:12px;color:var(--texto-l);">TOTAL JAN–ABR/2026 (dados reais)</span>
-      <span style="font-family:'Playfair Display',serif;font-size:18px;color:var(--ouro);font-weight:700;">R$ 298.590</span>
-    </div>
-  </div>
-
-  <!-- Desembolso mensal -->
-  <div class="card">
-    <div class="card-title">Desembolso por Mês — Jan a Abr/2026</div>
-    <div class="meses-chart">
-      <!-- max: 129.467 (abr) -->
-      <div class="mes-col">
-        <div class="mes-val" style="color:var(--sys-verde);">R$162k</div>
-        <div class="mes-bar-wrap"><div class="mes-bar antecipado" style="height:50%;"></div></div>
-        <div class="mes-label">Jan+Fev<br>/2026</div>
-      </div>
-      <div class="mes-col">
-        <div class="mes-val">R$46k</div>
-        <div class="mes-bar-wrap"><div class="mes-bar executado" style="height:35%;"></div></div>
-        <div class="mes-label">Mar<br>/2026</div>
-      </div>
-      <div class="mes-col">
-        <div class="mes-val">R$129k</div>
-        <div class="mes-bar-wrap"><div class="mes-bar executado" style="height:100%;"></div></div>
-        <div class="mes-label">Abr<br>/2026</div>
-      </div>
-      <div class="mes-col">
-        <div class="mes-val" style="color:var(--cinza-b);">—</div>
-        <div class="mes-bar-wrap"><div class="mes-bar" style="height:3%;background:var(--cinza-b);"></div></div>
-        <div class="mes-label">Mai<br>/2026</div>
-      </div>
-      <div class="mes-col">
-        <div class="mes-val" style="color:var(--cinza-b);">—</div>
-        <div class="mes-bar-wrap"><div class="mes-bar" style="height:3%;background:var(--cinza-b);"></div></div>
-        <div class="mes-label">Jun<br>/2026</div>
-      </div>
-    </div>
-    <div style="display:flex;gap:16px;margin-top:8px;flex-wrap:wrap;">
-      <span style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--texto-l);">
-        <span style="width:12px;height:12px;background:linear-gradient(90deg,#2D6B3A,#3D7A25);border-radius:2px;display:inline-block;"></span>
-        Antecipação Systemica
-      </span>
-      <span style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--texto-l);">
-        <span style="width:12px;height:12px;background:linear-gradient(90deg,#C8940A,#E8B020);border-radius:2px;display:inline-block;"></span>
-        Executado (prestações de contas)
-      </span>
-    </div>
-    <div style="margin-top:10px;padding:10px 12px;background:#FFF5F5;border-radius:6px;border-left:3px solid #CC4400;font-size:12px;color:#7A3020;">
-      <strong>Abril:</strong> R$ 90.000 referem-se ao contrato de Plano de Segurança Territorial com GA Global Advising (Gestão de Risco Ltda) — ação emergencial em contexto de ataques armados ao povo Parakanã na área de reocupação.
-    </div>
-  </div>
-
-  <!-- Tabela prestações -->
-  <div class="card">
-    <div class="card-title">Resumo das Prestações de Contas</div>
-    <table class="data-table">
-      <thead>
-        <tr><th>Período</th><th>Adiantamento</th><th>Executado</th><th>Saldo</th><th>Lançamentos</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Jan–Fev/2026</td><td>R$ 162.600</td><td>R$ 123.375</td><td>R$ 39.225</td><td>93</td></tr>
-        <tr><td>Março/2026</td><td>R$ 63.699</td><td>R$ 45.747</td><td>R$ 57.176</td><td>37</td></tr>
-        <tr><td>Abril/2026</td><td>R$ 136.594</td><td>R$ 129.467</td><td>R$ 64.303</td><td>31</td></tr>
-        <tr class="total"><td>TOTAL</td><td>R$ 362.893</td><td>R$ 298.590</td><td>R$ 64.303</td><td>161</td></tr>
-      </tbody>
-    </table>
-    <div style="font-size:11px;color:var(--texto-l);margin-top:8px;">Parceiro financeiro: Systemica – Inteligência em Sustentabilidade S.A. · 100% do custeio da fase de implantação pela Systemica</div>
-  </div>
-
-</div><!-- /financeiro -->
-
-<!-- ══════ CONSULTA CLPI ══════ -->
-
-<div class="inner-section" id="sys-execucao">
-
-    <div class="card" style="margin-bottom:18px;">
-      <div class="card-title">Execução por Rubrica</div>
-      <div style="font-size:.78rem;color:var(--texto-muted,#888);margin-bottom:16px;">Executado real (lançamentos do monitoramento financeiro) vs. orçado aprovado. Alimentado automaticamente via Apps Script.</div>
-      <div id="sys-exec-rubrica"><div style="padding:20px;text-align:center;color:#777;">Carregando…</div></div>
-    </div>
-    <div class="card" style="margin-bottom:18px;">
-      <div class="card-title">Execução por Ação</div>
-      <div id="sys-exec-acao"><div style="padding:14px;text-align:center;color:#777;">Carregando…</div></div>
-    </div>
-    <div class="card" style="margin-bottom:18px;">
-      <div class="card-title">Execução por Atividade</div>
-      <div id="sys-exec-atividade"><div style="padding:14px;text-align:center;color:#777;">Carregando…</div></div>
-    </div>
-    <div class="card">
-      <div style="font-size:.75rem;color:var(--texto-muted,#888);line-height:1.6;">
-        <strong>Nota metodológica:</strong> Para que as barras sejam preenchidas, cada lançamento na planilha de monitoramento financeiro deve ter as colunas <strong>Rubrica (C)</strong>, <strong>Ação/Categoria (D)</strong> e <strong>Atividade (E)</strong> preenchidas, e o Apps Script deve estar atualizado para exportar esses campos.
-      </div>
-    </div>
-  </div>
-</main>
-
-<footer>
-  <strong>Associação Indígena Tato'a – AIT</strong> · Povo Parakanã · TI Apyterewa · São Félix do Xingu – PA
-  &nbsp;|&nbsp; Projeto Apyterewa REDD+ · Systemica · Dados: Prestações de contas Jan–Abr/2026 + Orçamento v1 Jan/2026
-</footer>
-
-<script>
-function showInner(proj, id) {
-  document.querySelectorAll('.inner-section').forEach(s => s.classList.remove('active'));
-  document.querySelectorAll('.inner-tab').forEach(b => b.classList.remove('active'));
-  document.getElementById(proj + '-' + id).classList.add('active');
-  event.target.classList.add('active');
-}
-
-// ══════ Dados ao vivo · Systemica ══════
-(function carregarDadosSystemica(){
-  function fmtBR(n){
-    if (typeof n !== 'number') return '—';
-    return n.toLocaleString('pt-BR', {minimumFractionDigits:2, maximumFractionDigits:2});
-  }
-  function fmtCompact(n){
-    if (typeof n !== 'number') return '—';
-    var abs = Math.abs(n);
-    if (abs >= 1000000) return (n/1000000).toFixed(2).replace('.', ',') + 'M';
-    if (abs >= 1000) return (n/1000).toFixed(1).replace('.', ',') + 'k';
-    return fmtBR(n);
-  }
-  function fmtData(iso){
-    if (!iso) return '';
-    var d = new Date(iso);
-    var dd = String(d.getDate()).padStart(2,'0');
-    var mm = String(d.getMonth()+1).padStart(2,'0');
-    var yy = d.getFullYear();
-    var hh = String(d.getHours()).padStart(2,'0');
-    var mi = String(d.getMinutes()).padStart(2,'0');
-    return dd + '/' + mm + '/' + yy + ' às ' + hh + ':' + mi;
-  }
-  function escapeHtml(s){
-    return String(s).replace(/[&<>"']/g, function(c){
-      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
-    });
-  }
-
-  function renderizar(d){
-    document.getElementById('sys-kpi-saldo').textContent = 'R$ ' + fmtCompact(d.saldo);
-    document.getElementById('sys-kpi-entradas').textContent = 'R$ ' + fmtCompact(d.totalEntradas);
-    document.getElementById('sys-kpi-saidas').textContent = 'R$ ' + fmtCompact(d.totalSaidas);
-    document.getElementById('sys-kpi-lancamentos').textContent = d.totalLancamentos;
-
-    // Por caixa
-    var caixaHtml = '';
-    var caixas = Object.keys(d.porCaixa).sort(function(a,b){
-      return Math.abs(d.porCaixa[b]) - Math.abs(d.porCaixa[a]);
-    });
-    caixas.forEach(function(k){
-      var v = d.porCaixa[k];
-      var cor = v < 0 ? 'var(--terra)' : 'var(--sys-verde)';
-      caixaHtml += '<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:.5px solid var(--cinza-q);">' +
-        '<span>' + escapeHtml(k) + '</span>' +
-        '<span style="font-weight:600;color:' + cor + ';">R$ ' + fmtBR(v) + '</span></div>';
-    });
-    document.getElementById('sys-por-caixa').innerHTML = caixaHtml || '<span style="color:var(--texto-l);">Sem dados</span>';
-
-    // Por categoria
-    var catHtml = '';
-    var cats = Object.keys(d.porCategoria).sort(function(a,b){
-      return Math.abs(d.porCategoria[b]) - Math.abs(d.porCategoria[a]);
-    });
-    cats.forEach(function(k){
-      var v = d.porCategoria[k];
-      var cor = v < 0 ? 'var(--terra)' : 'var(--sys-verde)';
-      catHtml += '<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:.5px solid var(--cinza-q);">' +
-        '<span>' + escapeHtml(k) + '</span>' +
-        '<span style="font-weight:600;color:' + cor + ';">R$ ' + fmtBR(v) + '</span></div>';
-    });
-    document.getElementById('sys-por-categoria').innerHTML = catHtml || '<span style="color:var(--texto-l);">Sem dados</span>';
-
-    // Tabela
-    var trs = '';
-    (d.movimentacoes || []).forEach(function(m){
-      var cor = m.valor < 0 ? 'var(--terra)' : 'var(--sys-verde)';
-      var sinal = m.valor < 0 ? '−' : '+';
-      trs += '<tr>' +
-        '<td>' + escapeHtml(m.dtPgto || '') + '</td>' +
-        '<td>' + escapeHtml(m.descricao || '') + '</td>' +
-        '<td style="color:var(--texto-l);font-size:11px;">' + escapeHtml(m.fornecedor || '') + '</td>' +
-        '<td><span class="badge b-sys">' + escapeHtml(m.caixa || '') + '</span></td>' +
-        '<td style="text-align:right;font-weight:600;color:' + cor + ';">' + sinal + ' R$ ' + fmtBR(Math.abs(m.valor)) + '</td>' +
-        '</tr>';
-    });
-    document.getElementById('sys-mov-body').innerHTML = trs ||
-      '<tr><td colspan="6" style="text-align:center;color:var(--texto-l);padding:18px;">Sem movimentações</td></tr>';
-
-    // Status
-    renderExecucao(d.movimentacoes);
-    document.getElementById('sys-live-status').textContent = 'atualizado em ' + fmtData(d.geradoEm);
-    document.getElementById('sys-live-pulse').style.background = 'var(--sys-verde)';
-  }
-
-  function falhar(msg){
-    document.getElementById('sys-live-status').textContent = msg || 'erro ao carregar';
-    document.getElementById('sys-live-pulse').style.background = '#CC2200';
-    document.getElementById('sys-mov-body').innerHTML =
-      '<tr><td colspan="6" style="text-align:center;color:var(--texto-l);padding:18px;">Dados indisponíveis no momento.</td></tr>';
-  }
-
-  // Adiciona cache-bust para evitar JSON cacheado no GitHub Pages
-  var url = 'dados_systemica.json?t=' + Date.now();
-  fetch(url, {cache:'no-store'})
-    .then(function(r){ if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-    .then(renderizar)
-    
-  // ── ORÇAMENTO APROVADO ──
-  var ORCAMENTO_RUBRICA = {
-    "Contratação": 237358,
-    "Infraestrutura": 138342,
-    "Transporte": 114300,
-    "Administrativo": 10000
-};
-  var ORCAMENTO_ACAO    = {};
-
-  function renderExecucao(movimentacoes) {
-    var porRubrica = {};
-    var porAcao    = {};
-    var porAtividade = {};
-
-    (movimentacoes || []).forEach(function(m) {
-      if (m.valor >= 0) return;
-      var val  = Math.abs(m.valor);
-      var rub  = (m.rubrica  && m.rubrica  !== '(sem categoria)') ? m.rubrica  : 'Sem classificação';
-      var acao = (m.acao     && m.acao     !== '(sem categoria)') ? m.acao     : 'Sem classificação';
-      var ativ = (m.atividade&& m.atividade!== '(sem categoria)') ? m.atividade: 'Sem classificação';
-      porRubrica[rub] = (porRubrica[rub] || 0) + val;
-      if (!porAcao[acao]) porAcao[acao] = 0;
-      porAcao[acao] += val;
-      var chav = acao + ' › ' + ativ;
-      if (!porAtividade[chav]) porAtividade[chav] = {acao: acao, atividade: ativ, total: 0, lancamentos: []};
-      porAtividade[chav].total += val;
-      porAtividade[chav].lancamentos.push(m);
-    });
-
-    // Render Rubrica
-    var rubricasAll = Object.keys(ORCAMENTO_RUBRICA).concat(
-      Object.keys(porRubrica).filter(function(k){return !ORCAMENTO_RUBRICA[k];}));
-    rubricasAll = rubricasAll.filter(function(v,i,a){return a.indexOf(v)===i;});
-    var rubHtml = '';
-    rubricasAll.forEach(function(rub) {
-      var exec = porRubrica[rub] || 0;
-      var orc  = ORCAMENTO_RUBRICA[rub] || 0;
-      var pct  = orc > 0 ? Math.min((exec/orc)*100, 100) : 0;
-      var pctR = orc > 0 ? ((exec/orc)*100).toFixed(1) : '—';
-      var cor  = pct < 50 ? 'linear-gradient(90deg,#1a5a2a,#2a8a3a)' : pct < 80 ? 'linear-gradient(90deg,var(--ouro),var(--ouro-claro))' : 'linear-gradient(90deg,#8B3A1A,#aa4a2a)';
-      rubHtml += '<div style="margin-bottom:14px;">' +
-        '<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px;">' +
-          '<span style="font-weight:600;font-size:.85rem;">' + escapeHtml(rub) + '</span>' +
-          '<span style="display:flex;gap:14px;">' +
-            (orc ? '<span style="font-size:.72rem;color:var(--texto-muted,#888);">Orçado: R$ ' + fmtBR(orc) + '</span>' : '') +
-            '<span style="font-size:.9rem;font-weight:700;color:var(--ouro);">R$ ' + fmtBR(exec) + '</span>' +
-          '</span>' +
-        '</div>' +
-        '<div style="background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden;">' +
-          '<div style="height:8px;border-radius:4px;width:' + pct + '%;background:' + cor + ';transition:width .5s;"></div>' +
-        '</div>' +
-        '<div style="font-size:.7rem;color:var(--texto-muted,#888);margin-top:3px;">' + pctR + '% executado</div>' +
-      '</div>';
-    });
-    document.getElementById('sys-exec-rubrica').innerHTML = rubHtml ||
-      '<div style="color:#777;padding:20px;text-align:center;">Nenhum lançamento classificado ainda.<br><small>Preencha as colunas Rubrica/Ação/Atividade na planilha de monitoramento.</small></div>';
-
-    // Render Ação
-    var acoesAll = Object.keys(ORCAMENTO_ACAO).concat(Object.keys(porAcao).filter(function(k){return !ORCAMENTO_ACAO[k];}));
-    acoesAll = acoesAll.filter(function(v,i,a){return a.indexOf(v)===i;});
-    var acaoHtml = '';
-    acoesAll.forEach(function(acao) {
-      var exec = porAcao[acao] || 0;
-      var orc  = ORCAMENTO_ACAO[acao] || 0;
-      var pct  = orc > 0 ? Math.min((exec/orc)*100,100) : 0;
-      var pctR = orc > 0 ? ((exec/orc)*100).toFixed(1) : '—';
-      var cor  = pct < 50 ? 'linear-gradient(90deg,#1a5a2a,#2a8a3a)' : pct < 80 ? 'linear-gradient(90deg,var(--ouro),var(--ouro-claro))' : 'linear-gradient(90deg,#8B3A1A,#aa4a2a)';
-      acaoHtml += '<div style="margin-bottom:12px;">' +
-        '<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px;">' +
-          '<span style="font-size:.82rem;">' + escapeHtml(acao) + '</span>' +
-          '<span style="font-size:.88rem;font-weight:600;color:var(--ouro);">R$ ' + fmtBR(exec) + '</span>' +
-        '</div>' +
-        '<div style="background:rgba(255,255,255,.08);border-radius:4px;height:6px;overflow:hidden;">' +
-          '<div style="height:6px;border-radius:4px;width:' + pct + '%;background:' + cor + ';"></div>' +
-        '</div>' +
-        (orc ? '<div style="font-size:.68rem;color:var(--texto-muted,#888);margin-top:2px;">' + pctR + '% de R$ ' + fmtBR(orc) + ' orçado</div>' : '<div style="font-size:.68rem;color:#664;margin-top:2px;">Sem orçamento mapeado</div>') +
-      '</div>';
-    });
-    document.getElementById('sys-exec-acao').innerHTML = acaoHtml ||
-      '<div style="color:#777;padding:14px;text-align:center;">Nenhum lançamento classificado por Ação ainda.</div>';
-
-    // Render Atividade
-    var ativHtml = '';
-    Object.keys(porAtividade).sort().forEach(function(chav) {
-      var item = porAtividade[chav];
-      ativHtml += '<div style="margin-bottom:16px;padding:12px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:8px;">' +
-        '<div style="font-size:.72rem;color:var(--ouro);margin-bottom:3px;letter-spacing:.04em;">' + escapeHtml(item.acao) + '</div>' +
-        '<div style="font-size:.85rem;font-weight:600;margin-bottom:8px;">' + escapeHtml(item.atividade) + '</div>' +
-        '<div style="display:flex;justify-content:space-between;margin-bottom:8px;">' +
-          '<span style="font-size:.75rem;color:var(--texto-muted,#888);">' + item.lancamentos.length + ' lançamento(s)</span>' +
-          '<span style="font-size:.95rem;font-weight:700;color:var(--ouro);">R$ ' + fmtBR(item.total) + '</span>' +
-        '</div>' +
-        '<table style="width:100%;border-collapse:collapse;font-size:11px;">' +
-          '<thead><tr style="color:#888;border-bottom:.5px solid rgba(255,255,255,.1);">' +
-            '<th style="text-align:left;padding:4px 6px;">Data</th>' +
-            '<th style="text-align:left;padding:4px 6px;">Descrição</th>' +
-            '<th style="text-align:right;padding:4px 6px;">Valor</th>' +
-          '</tr></thead><tbody>' +
-          item.lancamentos.map(function(l) {
-            return '<tr style="border-top:.5px solid rgba(255,255,255,.05);">' +
-              '<td style="padding:4px 6px;color:#aaa;white-space:nowrap;">' + escapeHtml(l.dtPgto||'') + '</td>' +
-              '<td style="padding:4px 6px;color:#ccc;">' + escapeHtml(l.descricao||l.fornecedor||'') + '</td>' +
-              '<td style="padding:4px 6px;text-align:right;color:#8B3A1A;font-weight:600;">− R$ ' + fmtBR(Math.abs(l.valor)) + '</td>' +
-            '</tr>';
-          }).join('') +
-          '</tbody></table>' +
-      '</div>';
-    });
-    document.getElementById('sys-exec-atividade').innerHTML = ativHtml ||
-      '<div style="color:#777;padding:14px;text-align:center;">Nenhum lançamento classificado por Atividade ainda.</div>';
-  }
-.catch(function(e){ console.error(e); falhar('dados indisponíveis'); });
-})();
-
-  function showTab(id, el) {
-    document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('active');});
-    document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('active');});
-    var panel = document.getElementById(id);
-    if (panel) panel.classList.add('active');
-    if (el) el.classList.add('active');
-  }
-</script>
-</body>
-</html>
 
 </div>
 
@@ -1572,5 +766,245 @@ function showInner(proj, id) {
 
 
   <!-- ── EXECUÇÃO POR RUBRICA ── -->
-  
 
+</main>
+
+<footer>
+  <strong>Associação Indígena Tato'a – AIT</strong> · Povo Parakanã · TI Apyterewa · São Félix do Xingu – PA
+  &nbsp;|&nbsp; Projeto Apyterewa REDD+ · Systemica · Dados: Prestações de contas Jan–Abr/2026 + Orçamento v1 Jan/2026
+</footer>
+
+
+<script>
+
+function showInner(proj, id) {
+  document.querySelectorAll('.inner-section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.inner-tab').forEach(b => b.classList.remove('active'));
+  document.getElementById(proj + '-' + id).classList.add('active');
+  event.target.classList.add('active');
+}
+
+// ══════ Dados ao vivo · Systemica ══════
+(function carregarDadosSystemica(){
+  function fmtBR(n){
+    if (typeof n !== 'number') return '—';
+    return n.toLocaleString('pt-BR', {minimumFractionDigits:2, maximumFractionDigits:2});
+  }
+  function fmtCompact(n){
+    if (typeof n !== 'number') return '—';
+    var abs = Math.abs(n);
+    if (abs >= 1000000) return (n/1000000).toFixed(2).replace('.', ',') + 'M';
+    if (abs >= 1000) return (n/1000).toFixed(1).replace('.', ',') + 'k';
+    return fmtBR(n);
+  }
+  function fmtData(iso){
+    if (!iso) return '';
+    var d = new Date(iso);
+    var dd = String(d.getDate()).padStart(2,'0');
+    var mm = String(d.getMonth()+1).padStart(2,'0');
+    var yy = d.getFullYear();
+    var hh = String(d.getHours()).padStart(2,'0');
+    var mi = String(d.getMinutes()).padStart(2,'0');
+    return dd + '/' + mm + '/' + yy + ' às ' + hh + ':' + mi;
+  }
+  function escapeHtml(s){
+    return String(s).replace(/[&<>"']/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  }
+
+  function renderizar(d){
+    document.getElementById('sys-kpi-saldo').textContent = 'R$ ' + fmtCompact(d.saldo);
+    document.getElementById('sys-kpi-entradas').textContent = 'R$ ' + fmtCompact(d.totalEntradas);
+    document.getElementById('sys-kpi-saidas').textContent = 'R$ ' + fmtCompact(d.totalSaidas);
+    document.getElementById('sys-kpi-lancamentos').textContent = d.totalLancamentos;
+
+    // Por caixa
+    var caixaHtml = '';
+    var caixas = Object.keys(d.porCaixa).sort(function(a,b){
+      return Math.abs(d.porCaixa[b]) - Math.abs(d.porCaixa[a]);
+    });
+    caixas.forEach(function(k){
+      var v = d.porCaixa[k];
+      var cor = v < 0 ? 'var(--terra)' : 'var(--sys-verde)';
+      caixaHtml += '<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:.5px solid var(--cinza-q);">' +
+        '<span>' + escapeHtml(k) + '</span>' +
+        '<span style="font-weight:600;color:' + cor + ';">R$ ' + fmtBR(v) + '</span></div>';
+    });
+    document.getElementById('sys-por-caixa').innerHTML = caixaHtml || '<span style="color:var(--texto-l);">Sem dados</span>';
+
+    // Por categoria
+    var catHtml = '';
+    var cats = Object.keys(d.porCategoria).sort(function(a,b){
+      return Math.abs(d.porCategoria[b]) - Math.abs(d.porCategoria[a]);
+    });
+    cats.forEach(function(k){
+      var v = d.porCategoria[k];
+      var cor = v < 0 ? 'var(--terra)' : 'var(--sys-verde)';
+      catHtml += '<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:.5px solid var(--cinza-q);">' +
+        '<span>' + escapeHtml(k) + '</span>' +
+        '<span style="font-weight:600;color:' + cor + ';">R$ ' + fmtBR(v) + '</span></div>';
+    });
+    document.getElementById('sys-por-categoria').innerHTML = catHtml || '<span style="color:var(--texto-l);">Sem dados</span>';
+
+    // Tabela
+    var trs = '';
+    (d.movimentacoes || []).forEach(function(m){
+      var cor = m.valor < 0 ? 'var(--terra)' : 'var(--sys-verde)';
+      var sinal = m.valor < 0 ? '−' : '+';
+      trs += '<tr>' +
+        '<td>' + escapeHtml(m.dtPgto || '') + '</td>' +
+        '<td>' + escapeHtml(m.descricao || '') + '</td>' +
+        '<td style="color:var(--texto-l);font-size:11px;">' + escapeHtml(m.fornecedor || '') + '</td>' +
+        '<td><span class="badge b-sys">' + escapeHtml(m.caixa || '') + '</span></td>' +
+        '<td style="text-align:right;font-weight:600;color:' + cor + ';">' + sinal + ' R$ ' + fmtBR(Math.abs(m.valor)) + '</td>' +
+        '</tr>';
+    });
+    document.getElementById('sys-mov-body').innerHTML = trs ||
+      '<tr><td colspan="6" style="text-align:center;color:var(--texto-l);padding:18px;">Sem movimentações</td></tr>';
+
+    // Status
+    renderExecucao(d.movimentacoes);
+    document.getElementById('sys-live-status').textContent = 'atualizado em ' + fmtData(d.geradoEm);
+    document.getElementById('sys-live-pulse').style.background = 'var(--sys-verde)';
+  }
+
+  function falhar(msg){
+    document.getElementById('sys-live-status').textContent = msg || 'erro ao carregar';
+    document.getElementById('sys-live-pulse').style.background = '#CC2200';
+    document.getElementById('sys-mov-body').innerHTML =
+      '<tr><td colspan="6" style="text-align:center;color:var(--texto-l);padding:18px;">Dados indisponíveis no momento.</td></tr>';
+  }
+
+  // Adiciona cache-bust para evitar JSON cacheado no GitHub Pages
+  var url = 'dados_systemica.json?t=' + Date.now();
+  fetch(url, {cache:'no-store'})
+    .then(function(r){ if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(renderizar)
+    .catch(function(e){ console.error(e); falhar('dados indisponíveis'); });
+
+  // ── ORÇAMENTO APROVADO ──
+  var ORCAMENTO_RUBRICA = {
+    "Contratação": 237358,
+    "Infraestrutura": 138342,
+    "Transporte": 114300,
+    "Administrativo": 10000
+};
+  var ORCAMENTO_ACAO    = {};
+
+
+  function renderExecucao(movimentacoes) {
+    var porRubrica = {};
+    var porAcao    = {};
+    var porAtividade = {};
+
+    (movimentacoes || []).forEach(function(m) {
+      if (m.valor >= 0) return;
+      var val  = Math.abs(m.valor);
+      var rub  = (m.rubrica  && m.rubrica  !== '(sem categoria)') ? m.rubrica  : 'Sem classificação';
+      var acao = (m.acao     && m.acao     !== '(sem categoria)') ? m.acao     : 'Sem classificação';
+      var ativ = (m.atividade&& m.atividade!== '(sem categoria)') ? m.atividade: 'Sem classificação';
+      porRubrica[rub] = (porRubrica[rub] || 0) + val;
+      if (!porAcao[acao]) porAcao[acao] = 0;
+      porAcao[acao] += val;
+      var chav = acao + ' › ' + ativ;
+      if (!porAtividade[chav]) porAtividade[chav] = {acao: acao, atividade: ativ, total: 0, lancamentos: []};
+      porAtividade[chav].total += val;
+      porAtividade[chav].lancamentos.push(m);
+    });
+
+    // Render Rubrica
+    var rubricasAll = Object.keys(ORCAMENTO_RUBRICA).concat(
+      Object.keys(porRubrica).filter(function(k){return !ORCAMENTO_RUBRICA[k];}));
+    rubricasAll = rubricasAll.filter(function(v,i,a){return a.indexOf(v)===i;});
+    var rubHtml = '';
+    rubricasAll.forEach(function(rub) {
+      var exec = porRubrica[rub] || 0;
+      var orc  = ORCAMENTO_RUBRICA[rub] || 0;
+      var pct  = orc > 0 ? Math.min((exec/orc)*100, 100) : 0;
+      var pctR = orc > 0 ? ((exec/orc)*100).toFixed(1) : '—';
+      var cor  = pct < 50 ? 'linear-gradient(90deg,#1a5a2a,#2a8a3a)' : pct < 80 ? 'linear-gradient(90deg,var(--ouro),var(--ouro-claro))' : 'linear-gradient(90deg,#8B3A1A,#aa4a2a)';
+      rubHtml += '<div style="margin-bottom:14px;">' +
+        '<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px;">' +
+          '<span style="font-weight:600;font-size:.85rem;">' + escapeHtml(rub) + '</span>' +
+          '<span style="display:flex;gap:14px;">' +
+            (orc ? '<span style="font-size:.72rem;color:var(--texto-muted,#888);">Orçado: R$ ' + fmtBR(orc) + '</span>' : '') +
+            '<span style="font-size:.9rem;font-weight:700;color:var(--ouro);">R$ ' + fmtBR(exec) + '</span>' +
+          '</span>' +
+        '</div>' +
+        '<div style="background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden;">' +
+          '<div style="height:8px;border-radius:4px;width:' + pct + '%;background:' + cor + ';transition:width .5s;"></div>' +
+        '</div>' +
+        '<div style="font-size:.7rem;color:var(--texto-muted,#888);margin-top:3px;">' + pctR + '% executado</div>' +
+      '</div>';
+    });
+    document.getElementById('sys-exec-rubrica').innerHTML = rubHtml ||
+      '<div style="color:#777;padding:20px;text-align:center;">Nenhum lançamento classificado ainda.<br><small>Preencha as colunas Rubrica/Ação/Atividade na planilha de monitoramento.</small></div>';
+
+    // Render Ação
+    var acoesAll = Object.keys(ORCAMENTO_ACAO).concat(Object.keys(porAcao).filter(function(k){return !ORCAMENTO_ACAO[k];}));
+    acoesAll = acoesAll.filter(function(v,i,a){return a.indexOf(v)===i;});
+    var acaoHtml = '';
+    acoesAll.forEach(function(acao) {
+      var exec = porAcao[acao] || 0;
+      var orc  = ORCAMENTO_ACAO[acao] || 0;
+      var pct  = orc > 0 ? Math.min((exec/orc)*100,100) : 0;
+      var pctR = orc > 0 ? ((exec/orc)*100).toFixed(1) : '—';
+      var cor  = pct < 50 ? 'linear-gradient(90deg,#1a5a2a,#2a8a3a)' : pct < 80 ? 'linear-gradient(90deg,var(--ouro),var(--ouro-claro))' : 'linear-gradient(90deg,#8B3A1A,#aa4a2a)';
+      acaoHtml += '<div style="margin-bottom:12px;">' +
+        '<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px;">' +
+          '<span style="font-size:.82rem;">' + escapeHtml(acao) + '</span>' +
+          '<span style="font-size:.88rem;font-weight:600;color:var(--ouro);">R$ ' + fmtBR(exec) + '</span>' +
+        '</div>' +
+        '<div style="background:rgba(255,255,255,.08);border-radius:4px;height:6px;overflow:hidden;">' +
+          '<div style="height:6px;border-radius:4px;width:' + pct + '%;background:' + cor + ';"></div>' +
+        '</div>' +
+        (orc ? '<div style="font-size:.68rem;color:var(--texto-muted,#888);margin-top:2px;">' + pctR + '% de R$ ' + fmtBR(orc) + ' orçado</div>' : '<div style="font-size:.68rem;color:#664;margin-top:2px;">Sem orçamento mapeado</div>') +
+      '</div>';
+    });
+    document.getElementById('sys-exec-acao').innerHTML = acaoHtml ||
+      '<div style="color:#777;padding:14px;text-align:center;">Nenhum lançamento classificado por Ação ainda.</div>';
+
+    // Render Atividade
+    var ativHtml = '';
+    Object.keys(porAtividade).sort().forEach(function(chav) {
+      var item = porAtividade[chav];
+      ativHtml += '<div style="margin-bottom:16px;padding:12px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:8px;">' +
+        '<div style="font-size:.72rem;color:var(--ouro);margin-bottom:3px;letter-spacing:.04em;">' + escapeHtml(item.acao) + '</div>' +
+        '<div style="font-size:.85rem;font-weight:600;margin-bottom:8px;">' + escapeHtml(item.atividade) + '</div>' +
+        '<div style="display:flex;justify-content:space-between;margin-bottom:8px;">' +
+          '<span style="font-size:.75rem;color:var(--texto-muted,#888);">' + item.lancamentos.length + ' lançamento(s)</span>' +
+          '<span style="font-size:.95rem;font-weight:700;color:var(--ouro);">R$ ' + fmtBR(item.total) + '</span>' +
+        '</div>' +
+        '<table style="width:100%;border-collapse:collapse;font-size:11px;">' +
+          '<thead><tr style="color:#888;border-bottom:.5px solid rgba(255,255,255,.1);">' +
+            '<th style="text-align:left;padding:4px 6px;">Data</th>' +
+            '<th style="text-align:left;padding:4px 6px;">Descrição</th>' +
+            '<th style="text-align:right;padding:4px 6px;">Valor</th>' +
+          '</tr></thead><tbody>' +
+          item.lancamentos.map(function(l) {
+            return '<tr style="border-top:.5px solid rgba(255,255,255,.05);">' +
+              '<td style="padding:4px 6px;color:#aaa;white-space:nowrap;">' + escapeHtml(l.dtPgto||'') + '</td>' +
+              '<td style="padding:4px 6px;color:#ccc;">' + escapeHtml(l.descricao||l.fornecedor||'') + '</td>' +
+              '<td style="padding:4px 6px;text-align:right;color:#8B3A1A;font-weight:600;">− R$ ' + fmtBR(Math.abs(l.valor)) + '</td>' +
+            '</tr>';
+          }).join('') +
+          '</tbody></table>' +
+      '</div>';
+    });
+    document.getElementById('sys-exec-atividade').innerHTML = ativHtml ||
+      '<div style="color:#777;padding:14px;text-align:center;">Nenhum lançamento classificado por Atividade ainda.</div>';
+  }
+})();
+
+  function showTab(id, el) {
+    document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('active');});
+    document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('active');});
+    var panel = document.getElementById(id);
+    if (panel) panel.classList.add('active');
+    if (el) el.classList.add('active');
+  }
+
+</script>
+</body>
+</html>
