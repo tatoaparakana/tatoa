@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-05-29T14:55:52.458Z",
+  "geradoEm": "2026-06-01T18:24:54.141Z",
   "projeto": "PBA",
   "filtroProjeto": "PBA",
   "saldo": 3600.850000000035,
@@ -10,7 +10,9 @@
     "Geral": 3600.8500000000167
   },
   "porCategoria": {
-    "(sem categoria)": 3600.8500000000167
+    "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO": -37381.3,
+    "MÃO-DE-OBRA (COM ENCARGOS)": -169536,
+    "(sem categoria)": 210518.15000000002
   },
   "movimentacoes": [
     {
@@ -21,9 +23,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Manutenção do escritório: energia e internet"
     },
     {
       "dtPgto": "12/05/2026",
@@ -33,9 +35,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Taxi"
     },
     {
       "dtPgto": "12/05/2026",
@@ -45,9 +47,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Diárias de limpeza e cozinha (prestação de serviços - RPA)"
     },
     {
       "dtPgto": "08/05/2026",
@@ -57,9 +59,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Consultor Contábil (contador - sob demanda)"
     },
     {
       "dtPgto": "08/05/2026",
@@ -69,9 +71,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Taxi"
     },
     {
       "dtPgto": "05/05/2026",
@@ -81,9 +83,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Manutenção do escritório: energia e internet"
     },
     {
       "dtPgto": "04/05/2026",
@@ -93,9 +95,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Material de consumo: limpeza, copa e cozinha"
     },
     {
       "dtPgto": "04/05/2026",
@@ -105,9 +107,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Diárias de limpeza e cozinha (prestação de serviços - RPA)"
     },
     {
       "dtPgto": "30/04/2026",
@@ -117,9 +119,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Técnico Financeiro, Administrativo e Logística"
     },
     {
       "dtPgto": "30/04/2026",
@@ -129,9 +131,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Analista Administrativo, Financeiro e Logística"
     },
     {
       "dtPgto": "30/04/2026",
@@ -141,9 +143,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Técnico de campo indígena"
     },
     {
       "dtPgto": "30/04/2026",
@@ -153,9 +155,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Gerente de Projetos"
     },
     {
       "dtPgto": "24/04/2026",
@@ -165,9 +167,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Manutenção do escritório: energia e internet"
     },
     {
       "dtPgto": "22/04/2026",
@@ -177,9 +179,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Material Permanente - Escritório"
     },
     {
       "dtPgto": "13/04/2026",
@@ -189,9 +191,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Taxi"
     },
     {
       "dtPgto": "13/04/2026",
@@ -201,9 +203,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Diárias de limpeza e cozinha (prestação de serviços - RPA)"
     },
     {
       "dtPgto": "10/04/2026",
@@ -213,9 +215,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Manutenção do escritório: energia e internet"
     },
     {
       "dtPgto": "09/04/2026",
@@ -225,9 +227,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Consultor Contábil (contador - sob demanda)"
     },
     {
       "dtPgto": "08/04/2026",
@@ -237,9 +239,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (alimentação)"
     },
     {
       "dtPgto": "07/04/2026",
@@ -249,9 +251,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Material Permanente - Escritório"
     },
     {
       "dtPgto": "07/04/2026",
@@ -261,9 +263,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Técnico de campo indígena"
     },
     {
       "dtPgto": "06/04/2026",
@@ -273,9 +275,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Diárias de limpeza e cozinha (prestação de serviços - RPA)"
     },
     {
       "dtPgto": "06/04/2026",
@@ -285,9 +287,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (frete de voadeira com piloto e combustível, locação de veículo com combustível)"
     },
     {
       "dtPgto": "06/04/2026",
@@ -297,21 +299,21 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Taxi"
     },
     {
       "dtPgto": "06/04/2026",
-      "descricao": "",
+      "descricao": "Financeiro Tato'a AIT",
       "fornecedor": "PAGAMENTO PIX 04624939000188 PERFORM INFORMATICA",
       "valor": -220,
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Material Permanente - Escritório"
     },
     {
       "dtPgto": "06/04/2026",
@@ -321,9 +323,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Manutenção do escritório: energia e internet"
     },
     {
       "dtPgto": "02/04/2026",
@@ -333,13 +335,13 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (frete de voadeira com piloto e combustível, locação de veículo com combustível)"
     },
     {
       "dtPgto": "02/04/2026",
-      "descricao": "",
+      "descricao": "Financeiro Tato'a AIT",
       "fornecedor": "PAGAMENTO PIX 05081671000148 FISCHER",
       "valor": -80.55,
       "movimento": "Saída",
@@ -357,9 +359,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (frete de voadeira com piloto e combustível, locação de veículo com combustível)"
     },
     {
       "dtPgto": "31/03/2026",
@@ -369,9 +371,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Taxi"
     },
     {
       "dtPgto": "31/03/2026",
@@ -381,9 +383,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Técnico de campo indígena"
     },
     {
       "dtPgto": "31/03/2026",
@@ -393,9 +395,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (alimentação)"
     },
     {
       "dtPgto": "31/03/2026",
@@ -405,9 +407,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (frete de voadeira com piloto e combustível, locação de veículo com combustível)"
     },
     {
       "dtPgto": "31/03/2026",
@@ -417,9 +419,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Coordenador Geral"
     },
     {
       "dtPgto": "31/03/2026",
@@ -429,9 +431,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (alimentação)"
     },
     {
       "dtPgto": "31/03/2026",
@@ -441,9 +443,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (frete de voadeira com piloto e combustível, locação de veículo com combustível)"
     },
     {
       "dtPgto": "30/03/2026",
@@ -453,9 +455,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Diárias de limpeza e cozinha (prestação de serviços - RPA)"
     },
     {
       "dtPgto": "30/03/2026",
@@ -465,9 +467,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Analista Administrativo, Financeiro e Logística"
     },
     {
       "dtPgto": "30/03/2026",
@@ -477,9 +479,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Técnico de campo indígena"
     },
     {
       "dtPgto": "30/03/2026",
@@ -489,9 +491,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Agente indígena"
     },
     {
       "dtPgto": "30/03/2026",
@@ -501,9 +503,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Técnico Financeiro, Administrativo e Logística"
     },
     {
       "dtPgto": "30/03/2026",
@@ -513,9 +515,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Material Permanente - Escritório"
     },
     {
       "dtPgto": "30/03/2026",
@@ -525,9 +527,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (frete de voadeira com piloto e combustível, locação de veículo com combustível)"
     },
     {
       "dtPgto": "30/03/2026",
@@ -537,9 +539,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (frete de voadeira com piloto e combustível, locação de veículo com combustível)"
     },
     {
       "dtPgto": "30/03/2026",
@@ -549,9 +551,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Taxi"
     },
     {
       "dtPgto": "30/03/2026",
@@ -561,9 +563,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Gerente de Projetos"
     },
     {
       "dtPgto": "27/03/2026",
@@ -573,9 +575,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (alimentação)"
     },
     {
       "dtPgto": "27/03/2026",
@@ -585,9 +587,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Manutenção do escritório: energia e internet"
     },
     {
       "dtPgto": "27/03/2026",
@@ -597,9 +599,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Consultor Especialista (sob demanda)"
     },
     {
       "dtPgto": "26/03/2026",
@@ -609,9 +611,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (frete de voadeira com piloto e combustível, locação de veículo com combustível)"
     },
     {
       "dtPgto": "26/03/2026",
@@ -621,9 +623,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Consultor Especialista (sob demanda)"
     },
     {
       "dtPgto": "26/03/2026",
@@ -633,9 +635,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (alimentação)"
     },
     {
       "dtPgto": "26/03/2026",
@@ -645,9 +647,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (alimentação)"
     },
     {
       "dtPgto": "26/03/2026",
@@ -657,9 +659,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Material de consumo: limpeza, copa e cozinha"
     },
     {
       "dtPgto": "25/03/2026",
@@ -669,9 +671,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Taxi"
     },
     {
       "dtPgto": "25/03/2026",
@@ -681,9 +683,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Diárias de limpeza e cozinha (prestação de serviços - RPA)"
     },
     {
       "dtPgto": "23/03/2026",
@@ -693,9 +695,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (alimentação)"
     },
     {
       "dtPgto": "23/03/2026",
@@ -705,9 +707,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Taxi"
     },
     {
       "dtPgto": "19/03/2026",
@@ -717,9 +719,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Diárias de limpeza e cozinha (prestação de serviços - RPA)"
     },
     {
       "dtPgto": "13/03/2026",
@@ -729,9 +731,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Manutenção do escritório: energia e internet"
     },
     {
       "dtPgto": "11/03/2026",
@@ -741,9 +743,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Consultor Contábil (contador - sob demanda)"
     },
     {
       "dtPgto": "10/03/2026",
@@ -753,9 +755,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Material de consumo: limpeza, copa e cozinha"
     },
     {
       "dtPgto": "09/03/2026",
@@ -765,9 +767,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (frete de voadeira com piloto e combustível, locação de veículo com combustível)"
     },
     {
       "dtPgto": "05/03/2026",
@@ -777,9 +779,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Manutenção do escritório: energia e internet"
     },
     {
       "dtPgto": "02/03/2026",
@@ -789,9 +791,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Diárias de limpeza e cozinha (prestação de serviços - RPA)"
     },
     {
       "dtPgto": "02/03/2026",
@@ -801,9 +803,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Técnico de campo indígena"
     },
     {
       "dtPgto": "02/03/2026",
@@ -813,9 +815,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Diárias de limpeza e cozinha (prestação de serviços - RPA)"
     },
     {
       "dtPgto": "27/02/2026",
@@ -825,9 +827,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Gerente de Projetos"
     },
     {
       "dtPgto": "27/02/2026",
@@ -837,9 +839,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Analista Administrativo, Financeiro e Logística"
     },
     {
       "dtPgto": "27/02/2026",
@@ -849,9 +851,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Técnico Financeiro, Administrativo e Logística"
     },
     {
       "dtPgto": "27/02/2026",
@@ -861,9 +863,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Agente indígena"
     },
     {
       "dtPgto": "27/02/2026",
@@ -873,9 +875,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Coordenador Geral"
     },
     {
       "dtPgto": "26/02/2026",
@@ -885,9 +887,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Consultor Jurídico (advogado - sob demanda)"
     },
     {
       "dtPgto": "23/02/2026",
@@ -897,13 +899,13 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Manutenção do escritório: energia e internet"
     },
     {
       "dtPgto": "18/02/2026",
-      "descricao": "",
+      "descricao": "Financeiro Tato'a AIT",
       "fornecedor": "PAGAMENTO PIX SICREDI 28782251000194 AZEVEDO COM",
       "valor": -336.12,
       "movimento": "Saída",
@@ -921,9 +923,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Manutenção do escritório: energia e internet"
     },
     {
       "dtPgto": "11/02/2026",
@@ -933,9 +935,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Consultor Contábil (contador - sob demanda)"
     },
     {
       "dtPgto": "11/02/2026",
@@ -945,9 +947,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Analista Administrativo, Financeiro e Logística"
     },
     {
       "dtPgto": "10/02/2026",
@@ -981,9 +983,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Técnico de campo indígena"
     },
     {
       "dtPgto": "10/02/2026",
@@ -993,9 +995,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Hospedagem"
     },
     {
       "dtPgto": "10/02/2026",
@@ -1005,9 +1007,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Técnico Financeiro, Administrativo e Logística"
     },
     {
       "dtPgto": "10/02/2026",
@@ -1017,9 +1019,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Manutenção do escritório: energia e internet"
     },
     {
       "dtPgto": "10/02/2026",
@@ -1029,13 +1031,13 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Gerente de Projetos"
     },
     {
       "dtPgto": "14/01/2026",
-      "descricao": "",
+      "descricao": "Financeiro Tato'a AIT",
       "fornecedor": "RECEBIMENTO PIX 62559249200 FABIANO PERILO CARVA",
       "valor": 7000,
       "movimento": "Entrada",
@@ -1053,9 +1055,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (frete de voadeira com piloto e combustível, locação de veículo com combustível)"
     },
     {
       "dtPgto": "09/01/2026",
@@ -1065,9 +1067,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (alimentação)"
     },
     {
       "dtPgto": "08/01/2026",
@@ -1077,21 +1079,21 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Diárias de limpeza e cozinha (prestação de serviços - RPA)"
     },
     {
       "dtPgto": "07/01/2026",
-      "descricao": "",
+      "descricao": "Internet sede Tato'a",
       "fornecedor": "PAGAMENTO PIX 02558157000162 TELEFONICA BRAS",
       "valor": -99.99,
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Manutenção do escritório: energia e internet"
     },
     {
       "dtPgto": "07/01/2026",
@@ -1101,9 +1103,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Consultor Contábil (contador - sob demanda)"
     },
     {
       "dtPgto": "05/01/2026",
@@ -1113,9 +1115,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Manutenção do escritório: energia e internet"
     }
   ]
 }
