@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-01T14:43:22.413Z",
+  "geradoEm": "2026-06-01T15:43:22.566Z",
   "projeto": "Systemica - Antecipação",
   "saldo": 12682,
   "totalEntradas": 375655.46,
@@ -9,8 +9,9 @@
     "(sem caixa)": 12682
   },
   "porCategoria": {
-    "Governanca": -42566.82,
-    "(sem categoria)": 55248.82
+    "Governanca": -84838.08,
+    "(sem categoria)": 98582.25,
+    "Meio Ambiente": -1062.17
   },
   "movimentacoes": [
     {
@@ -171,7 +172,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Governanca"
     },
     {
       "dtPgto": "05/05/2026",
