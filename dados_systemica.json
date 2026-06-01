@@ -1,30 +1,20 @@
 {
-  "geradoEm": "2026-06-01T21:43:22.166Z",
+  "geradoEm": "2026-06-01T22:16:16.106Z",
   "projeto": "Systemica - Antecipação",
-  "saldo": 227767.73,
-  "totalEntradas": 591167.71,
+  "saldo": 66632.51,
+  "totalEntradas": 430032.49,
   "totalSaidas": 363399.98,
-  "totalLancamentos": 223,
+  "totalLancamentos": 222,
   "porCaixa": {
-    "(sem caixa)": 227767.73
+    "(sem caixa)": 66632.51
   },
   "porCategoria": {
     "Governanca": -160259.57,
-    "(sem categoria)": 561269.98,
+    "(sem categoria)": 400134.76,
     "Meio Ambiente": -83242.68,
     "Renda": -90000
   },
   "movimentacoes": [
-    {
-      "dtPgto": "29/05/2026",
-      "descricao": "TED 12300288000107 NORTE ENERGIA S A",
-      "fornecedor": "",
-      "valor": 161135.22,
-      "movimento": "Entrada",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
-    },
     {
       "dtPgto": "28/05/2026",
       "descricao": "Mensalidade Starlink",
@@ -210,6 +200,16 @@
       "descricao": "Prestação de serviços mês de abril 2026",
       "fornecedor": "PAGAMENTO PIX 62218112000170 J E BANDEIRA DE MAT",
       "valor": -2000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "Governanca"
+    },
+    {
+      "dtPgto": "05/05/2026",
+      "descricao": "Prestação de serviços mês de abril 2026",
+      "fornecedor": "PAGAMENTO PIX 62010588000111 62 010 588 SIMONE P",
+      "valor": -1100,
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
