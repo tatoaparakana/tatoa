@@ -750,7 +750,7 @@ function falhar(){
       '<tr><td colspan="5" style="text-align:center;color:var(--texto-l);padding:18px;">Dados indisponíveis no momento.</td></tr>';
   }
 
-  fetch('dados_pba.json?t='+Date.now())
+  fetch('dados_pba.json?t='+Date.now(), {cache:'no-store'})
     .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();})
     .then(renderizar)
     .catch(function(e){console.error(e);falhar();});
@@ -1165,7 +1165,7 @@ new Chart(document.getElementById('chartCiTecnicas'),{
       '<tr><td colspan="5" style="text-align:center;color:var(--texto-l);padding:18px;">Dados indisponíveis no momento.</td></tr>';
   }
 
-  fetch('dados_pba.json?t='+Date.now())
+  fetch('dados_pba.json?t='+Date.now(), {cache:'no-store'})
     .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();})
     .then(renderizar)
     .catch(function(e){console.error(e);falhar();});
