@@ -155,8 +155,6 @@ footer strong{color:var(--ouro-claro);}
   .tab { padding:12px 20px; font-size:13px; color:var(--texto-l,#7A6F5A); background:none; border:none; border-bottom:2px solid transparent; cursor:pointer; margin-bottom:-1px; transition:all .15s; }
   .tab:hover { color:var(--ouro-claro,#F0D878); }
   .tab.active { color:var(--ouro-claro,#F0D878); border-bottom:2px solid var(--ouro,#C8940A); font-weight:600; }
-  .panel { display:none; }
-  .panel.active { display:block; }
 </style>
 <!-- cache-bust: 2026-06-02T20:09:35.001882 -->
 </head>
@@ -186,13 +184,6 @@ footer strong{color:var(--ouro-claro);}
 <!-- HERO -->
 <div class="proj-hero">
   <div class="proj-hero-content">
-<div class="tabs-wrap">
-  <div class="tabs">
-    <div class="tab active" onclick="showTab('dab-financeiro',this)">Financeiro</div>
-    <div class="tab" onclick="showTab('dab-execucao',this)">Execução por Rubrica</div>
-  </div>
-</div>
-
     <div class="proj-hero-left">
       <div class="proj-hero-title">Ipoxika'o Ka'a<br><em>Retomada Parakanã da TI Apyterewa</em></div>
       <div class="proj-hero-sub">CESE / Fundo Amazônia · CNBB · Projeto nº 27907 · 28/Abr/2025 – 28/Abr/2027</div>
@@ -208,6 +199,7 @@ footer strong{color:var(--ouro-claro);}
 <!-- INNER TABS -->
 <div class="inner-tabs">
   <button class="inner-tab active" onclick="showInner('dab','financeiro')">Financeiro</button>
+  <button class="inner-tab" onclick="showInner('dab','execucao')">Execução por Rubrica</button>
   <button class="inner-tab" onclick="showInner('dab','cronograma')">Cronograma</button>
   <button class="inner-tab" onclick="showInner('dab','atividades')">Atividades</button>
   <button class="inner-tab" onclick="showInner('dab','producao')">Produção & Campo</button>
@@ -438,6 +430,23 @@ footer strong{color:var(--ouro-claro);}
 </div><!-- /financeiro -->
 
 <!-- ═══════════════ CRONOGRAMA ═══════════════ -->
+
+<div class="inner-section" id="dab-execucao">
+  <div class="card" style="margin-bottom:18px;">
+    <div class="card-title">Execução por Rubrica</div>
+    <div style="font-size:.78rem;color:var(--texto-l);margin-bottom:16px;">Executado real vs. orçado aprovado. Alimentado automaticamente via Apps Script.</div>
+    <div id="dab-exec-rubrica"><div style="padding:20px;text-align:center;color:#777;">Carregando…</div></div>
+  </div>
+  <div class="card" style="margin-bottom:18px;">
+    <div class="card-title">Execução por Ação</div>
+    <div id="dab-exec-acao"><div style="padding:14px;text-align:center;color:#777;">Carregando…</div></div>
+  </div>
+  <div class="card" style="margin-bottom:18px;">
+    <div class="card-title">Execução por Atividade</div>
+    <div id="dab-exec-atividade"><div style="padding:14px;text-align:center;color:#777;">Carregando…</div></div>
+  </div>
+</div>
+
 <div class="inner-section" id="dab-cronograma">
 
   <!-- Barra temporal -->
@@ -721,40 +730,8 @@ footer strong{color:var(--ouro-claro);}
   </div>
 
 </div>
-<div class="panel active" id="dab-financeiro">
-<!-- /sobre -->
 
 
-  <!-- ── EXECUÇÃO POR RUBRICA ── -->
-  
-</div><!-- /dab-financeiro -->
-
-<div class="panel" id="dab-execucao">
-    <div class="card" style="margin-bottom:18px;">
-      <div class="card-title">Execução por Rubrica</div>
-      <div style="font-size:.78rem;color:var(--texto-muted,#888);margin-bottom:16px;">Executado real (lançamentos do monitoramento financeiro) vs. orçado aprovado. Alimentado automaticamente via Apps Script.</div>
-      <div id="dab-exec-rubrica"><div style="padding:20px;text-align:center;color:#777;">Carregando…</div></div>
-    </div>
-    <div class="card" style="margin-bottom:18px;">
-      <div class="card-title">Execução por Ação</div>
-      <div id="dab-exec-acao"><div style="padding:14px;text-align:center;color:#777;">Carregando…</div></div>
-    </div>
-    <div class="card" style="margin-bottom:18px;">
-      <div class="card-title">Execução por Atividade</div>
-      <div id="dab-exec-atividade"><div style="padding:14px;text-align:center;color:#777;">Carregando…</div></div>
-    </div>
-    <div class="card">
-      <div style="font-size:.75rem;color:var(--texto-muted,#888);line-height:1.6;">
-        <strong>Nota metodológica:</strong> Para que as barras sejam preenchidas, cada lançamento na planilha de monitoramento financeiro deve ter as colunas <strong>Rubrica (C)</strong>, <strong>Ação/Categoria (D)</strong> e <strong>Atividade (E)</strong> preenchidas, e o Apps Script deve estar atualizado para exportar esses campos.
-      </div>
-    </div>
-  </div>
-</main>
-
-<footer>
-  <strong>Associação Indígena Tato'a – AIT</strong> · Povo Parakanã · TI Apyterewa · São Félix do Xingu – PA
-  &nbsp;|&nbsp; Projeto Dabucury nº 27907 · CESE / Fundo Amazônia · Dados: Planilha financeira + Relatório Parcial Mai/25–Fev/26
-</footer>
 
 <script>
 
