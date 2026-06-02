@@ -1,16 +1,17 @@
 {
-  "geradoEm": "2026-06-02T13:51:49.010Z",
+  "geradoEm": "2026-06-02T13:54:43.953Z",
   "projeto": "PBA",
-  "saldo": 124628.95,
-  "totalEntradas": 372070.04,
-  "totalSaidas": 247441.09,
+  "filtroProjeto": "PBA",
+  "saldo": 124628.95000000007,
+  "totalEntradas": 372070.04000000004,
+  "totalSaidas": 247441.08999999997,
   "totalLancamentos": 100,
   "porCaixa": {
-    "(sem caixa)": 124628.95
+    "Geral": 124628.95000000001
   },
   "porCategoria": {
-    "SUPORTE LOGÍSTICO E ADMINISTRATIVO": -39916.42,
-    "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)": -207108,
+    "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO": -41537.420000000006,
+    "MÃO-DE-OBRA (COM ENCARGOS)": -205487,
     "(sem categoria)": 371653.37
   },
   "movimentacoes": [
@@ -21,8 +22,10 @@
       "valor": 161135.22,
       "movimento": "Entrada",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "28/05/2026",
@@ -31,8 +34,10 @@
       "valor": -2000,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "SUPORTE LOGÍSTICO E ADMINISTRATIVO"
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Gerente de Projetos"
     },
     {
       "dtPgto": "28/05/2026",
@@ -41,8 +46,10 @@
       "valor": -7700,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)"
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Analista técnico de campo (PFI e PGTI)"
     },
     {
       "dtPgto": "27/05/2026",
@@ -51,8 +58,10 @@
       "valor": -3960,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)"
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Técnico Financeiro"
     },
     {
       "dtPgto": "27/05/2026",
@@ -61,8 +70,10 @@
       "valor": -13000,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)"
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Gerente de Projetos"
     },
     {
       "dtPgto": "27/05/2026",
@@ -71,8 +82,10 @@
       "valor": -6160,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)"
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Técnico de campo indígena"
     },
     {
       "dtPgto": "27/05/2026",
@@ -81,8 +94,10 @@
       "valor": -6752,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)"
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Agente indígena"
     },
     {
       "dtPgto": "26/05/2026",
@@ -91,8 +106,10 @@
       "valor": -535.12,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "SUPORTE LOGÍSTICO E ADMINISTRATIVO"
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Manutenção do escritório: energia e internet"
     },
     {
       "dtPgto": "15/05/2026",
@@ -101,8 +118,10 @@
       "valor": -99.99,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "SUPORTE LOGÍSTICO E ADMINISTRATIVO"
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Manutenção do escritório: energia e internet"
     },
     {
       "dtPgto": "12/05/2026",
@@ -111,8 +130,10 @@
       "valor": -20,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "SUPORTE LOGÍSTICO E ADMINISTRATIVO"
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Taxi"
     },
     {
       "dtPgto": "12/05/2026",
@@ -121,8 +142,10 @@
       "valor": -150,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "SUPORTE LOGÍSTICO E ADMINISTRATIVO"
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Diárias de limpeza e cozinha (prestação de serviços - RPA)"
     },
     {
       "dtPgto": "08/05/2026",
@@ -131,8 +154,10 @@
       "valor": -1621,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)"
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Consultor Contábil (contador - sob demanda)"
     },
     {
       "dtPgto": "08/05/2026",
@@ -141,8 +166,10 @@
       "valor": -150,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "SUPORTE LOGÍSTICO E ADMINISTRATIVO"
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Taxi"
     },
     {
       "dtPgto": "05/05/2026",
@@ -151,8 +178,10 @@
       "valor": -63.8,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "SUPORTE LOGÍSTICO E ADMINISTRATIVO"
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Manutenção do escritório: energia e internet"
     },
     {
       "dtPgto": "04/05/2026",
@@ -161,8 +190,10 @@
       "valor": -178.19,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "SUPORTE LOGÍSTICO E ADMINISTRATIVO"
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Material de consumo: limpeza, copa e cozinha"
     },
     {
       "dtPgto": "04/05/2026",
@@ -171,8 +202,10 @@
       "valor": -150,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "SUPORTE LOGÍSTICO E ADMINISTRATIVO"
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Diárias de limpeza e cozinha (prestação de serviços - RPA)"
     },
     {
       "dtPgto": "30/04/2026",
@@ -181,8 +214,10 @@
       "valor": -3960,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)"
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Técnico Financeiro, Administrativo e Logística"
     },
     {
       "dtPgto": "30/04/2026",
@@ -191,8 +226,10 @@
       "valor": -7700,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)"
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Analista Administrativo, Financeiro e Logística"
     },
     {
       "dtPgto": "30/04/2026",
@@ -201,8 +238,10 @@
       "valor": -6160,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)"
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Técnico de campo indígena"
     },
     {
       "dtPgto": "30/04/2026",
@@ -211,8 +250,970 @@
       "valor": -13000,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)"
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Gerente de Projetos"
+    },
+    {
+      "dtPgto": "24/04/2026",
+      "descricao": "Venc: 29.04.2026 - R$ 570,82",
+      "fornecedor": "PAGAMENTO PIX 04895728000180 EQUATORIAL PARA DIS",
+      "valor": -570.82,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Manutenção do escritório: energia e internet"
+    },
+    {
+      "dtPgto": "22/04/2026",
+      "descricao": "Conserto notebook",
+      "fornecedor": "PAGAMENTO PIX 04624939000188 PERFORM INFORMATICA",
+      "valor": -370,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Material Permanente - Escritório"
+    },
+    {
+      "dtPgto": "13/04/2026",
+      "descricao": "Apoio Logístico - retorno ATL 2026",
+      "fornecedor": "PAGAMENTO PIX 75110326215 Sebastiao Gonçalves Po",
+      "valor": -70,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Taxi"
+    },
+    {
+      "dtPgto": "13/04/2026",
+      "descricao": "limpeza interna da sede AIT",
+      "fornecedor": "PAGAMENTO PIX 82182396268 ELZA DO LIVRAMENTO ARA",
+      "valor": -150,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Diárias de limpeza e cozinha (prestação de serviços - RPA)"
+    },
+    {
+      "dtPgto": "10/04/2026",
+      "descricao": "",
+      "fornecedor": "PAGAMENTO PIX 02558157000162 TELEFONICA BRAS",
+      "valor": -99.99,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Manutenção do escritório: energia e internet"
+    },
+    {
+      "dtPgto": "09/04/2026",
+      "descricao": "Serviços Contábeis- mês de março 2026",
+      "fornecedor": "PAGAMENTO PIX 38636232000103 SILVAS GESTAO EMPRE",
+      "valor": -1621,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Consultor Contábil (contador - sob demanda)"
+    },
+    {
+      "dtPgto": "08/04/2026",
+      "descricao": "Reembolso- viagem a TI APYTEREWA",
+      "fornecedor": "PAGAMENTO PIX 01385741201 JORDAN CARVALHO PANTOJ",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (alimentação)"
+    },
+    {
+      "dtPgto": "07/04/2026",
+      "descricao": "Pgto - Material permanente",
+      "fornecedor": "PAGAMENTO PIX 10302089000366 ALANNA COMERCIO LTD",
+      "valor": -341,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Material Permanente - Escritório"
+    },
+    {
+      "dtPgto": "07/04/2026",
+      "descricao": "Despesas com transporte de materiais - ATL",
+      "fornecedor": "PAGAMENTO PIX 55479847287 Marcio Parakana",
+      "valor": -570,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Técnico de campo indígena"
+    },
+    {
+      "dtPgto": "06/04/2026",
+      "descricao": "limpeza da sede - AIT",
+      "fornecedor": "PAGAMENTO PIX 82182396268 ELZA DO LIVRAMENTO ARA",
+      "valor": -150,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Diárias de limpeza e cozinha (prestação de serviços - RPA)"
+    },
+    {
+      "dtPgto": "06/04/2026",
+      "descricao": "Apoio Logístico",
+      "fornecedor": "PAGAMENTO PIX 06038254000185 C R W COMERCIO DE C",
+      "valor": -427.07,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (frete de voadeira com piloto e combustível, locação de veículo com combustível)"
+    },
+    {
+      "dtPgto": "06/04/2026",
+      "descricao": "Apoio Logístico- ATL",
+      "fornecedor": "PAGAMENTO PIX 75110326215 Sebastiao Gonçalves Po",
+      "valor": -80,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Taxi"
+    },
+    {
+      "dtPgto": "06/04/2026",
+      "descricao": "Financeiro Tato'a AIT",
+      "fornecedor": "PAGAMENTO PIX 04624939000188 PERFORM INFORMATICA",
+      "valor": -220,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Material Permanente - Escritório"
+    },
+    {
+      "dtPgto": "06/04/2026",
+      "descricao": "Taxa Sicredi",
+      "fornecedor": "CESTA DE RELACIONAMENTO",
+      "valor": -63.8,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Manutenção do escritório: energia e internet"
+    },
+    {
+      "dtPgto": "02/04/2026",
+      "descricao": "Apoio Logístico TI Apyterewa",
+      "fornecedor": "PAGAMENTO PIX 19276857000167 L R DA PAZ CIA LTDA",
+      "valor": -491.39,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (frete de voadeira com piloto e combustível, locação de veículo com combustível)"
+    },
+    {
+      "dtPgto": "02/04/2026",
+      "descricao": "Financeiro Tato'a AIT",
+      "fornecedor": "PAGAMENTO PIX 05081671000148 FISCHER",
+      "valor": -80.55,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "01/04/2026",
+      "descricao": "Apoio Logístico",
+      "fornecedor": "PAGAMENTO PIX 29957703000194 M B",
+      "valor": -451.8,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (frete de voadeira com piloto e combustível, locação de veículo com combustível)"
+    },
+    {
+      "dtPgto": "31/03/2026",
+      "descricao": "Transporte de materiais",
+      "fornecedor": "PAGAMENTO PIX SICREDI 52477657000148 52477657 JO",
+      "valor": -2200,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Taxi"
+    },
+    {
+      "dtPgto": "31/03/2026",
+      "descricao": "ajuda de custo p alimentação e desloc - ATL",
+      "fornecedor": "PAGAMENTO PIX 55479847287 Marcio Parakana",
+      "valor": -2000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Técnico de campo indígena"
+    },
+    {
+      "dtPgto": "31/03/2026",
+      "descricao": "ajuda de custo alimentação deslc - ATL",
+      "fornecedor": "PAGAMENTO PIX 04006819196 xokarowara parakana",
+      "valor": -2000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (alimentação)"
+    },
+    {
+      "dtPgto": "31/03/2026",
+      "descricao": "Apoio Logístico TI Apyterewa",
+      "fornecedor": "PAGAMENTO PIX 09076307000140 CARVALHO GOMES & GO",
+      "valor": -4700,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (frete de voadeira com piloto e combustível, locação de veículo com combustível)"
+    },
+    {
+      "dtPgto": "31/03/2026",
+      "descricao": "Serviço de assessoria projeto PBA Mês 03 2026",
+      "fornecedor": "PAGAMENTO PIX 51380794000105 IMANA SOCIOAMBIENTA",
+      "valor": -4400,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Coordenador Geral"
+    },
+    {
+      "dtPgto": "31/03/2026",
+      "descricao": "Ajuda de custo - visita TI Apyterewa",
+      "fornecedor": "PAGAMENTO PIX SICREDI 01385741201 JORDAN CARVALH",
+      "valor": -1000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (alimentação)"
+    },
+    {
+      "dtPgto": "31/03/2026",
+      "descricao": "Apoio Logístico",
+      "fornecedor": "PAGAMENTO PIX SICREDI 28782251000194 AZEVEDO COM",
+      "valor": -426.85,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (frete de voadeira com piloto e combustível, locação de veículo com combustível)"
+    },
+    {
+      "dtPgto": "30/03/2026",
+      "descricao": "Limpeza interna e externa - sede AIT",
+      "fornecedor": "PAGAMENTO PIX 82182396268 ELZA DO LIVRAMENTO ARA",
+      "valor": -200,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Diárias de limpeza e cozinha (prestação de serviços - RPA)"
+    },
+    {
+      "dtPgto": "30/03/2026",
+      "descricao": "Pgto - Serviços prestados mês de março",
+      "fornecedor": "PAGAMENTO PIX 59276258000168 59.276.258 JORDAN C",
+      "valor": -7700,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Analista técnico de campo (PFI e PGTI)"
+    },
+    {
+      "dtPgto": "30/03/2026",
+      "descricao": "Pgto - Prestação de serviços mês de março 2026",
+      "fornecedor": "PAGAMENTO PIX 55479847287 Marcio Parakana",
+      "valor": -6160,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Técnico de campo indígena"
+    },
+    {
+      "dtPgto": "30/03/2026",
+      "descricao": "Pro - Serviços prestados mês de março 2026",
+      "fornecedor": "PAGAMENTO PIX 55501605287 NENEXIGA PARAKANA",
+      "valor": -6752,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Agente indígena"
+    },
+    {
+      "dtPgto": "30/03/2026",
+      "descricao": "Pgto - Serviços prestados mês de março 2026",
+      "fornecedor": "PAGAMENTO PIX 62010588000111 62 010 588 SIMONE P",
+      "valor": -3960,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Técnico Financeiro, Administrativo e Logística"
+    },
+    {
+      "dtPgto": "30/03/2026",
+      "descricao": "Pgto - Material de escritório",
+      "fornecedor": "PAGAMENTO PIX SICREDI 83912253000169 MORAES E NO",
+      "valor": -247,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Material Permanente - Escritório"
+    },
+    {
+      "dtPgto": "30/03/2026",
+      "descricao": "Deslocamento Protocolo de Consulta - PFI",
+      "fornecedor": "PAGAMENTO PIX 35306170000183 35.306.170 APOLIANN",
+      "valor": -1329,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (frete de voadeira com piloto e combustível, locação de veículo com combustível)"
+    },
+    {
+      "dtPgto": "30/03/2026",
+      "descricao": "Oficina de Planejamento Financeiro",
+      "fornecedor": "PAGAMENTO PIX 19276857000167 L R DA PAZ CIA LTDA",
+      "valor": -1540,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (frete de voadeira com piloto e combustível, locação de veículo com combustível)"
+    },
+    {
+      "dtPgto": "30/03/2026",
+      "descricao": "Transporte dos indígenas- III Feira Criativa Femi",
+      "fornecedor": "PAGAMENTO PIX SICREDI 02852650240 NAELY PEREIRA",
+      "valor": -117.58,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Taxi"
+    },
+    {
+      "dtPgto": "30/03/2026",
+      "descricao": "Prestação serviços mês de março 2026",
+      "fornecedor": "PAGAMENTO PIX 62218112000170 J E BANDEIRA DE MAT",
+      "valor": -13000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Gerente de Projetos"
+    },
+    {
+      "dtPgto": "27/03/2026",
+      "descricao": "Ajuda de custo - III FCF",
+      "fornecedor": "PAGAMENTO PIX 55482040259 YWOAGIA PARAKANA",
+      "valor": -310,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (alimentação)"
+    },
+    {
+      "dtPgto": "27/03/2026",
+      "descricao": "Venc: 30.03.2026 - R$ 514,71",
+      "fornecedor": "PAGAMENTO PIX 04895728000180 EQUATORIAL PARA DIS",
+      "valor": -514.71,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Manutenção do escritório: energia e internet"
+    },
+    {
+      "dtPgto": "27/03/2026",
+      "descricao": "Prestação de serviços - Oficina de Plan. Finan",
+      "fornecedor": "PAGAMENTO PIX 83931774000163 BELO MONTE INVESTIM",
+      "valor": -1000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Consultor Especialista (sob demanda)"
+    },
+    {
+      "dtPgto": "26/03/2026",
+      "descricao": "apoio logístico - Oficina planejamento financeir",
+      "fornecedor": "PAGAMENTO PIX SICREDI 28782251000194 AZEVEDO COM",
+      "valor": -4134,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (frete de voadeira com piloto e combustível, locação de veículo com combustível)"
+    },
+    {
+      "dtPgto": "26/03/2026",
+      "descricao": "Prestação de serviços- Ofina de planejamento fin",
+      "fornecedor": "PAGAMENTO PIX 83931774000163 BELO MONTE INVESTIM",
+      "valor": -2980,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Consultor Especialista (sob demanda)"
+    },
+    {
+      "dtPgto": "26/03/2026",
+      "descricao": "Ajuda de custo III FCF",
+      "fornecedor": "PAGAMENTO PIX 55533710230 Naoi Parakana",
+      "valor": -310,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (alimentação)"
+    },
+    {
+      "dtPgto": "26/03/2026",
+      "descricao": "Ajuda de custo - III FCF",
+      "fornecedor": "PAGAMENTO PIX 55534287268 Kaxapoga Parakana",
+      "valor": -310,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (alimentação)"
+    },
+    {
+      "dtPgto": "26/03/2026",
+      "descricao": "Material de limpeza - sede AIT",
+      "fornecedor": "PAGAMENTO PIX 13610012000180 CAMPEIRO SUPERMERCA",
+      "valor": -132.93,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Material de consumo: limpeza, copa e cozinha"
+    },
+    {
+      "dtPgto": "25/03/2026",
+      "descricao": "Pgto corrida para os ind participantes da oficina",
+      "fornecedor": "PAGAMENTO PIX SICREDI 02852650240 NAELY PEREIRA",
+      "valor": -100.2,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Taxi"
+    },
+    {
+      "dtPgto": "25/03/2026",
+      "descricao": "Servico de controle de abelhas na Sede da AIT",
+      "fornecedor": "PAGAMENTO PIX 95928332220 IGOR MARTINS DO NASCIM",
+      "valor": -200,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Diárias de limpeza e cozinha (prestação de serviços - RPA)"
+    },
+    {
+      "dtPgto": "23/03/2026",
+      "descricao": "compras para reuniões",
+      "fornecedor": "PAGAMENTO PIX 52544703000184 MILENIO EXPRESS",
+      "valor": -79.94,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (alimentação)"
+    },
+    {
+      "dtPgto": "23/03/2026",
+      "descricao": "Transporte dos indígenas casa do índio x ATI x",
+      "fornecedor": "PAGAMENTO PIX SICREDI 02852650240 NAELY PEREIRA",
+      "valor": -83.5,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Taxi"
+    },
+    {
+      "dtPgto": "19/03/2026",
+      "descricao": "Limpeza da sede - AIT",
+      "fornecedor": "PAGAMENTO PIX 00138453225 TEREZINHA DE JESUS RIB",
+      "valor": -150,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Diárias de limpeza e cozinha (prestação de serviços - RPA)"
+    },
+    {
+      "dtPgto": "13/03/2026",
+      "descricao": "Conta de Internet",
+      "fornecedor": "PAGAMENTO PIX 02558157000162 TELEFONICA BRAS",
+      "valor": -99.99,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Manutenção do escritório: energia e internet"
+    },
+    {
+      "dtPgto": "11/03/2026",
+      "descricao": "Pgto - Serviços Contábeis mês de março 2026",
+      "fornecedor": "PAGAMENTO PIX 38636232000103 SILVAS GESTAO EMPRE",
+      "valor": -1621,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Consultor Contábil (contador - sob demanda)"
+    },
+    {
+      "dtPgto": "10/03/2026",
+      "descricao": "pgto camisetas feira criativa",
+      "fornecedor": "PAGAMENTO PIX 14136881000187 ASSOCIACAO COMERCIA",
+      "valor": -120,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Material de consumo: limpeza, copa e cozinha"
+    },
+    {
+      "dtPgto": "09/03/2026",
+      "descricao": "participação feira criativa ACIAPA mulheres",
+      "fornecedor": "PAGAMENTO PIX 14136881000187 ASSOCIACAO COMERCIA",
+      "valor": -100,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (frete de voadeira com piloto e combustível, locação de veículo com combustível)"
+    },
+    {
+      "dtPgto": "05/03/2026",
+      "descricao": "Taxa Sicredi",
+      "fornecedor": "CESTA DE RELACIONAMENTO",
+      "valor": -63.8,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Manutenção do escritório: energia e internet"
+    },
+    {
+      "dtPgto": "02/03/2026",
+      "descricao": "Ppto 1 diária de limpeza sede AIT",
+      "fornecedor": "PAGAMENTO PIX 00138453225 TEREZINHA DE JESUS RIB",
+      "valor": -150,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Diárias de limpeza e cozinha (prestação de serviços - RPA)"
+    },
+    {
+      "dtPgto": "02/03/2026",
+      "descricao": "prestação de serviços mês de fevereiro 2026",
+      "fornecedor": "PAGAMENTO PIX 55479847287 Marcio Parakana",
+      "valor": -6160,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Técnico de campo indígena"
+    },
+    {
+      "dtPgto": "02/03/2026",
+      "descricao": "participação feira criativa ACIAPA mulheres",
+      "fornecedor": "PAGAMENTO PIX 00138453225 TEREZINHA DE JESUS RIB",
+      "valor": -150,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Diárias de limpeza e cozinha (prestação de serviços - RPA)"
+    },
+    {
+      "dtPgto": "27/02/2026",
+      "descricao": "Prestação de serviços mês fevereiro 2026",
+      "fornecedor": "PAGAMENTO PIX 62218112000170 J E BANDEIRA DE MAT",
+      "valor": -13000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Gerente de Projetos"
+    },
+    {
+      "dtPgto": "27/02/2026",
+      "descricao": "Prestação de serviços mês fevereiro 2026",
+      "fornecedor": "PAGAMENTO PIX 59276258000168 59.276.258 JORDAN C",
+      "valor": -7700,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Analista Administrativo, Financeiro e Logística"
+    },
+    {
+      "dtPgto": "27/02/2026",
+      "descricao": "Prestação de serviços mês fevereiro 2026",
+      "fornecedor": "PAGAMENTO PIX 62010588000111 62 010 588 SIMONE P",
+      "valor": -3960,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Técnico Financeiro, Administrativo e Logística"
+    },
+    {
+      "dtPgto": "27/02/2026",
+      "descricao": "Prestação de serviços mês fevereiro 2026",
+      "fornecedor": "PAGAMENTO PIX 55501605287 NENEXIGA PARAKANA",
+      "valor": -6752,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Agente indígena"
+    },
+    {
+      "dtPgto": "27/02/2026",
+      "descricao": "prestação de serviços Janeiro e fevereiro",
+      "fornecedor": "PAGAMENTO PIX 51380794000105 IMANA SOCIOAMBIENTA",
+      "valor": -8800,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Coordenador Geral"
+    },
+    {
+      "dtPgto": "26/02/2026",
+      "descricao": "prestação de serviços advocatícios fevereiro",
+      "fornecedor": "PAGAMENTO PIX 27508463000115 Morais e Azanha Soc",
+      "valor": -5000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Consultor Jurídico (advogado - sob demanda)"
+    },
+    {
+      "dtPgto": "23/02/2026",
+      "descricao": "Venc: 27.02.2026 - R$ 590,22",
+      "fornecedor": "PAGAMENTO PIX 04895728000180 EQUATORIAL PARA DIS",
+      "valor": -590.22,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Manutenção do escritório: energia e internet"
+    },
+    {
+      "dtPgto": "18/02/2026",
+      "descricao": "Financeiro Tato'a AIT",
+      "fornecedor": "PAGAMENTO PIX SICREDI 28782251000194 AZEVEDO COM",
+      "valor": -336.12,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "11/02/2026",
+      "descricao": "",
+      "fornecedor": "PAGAMENTO PIX 02558157000162 TELEFONICA BRAS",
+      "valor": -99.99,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Manutenção do escritório: energia e internet"
+    },
+    {
+      "dtPgto": "11/02/2026",
+      "descricao": "serviços contábeis janeiro 2026",
+      "fornecedor": "PAGAMENTO PIX 38636232000103 SILVAS GESTAO EMPRE",
+      "valor": -1621,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Consultor Contábil (contador - sob demanda)"
+    },
+    {
+      "dtPgto": "11/02/2026",
+      "descricao": "prestação de serviços mês Janeiro 2026",
+      "fornecedor": "PAGAMENTO PIX 59276258000168 59.276.258 JORDAN C",
+      "valor": -7700,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Analista Administrativo, Financeiro e Logística"
+    },
+    {
+      "dtPgto": "10/02/2026",
+      "descricao": "TED 12300288000107 NORTE ENERGIA S A",
+      "fornecedor": "TED 12300288000107 NORTE ENERGIA S A",
+      "valor": 194934.82,
+      "movimento": "Entrada",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "10/02/2026",
+      "descricao": "TED 12300288000107 NORTE ENERGIA S A",
+      "fornecedor": "TED 12300288000107 NORTE ENERGIA S A",
+      "valor": 9000,
+      "movimento": "Entrada",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "10/02/2026",
+      "descricao": "Prestação de serviços mês de janeiro 2026",
+      "fornecedor": "PAGAMENTO PIX 55479847287 Marcio Parakana",
+      "valor": -6160,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Técnico de campo indígena"
+    },
+    {
+      "dtPgto": "10/02/2026",
+      "descricao": "Hospedagem : Paulo Bull 22/01 a 09/02",
+      "fornecedor": "PAGAMENTO PIX 05215027000115 AMAZON XINGU HOTEL",
+      "valor": -3718,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Hospedagem"
+    },
+    {
+      "dtPgto": "10/02/2026",
+      "descricao": "Prestação de serviços mês janeiro de 2026",
+      "fornecedor": "PAGAMENTO PIX 62010588000111 62 010 588 SIMONE P",
+      "valor": -3960,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Técnico Financeiro, Administrativo e Logística"
+    },
+    {
+      "dtPgto": "10/02/2026",
+      "descricao": "Taxa Sicredi",
+      "fornecedor": "CESTA DE RELACIONAMENTO",
+      "valor": -63.8,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Manutenção do escritório: energia e internet"
+    },
+    {
+      "dtPgto": "10/02/2026",
+      "descricao": "Prestação de serviços mês Janeiro 2026",
+      "fornecedor": "PAGAMENTO PIX 62218112000170 J E BANDEIRA DE MAT",
+      "valor": -13000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Gerente de Projetos"
+    },
+    {
+      "dtPgto": "14/01/2026",
+      "descricao": "Financeiro Tato'a AIT",
+      "fornecedor": "RECEBIMENTO PIX 62559249200 FABIANO PERILO CARVA",
+      "valor": 7000,
+      "movimento": "Entrada",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "14/01/2026",
+      "descricao": "pgto de locação de veículos",
+      "fornecedor": "PAGAMENTO PIX 09076307000140 CARVALHO GOMES & GO",
+      "valor": -7000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (frete de voadeira com piloto e combustível, locação de veículo com combustível)"
+    },
+    {
+      "dtPgto": "09/01/2026",
+      "descricao": "compra de material de expediente",
+      "fornecedor": "PAGAMENTO PIX 13610012000180 CAMPEIRO SUPERMERCA",
+      "valor": -28.15,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (alimentação)"
+    },
+    {
+      "dtPgto": "08/01/2026",
+      "descricao": "pgto de diarista",
+      "fornecedor": "PAGAMENTO PIX 00138453225 TEREZINHA DE JESUS RIB",
+      "valor": -150,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Diárias de limpeza e cozinha (prestação de serviços - RPA)"
+    },
+    {
+      "dtPgto": "07/01/2026",
+      "descricao": "Internet sede Tato'a",
+      "fornecedor": "PAGAMENTO PIX 02558157000162 TELEFONICA BRAS",
+      "valor": -99.99,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Manutenção do escritório: energia e internet"
+    },
+    {
+      "dtPgto": "07/01/2026",
+      "descricao": "Prestação de serviços - mês de dezembro 2025",
+      "fornecedor": "PAGAMENTO PIX 38636232000103 SILVAS GESTAO EMPRE",
+      "valor": -1518,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Consultor Contábil (contador - sob demanda)"
+    },
+    {
+      "dtPgto": "05/01/2026",
+      "descricao": "Taxa Sicredi",
+      "fornecedor": "CESTA DE RELACIONAMENTO",
+      "valor": -63.8,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Manutenção do escritório: energia e internet"
     }
   ]
 }
