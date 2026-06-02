@@ -1,19 +1,21 @@
 {
-  "geradoEm": "2026-06-01T22:16:30.239Z",
+  "geradoEm": "2026-06-02T13:31:34.964Z",
   "projeto": "Dabucury",
-  "saldo": -86803.17,
+  "filtroProjeto": "Dabucury",
+  "saldo": -86803.16999999998,
   "totalEntradas": 1527.55,
-  "totalSaidas": 88330.72,
+  "totalSaidas": 88330.71999999999,
   "totalLancamentos": 33,
   "porCaixa": {
-    "(sem caixa)": -86803.17
+    "Geral": -86803.16999999998
   },
   "porCategoria": {
-    "Gestão do Projeto": -46178.5,
-    "(sem categoria)": -16557.96,
-    "Mapeamento de áreas com potencial produtivo e coleta de produtos": -15626.79,
-    "Estruturação Base de Vigilância": -2864.92,
-    "Construção de estufa para secagem de amêndoas de cacau": -5575
+    "5. Despesas Administrativas": -7178.499999999999,
+    "(sem categoria)": -6557.96,
+    "2. Atividades/Eventos/Reuniões": -25626.79,
+    "1. Equipe do projeto": -39000,
+    "4. Máquinas, equipamentos e outros bens": -2864.92,
+    "3. Obras civis e instalações": -5575
   },
   "movimentacoes": [
     {
@@ -23,18 +25,22 @@
       "valor": -13500,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Gestão do Projeto"
+      "caixa": "Geral",
+      "rubrica": "1. Equipe do projeto",
+      "acao": "Gestão do Projeto",
+      "atividade": "Coordenador do Projeto"
     },
     {
       "dtPgto": "12/05/2026",
-      "descricao": "",
+      "descricao": "transferência entre contas da mesma titularidade",
       "fornecedor": "RECEBIMENTO PIX 20481744000182 ASSOCIACAO INDIGE",
       "valor": 892.04,
       "movimento": "Entrada",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "05/05/2026",
@@ -43,8 +49,10 @@
       "valor": -35.7,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Gestão do Projeto"
+      "caixa": "Geral",
+      "rubrica": "5. Despesas Administrativas",
+      "acao": "Gestão do Projeto",
+      "atividade": "Adesivos para o projeto"
     },
     {
       "dtPgto": "24/04/2026",
@@ -53,8 +61,10 @@
       "valor": -2450,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Construção de estufa para secagem de amêndoas de cacau"
+      "caixa": "Geral",
+      "rubrica": "3. Obras civis e instalações",
+      "acao": "Construção de estufa para secagem de amêndoas de cacau",
+      "atividade": "Materiais de construção e instalação"
     },
     {
       "dtPgto": "24/04/2026",
@@ -63,8 +73,10 @@
       "valor": -6000,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Gestão do Projeto"
+      "caixa": "Geral",
+      "rubrica": "1. Equipe do projeto",
+      "acao": "Gestão do Projeto",
+      "atividade": "Coordenador financeiro"
     },
     {
       "dtPgto": "06/04/2026",
@@ -73,8 +85,10 @@
       "valor": -35.7,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Gestão do Projeto"
+      "caixa": "Geral",
+      "rubrica": "5. Despesas Administrativas",
+      "acao": "Gestão do Projeto",
+      "atividade": "Adesivos para o projeto"
     },
     {
       "dtPgto": "26/03/2026",
@@ -83,8 +97,10 @@
       "valor": -2450,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Construção de estufa para secagem de amêndoas de cacau"
+      "caixa": "Geral",
+      "rubrica": "3. Obras civis e instalações",
+      "acao": "Construção de estufa para secagem de amêndoas de cacau",
+      "atividade": "Materiais de construção e instalação"
     },
     {
       "dtPgto": "05/03/2026",
@@ -93,8 +109,10 @@
       "valor": -35.7,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Gestão do Projeto"
+      "caixa": "Geral",
+      "rubrica": "5. Despesas Administrativas",
+      "acao": "Gestão do Projeto",
+      "atividade": "Adesivos para o projeto"
     },
     {
       "dtPgto": "02/03/2026",
@@ -103,8 +121,10 @@
       "valor": -675,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Construção de estufa para secagem de amêndoas de cacau"
+      "caixa": "Geral",
+      "rubrica": "3. Obras civis e instalações",
+      "acao": "Construção de estufa para secagem de amêndoas de cacau",
+      "atividade": "Materiais de construção e instalação"
     },
     {
       "dtPgto": "02/03/2026",
@@ -113,8 +133,10 @@
       "valor": -235.52,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Estruturação Base de Vigilância"
+      "caixa": "Geral",
+      "rubrica": "4. Máquinas, equipamentos e outros bens",
+      "acao": "Estruturação Base de Vigilância",
+      "atividade": "Starlink"
     },
     {
       "dtPgto": "26/02/2026",
@@ -123,8 +145,10 @@
       "valor": -466.06,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Estruturação Base de Vigilância"
+      "caixa": "Geral",
+      "rubrica": "4. Máquinas, equipamentos e outros bens",
+      "acao": "Estruturação Base de Vigilância",
+      "atividade": "Starlink"
     },
     {
       "dtPgto": "20/02/2026",
@@ -133,8 +157,10 @@
       "valor": -235.52,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Estruturação Base de Vigilância"
+      "caixa": "Geral",
+      "rubrica": "4. Máquinas, equipamentos e outros bens",
+      "acao": "Estruturação Base de Vigilância",
+      "atividade": "Starlink"
     },
     {
       "dtPgto": "19/02/2026",
@@ -143,8 +169,10 @@
       "valor": -800.26,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Estruturação Base de Vigilância"
+      "caixa": "Geral",
+      "rubrica": "4. Máquinas, equipamentos e outros bens",
+      "acao": "Estruturação Base de Vigilância",
+      "atividade": "Starlink"
     },
     {
       "dtPgto": "19/02/2026",
@@ -153,8 +181,10 @@
       "valor": -2836.99,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Mapeamento de áreas com potencial produtivo e coleta de produtos"
+      "caixa": "Geral",
+      "rubrica": "2. Atividades/Eventos/Reuniões",
+      "acao": "Mapeamento de áreas com potencial produtivo e coleta de produtos",
+      "atividade": "Gêneros alimentícios"
     },
     {
       "dtPgto": "18/02/2026",
@@ -163,8 +193,10 @@
       "valor": -185.48,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Estruturação Base de Vigilância"
+      "caixa": "Geral",
+      "rubrica": "4. Máquinas, equipamentos e outros bens",
+      "acao": "Estruturação Base de Vigilância",
+      "atividade": "Starlink"
     },
     {
       "dtPgto": "18/02/2026",
@@ -173,8 +205,10 @@
       "valor": -10000,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "caixa": "Geral",
+      "rubrica": "2. Atividades/Eventos/Reuniões",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
     },
     {
       "dtPgto": "13/02/2026",
@@ -183,8 +217,10 @@
       "valor": -235.52,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Estruturação Base de Vigilância"
+      "caixa": "Geral",
+      "rubrica": "4. Máquinas, equipamentos e outros bens",
+      "acao": "Estruturação Base de Vigilância",
+      "atividade": "Starlink"
     },
     {
       "dtPgto": "12/02/2026",
@@ -193,8 +229,10 @@
       "valor": -13500,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Gestão do Projeto"
+      "caixa": "Geral",
+      "rubrica": "1. Equipe do projeto",
+      "acao": "Gestão do Projeto",
+      "atividade": "Coordenador do Projeto"
     },
     {
       "dtPgto": "11/02/2026",
@@ -203,8 +241,10 @@
       "valor": -235.52,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Estruturação Base de Vigilância"
+      "caixa": "Geral",
+      "rubrica": "4. Máquinas, equipamentos e outros bens",
+      "acao": "Estruturação Base de Vigilância",
+      "atividade": "Starlink"
     },
     {
       "dtPgto": "10/02/2026",
@@ -213,8 +253,166 @@
       "valor": -471.04,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Estruturação Base de Vigilância"
+      "caixa": "Geral",
+      "rubrica": "4. Máquinas, equipamentos e outros bens",
+      "acao": "Estruturação Base de Vigilância",
+      "atividade": "Starlink"
+    },
+    {
+      "dtPgto": "09/02/2026",
+      "descricao": "Combustível apoia a safra Cacau e castanha",
+      "fornecedor": "PAGAMENTO PIX 44609340000190 CENTRO POSTO",
+      "valor": -4240,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "2. Atividades/Eventos/Reuniões",
+      "acao": "Mapeamento de áreas com potencial produtivo e coleta de produtos",
+      "atividade": "Combustível"
+    },
+    {
+      "dtPgto": "06/02/2026",
+      "descricao": "Consultoria técnica de protocolo de gestão",
+      "fornecedor": "PAGAMENTO PIX 35948995000100 35.948.995 BRUNNA S",
+      "valor": -7000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "5. Despesas Administrativas",
+      "acao": "Gestão do Projeto",
+      "atividade": "Consultoria Técnica"
+    },
+    {
+      "dtPgto": "05/02/2026",
+      "descricao": "Taxa Sicredi",
+      "fornecedor": "CESTA DE RELACIONAMENTO",
+      "valor": -35.7,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "5. Despesas Administrativas",
+      "acao": "Gestão do Projeto",
+      "atividade": "Adesivos para o projeto"
+    },
+    {
+      "dtPgto": "04/02/2026",
+      "descricao": "coordenador financeiro",
+      "fornecedor": "PAGAMENTO PIX 55501605287 NENEXIGA PARAKANA",
+      "valor": -6000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "1. Equipe do projeto",
+      "acao": "Gestão do Projeto",
+      "atividade": "Coordenador financeiro"
+    },
+    {
+      "dtPgto": "04/02/2026",
+      "descricao": "Combustível apoia a safra Cacau e castanha",
+      "fornecedor": "PAGAMENTO PIX SICREDI 19276857000167 L R DA PAZ",
+      "valor": -2351,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "2. Atividades/Eventos/Reuniões",
+      "acao": "Mapeamento de áreas com potencial produtivo e coleta de produtos",
+      "atividade": "Combustível"
+    },
+    {
+      "dtPgto": "02/02/2026",
+      "descricao": "pgto dre gêneros alimentícios",
+      "fornecedor": "PAGAMENTO PIX SICREDI 39663958000106 PREMIUM SUP",
+      "valor": -3121,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "2. Atividades/Eventos/Reuniões",
+      "acao": "Mapeamento de áreas com potencial produtivo e coleta de produtos",
+      "atividade": "Gêneros alimentícios"
+    },
+    {
+      "dtPgto": "28/01/2026",
+      "descricao": "PAGAMENTO PIX SICREDI 39663958000106 PREMIUM SUP",
+      "fornecedor": "PAGAMENTO PIX SICREDI 39663958000106 PREMIUM SUP",
+      "valor": -3077.8,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "2. Atividades/Eventos/Reuniões",
+      "acao": "Mapeamento de áreas com potencial produtivo e coleta de produtos",
+      "atividade": "Gêneros alimentícios"
+    },
+    {
+      "dtPgto": "27/01/2026",
+      "descricao": "Financeiro Tato'a AIT",
+      "fornecedor": "PAGAMENTO PIX 99117509220 Tatoraroa Parakana",
+      "valor": -350.34,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "27/01/2026",
+      "descricao": "Financeiro Tato'a AIT",
+      "fornecedor": "PAGAMENTO PIX 99117509220 Tatoraroa Parakana",
+      "valor": -285.17,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "27/01/2026",
+      "descricao": "Financeiro Tato'a AIT",
+      "fornecedor": "RECEBIMENTO PIX SICREDI 20481744000182 ASSOCIACA",
+      "valor": 635.51,
+      "movimento": "Entrada",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "26/01/2026",
+      "descricao": "Financeiro Tato'a AIT",
+      "fornecedor": "LIQUIDACAO BOLETO SICREDI 01951330000125 FERREIR",
+      "valor": -2450,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "26/01/2026",
+      "descricao": "Financeiro Tato'a AIT",
+      "fornecedor": "PAGAMENTO PIX 82518904204 Gilvan da Silva Lima",
+      "valor": -5000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "05/01/2026",
+      "descricao": "Taxa Sicredi",
+      "fornecedor": "CESTA DE RELACIONAMENTO",
+      "valor": -35.7,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "5. Despesas Administrativas",
+      "acao": "Gestão do Projeto",
+      "atividade": "Adesivos para o projeto"
     }
   ]
 }
