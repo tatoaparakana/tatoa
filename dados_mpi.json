@@ -1,15 +1,17 @@
 {
-  "geradoEm": "2026-06-08T19:14:56.434Z",
+  "geradoEm": "2026-06-08T19:40:34.892Z",
   "projeto": "MPI Mulheres",
+  "filtroProjeto": "MPI Mulheres",
   "saldo": -19675.1,
   "totalEntradas": 1000,
   "totalSaidas": 20675.1,
   "totalLancamentos": 30,
   "porCaixa": {
-    "(sem caixa)": -19675.1
+    "Geral": -19675.1
   },
   "porCategoria": {
-    "Fortalecimento do espaco Kania Arte Parakana": -19675.1
+    "Contratos": -16447,
+    "Infraestrutura": -3228.1
   },
   "movimentacoes": [
     {
@@ -19,8 +21,10 @@
       "valor": -1000,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Fortalecimento do espaco Kania Arte Parakana"
+      "caixa": "Geral",
+      "rubrica": "Contratos",
+      "acao": "Fortalecimento do espaco Kania Arte Parakana",
+      "atividade": "Pagamento de bolsa para artesa realizar gestao de artesanato (12 meses)"
     },
     {
       "dtPgto": "09/04/2026",
@@ -29,8 +33,10 @@
       "valor": -2277,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Fortalecimento do espaco Kania Arte Parakana"
+      "caixa": "Geral",
+      "rubrica": "Contratos",
+      "acao": "Fortalecimento do espaco Kania Arte Parakana",
+      "atividade": "Pagamento de bolsa para artesa realizar gestao de artesanato (12 meses)"
     },
     {
       "dtPgto": "07/04/2026",
@@ -39,8 +45,10 @@
       "valor": -1000,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Fortalecimento do espaco Kania Arte Parakana"
+      "caixa": "Geral",
+      "rubrica": "Contratos",
+      "acao": "Fortalecimento do espaco Kania Arte Parakana",
+      "atividade": "Pagamento de bolsa para artesa realizar gestao de artesanato (12 meses)"
     },
     {
       "dtPgto": "07/04/2026",
@@ -49,8 +57,10 @@
       "valor": -1000,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Fortalecimento do espaco Kania Arte Parakana"
+      "caixa": "Geral",
+      "rubrica": "Contratos",
+      "acao": "Fortalecimento do espaco Kania Arte Parakana",
+      "atividade": "Pagamento de bolsa para artesa realizar gestao de artesanato (12 meses)"
     },
     {
       "dtPgto": "07/04/2026",
@@ -59,8 +69,10 @@
       "valor": -1518,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Fortalecimento do espaco Kania Arte Parakana"
+      "caixa": "Geral",
+      "rubrica": "Contratos",
+      "acao": "Fortalecimento do espaco Kania Arte Parakana",
+      "atividade": "Pagamento de bolsa para artesa realizar gestao de artesanato (12 meses)"
     },
     {
       "dtPgto": "06/04/2026",
@@ -69,8 +81,10 @@
       "valor": -1000,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Fortalecimento do espaco Kania Arte Parakana"
+      "caixa": "Geral",
+      "rubrica": "Contratos",
+      "acao": "Fortalecimento do espaco Kania Arte Parakana",
+      "atividade": "Pagamento de bolsa para artesa realizar gestao de artesanato (12 meses)"
     },
     {
       "dtPgto": "04/04/2026",
@@ -79,8 +93,10 @@
       "valor": -500,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Fortalecimento do espaco Kania Arte Parakana"
+      "caixa": "Geral",
+      "rubrica": "Contratos",
+      "acao": "Fortalecimento do espaco Kania Arte Parakana",
+      "atividade": "Pagamento de bolsa para artesa realizar gestao de artesanato (12 meses)"
     },
     {
       "dtPgto": "02/04/2026",
@@ -89,8 +105,10 @@
       "valor": -500,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Fortalecimento do espaco Kania Arte Parakana"
+      "caixa": "Geral",
+      "rubrica": "Contratos",
+      "acao": "Fortalecimento do espaco Kania Arte Parakana",
+      "atividade": "Pagamento de bolsa para artesa realizar gestao de artesanato (12 meses)"
     },
     {
       "dtPgto": "01/04/2026",
@@ -99,8 +117,10 @@
       "valor": -150,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Fortalecimento do espaco Kania Arte Parakana"
+      "caixa": "Geral",
+      "rubrica": "Contratos",
+      "acao": "Fortalecimento do espaco Kania Arte Parakana",
+      "atividade": "Pagamento de bolsa para artesa realizar gestao de artesanato (12 meses)"
     },
     {
       "dtPgto": "18/03/2026",
@@ -109,8 +129,10 @@
       "valor": -500,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Fortalecimento do espaco Kania Arte Parakana"
+      "caixa": "Geral",
+      "rubrica": "Contratos",
+      "acao": "Fortalecimento do espaco Kania Arte Parakana",
+      "atividade": "Pagamento de bolsa para artesa realizar gestao de artesanato (12 meses)"
     },
     {
       "dtPgto": "18/03/2026",
@@ -119,8 +141,10 @@
       "valor": 500,
       "movimento": "Entrada",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Fortalecimento do espaco Kania Arte Parakana"
+      "caixa": "Geral",
+      "rubrica": "Contratos",
+      "acao": "Fortalecimento do espaco Kania Arte Parakana",
+      "atividade": "Pagamento de bolsa para artesa realizar gestao de artesanato (12 meses)"
     },
     {
       "dtPgto": "18/03/2026",
@@ -129,8 +153,10 @@
       "valor": -500,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Fortalecimento do espaco Kania Arte Parakana"
+      "caixa": "Geral",
+      "rubrica": "Contratos",
+      "acao": "Fortalecimento do espaco Kania Arte Parakana",
+      "atividade": "Pagamento de bolsa para artesa realizar gestao de artesanato (12 meses)"
     },
     {
       "dtPgto": "18/03/2026",
@@ -139,8 +165,10 @@
       "valor": -500,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Fortalecimento do espaco Kania Arte Parakana"
+      "caixa": "Geral",
+      "rubrica": "Contratos",
+      "acao": "Fortalecimento do espaco Kania Arte Parakana",
+      "atividade": "Pagamento de bolsa para artesa realizar gestao de artesanato (12 meses)"
     },
     {
       "dtPgto": "16/03/2026",
@@ -149,8 +177,10 @@
       "valor": -500,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Fortalecimento do espaco Kania Arte Parakana"
+      "caixa": "Geral",
+      "rubrica": "Contratos",
+      "acao": "Fortalecimento do espaco Kania Arte Parakana",
+      "atividade": "Pagamento de bolsa para artesa realizar gestao de artesanato (12 meses)"
     },
     {
       "dtPgto": "03/03/2026",
@@ -159,8 +189,10 @@
       "valor": -3228.1,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Fortalecimento do espaco Kania Arte Parakana"
+      "caixa": "Geral",
+      "rubrica": "Infraestrutura",
+      "acao": "Fortalecimento do espaco Kania Arte Parakana",
+      "atividade": "Aquisicao de materiais de escritorio (12 meses)"
     },
     {
       "dtPgto": "27/02/2026",
@@ -169,8 +201,10 @@
       "valor": -500,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Fortalecimento do espaco Kania Arte Parakana"
+      "caixa": "Geral",
+      "rubrica": "Contratos",
+      "acao": "Fortalecimento do espaco Kania Arte Parakana",
+      "atividade": "Pagamento de bolsa para artesa realizar gestao de artesanato (12 meses)"
     },
     {
       "dtPgto": "27/02/2026",
@@ -179,8 +213,10 @@
       "valor": -500,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Fortalecimento do espaco Kania Arte Parakana"
+      "caixa": "Geral",
+      "rubrica": "Contratos",
+      "acao": "Fortalecimento do espaco Kania Arte Parakana",
+      "atividade": "Pagamento de bolsa para artesa realizar gestao de artesanato (12 meses)"
     },
     {
       "dtPgto": "27/02/2026",
@@ -189,8 +225,10 @@
       "valor": -500,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Fortalecimento do espaco Kania Arte Parakana"
+      "caixa": "Geral",
+      "rubrica": "Contratos",
+      "acao": "Fortalecimento do espaco Kania Arte Parakana",
+      "atividade": "Pagamento de bolsa para artesa realizar gestao de artesanato (12 meses)"
     },
     {
       "dtPgto": "27/02/2026",
@@ -199,8 +237,10 @@
       "valor": -500,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Fortalecimento do espaco Kania Arte Parakana"
+      "caixa": "Geral",
+      "rubrica": "Contratos",
+      "acao": "Fortalecimento do espaco Kania Arte Parakana",
+      "atividade": "Pagamento de bolsa para artesa realizar gestao de artesanato (12 meses)"
     },
     {
       "dtPgto": "27/02/2026",
@@ -209,8 +249,130 @@
       "valor": -2,
       "movimento": "Saída",
       "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Fortalecimento do espaco Kania Arte Parakana"
+      "caixa": "Geral",
+      "rubrica": "Contratos",
+      "acao": "Fortalecimento do espaco Kania Arte Parakana",
+      "atividade": "Pagamento de bolsa para artesa realizar gestao de artesanato (12 meses)"
+    },
+    {
+      "dtPgto": "14/02/2026",
+      "descricao": "Pgto - referente Bolsa de estágio na Kania - Projeto das mulheres",
+      "fornecedor": "YWOAGIA PARAKANA",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "Contratos",
+      "acao": "Fortalecimento do espaco Kania Arte Parakana",
+      "atividade": "Pagamento de bolsa para artesa realizar gestao de artesanato (12 meses)"
+    },
+    {
+      "dtPgto": "14/02/2026",
+      "descricao": "Pgto - referente Bolsa de estágio na Kania - Projeto das mulheres",
+      "fornecedor": "Naoi Parakana",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "Contratos",
+      "acao": "Fortalecimento do espaco Kania Arte Parakana",
+      "atividade": "Pagamento de bolsa para artesa realizar gestao de artesanato (12 meses)"
+    },
+    {
+      "dtPgto": "14/02/2026",
+      "descricao": "Pgto - referente Bolsa de estágio na Kania - Projeto das mulheres",
+      "fornecedor": "Kaxapoga Parakana",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "Contratos",
+      "acao": "Fortalecimento do espaco Kania Arte Parakana",
+      "atividade": "Pagamento de bolsa para artesa realizar gestao de artesanato (12 meses)"
+    },
+    {
+      "dtPgto": "14/02/2026",
+      "descricao": "Pgto - referente Bolsa de estágio na Kania - Projeto das mulheres",
+      "fornecedor": "Xogoa Parakana",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "Contratos",
+      "acao": "Fortalecimento do espaco Kania Arte Parakana",
+      "atividade": "Pagamento de bolsa para artesa realizar gestao de artesanato (12 meses)"
+    },
+    {
+      "dtPgto": "14/02/2026",
+      "descricao": "Pgto - referente Bolsa de estágio na Kania - Projeto das mulheres",
+      "fornecedor": "Estorno de",
+      "valor": 500,
+      "movimento": "Entrada",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "Contratos",
+      "acao": "Fortalecimento do espaco Kania Arte Parakana",
+      "atividade": "Pagamento de bolsa para artesa realizar gestao de artesanato (12 meses)"
+    },
+    {
+      "dtPgto": "14/02/2026",
+      "descricao": "Pgto - referente Bolsa de estágio na Kania - Projeto das mulheres (Poxira pago no pix do Xogoa)",
+      "fornecedor": "Xogoa Parakana",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "Contratos",
+      "acao": "Fortalecimento do espaco Kania Arte Parakana",
+      "atividade": "Pagamento de bolsa para artesa realizar gestao de artesanato (12 meses)"
+    },
+    {
+      "dtPgto": "15/01/2026",
+      "descricao": "Pgto - referente Bolsa de estágio na Kania projeto das Mulheres",
+      "fornecedor": "Kaxapoga Parakana",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "Contratos",
+      "acao": "Fortalecimento do espaco Kania Arte Parakana",
+      "atividade": "Pagamento de bolsa para artesa realizar gestao de artesanato (12 meses)"
+    },
+    {
+      "dtPgto": "15/01/2026",
+      "descricao": "Pgto - referente Bolsa de estágio na Kania, projeto das Mulheres - Poxira",
+      "fornecedor": "Xogoa Parakana",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "Contratos",
+      "acao": "Fortalecimento do espaco Kania Arte Parakana",
+      "atividade": "Pagamento de bolsa para artesa realizar gestao de artesanato (12 meses)"
+    },
+    {
+      "dtPgto": "15/01/2026",
+      "descricao": "Pgto - referente Bolsa de estágio na Kania, projeto das Mulheres",
+      "fornecedor": "Naoi Parakana",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "Contratos",
+      "acao": "Fortalecimento do espaco Kania Arte Parakana",
+      "atividade": "Pagamento de bolsa para artesa realizar gestao de artesanato (12 meses)"
+    },
+    {
+      "dtPgto": "15/01/2026",
+      "descricao": "Pgto - referente Bolsa de estágio na Kania, projeto das Mulheres",
+      "fornecedor": "YWOAGIA PARAKANA",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "Contratos",
+      "acao": "Fortalecimento do espaco Kania Arte Parakana",
+      "atividade": "Pagamento de bolsa para artesa realizar gestao de artesanato (12 meses)"
     }
   ]
 }
