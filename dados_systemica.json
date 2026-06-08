@@ -1,20 +1,151 @@
 {
-  "geradoEm": "2026-06-08T11:43:22.071Z",
+  "geradoEm": "2026-06-08T12:43:22.510Z",
   "projeto": "Systemica - Antecipação",
-  "saldo": 66632.51,
+  "saldo": 50598.95,
   "totalEntradas": 430032.49,
-  "totalSaidas": 363399.98,
-  "totalLancamentos": 222,
+  "totalSaidas": 379433.54,
+  "totalLancamentos": 236,
   "porCaixa": {
-    "(sem caixa)": 66632.51
+    "(sem caixa)": 50598.95
   },
   "porCategoria": {
     "Governanca": -160495.09,
-    "(sem categoria)": 400561.28,
+    "(sem categoria)": 391763.24,
     "Meio Ambiente": -83433.68,
-    "Renda": -90000
+    "Renda": -90000,
+    "Gestão do Projeto": -7235.52
   },
   "movimentacoes": [
+    {
+      "dtPgto": "05/06/2026",
+      "descricao": "",
+      "fornecedor": "PAGAMENTO PIX 59276258000168 59.276.258 JORDAN C",
+      "valor": -3000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "05/06/2026",
+      "descricao": "",
+      "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
+      "valor": -235.52,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "03/06/2026",
+      "descricao": "",
+      "fornecedor": "PAGAMENTO PIX 62218112000170 J E BANDEIRA DE MAT",
+      "valor": -2000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "03/06/2026",
+      "descricao": "",
+      "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
+      "valor": -235.52,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "02/06/2026",
+      "descricao": "Pgto comissão Parakanã mês de junho",
+      "fornecedor": "PAGAMENTO PIX 55624880278 MOXEIA PARAKANA",
+      "valor": -1000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "Gestão do Projeto"
+    },
+    {
+      "dtPgto": "02/06/2026",
+      "descricao": "",
+      "fornecedor": "PAGAMENTO PIX 62010588000111 62 010 588 SIMONE P",
+      "valor": -2500,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "01/06/2026",
+      "descricao": "Mensalidade Starlink",
+      "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZI",
+      "valor": -235.52,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "Gestão do Projeto"
+    },
+    {
+      "dtPgto": "01/06/2026",
+      "descricao": "Fortalecimento da Reocupação",
+      "fornecedor": "PAGAMENTO PIX 39663958000106 PREMIUM SUPERMERCAD",
+      "valor": -1000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "Gestão do Projeto"
+    },
+    {
+      "dtPgto": "01/06/2026",
+      "descricao": "Pgto comissão Parakanã mês de junho",
+      "fornecedor": "PAGAMENTO PIX 55501605287 NENEXIGA PARAKANA",
+      "valor": -1000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "Gestão do Projeto"
+    },
+    {
+      "dtPgto": "01/06/2026",
+      "descricao": "Pgto comissão Parakanã mês de junho",
+      "fornecedor": "PAGAMENTO PIX 53829905220 Wenatoa Parakana",
+      "valor": -1000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "Gestão do Projeto"
+    },
+    {
+      "dtPgto": "01/06/2026",
+      "descricao": "Pgto comissão Parakanã mês de junho",
+      "fornecedor": "PAGAMENTO PIX 55500587234 AWAPEWA PARAKANA",
+      "valor": -1000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "Gestão do Projeto"
+    },
+    {
+      "dtPgto": "01/06/2026",
+      "descricao": "Pgto comissão Parakanã mês de junho",
+      "fornecedor": "PAGAMENTO PIX 55536034200 Inara Parakana",
+      "valor": -1000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "Gestão do Projeto"
+    },
+    {
+      "dtPgto": "01/06/2026",
+      "descricao": "Pgto comissão Parakanã mês de junho",
+      "fornecedor": "PAGAMENTO PIX 01381669271 Ty e Parakana",
+      "valor": -1000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "Gestão do Projeto"
+    },
     {
       "dtPgto": "28/05/2026",
       "descricao": "Mensalidade Starlink",
@@ -84,136 +215,6 @@
       "status": "",
       "caixa": "(sem caixa)",
       "categoria": "Meio Ambiente"
-    },
-    {
-      "dtPgto": "11/05/2026",
-      "descricao": "pagamento conserto carro tato'a (josias)",
-      "fornecedor": "LIQUIDACAO BOLETO 01338388000106 RAJA RENT A CAR",
-      "valor": -5313.23,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Meio Ambiente"
-    },
-    {
-      "dtPgto": "08/05/2026",
-      "descricao": "Financeiro Tato'a AIT",
-      "fornecedor": "PAGAMENTO PIX 42020136000103 CASA DO LAVADOR",
-      "valor": -90,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "08/05/2026",
-      "descricao": "apoio Logístico retorno de agendas em ATM",
-      "fornecedor": "PAGAMENTO PIX 28782251000194 AZEVEDO COMERCIO VA",
-      "valor": -2376.5,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Governanca"
-    },
-    {
-      "dtPgto": "08/05/2026",
-      "descricao": "Apoio Logístico - agendas em ATM",
-      "fornecedor": "PAGAMENTO PIX 59446451000108 JULIANA SANTOS EMBA",
-      "valor": -600,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Governanca"
-    },
-    {
-      "dtPgto": "07/05/2026",
-      "descricao": "ogto Bolsa comissão Parakanã mês de junho",
-      "fornecedor": "PAGAMENTO PIX 52618145291 MAMA PARAKANA",
-      "valor": -1000,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Governanca"
-    },
-    {
-      "dtPgto": "07/05/2026",
-      "descricao": "Pgto Bolsa da comissão Parakanã mês maio",
-      "fornecedor": "PAGAMENTO PIX 53829905220 Wenatoa Parakana",
-      "valor": -1000,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Governanca"
-    },
-    {
-      "dtPgto": "06/05/2026",
-      "descricao": "40154884000153",
-      "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
-      "valor": -471.04,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Meio Ambiente"
-    },
-    {
-      "dtPgto": "06/05/2026",
-      "descricao": "Ajuda de custo agendas em ATM de 5 a 07 de maio",
-      "fornecedor": "PAGAMENTO PIX 53829905220 Wenatoa Parakana",
-      "valor": -450,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Governanca"
-    },
-    {
-      "dtPgto": "06/05/2026",
-      "descricao": "Ajuda de custo agendas em ATM de 5 a 07 de maio",
-      "fornecedor": "PAGAMENTO PIX 55628796204 Koxawewoxa Parakana",
-      "valor": -450,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Governanca"
-    },
-    {
-      "dtPgto": "05/05/2026",
-      "descricao": "Fortalecimento da Reocupação",
-      "fornecedor": "PAGAMENTO PIX 09404556000118 SUPERMERCADO TOCANT",
-      "valor": -2514.18,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Meio Ambiente"
-    },
-    {
-      "dtPgto": "05/05/2026",
-      "descricao": "taxa bancária",
-      "fornecedor": "CESTA DE RELACIONAMENTO",
-      "valor": -63.8,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Governanca"
-    },
-    {
-      "dtPgto": "05/05/2026",
-      "descricao": "Prestação de serviços mês de abril 2026",
-      "fornecedor": "PAGAMENTO PIX 62218112000170 J E BANDEIRA DE MAT",
-      "valor": -2000,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Governanca"
-    },
-    {
-      "dtPgto": "05/05/2026",
-      "descricao": "Prestação de serviços mês de abril 2026",
-      "fornecedor": "PAGAMENTO PIX 62010588000111 62 010 588 SIMONE P",
-      "valor": -1100,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Governanca"
     }
   ]
 }
