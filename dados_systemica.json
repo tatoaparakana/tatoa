@@ -1,60 +1,82 @@
 {
-  "geradoEm": "2026-06-08T12:43:22.510Z",
+  "geradoEm": "2026-06-08T13:43:21.714Z",
   "projeto": "Systemica - Antecipação",
-  "saldo": 50598.95,
+  "saldo": 50535.15,
   "totalEntradas": 430032.49,
-  "totalSaidas": 379433.54,
-  "totalLancamentos": 236,
+  "totalSaidas": 379497.34,
+  "totalLancamentos": 237,
   "porCaixa": {
-    "(sem caixa)": 50598.95
+    "(sem caixa)": 50535.15
   },
   "porCategoria": {
     "Governanca": -160495.09,
-    "(sem categoria)": 391763.24,
+    "(sem categoria)": 399734.28,
     "Meio Ambiente": -83433.68,
     "Renda": -90000,
-    "Gestão do Projeto": -7235.52
+    "Gestão do Projeto": -7706.56,
+    "Governança": -7500,
+    "Gestão de Progetos": -63.8
   },
   "movimentacoes": [
     {
       "dtPgto": "05/06/2026",
-      "descricao": "",
+      "descricao": "Prestação de serviços - mês de maio 2026",
       "fornecedor": "PAGAMENTO PIX 59276258000168 59.276.258 JORDAN C",
       "valor": -3000,
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Governança"
     },
     {
       "dtPgto": "05/06/2026",
-      "descricao": "",
+      "descricao": "Mensalidade Starlink",
       "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
       "valor": -235.52,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "Gestão do Projeto"
+    },
+    {
+      "dtPgto": "05/06/2026",
+      "descricao": "Fortalecimento da Reocupação",
+      "fornecedor": "PAGAMENTO PIX 15496840000164 F. R. A. DA SILVA C",
+      "valor": -827,
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
       "categoria": "(sem categoria)"
     },
     {
+      "dtPgto": "05/06/2026",
+      "descricao": "Taxa Sicredi",
+      "fornecedor": "CESTA DE RELACIONAMENTO",
+      "valor": -63.8,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "Gestão de Progetos"
+    },
+    {
       "dtPgto": "03/06/2026",
-      "descricao": "",
+      "descricao": "Prestação de serviços - mês de maio 2026",
       "fornecedor": "PAGAMENTO PIX 62218112000170 J E BANDEIRA DE MAT",
       "valor": -2000,
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Governança"
     },
     {
       "dtPgto": "03/06/2026",
-      "descricao": "",
+      "descricao": "Mensalidade Starlink",
       "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
       "valor": -235.52,
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Gestão do Projeto"
     },
     {
       "dtPgto": "02/06/2026",
@@ -68,13 +90,13 @@
     },
     {
       "dtPgto": "02/06/2026",
-      "descricao": "",
+      "descricao": "Prestação de serviços - mês de maio 2026",
       "fornecedor": "PAGAMENTO PIX 62010588000111 62 010 588 SIMONE P",
       "valor": -2500,
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Governança"
     },
     {
       "dtPgto": "01/06/2026",
@@ -191,26 +213,6 @@
       "descricao": "Mensalidade - Aldeia Ywyete",
       "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
       "valor": -190,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Meio Ambiente"
-    },
-    {
-      "dtPgto": "15/05/2026",
-      "descricao": "Hospedagem- comissão Parakanã",
-      "fornecedor": "PAGAMENTO PIX 06236230000130 PALACE HOTEL",
-      "valor": -3699,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Meio Ambiente"
-    },
-    {
-      "dtPgto": "11/05/2026",
-      "descricao": "40154884000153",
-      "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
-      "valor": -235.52,
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
