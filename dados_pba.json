@@ -1,21 +1,116 @@
 {
-  "geradoEm": "2026-06-08T19:46:26.503Z",
+  "geradoEm": "2026-06-18T13:02:23.508Z",
   "projeto": "PBA",
   "filtroProjeto": "PBA",
-  "saldo": 117670.15000000008,
-  "totalEntradas": 372070.04000000004,
-  "totalSaidas": 254399.88999999996,
-  "totalLancamentos": 105,
+  "saldo": -49955.03999999995,
+  "totalEntradas": 210934.82,
+  "totalSaidas": 260889.85999999996,
+  "totalLancamentos": 112,
   "porCaixa": {
-    "Geral": 117670.15000000001
+    "Geral": -49955.039999999986
   },
   "porCategoria": {
-    "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO": -41537.420000000006,
-    "MÃO-DE-OBRA (COM ENCARGOS)": -205487,
-    "(sem categoria)": 364844.57,
-    "Custo Operacional": -150
+    "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO": -50046.22000000001,
+    "MÃO-DE-OBRA (COM ENCARGOS)": -205937,
+    "(sem categoria)": 206028.18000000002
   },
   "movimentacoes": [
+    {
+      "dtPgto": "13/06/2026",
+      "descricao": "Apoio a visita do plano de segurança TI APYTEREWA",
+      "fornecedor": "PAGAMENTO PIX 22121734000161 AUTO POSTO PATRONO",
+      "valor": -380.07,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "10/06/2026",
+      "descricao": "Prestação de serviços contábeis mês de maio",
+      "fornecedor": "PAGAMENTO PIX 38636232000103 SILVAS GESTAO EMPRE",
+      "valor": -1620,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "10/06/2026",
+      "descricao": "Conta vivo internet mês de junho",
+      "fornecedor": "PAGAMENTO PIX 02558157000162 TELEFONICA BRAS",
+      "valor": -99.99,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "10/06/2026",
+      "descricao": "Apoio a visita do plano de segurança TI APYTEREWA",
+      "fornecedor": "PAGAMENTO PIX 19276857000167 L R DA PAZ & CIA LT",
+      "valor": -856,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "09/06/2026",
+      "descricao": "Acomp. ao plano de segurança no TI APYTEREWA",
+      "fornecedor": "PAGAMENTO PIX 78177871234 JOSE EMILIO BANDEIRA D",
+      "valor": -2000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Hospedagem"
+    },
+    {
+      "dtPgto": "09/06/2026",
+      "descricao": "Apoio a visita do plano de segurança TI APYTEREWA",
+      "fornecedor": "PAGAMENTO PIX 55990096000174 POSTO COPA 2002",
+      "valor": -485,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "08/06/2026",
+      "descricao": "Oficina Transmissão de Saberes",
+      "fornecedor": "PAGAMENTO PIX 08116338000387 P GONCALVES DE LIMA",
+      "valor": -775.91,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
+    {
+      "dtPgto": "08/06/2026",
+      "descricao": "Reembolso Emílio visita técnica",
+      "fornecedor": "PAGAMENTO PIX 78177871234 JOSE EMILIO BANDEIRA D",
+      "valor": -273,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "Geral",
+      "rubrica": "(sem categoria)",
+      "acao": "(sem categoria)",
+      "atividade": "(sem categoria)"
+    },
     {
       "dtPgto": "05/06/2026",
       "descricao": "desloc. indígenas Oficina Transmissão de Sabere",
@@ -24,9 +119,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Taxi"
     },
     {
       "dtPgto": "05/06/2026",
@@ -36,9 +131,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "Gestão de Progetos",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Manutenção do escritório: energia e internet"
     },
     {
       "dtPgto": "05/06/2026",
@@ -48,9 +143,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "MÃO-DE-OBRA (COM ENCARGOS)",
+      "acao": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)",
+      "atividade": "Consultor Especialista (sob demanda)"
     },
     {
       "dtPgto": "05/06/2026",
@@ -60,9 +155,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Atividades de Campo (frete de voadeira com piloto e combustível, locação de veículo com combustível)"
     },
     {
       "dtPgto": "01/06/2026",
@@ -72,21 +167,9 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "Geral",
-      "rubrica": "Custo Operacional",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
-    },
-    {
-      "dtPgto": "29/05/2026",
-      "descricao": "TED 12300288000107 NORTE ENERGIA S A",
-      "fornecedor": "",
-      "valor": 161135.22,
-      "movimento": "Entrada",
-      "status": "",
-      "caixa": "Geral",
-      "rubrica": "(sem categoria)",
-      "acao": "(sem categoria)",
-      "atividade": "(sem categoria)"
+      "rubrica": "CUSTO OPERACIONAL E DESPESA DE SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "acao": "SUPORTE LOGÍSTICO E ADMINISTRATIVO",
+      "atividade": "Diárias de limpeza e cozinha (prestação de serviços - RPA)"
     },
     {
       "dtPgto": "28/05/2026",
