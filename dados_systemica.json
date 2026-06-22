@@ -1,21 +1,41 @@
 {
-  "geradoEm": "2026-06-22T10:43:22.927Z",
+  "geradoEm": "2026-06-22T11:43:23.546Z",
   "projeto": "Systemica - Antecipação",
-  "saldo": 40222.61,
+  "saldo": 32022.61,
   "totalEntradas": 430032.49,
-  "totalSaidas": 389809.88,
-  "totalLancamentos": 241,
+  "totalSaidas": 398009.88,
+  "totalLancamentos": 243,
   "porCaixa": {
-    "(sem caixa)": 40222.61
+    "(sem caixa)": 32022.61
   },
   "porCategoria": {
     "Governanca": -160495.09,
-    "(sem categoria)": 380386.9,
+    "(sem categoria)": 372186.9,
     "Meio Ambiente": -83433.68,
     "Renda": -90000,
     "Gestão do Projeto": -6235.52
   },
   "movimentacoes": [
+    {
+      "dtPgto": "19/06/2026",
+      "descricao": "Assessoria de campo meses de fevereiro e março",
+      "fornecedor": "PAGAMENTO PIX 03791559230 Josias Nascimento Sant",
+      "valor": -7200,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "15/06/2026",
+      "descricao": "Fortalecimento da Reocupação",
+      "fornecedor": "PAGAMENTO PIX 39663958000106 PREMIUM SUPERMERCAD",
+      "valor": -1000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
     {
       "dtPgto": "11/06/2026",
       "descricao": "Bolsa comissão Parakanã mês de julho",
@@ -195,26 +215,6 @@
       "status": "",
       "caixa": "(sem caixa)",
       "categoria": "Gestão do Projeto"
-    },
-    {
-      "dtPgto": "01/06/2026",
-      "descricao": "Pgto comissão Parakanã mês de junho",
-      "fornecedor": "PAGAMENTO PIX 01381669271 Ty e Parakana",
-      "valor": -1000,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Gestão do Projeto"
-    },
-    {
-      "dtPgto": "28/05/2026",
-      "descricao": "Mensalidade Starlink",
-      "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
-      "valor": -235.52,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Governanca"
     }
   ]
 }
