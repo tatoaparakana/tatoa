@@ -1,16 +1,16 @@
 {
-  "geradoEm": "2026-07-14T13:43:22.802Z",
+  "geradoEm": "2026-07-14T14:43:22.166Z",
   "projeto": "Systemica - Antecipação",
-  "saldo": 31273.29,
-  "totalEntradas": 430503.53,
-  "totalSaidas": 399230.24,
+  "saldo": 30331.21,
+  "totalEntradas": 430032.49,
+  "totalSaidas": 399701.28,
   "totalLancamentos": 250,
   "porCaixa": {
-    "(sem caixa)": 31273.29
+    "(sem caixa)": 30331.21
   },
   "porCategoria": {
     "Governanca": -160495.09,
-    "(sem categoria)": 371437.58,
+    "(sem categoria)": 370495.5,
     "Meio Ambiente": -83433.68,
     "Renda": -90000,
     "Gestão do Projeto": -6235.52
@@ -18,17 +18,17 @@
   "movimentacoes": [
     {
       "dtPgto": "08/07/2026",
-      "descricao": "",
+      "descricao": "Mensalidade starlink Centro Parakanã",
       "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
-      "valor": 471.04,
-      "movimento": "Entrada",
+      "valor": -471.04,
+      "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
       "categoria": "(sem categoria)"
     },
     {
       "dtPgto": "06/07/2026",
-      "descricao": "",
+      "descricao": "Mensalidade de Starlink",
       "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
       "valor": -235.52,
       "movimento": "Saída",
@@ -38,7 +38,7 @@
     },
     {
       "dtPgto": "06/07/2026",
-      "descricao": "",
+      "descricao": "Mensalidade de Starlink",
       "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
       "valor": -471.04,
       "movimento": "Saída",
@@ -48,7 +48,7 @@
     },
     {
       "dtPgto": "06/07/2026",
-      "descricao": "",
+      "descricao": "Pgto serviço de tradução na Assembleia Apyterewa",
       "fornecedor": "PAGAMENTO PIX 55501605287 NENEXIGA PARAKANA",
       "valor": -150,
       "movimento": "Saída",
@@ -58,7 +58,7 @@
     },
     {
       "dtPgto": "06/07/2026",
-      "descricao": "",
+      "descricao": "Pgto serviço de tradução na Assembleia Apyterewa",
       "fornecedor": "PAGAMENTO PIX 04006819196 xokarowara parakana",
       "valor": -150,
       "movimento": "Saída",
@@ -68,7 +68,7 @@
     },
     {
       "dtPgto": "06/07/2026",
-      "descricao": "",
+      "descricao": "Pgto serviço de tradução na Assembleia Apyterewa",
       "fornecedor": "PAGAMENTO PIX 01381669271 Ty e Parakana",
       "valor": -150,
       "movimento": "Saída",
@@ -78,7 +78,7 @@
     },
     {
       "dtPgto": "06/07/2026",
-      "descricao": "",
+      "descricao": "Taxa Sicredi",
       "fornecedor": "CESTA DE RELACIONAMENTO",
       "valor": -63.8,
       "movimento": "Saída",
