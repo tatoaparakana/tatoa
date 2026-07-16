@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-16T14:43:23.319Z",
+  "geradoEm": "2026-07-16T15:43:23.443Z",
   "projeto": "Systemica - Antecipação",
   "saldo": 30331.21,
   "totalEntradas": 430032.49,
@@ -9,11 +9,10 @@
     "(sem caixa)": 30331.21
   },
   "porCategoria": {
-    "Governanca": -173209.57,
-    "(sem categoria)": 380565.18,
-    "Meio Ambiente": -86024.4,
-    "Renda": -90000,
-    "Gestão do Projeto": -1000
+    "Governanca": -182473.37,
+    "(sem categoria)": 398557.48,
+    "Meio Ambiente": -95752.9,
+    "Renda": -90000
   },
   "movimentacoes": [
     {
@@ -84,7 +83,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Governanca"
     },
     {
       "dtPgto": "19/06/2026",
@@ -94,7 +93,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Governanca"
     },
     {
       "dtPgto": "15/06/2026",
@@ -104,7 +103,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Meio Ambiente"
     },
     {
       "dtPgto": "11/06/2026",
@@ -118,7 +117,7 @@
     },
     {
       "dtPgto": "08/06/2026",
-      "descricao": "Pgto 194kg Cacau seco - Pytoara",
+      "descricao": "Pgto 194kg Cacau seco - Pytoara (financeiro@tatoaparakana.com confirmar se tá certo)",
       "fornecedor": "PAGAMENTO PIX 55504922291 KAWOWE PARAKANA",
       "valor": -1940,
       "movimento": "Saída",
@@ -144,7 +143,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Meio Ambiente"
     },
     {
       "dtPgto": "05/06/2026",
@@ -174,7 +173,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Meio Ambiente"
     },
     {
       "dtPgto": "05/06/2026",
@@ -194,7 +193,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Governanca"
     },
     {
       "dtPgto": "03/06/2026",
