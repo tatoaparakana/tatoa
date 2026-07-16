@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-16T12:43:25.267Z",
+  "geradoEm": "2026-07-16T13:43:23.151Z",
   "projeto": "Systemica - Antecipação",
   "saldo": 30331.21,
   "totalEntradas": 430032.49,
@@ -9,11 +9,11 @@
     "(sem caixa)": 30331.21
   },
   "porCategoria": {
-    "Governanca": -160495.09,
-    "(sem categoria)": 370495.5,
-    "Meio Ambiente": -83433.68,
+    "Governanca": -173209.57,
+    "(sem categoria)": 380565.18,
+    "Meio Ambiente": -86024.4,
     "Renda": -90000,
-    "Gestão do Projeto": -6235.52
+    "Gestão do Projeto": -1000
   },
   "movimentacoes": [
     {
@@ -24,7 +24,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Meio Ambiente"
     },
     {
       "dtPgto": "06/07/2026",
@@ -34,7 +34,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Meio Ambiente"
     },
     {
       "dtPgto": "06/07/2026",
@@ -44,7 +44,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Meio Ambiente"
     },
     {
       "dtPgto": "06/07/2026",
@@ -54,7 +54,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Governanca"
     },
     {
       "dtPgto": "06/07/2026",
@@ -64,7 +64,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Governanca"
     },
     {
       "dtPgto": "06/07/2026",
@@ -74,7 +74,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Governanca"
     },
     {
       "dtPgto": "06/07/2026",
@@ -114,7 +114,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Governanca"
     },
     {
       "dtPgto": "08/06/2026",
@@ -134,7 +134,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Meio Ambiente"
     },
     {
       "dtPgto": "08/06/2026",
@@ -154,7 +154,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Governanca"
     },
     {
       "dtPgto": "05/06/2026",
@@ -164,7 +164,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Meio Ambiente"
     },
     {
       "dtPgto": "05/06/2026",
@@ -204,7 +204,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Meio Ambiente"
     },
     {
       "dtPgto": "02/06/2026",
@@ -214,7 +214,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
+      "categoria": "Governanca"
     }
   ]
 }
