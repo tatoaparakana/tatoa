@@ -1,16 +1,16 @@
 {
-  "geradoEm": "2026-07-17T12:13:32.977Z",
+  "geradoEm": "2026-07-17T15:59:19.116Z",
   "projeto": "PBA",
-  "saldo": 88137.1,
+  "saldo": 18230.1,
   "totalEntradas": 372070.04,
-  "totalSaidas": 283932.94,
-  "totalLancamentos": 128,
+  "totalSaidas": 353839.94,
+  "totalLancamentos": 142,
   "porCaixa": {
-    "(sem caixa)": 88137.1
+    "(sem caixa)": 18230.1
   },
   "porCategoria": {
-    "SUPORTE LOGÍSTICO E ADMINISTRATIVO": -63441.36,
-    "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)": -219299,
+    "SUPORTE LOGÍSTICO E ADMINISTRATIVO": -95736.36,
+    "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)": -256911,
     "(sem categoria)": 371653.37,
     "Materiais e serviços diversos para atividades do PFI e PGTI": -775.91
   },
@@ -166,54 +166,54 @@
       "categoria": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)"
     },
     {
-      "dtPgto": "13/06/2026",
-      "descricao": "Apoio a visita do plano de segurança TI APYTEREWA",
-      "fornecedor": "PAGAMENTO PIX 22121734000161 AUTO POSTO PATRONO",
-      "valor": -380.07,
+      "dtPgto": "26/06/2026",
+      "descricao": "Apoio atividades PBA- CI",
+      "fornecedor": "PAGAMENTO PIX 07998440000129 DISTRIBUIDORA DE GA",
+      "valor": -375,
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
       "categoria": "SUPORTE LOGÍSTICO E ADMINISTRATIVO"
     },
     {
-      "dtPgto": "10/06/2026",
-      "descricao": "Prestação de serviços contábeis mês de maio",
-      "fornecedor": "PAGAMENTO PIX 38636232000103 SILVAS GESTAO EMPRE",
-      "valor": -1620,
+      "dtPgto": "26/06/2026",
+      "descricao": "Apoio atividades PBA- CI",
+      "fornecedor": "PAGAMENTO PIX 08116338000387 P GONCALVES DE LIMA",
+      "valor": -565.38,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "SUPORTE LOGÍSTICO E ADMINISTRATIVO"
+    },
+    {
+      "dtPgto": "26/06/2026",
+      "descricao": "Apoio atividades PBA- CI",
+      "fornecedor": "PAGAMENTO PIX 40723825000159 ALTA GELO",
+      "valor": -56,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "SUPORTE LOGÍSTICO E ADMINISTRATIVO"
+    },
+    {
+      "dtPgto": "26/06/2026",
+      "descricao": "Prestação de serviços mês de junho",
+      "fornecedor": "PAGAMENTO PIX 59276258000168 59.276.258 JORDAN C",
+      "valor": -7700,
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
       "categoria": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)"
     },
     {
-      "dtPgto": "10/06/2026",
-      "descricao": "Conta vivo internet mês de junho",
-      "fornecedor": "PAGAMENTO PIX 02558157000162 TELEFONICA BRAS",
-      "valor": -99.99,
+      "dtPgto": "26/06/2026",
+      "descricao": "Prestação de serviços mês de junho",
+      "fornecedor": "PAGAMENTO PIX 62010588000111 62 010 588 SIMONE P",
+      "valor": -4000,
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "SUPORTE LOGÍSTICO E ADMINISTRATIVO"
-    },
-    {
-      "dtPgto": "10/06/2026",
-      "descricao": "Apoio a visita do plano de segurança TI APYTEREWA",
-      "fornecedor": "PAGAMENTO PIX 19276857000167 L R DA PAZ & CIA LT",
-      "valor": -856,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "SUPORTE LOGÍSTICO E ADMINISTRATIVO"
-    },
-    {
-      "dtPgto": "09/06/2026",
-      "descricao": "Acomp. ao plano de segurança no TI APYTEREWA",
-      "fornecedor": "PAGAMENTO PIX 78177871234 JOSE EMILIO BANDEIRA D",
-      "valor": -2000,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "SUPORTE LOGÍSTICO E ADMINISTRATIVO"
+      "categoria": "CUSTO - MÃO-DE-OBRA (COM ENCARGOS)"
     }
   ]
 }
