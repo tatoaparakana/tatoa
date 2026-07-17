@@ -1,25 +1,26 @@
 {
-  "geradoEm": "2026-07-17T12:13:41.705Z",
+  "geradoEm": "2026-07-17T15:59:25.272Z",
   "projeto": "TNC Aditivo",
-  "saldo": 128000.6,
-  "totalEntradas": 389635.13,
-  "totalSaidas": 261634.53,
-  "totalLancamentos": 246,
+  "saldo": 23777.69,
+  "totalEntradas": 389616.8,
+  "totalSaidas": 365839.11,
+  "totalLancamentos": 300,
   "porCaixa": {
-    "(sem caixa)": 128000.6
+    "(sem caixa)": 23777.69
   },
   "porCategoria": {
-    "1.1 Apoio técnico": -73997,
-    "3.3 Sistema de comunicação": -25208.42,
-    "4.3 Articulação e estreitamento de relações com parceiros": -5976.08,
-    "1.2 Apoio administrativo": -15262.31,
-    "2.3 Desenv. da cadeia produtiva do cacau 2026": -77633.87,
+    "1.1 Apoio técnico": -113825,
+    "3.3 Sistema de comunicação": -23379.42,
+    "4.3 Articulação e estreitamento de relações com parceiros": -5987.68,
+    "1.2 Apoio administrativo": -19664.98,
+    "2.3 Desenv. da cadeia produtiva do cacau 2026": -83413.46,
     "1.3 Gestão e monitoramento de projetos e atividades": -24699.6,
-    "4.1 Viagens à Brasília - Reunião com órgãos": -9098.61,
+    "4.1 Viagens à Brasília - Reunião com órgãos": -12798.61,
     "2.1 Desenvolvimento da cadeia produtiva da castanha - safra 2025/2026": -16976,
-    "(sem categoria)": 389616.8,
-    "4.2 Processos de Consulta Livre, Prévia e Informada": -12606.84,
-    "2.2 Fortalecimento da cadeia produtiva do Artesanato": -157.47
+    "(sem categoria)": 381817.8,
+    "4.2 Processos de Consulta Livre, Prévia e Informada": -54402.08,
+    "2.2 Fortalecimento da cadeia produtiva do Artesanato": -1893.28,
+    "2.4 Construções e Reformas": -1000
   },
   "movimentacoes": [
     {
@@ -50,7 +51,7 @@
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "3.3 Sistema de comunicação"
+      "categoria": "(sem categoria)"
     },
     {
       "dtPgto": "08/07/2026",
@@ -103,120 +104,120 @@
       "categoria": "3.3 Sistema de comunicação"
     },
     {
-      "dtPgto": "23/06/2026",
-      "descricao": "Mensalidade Starlink",
-      "fornecedor": "Transação via Pix Automático para STARLINK BRAZIL SERVICOS",
-      "valor": -235.52,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "3.3 Sistema de comunicação"
-    },
-    {
-      "dtPgto": "22/06/2026",
-      "descricao": "Mensalidade Starlink",
-      "fornecedor": "Transação via Pix Automático para STARLINK BRAZIL SERVICOS",
-      "valor": -249,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "3.3 Sistema de comunicação"
-    },
-    {
-      "dtPgto": "22/06/2026",
-      "descricao": "Reembolso- assessoria de campo viagem p pega o car",
-      "fornecedor": "PAGAMENTO PIX 01317002270 CASIO TRAJANO DA LUZ",
-      "valor": -135,
+      "dtPgto": "30/06/2026",
+      "descricao": "Pgto - de combustível apoio a Reocupação",
+      "fornecedor": "PAGAMENTO PIX 17174074200 MARIA NEUSA TEIXEIRA D",
+      "valor": -200,
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
       "categoria": "4.2 Processos de Consulta Livre, Prévia e Informada"
     },
     {
-      "dtPgto": "19/06/2026",
-      "descricao": "Mensalidade Starlink",
-      "fornecedor": "Transação via Pix Automático para STARLINK BRAZIL SERVICOS",
-      "valor": -235.52,
+      "dtPgto": "30/06/2026",
+      "descricao": "Apoio Assembleia Apyterewa",
+      "fornecedor": "PAGAMENTO PIX 07998440000129 DISTRIBUIDORA DE GA",
+      "valor": -130,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "4.2 Processos de Consulta Livre, Prévia e Informada"
+    },
+    {
+      "dtPgto": "30/06/2026",
+      "descricao": "Pgto - Roçadeira apoio a safra do cacau",
+      "fornecedor": "PAGAMENTO PIX 20589162000114 CASA DOS PARAFUSOS",
+      "valor": -3690,
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
       "categoria": "3.3 Sistema de comunicação"
     },
     {
-      "dtPgto": "12/06/2026",
-      "descricao": "Conserto de quadricilo",
-      "fornecedor": "PAGAMENTO PIX 34913517000193 COMERCIAL DE MOTOS",
-      "valor": -1245,
+      "dtPgto": "30/06/2026",
+      "descricao": "Manequim robustez p cadeia do artesanato",
+      "fornecedor": "PAGAMENTO PIX 32812192000127 32.812.192 GISELLE",
+      "valor": -1600,
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "4.3 Articulação e estreitamento de relações com parceiros"
+      "categoria": "2.2 Fortalecimento da cadeia produtiva do Artesanato"
     },
     {
-      "dtPgto": "12/06/2026",
-      "descricao": "Pgto 161kg Cacau seco - Maritoe",
-      "fornecedor": "PAGAMENTO PIX 55626890220 Exiane Parakanã",
-      "valor": -1610,
+      "dtPgto": "30/06/2026",
+      "descricao": "Pgto - Deslocamento dos Parakanã para Assembleia",
+      "fornecedor": "PAGAMENTO PIX 49738200000135 49738200 RAIMUNDO C",
+      "valor": -9000,
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "1.1 Apoio técnico"
+      "categoria": "4.2 Processos de Consulta Livre, Prévia e Informada"
     },
     {
-      "dtPgto": "12/06/2026",
-      "descricao": "Pgto 42kg Cacau seco - Paranoia",
-      "fornecedor": "PAGAMENTO PIX 55479863215 Xamara Parakana",
-      "valor": -420,
+      "dtPgto": "30/06/2026",
+      "descricao": "Pgto - Combustível carro em campo TI APYTEREWA",
+      "fornecedor": "PAGAMENTO PIX 03804632000104 SUPER POSTO TRIUNFO",
+      "valor": -5000,
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "1.1 Apoio técnico"
+      "categoria": "4.2 Processos de Consulta Livre, Prévia e Informada"
     },
     {
-      "dtPgto": "12/06/2026",
-      "descricao": "Pgto 87kg Cacau seco - Mamate",
-      "fornecedor": "PAGAMENTO PIX 55504922291 KAWOWE PARAKANA",
-      "valor": -870,
+      "dtPgto": "30/06/2026",
+      "descricao": "Deslocamento dos indígenas Assembleia Apyterewa",
+      "fornecedor": "PAGAMENTO PIX 39663958000106 PREMIUM SUPERMERCAD",
+      "valor": -453.69,
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "1.1 Apoio técnico"
+      "categoria": "4.2 Processos de Consulta Livre, Prévia e Informada"
     },
     {
-      "dtPgto": "12/06/2026",
-      "descricao": "Aj. custo a visita do diretor da Nesa na Ait",
-      "fornecedor": "PAGAMENTO PIX 70719341264 NAEYKYXA PARAKANA",
-      "valor": -70,
+      "dtPgto": "29/06/2026",
+      "descricao": "Recarga- celular da Associação Tato'a",
+      "fornecedor": "PAGAMENTO PIX 06626253000151 FARMACIA PAGUE MENO",
+      "valor": -20,
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "1.3 Gestão e monitoramento de projetos e atividades"
+      "categoria": "1.2 Apoio administrativo"
     },
     {
-      "dtPgto": "12/06/2026",
-      "descricao": "Pgto 166kg cacau seco",
-      "fornecedor": "PAGAMENTO PIX 01463992262 AWETE PARAKANA",
-      "valor": -1660,
+      "dtPgto": "29/06/2026",
+      "descricao": "Deslocamento até o aeroporto de Campinas Assembl",
+      "fornecedor": "PAGAMENTO PIX 45976823000195 GUILHERME SANTIAGO",
+      "valor": -300,
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "1.1 Apoio técnico"
+      "categoria": "4.2 Processos de Consulta Livre, Prévia e Informada"
     },
     {
-      "dtPgto": "11/06/2026",
-      "descricao": "Pgto 267kg Cacau seco",
-      "fornecedor": "PAGAMENTO PIX 55504922291 KAWOWE PARAKANA",
-      "valor": -2670,
+      "dtPgto": "29/06/2026",
+      "descricao": "Apoio Assembleia Apyterewa - alimentação",
+      "fornecedor": "PAGAMENTO PIX 13610012000180 CAMPEIRO SUPERMERCA",
+      "valor": -638.43,
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
-      "categoria": "1.1 Apoio técnico"
+      "categoria": "4.2 Processos de Consulta Livre, Prévia e Informada"
     },
     {
-      "dtPgto": "11/06/2026",
-      "descricao": "Pgto  187kg cacau seco - Taina",
-      "fornecedor": "PAGAMENTO PIX 08023203258 Taina Parakana",
-      "valor": -1870,
+      "dtPgto": "29/06/2026",
+      "descricao": "Apoio Assembleia Apyterewa - alimentação",
+      "fornecedor": "PAGAMENTO PIX 13610012000180 CAMPEIRO SUPERMERCA",
+      "valor": -635.4,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "4.2 Processos de Consulta Livre, Prévia e Informada"
+    },
+    {
+      "dtPgto": "29/06/2026",
+      "descricao": "Prestação de serviços - Assessoria mês junho",
+      "fornecedor": "PAGAMENTO PIX 51380794000105 IMANA SOCIOAMBIENTA",
+      "valor": -15600,
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
