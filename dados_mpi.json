@@ -1,15 +1,15 @@
 {
-  "geradoEm": "2026-07-17T15:59:21.152Z",
+  "geradoEm": "2026-07-17T20:59:58.955Z",
   "projeto": "MPI Mulheres",
-  "saldo": -19675.1,
+  "saldo": -15880.1,
   "totalEntradas": 1000,
-  "totalSaidas": 20675.1,
-  "totalLancamentos": 30,
+  "totalSaidas": 16880.1,
+  "totalLancamentos": 28,
   "porCaixa": {
-    "(sem caixa)": -19675.1
+    "(sem caixa)": -15880.1
   },
   "porCategoria": {
-    "Fortalecimento do espaco Kania Arte Parakana": -19675.1
+    "Fortalecimento do espaco Kania Arte Parakana": -15880.1
   },
   "movimentacoes": [
     {
@@ -17,16 +17,6 @@
       "descricao": "Bolsa koxoas",
       "fornecedor": "Transação via Pix com chave para Kaxapoga Parakana",
       "valor": -1000,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Fortalecimento do espaco Kania Arte Parakana"
-    },
-    {
-      "dtPgto": "09/04/2026",
-      "descricao": "Bolsa koxoas",
-      "fornecedor": "Transação via Pix com chave para Wenatoa Parakana",
-      "valor": -2277,
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
@@ -47,16 +37,6 @@
       "descricao": "Bolsa koxoas",
       "fornecedor": "Transação via Pix com chave para POXIRA PARAKANA",
       "valor": -1000,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Fortalecimento do espaco Kania Arte Parakana"
-    },
-    {
-      "dtPgto": "07/04/2026",
-      "descricao": "Bolsa koxoas",
-      "fornecedor": "Transação via Pix com chave para Koxawewoxa Parakana",
-      "valor": -1518,
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
@@ -207,6 +187,26 @@
       "descricao": "Pgto referente Bolsa estágio na Kania projeto das Mulheres",
       "fornecedor": "Pix",
       "valor": -2,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "Fortalecimento do espaco Kania Arte Parakana"
+    },
+    {
+      "dtPgto": "14/02/2026",
+      "descricao": "Pgto - referente Bolsa de estágio na Kania - Projeto das mulheres",
+      "fornecedor": "YWOAGIA PARAKANA",
+      "valor": -500,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "Fortalecimento do espaco Kania Arte Parakana"
+    },
+    {
+      "dtPgto": "14/02/2026",
+      "descricao": "Pgto - referente Bolsa de estágio na Kania - Projeto das mulheres",
+      "fornecedor": "Naoi Parakana",
+      "valor": -500,
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
