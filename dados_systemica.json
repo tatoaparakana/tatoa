@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-14T13:43:23.494Z",
+  "geradoEm": "2026-08-14T14:43:25.598Z",
   "projeto": "Systemica - Antecipação",
   "saldo": -7068.77,
   "totalEntradas": 462796.29,
@@ -17,7 +17,7 @@
   "movimentacoes": [
     {
       "dtPgto": "07/08/2026",
-      "descricao": "",
+      "descricao": "Fortalecimento da Reocupação",
       "fornecedor": "PAGAMENTO PIX 39663958000106 PREMIUM SUPERMERCAD",
       "valor": -1000,
       "movimento": "Saída",
@@ -27,7 +27,7 @@
     },
     {
       "dtPgto": "07/08/2026",
-      "descricao": "",
+      "descricao": "Pgto - conta incorreta",
       "fornecedor": "PAGAMENTO PIX 20481744000182 ASSOCIACAO INDIGENA",
       "valor": -7449,
       "movimento": "Saída",
@@ -37,7 +37,7 @@
     },
     {
       "dtPgto": "07/08/2026",
-      "descricao": "",
+      "descricao": "Pgto - Bolsa  Comissão Parakanã mês de setembro",
       "fornecedor": "PAGAMENTO PIX 52618145291 MAMA PARAKANA",
       "valor": -1000,
       "movimento": "Saída",
@@ -47,7 +47,7 @@
     },
     {
       "dtPgto": "06/08/2026",
-      "descricao": "",
+      "descricao": "Pgto - Mensalidade de Starlink",
       "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
       "valor": -471.04,
       "movimento": "Saída",
