@@ -1,20 +1,190 @@
 {
-  "geradoEm": "2026-08-14T12:43:22.453Z",
+  "geradoEm": "2026-08-14T13:43:23.494Z",
   "projeto": "Systemica - Antecipação",
-  "saldo": -8677.69,
-  "totalEntradas": 437232.49,
-  "totalSaidas": 445910.18,
-  "totalLancamentos": 287,
+  "saldo": -7068.77,
+  "totalEntradas": 462796.29,
+  "totalSaidas": 469865.06,
+  "totalLancamentos": 304,
   "porCaixa": {
-    "(sem caixa)": -8677.69
+    "(sem caixa)": -7068.77
   },
   "porCategoria": {
     "Governanca": -197973.37,
-    "(sem categoria)": 405121.92,
+    "(sem categoria)": 406730.84,
     "Meio Ambiente": -125826.24,
     "Renda": -90000
   },
   "movimentacoes": [
+    {
+      "dtPgto": "07/08/2026",
+      "descricao": "",
+      "fornecedor": "PAGAMENTO PIX 39663958000106 PREMIUM SUPERMERCAD",
+      "valor": -1000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "07/08/2026",
+      "descricao": "",
+      "fornecedor": "PAGAMENTO PIX 20481744000182 ASSOCIACAO INDIGENA",
+      "valor": -7449,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "07/08/2026",
+      "descricao": "",
+      "fornecedor": "PAGAMENTO PIX 52618145291 MAMA PARAKANA",
+      "valor": -1000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "06/08/2026",
+      "descricao": "",
+      "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
+      "valor": -471.04,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "05/08/2026",
+      "descricao": "Prestação de serviços mês de julho",
+      "fornecedor": "PAGAMENTO PIX 62218112000170 J E BANDEIRA DE MAT",
+      "valor": -2000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "05/08/2026",
+      "descricao": "Taxa Sicredi",
+      "fornecedor": "CESTA DE RELACIONAMENTO",
+      "valor": -63.8,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "04/08/2026",
+      "descricao": "Pgto - Mensalidade de Starlink",
+      "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
+      "valor": -235.52,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "04/08/2026",
+      "descricao": "OFÍCIO No 58/2026 AIT",
+      "fornecedor": "RECEBIMENTO PIX 50328655000161 ARAPUA FLORESTAS",
+      "valor": 25563.8,
+      "movimento": "Entrada",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "04/08/2026",
+      "descricao": "Prestação de serviços mês de julho",
+      "fornecedor": "PAGAMENTO PIX 62010588000111 62 010 588 SIMONE P",
+      "valor": -2500,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "04/08/2026",
+      "descricao": "Prestação de serviços mês de julho",
+      "fornecedor": "PAGAMENTO PIX 59276258000168 59.276.258 JORDAN C",
+      "valor": -3000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "04/08/2026",
+      "descricao": "Pgto Bolsa comissão Parakanã mês de agosto",
+      "fornecedor": "PAGAMENTO PIX 55501605287 NENEXIGA PARAKANA",
+      "valor": -1000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "04/08/2026",
+      "descricao": "Pgto Bolsa comissão Parakanã mês de agosto",
+      "fornecedor": "PAGAMENTO PIX 55500587234 AWAPEWA PARAKANA",
+      "valor": -1000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "04/08/2026",
+      "descricao": "Pgto Bolsa comissão Parakanã mês de agosto",
+      "fornecedor": "PAGAMENTO PIX 55536034200 Inara Parakana",
+      "valor": -1000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "04/08/2026",
+      "descricao": "Pgto Bolsa comissão Parakanã mês de agosto",
+      "fornecedor": "PAGAMENTO PIX 53829905220 Wenatoa Parakana",
+      "valor": -1000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "04/08/2026",
+      "descricao": "Pgto Bolsa comissão Parakanã mês de agosto",
+      "fornecedor": "PAGAMENTO PIX 01381669271 Ty e Parakana",
+      "valor": -1000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "04/08/2026",
+      "descricao": "Pgto Bolsa comissão Parakanã mês de agosto",
+      "fornecedor": "PAGAMENTO PIX 55624880278 MOXEIA PARAKANA",
+      "valor": -1000,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "03/08/2026",
+      "descricao": "Pgto - Mensalidade de Starlink",
+      "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
+      "valor": -235.52,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
     {
       "dtPgto": "30/07/2026",
       "descricao": "Pgto - Mensalidade de Starlink",
@@ -44,176 +214,6 @@
       "status": "",
       "caixa": "(sem caixa)",
       "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "22/07/2026",
-      "descricao": "Prestação de serviços mês de junho",
-      "fornecedor": "PAGAMENTO PIX 01317002270 CASIO TRAJANO DA LUZ",
-      "valor": -1500,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "20/07/2026",
-      "descricao": "Fortalecimento da Reocupação",
-      "fornecedor": "PAGAMENTO PIX 15496840000164 F. R. A. DA SILVA COMERCIO",
-      "valor": -225,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "08/07/2026",
-      "descricao": "Mensalidade starlink Centro Parakanã",
-      "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
-      "valor": -471.04,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Meio Ambiente"
-    },
-    {
-      "dtPgto": "06/07/2026",
-      "descricao": "Mensalidade de Starlink",
-      "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
-      "valor": -235.52,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Meio Ambiente"
-    },
-    {
-      "dtPgto": "06/07/2026",
-      "descricao": "Mensalidade de Starlink",
-      "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
-      "valor": -471.04,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Meio Ambiente"
-    },
-    {
-      "dtPgto": "06/07/2026",
-      "descricao": "Pgto serviço de tradução na Assembleia Apyterewa",
-      "fornecedor": "PAGAMENTO PIX 55501605287 NENEXIGA PARAKANA",
-      "valor": -150,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Governanca"
-    },
-    {
-      "dtPgto": "06/07/2026",
-      "descricao": "Pgto serviço de tradução na Assembleia Apyterewa",
-      "fornecedor": "PAGAMENTO PIX 04006819196 xokarowara parakana",
-      "valor": -150,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Governanca"
-    },
-    {
-      "dtPgto": "06/07/2026",
-      "descricao": "Pgto serviço de tradução na Assembleia Apyterewa",
-      "fornecedor": "PAGAMENTO PIX 01381669271 Ty e Parakana",
-      "valor": -150,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Governanca"
-    },
-    {
-      "dtPgto": "06/07/2026",
-      "descricao": "Taxa Sicredi",
-      "fornecedor": "CESTA DE RELACIONAMENTO",
-      "valor": -63.8,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Governanca"
-    },
-    {
-      "dtPgto": "03/07/2026",
-      "descricao": "Pgto - Mensalidade de Starlink",
-      "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
-      "valor": -235.52,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Meio Ambiente"
-    },
-    {
-      "dtPgto": "03/07/2026",
-      "descricao": "Pgto - Mensalidade de Starlink",
-      "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
-      "valor": -190,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Meio Ambiente"
-    },
-    {
-      "dtPgto": "03/07/2026",
-      "descricao": "Pgto - da Bolsa da comissão Parakanã mês julho",
-      "fornecedor": "PAGAMENTO PIX 55501605287 NENEXIGA PARAKANA",
-      "valor": -1000,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Governanca"
-    },
-    {
-      "dtPgto": "03/07/2026",
-      "descricao": "Corrida de táxi- retorno da Assembleia Apyterewa",
-      "fornecedor": "PAGAMENTO PIX 73104442215 ERNANDES BRITO SILVA",
-      "valor": -100,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Meio Ambiente"
-    },
-    {
-      "dtPgto": "03/07/2026",
-      "descricao": "Pgto Bolsa da comissão Parakanã mês de agosto",
-      "fornecedor": "PAGAMENTO PIX 04006819196 xokarowara parakana",
-      "valor": -1000,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Governanca"
-    },
-    {
-      "dtPgto": "03/07/2026",
-      "descricao": "Prestação de serviços mês de junho",
-      "fornecedor": "PAGAMENTO PIX 59276258000168 59.276.258 JORDAN C",
-      "valor": -3000,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Governanca"
-    },
-    {
-      "dtPgto": "03/07/2026",
-      "descricao": "Fortalecimento da Reocupação",
-      "fornecedor": "PAGAMENTO PIX 39663958000106 PREMIUM SUPERMERCAD",
-      "valor": -1129,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Meio Ambiente"
-    },
-    {
-      "dtPgto": "03/07/2026",
-      "descricao": "Fortalecimento da Reocupação",
-      "fornecedor": "PAGAMENTO PIX 15496840000164 F. R. A. DA SILVA C",
-      "valor": -9168,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "Meio Ambiente"
     }
   ]
 }
