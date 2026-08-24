@@ -1,20 +1,30 @@
 {
-  "geradoEm": "2026-08-24T11:43:22.867Z",
+  "geradoEm": "2026-08-24T12:43:23.503Z",
   "projeto": "Systemica - Antecipação",
-  "saldo": -7983.29,
+  "saldo": -18480.83,
   "totalEntradas": 462796.29,
-  "totalSaidas": 470779.58,
-  "totalLancamentos": 307,
+  "totalSaidas": 481277.12,
+  "totalLancamentos": 308,
   "porCaixa": {
-    "(sem caixa)": -7983.29
+    "(sem caixa)": -18480.83
   },
   "porCategoria": {
-    "(sem categoria)": 405816.32,
+    "(sem categoria)": 395318.78,
     "Governanca": -197973.37,
     "Meio Ambiente": -125826.24,
     "Renda": -90000
   },
   "movimentacoes": [
+    {
+      "dtPgto": "17/08/2026",
+      "descricao": "Pgto - Seguro do veículo da Tato'a",
+      "fornecedor": "PAGAMENTO PIX 33164021000100 TOKIO MARINE SE",
+      "valor": -10497.54,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
     {
       "dtPgto": "10/08/2026",
       "descricao": "Pgto - Mensalidade Starlink",
@@ -200,16 +210,6 @@
       "descricao": "Pgto - Mensalidade de Starlink",
       "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
       "valor": -235.52,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "29/07/2026",
-      "descricao": "Pgto - Mensalidade de Starlink",
-      "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
-      "valor": -471.04,
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
