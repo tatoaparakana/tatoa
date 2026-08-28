@@ -1,15 +1,15 @@
 {
-  "geradoEm": "2026-08-28T19:43:23.858Z",
+  "geradoEm": "2026-08-28T20:43:22.023Z",
   "projeto": "Systemica - Antecipação",
-  "saldo": -18480.83,
+  "saldo": -18862.83,
   "totalEntradas": 462796.29,
-  "totalSaidas": 481277.12,
-  "totalLancamentos": 308,
+  "totalSaidas": 481659.12,
+  "totalLancamentos": 309,
   "porCaixa": {
-    "(sem caixa)": -18480.83
+    "(sem caixa)": -18862.83
   },
   "porCategoria": {
-    "(sem categoria)": 395318.78,
+    "(sem categoria)": 394936.78,
     "Governanca": -197973.37,
     "Meio Ambiente": -125826.24,
     "Renda": -90000
@@ -20,6 +20,16 @@
       "descricao": "Pgto - Seguro do veículo da Tato'a",
       "fornecedor": "PAGAMENTO PIX 33164021000100 TOKIO MARINE SE",
       "valor": -10497.54,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "14/08/2026",
+      "descricao": "Fortalecimento da Reocupação",
+      "fornecedor": "PAGAMENTO PIX 15496840000164 F. R. A. DA SILVA C",
+      "valor": -382,
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
@@ -197,16 +207,6 @@
     },
     {
       "dtPgto": "03/08/2026",
-      "descricao": "Pgto - Mensalidade de Starlink",
-      "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
-      "valor": -235.52,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "30/07/2026",
       "descricao": "Pgto - Mensalidade de Starlink",
       "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
       "valor": -235.52,
