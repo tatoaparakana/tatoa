@@ -1,16 +1,16 @@
 {
-  "geradoEm": "2026-08-28T20:43:22.023Z",
+  "geradoEm": "2026-08-28T21:43:23.353Z",
   "projeto": "Systemica - Antecipação",
-  "saldo": -18862.83,
+  "saldo": -18565.83,
   "totalEntradas": 462796.29,
-  "totalSaidas": 481659.12,
-  "totalLancamentos": 309,
+  "totalSaidas": 481362.12,
+  "totalLancamentos": 308,
   "porCaixa": {
-    "(sem caixa)": -18862.83
+    "(sem caixa)": -18565.83
   },
   "porCategoria": {
-    "(sem categoria)": 394936.78,
     "Governanca": -197973.37,
+    "(sem categoria)": 395233.78,
     "Meio Ambiente": -125826.24,
     "Renda": -90000
   },
@@ -20,6 +20,16 @@
       "descricao": "Pgto - Seguro do veículo da Tato'a",
       "fornecedor": "PAGAMENTO PIX 33164021000100 TOKIO MARINE SE",
       "valor": -10497.54,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "14/08/2026",
+      "descricao": "Fortalecimento da Reocupação",
+      "fornecedor": "PAGAMENTO PIX 15496840000164 F. R. A. DA SILVA C",
+      "valor": -382,
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
@@ -200,16 +210,6 @@
       "descricao": "Pgto Bolsa comissão Parakanã mês de agosto",
       "fornecedor": "PAGAMENTO PIX 55624880278 MOXEIA PARAKANA",
       "valor": -1000,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "03/08/2026",
-      "descricao": "Pgto - Mensalidade de Starlink",
-      "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
-      "valor": -235.52,
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
