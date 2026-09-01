@@ -1,20 +1,60 @@
 {
-  "geradoEm": "2026-09-01T19:43:27.250Z",
+  "geradoEm": "2026-09-01T20:43:23.815Z",
   "projeto": "Systemica - Antecipação",
-  "saldo": -18565.83,
+  "saldo": -19417.45,
   "totalEntradas": 462796.29,
-  "totalSaidas": 481362.12,
-  "totalLancamentos": 308,
+  "totalSaidas": 482213.74,
+  "totalLancamentos": 312,
   "porCaixa": {
-    "(sem caixa)": -18565.83
+    "(sem caixa)": -19417.45
   },
   "porCategoria": {
     "Governanca": -197973.37,
-    "(sem categoria)": 395233.78,
+    "(sem categoria)": 394382.16,
     "Meio Ambiente": -125826.24,
     "Renda": -90000
   },
   "movimentacoes": [
+    {
+      "dtPgto": "31/08/2026",
+      "descricao": "Mensalidade Starlink",
+      "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
+      "valor": -235.52,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "31/08/2026",
+      "descricao": "Mensalidade Starlink",
+      "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
+      "valor": -249,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "28/08/2026",
+      "descricao": "Mensalidade Starlink",
+      "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
+      "valor": -131.58,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "28/08/2026",
+      "descricao": "Mensalidade Starlink",
+      "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
+      "valor": -235.52,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
     {
       "dtPgto": "17/08/2026",
       "descricao": "Pgto - Seguro do veículo da Tato'a",
@@ -169,46 +209,6 @@
       "dtPgto": "04/08/2026",
       "descricao": "Pgto Bolsa comissão Parakanã mês de agosto",
       "fornecedor": "PAGAMENTO PIX 55500587234 AWAPEWA PARAKANA",
-      "valor": -1000,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "04/08/2026",
-      "descricao": "Pgto Bolsa comissão Parakanã mês de agosto",
-      "fornecedor": "PAGAMENTO PIX 55536034200 Inara Parakana",
-      "valor": -1000,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "04/08/2026",
-      "descricao": "Pgto Bolsa comissão Parakanã mês de agosto",
-      "fornecedor": "PAGAMENTO PIX 53829905220 Wenatoa Parakana",
-      "valor": -1000,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "04/08/2026",
-      "descricao": "Pgto Bolsa comissão Parakanã mês de agosto",
-      "fornecedor": "PAGAMENTO PIX 01381669271 Ty e Parakana",
-      "valor": -1000,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "04/08/2026",
-      "descricao": "Pgto Bolsa comissão Parakanã mês de agosto",
-      "fornecedor": "PAGAMENTO PIX 55624880278 MOXEIA PARAKANA",
       "valor": -1000,
       "movimento": "Saída",
       "status": "",
