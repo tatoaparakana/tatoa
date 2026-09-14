@@ -1,20 +1,90 @@
 {
-  "geradoEm": "2026-09-14T14:43:24.183Z",
+  "geradoEm": "2026-09-14T15:43:23.275Z",
   "projeto": "Systemica - Antecipação",
-  "saldo": -8746.38,
+  "saldo": -15624.15,
   "totalEntradas": 493360.09,
-  "totalSaidas": 502106.47,
-  "totalLancamentos": 326,
+  "totalSaidas": 508984.24,
+  "totalLancamentos": 333,
   "porCaixa": {
-    "(sem caixa)": -8746.38
+    "(sem caixa)": -15624.15
   },
   "porCategoria": {
     "Governanca": -197973.37,
-    "(sem categoria)": 405053.23,
+    "(sem categoria)": 398175.46,
     "Meio Ambiente": -125826.24,
     "Renda": -90000
   },
   "movimentacoes": [
+    {
+      "dtPgto": "11/09/2026",
+      "descricao": "Pgto - mensalidade de Starlink",
+      "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
+      "valor": -235.52,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "10/09/2026",
+      "descricao": "Pgto - mensalidade de Starlink",
+      "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
+      "valor": -235.52,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "10/09/2026",
+      "descricao": "Fortalecimento da Reocupação",
+      "fornecedor": "PAGAMENTO PIX 39663958000106 PREMIUM SUPERMERCAD",
+      "valor": -490,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "08/09/2026",
+      "descricao": "Pgto -  mensalidade de Starlink",
+      "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
+      "valor": -471.04,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "08/09/2026",
+      "descricao": "Fortalecimento da Reocupação",
+      "fornecedor": "PAGAMENTO PIX 15496840000164 F. R. A. DA SILVA C",
+      "valor": -382,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "08/09/2026",
+      "descricao": "Cesta básicas - curso brigadista TI Apyterewa",
+      "fornecedor": "PAGAMENTO PIX 15496840000164 F. R. A. DA SILVA C",
+      "valor": -4999.89,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "08/09/2026",
+      "descricao": "Taxa Sicredi",
+      "fornecedor": "CESTA DE RELACIONAMENTO",
+      "valor": -63.8,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
     {
       "dtPgto": "04/09/2026",
       "descricao": "Pgto - mensalidade de Starlink",
@@ -140,76 +210,6 @@
       "descricao": "Pgto Bolsa da comissão Parakanã mês de setembro",
       "fornecedor": "PAGAMENTO PIX 53829905220 Wenatoa Parakana",
       "valor": -1000,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "01/09/2026",
-      "descricao": "Pgto Bolsa da comissão Parakanã mês de setembro",
-      "fornecedor": "PAGAMENTO PIX 55624880278 MOXEIA PARAKANA",
-      "valor": -1000,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "31/08/2026",
-      "descricao": "Mensalidade Starlink",
-      "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
-      "valor": -235.52,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "31/08/2026",
-      "descricao": "Mensalidade Starlink",
-      "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
-      "valor": -249,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "28/08/2026",
-      "descricao": "Mensalidade Starlink",
-      "fornecedor": "PAGAMENTO PIX 40154884000153 STARLINK BRAZIL SER",
-      "valor": -131.58,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "28/08/2026",
-      "descricao": "Mensalidade Starlink",
-      "fornecedor": "DB PIX AUTOMATICO 40154884000153 STARLINK BRAZIL",
-      "valor": -235.52,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "17/08/2026",
-      "descricao": "Pgto - Seguro do veículo da Tato'a",
-      "fornecedor": "PAGAMENTO PIX 33164021000100 TOKIO MARINE SE",
-      "valor": -10497.54,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "14/08/2026",
-      "descricao": "Fortalecimento da Reocupação",
-      "fornecedor": "PAGAMENTO PIX 15496840000164 F. R. A. DA SILVA C",
-      "valor": -382,
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
