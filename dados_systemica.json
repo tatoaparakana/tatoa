@@ -1,20 +1,50 @@
 {
-  "geradoEm": "2026-09-29T16:43:23.391Z",
+  "geradoEm": "2026-09-29T17:43:23.177Z",
   "projeto": "Systemica - Antecipação",
-  "saldo": -16787.15,
+  "saldo": -17506.71,
   "totalEntradas": 493360.09,
-  "totalSaidas": 510147.24,
-  "totalLancamentos": 334,
+  "totalSaidas": 510866.8,
+  "totalLancamentos": 337,
   "porCaixa": {
-    "(sem caixa)": -16787.15
+    "(sem caixa)": -17506.71
   },
   "porCategoria": {
     "Governanca": -197973.37,
-    "(sem categoria)": 397012.46,
+    "(sem categoria)": 396292.9,
     "Meio Ambiente": -125826.24,
     "Renda": -90000
   },
   "movimentacoes": [
+    {
+      "dtPgto": "24/09/2026",
+      "descricao": "",
+      "fornecedor": "PAGAMENTO PIX 39663958000106 PREMIUM SUPERMERCAD",
+      "valor": -225,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "21/09/2026",
+      "descricao": "",
+      "fornecedor": "PAGAMENTO PIX 15496840000164 F. R. A. DA SILVA C",
+      "valor": -378,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
+    {
+      "dtPgto": "21/09/2026",
+      "descricao": "",
+      "fornecedor": "PAGAMENTO PIX 39663958000106 PREMIUM SUPERMERCAD",
+      "valor": -116.56,
+      "movimento": "Saída",
+      "status": "",
+      "caixa": "(sem caixa)",
+      "categoria": "(sem categoria)"
+    },
     {
       "dtPgto": "15/09/2026",
       "descricao": "Fortalecimento da Reocupação",
@@ -179,36 +209,6 @@
       "dtPgto": "01/09/2026",
       "descricao": "Pgto Bolsa da comissão Parakanã mês de setembro",
       "fornecedor": "PAGAMENTO PIX 04006819196 xokarowara parakana",
-      "valor": -1000,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "01/09/2026",
-      "descricao": "Pgto Bolsa da comissão Parakanã mês de setembro",
-      "fornecedor": "PAGAMENTO PIX 55501605287 NENEXIGA PARAKANA",
-      "valor": -1000,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "01/09/2026",
-      "descricao": "Pgto Bolsa da comissão Parakanã mês de setembro",
-      "fornecedor": "PAGAMENTO PIX 55500587234 AWAPEWA PARAKANA",
-      "valor": -1000,
-      "movimento": "Saída",
-      "status": "",
-      "caixa": "(sem caixa)",
-      "categoria": "(sem categoria)"
-    },
-    {
-      "dtPgto": "01/09/2026",
-      "descricao": "Pgto Bolsa da comissão Parakanã mês de setembro",
-      "fornecedor": "PAGAMENTO PIX 55536034200 Inara Parakana",
       "valor": -1000,
       "movimento": "Saída",
       "status": "",
