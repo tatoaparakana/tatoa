@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-29T17:43:23.177Z",
+  "geradoEm": "2026-09-29T18:43:23.462Z",
   "projeto": "Systemica - Antecipação",
   "saldo": -17506.71,
   "totalEntradas": 493360.09,
@@ -17,7 +17,7 @@
   "movimentacoes": [
     {
       "dtPgto": "24/09/2026",
-      "descricao": "",
+      "descricao": "Fortalecimento da Reocupação",
       "fornecedor": "PAGAMENTO PIX 39663958000106 PREMIUM SUPERMERCAD",
       "valor": -225,
       "movimento": "Saída",
@@ -27,7 +27,7 @@
     },
     {
       "dtPgto": "21/09/2026",
-      "descricao": "",
+      "descricao": "Fortalecimento da Reocupação",
       "fornecedor": "PAGAMENTO PIX 15496840000164 F. R. A. DA SILVA C",
       "valor": -378,
       "movimento": "Saída",
@@ -37,7 +37,7 @@
     },
     {
       "dtPgto": "21/09/2026",
-      "descricao": "",
+      "descricao": "Aquisição de materiais p/ desenvolvimento de atividades no TI",
       "fornecedor": "PAGAMENTO PIX 39663958000106 PREMIUM SUPERMERCAD",
       "valor": -116.56,
       "movimento": "Saída",
