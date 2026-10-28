@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-28T18:43:23.379Z",
+  "geradoEm": "2026-10-28T19:43:26.888Z",
   "projeto": "Systemica - Antecipação",
   "saldo": -24079.55,
   "totalEntradas": 493423.89,
@@ -197,9 +197,9 @@
     },
     {
       "dtPgto": "08/09/2026",
-      "descricao": "Fortalecimento da Reocupação",
-      "fornecedor": "PAGAMENTO PIX 15496840000164 F. R. A. DA SILVA C",
-      "valor": -382,
+      "descricao": "Taxa Sicredi",
+      "fornecedor": "CESTA DE RELACIONAMENTO",
+      "valor": -63.8,
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
@@ -207,9 +207,9 @@
     },
     {
       "dtPgto": "08/09/2026",
-      "descricao": "Cesta básicas - curso brigadista TI Apyterewa",
+      "descricao": "Fortalecimento da Reocupação",
       "fornecedor": "PAGAMENTO PIX 15496840000164 F. R. A. DA SILVA C",
-      "valor": -4999.89,
+      "valor": -382,
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
