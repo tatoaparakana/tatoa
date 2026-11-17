@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-17T18:43:22.178Z",
+  "geradoEm": "2026-11-17T19:43:24.145Z",
   "projeto": "Systemica - Antecipação",
   "saldo": -24079.55,
   "totalEntradas": 493423.89,
@@ -67,9 +67,9 @@
     },
     {
       "dtPgto": "02/10/2026",
-      "descricao": "Pgto -  Mensalidade de Starlink",
-      "fornecedor": "RECEBIMENTO PIX 20481744000182 ASSOCIACAO INDIGE",
-      "valor": -3300,
+      "descricao": "Fortalecimento da Reocupação",
+      "fornecedor": "PAGAMENTO PIX 39663958000106 PREMIUM SUPERMERCAD",
+      "valor": -1000,
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
@@ -77,9 +77,9 @@
     },
     {
       "dtPgto": "02/10/2026",
-      "descricao": "Fortalecimento da Reocupação",
-      "fornecedor": "PAGAMENTO PIX 39663958000106 PREMIUM SUPERMERCAD",
-      "valor": -1000,
+      "descricao": "Pgto -  Mensalidade de Starlink",
+      "fornecedor": "RECEBIMENTO PIX 20481744000182 ASSOCIACAO INDIGE",
+      "valor": -3300,
       "movimento": "Saída",
       "status": "",
       "caixa": "(sem caixa)",
